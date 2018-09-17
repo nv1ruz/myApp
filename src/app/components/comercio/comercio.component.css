@@ -1,0 +1,188 @@
+.cajaComercio{
+    text-align: center;
+    padding: 10px 20px;
+    /* box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2); */
+    /* background-color: #ff3e7f;     */
+    background-image: linear-gradient(#910030, #ff3e7f);
+}
+.cajaComercio img{
+    width: 120px;
+    height: 120px;
+    /* border-radius: 100px; */
+    margin: 10px 0;
+    border: 2px solid #910030;
+    box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.6);
+    transition: all .3s ease;
+}
+    .cajaComercio img:hover{
+        width: 160px;
+        height: 160px;
+    }
+.cajaComercio .nombre{
+    /* color: #666666; */
+    color: white;
+    font-size: 18px;
+    font-weight: bold; 
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+.cajaComercio .direccion{
+    color: whitesmoke;
+    font-size: 12px;
+    margin-bottom: 0;   
+    text-transform: capitalize;
+}
+.cajaComercio .contacto{
+    color: whitesmoke;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 0;  
+}
+.cajaComercio .estado{
+    /* color: #b4b4b4; */
+    color: whitesmoke;
+    font-size: 12px;
+    margin-bottom: 0;    
+}
+.cajaComercio .delivery{
+    color: #23d32c;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* .tab{
+    margin-top: 5px;
+    display: flex;
+}
+.tab .item{
+    width: 50%;  
+    border: 1px solid #b4b4b427;
+    border-radius: 8px;
+}
+.tab .item p{
+    color: #b4b4b4;
+    font-size: 14px;
+    font-weight: 500; 
+    text-align: center;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 8px;
+}
+.tab .item p:hover{
+    background-color: #fa3b7b;
+    color: #ffffff;
+} */
+
+
+.carousel {
+    width: 100%;
+    height: 200px;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 200px;
+}
+.carousel-item span{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .carousel {
+        width: 600px;
+        height: 400px;
+        margin: auto;
+        border-radius: 5%;
+    }
+    .carousel-item img{
+        width: 600px;
+        height: 400px;
+    }
+    .carousel-item span{
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+.txtProductos{
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;    
+    padding: 5px 10px 3px 10px;
+    /* border-bottom: 1px solid #ececec; */
+    box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.producto {
+    border-bottom: 1px solid #ececec;
+    padding: 0;     
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.producto:hover{
+    background: #f5f5f5;
+    box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.4);
+    padding: 20px 0;
+}
+
+.producto .caja1 {
+    padding: 10px 5px 10px 10px;
+}
+.producto .caja1 .foto {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    /* border-radius: 100px; */
+    transition: all .3s ease;
+}
+    .producto .caja1 .foto:hover{
+        width: 250px;
+        height: 200px;
+    }
+.producto .caja1 .foto img {
+    width: 100%;
+    height: 80px;
+    transition: all .3s ease;
+}
+    .producto .caja1 .foto img:hover{
+        width: 100%;
+        height: 200px;
+    }
+
+.producto .caja2 {
+    padding: 10px 10px 10px 5px;
+}
+.producto .caja2 .nombre{
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.producto .caja2 .ingredientes {
+    display: block;
+    color: #b4b4b4;
+    font-size: 12px;
+    text-transform: capitalize;
+    /* margin-bottom: 10px; */
+}
+.producto .caja2 .precio {
+    color: #fa3b7b;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+}

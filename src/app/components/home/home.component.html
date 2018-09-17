@@ -1,0 +1,44 @@
+
+
+
+
+<p class="txtComerciosAbiertos">en este momento</p>
+
+<div class="container-fluid animated fadeIn comerciosAbiertos">
+
+  <div class="comercio row align-items-center" (click)="verComercio(comercioAbierto.id)" *ngFor="let comercioAbierto of comerciosAbiertos">  
+    <div class="caja1 col-auto">
+      <div class="foto">
+        <img src="{{ comercioAbierto.data.img }}" width="100">
+      </div>
+    </div>
+    <div class="caja2 col">
+      <h5 class="nombre">{{ comercioAbierto.data.nombre }}</h5> 
+      <span *ngIf="comercioAbierto.data.estado == true" class="estado">Abierto </span>
+      <span *ngIf="comercioAbierto.data.estado == false" class="estado">Cerrado </span>
+      <span *ngIf="comercioAbierto.data.delivery == true" class="delivery"><i class="fas fa-shipping-fast"></i></span>      
+    </div>   
+  </div>
+
+</div>
+
+
+<p class="txtComercios">comercios cerrados</p>
+
+<div class="container-fluid animated fadeIn comerciosCerrados">
+
+  <div class="comercio row align-items-center" (click)="verComercio(comerciosCerrado.id)" *ngFor="let comerciosCerrado of comerciosCerrados">  
+    <div class="caja1 col-auto">
+      <div class="foto">
+        <img src="{{ comerciosCerrado.data.img }}" width="100">
+      </div>
+    </div>
+    <div class="caja2 col">
+      <h5 class="nombre">{{ comerciosCerrado.data.nombre }}</h5> 
+      <span *ngIf="comerciosCerrado.data.estado == true" class="estado">Abierto </span>
+      <span *ngIf="comerciosCerrado.data.estado == false" class="estado">Cerrado </span>
+      <span *ngIf="comerciosCerrado.data.delivery == true" class="delivery"><i class="fas fa-shipping-fast"></i></span>      
+    </div>   
+  </div>
+
+</div>

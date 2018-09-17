@@ -1,0 +1,96 @@
+ng-sidebar-container{
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: white;
+    width: 75vw;
+    height: 100%;
+}
+
+.sidebar .cajaUsuario{
+    height: auto;
+    background-image: linear-gradient(#910030, #ff3e7f);
+    padding: 15px;
+}
+.sidebar .cajaUsuario .foto{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+.sidebar .cajaUsuario .nombre{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+}
+.sidebar .cajaUsuario .email{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    margin: 0;
+}
+.sidebar .cajaUsuario .salir{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    margin: 0;
+    text-align: right;
+    cursor: pointer;
+}
+
+.sidebar hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.sidebar .caja {
+    padding: 10px 0 10px 15px;
+}
+.sidebar .caja a {
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+.sidebar .caja a span {
+    color: #4b4b4b;
+}
+.sidebar .caja a i {
+    margin-right: 30px;
+}
+.sidebar .caja a p {
+    font-size: 12px;
+    color: #4b4b4b;
+}
+
+.nav{
+    height: 50px;
+    /* background: #38a85a; */
+    background-image: linear-gradient(#910030, #ff3e7f);
+    align-content: center;
+    align-items: center;
+}
+.nav .btnMenu{
+    background: none;
+    border: 0;
+    color: #ffffff;
+    padding: 0 20px;
+    font-size: 20px;
+}
+.nav .titulo{
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: auto;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.nav .btnIngresar{
+    background: none;
+    border: 0;
+    color: #ffffff;
+    padding: 0 20px;
+    font-size: 14px;
+}

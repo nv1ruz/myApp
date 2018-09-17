@@ -1,0 +1,50 @@
+.contenedor{
+    margin: 10% 0;
+    padding: 50px 0;
+}
+.contenedor .nombreApp{
+    color: #fa3b7b;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+}
+.contenedor .descripcion{
+    margin-top: 20px;
+    padding: 0 15%;
+    text-align: center;
+}
+.contenedor .descripcion p{
+    font-weight: bold;
+    color: #b1b1b1;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 0;
+}
+.contenedor .descripcion .foto{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
+.contenedor .boton{
+    margin: 20px 15%;
+    height: 40px;
+    border: 1px solid #fa3b7b;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.contenedor .boton:hover, .contenedor .boton span:hover{
+    background-color: #fa3b7b;
+    color: #ffffff;
+}
+.contenedor .boton span{
+    font-weight: bold;
+    color: #fa3b7b;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s ease;
+}

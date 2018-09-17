@@ -1,0 +1,19 @@
+<div class="contenedor animated fadeIn fast">
+
+    <div class="nombreApp" *ngIf="!_fs.usuario.uid">
+        <span>myApp</span>
+    </div>
+
+    <div class="descripcion">
+        <p *ngIf="!_fs.usuario.uid">Ingresa con tu cuenta favorita y difruta al máximo la sorprendente App de comidas.</p>
+        <img *ngIf="_fs.usuario.uid" class="foto animated fadeIn" src="{{ _fs.usuario.foto }}">
+        <p *ngIf="_fs.usuario.uid" class="animated fadeIn">Bienvenido {{ _fs.usuario.nombre }}.</p>
+    </div>
+
+    <div class="boton" *ngIf="!_fs.usuario.uid">
+        <span (click)="_fs.login('google')">
+            Ingresar ahora
+        </span>
+    </div>
+
+</div>

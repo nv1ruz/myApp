@@ -1,20 +1,63 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- <app-nav></app-nav>
 
+<router-outlet></router-outlet> -->
+
+
+<!-- Container for sidebar(s) + page content -->
+<ng-sidebar-container>
+ 
+    <!-- A sidebar -->
+    <ng-sidebar
+        [(opened)]="_opened"
+        [mode]="'over'"
+        [showBackdrop]="'false'"
+        [closeOnClickOutside]="'true'">
+        <div class="sidebar"  *ngIf="_fs.usuario.uid">
+            <div class="cajaUsuario">
+                <p class="salir" (click)="_fs.logout()" [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</p>
+                <img class="foto" src="{{ _fs.usuario.foto }}">
+                <p class="nombre">{{ _fs.usuario.nombre }}</p>
+                <p class="email">{{ _fs.usuario.email }}</p>
+            </div>
+            <div class="caja">
+                <a [routerLink]="['/home']"><i class="fas fa-home"></i><span>Página principal</span></a>
+            </div>
+            <hr>
+            <div class="caja">
+                <a href="#"><i class="fas fa-shipping-fast"></i><span>Item 1</span></a>
+            </div>
+            <div class="caja">
+                <a href="#"><i class="fas fa-shipping-fast"></i><span>Item 2</span></a>
+            </div>
+            <div class="caja">
+                <a href="#"><i class="fas fa-shipping-fast"></i><span>Item 3</span></a>
+            </div>
+            <hr>
+            <div class="caja">
+                <a href="#"><i class="fas fa-shipping-fast"></i><span>Item 1</span></a>
+            </div>
+            <div class="caja">
+                <a href="#"><i class="fas fa-shipping-fast"></i><span>Item 2</span></a>
+            </div>        
+            <hr>
+            <div class="caja">
+                <a href="#"><p>Ayuda y sugerencias</p></a>
+                <a href="#"><p>Guía para padres</p></a>
+                <a href="#"><p>Información sobre Google Play</p></a>
+            </div>      
+
+        </div>
+    </ng-sidebar>
+
+    <!-- Page content -->
+    <div ng-sidebar-content>
+        <div class="nav">
+            <button class="btnMenu" *ngIf="_fs.usuario.uid" (click)="_toggleOpened()"><i class="fas fa-bars"></i></button>
+            <span class="titulo" [routerLink]="['/home']">miApp</span>
+            <button class="btnIngresar" *ngIf="!_fs.usuario.uid" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
+        </div>
+        
+        <router-outlet></router-outlet>
+    </div>
+   
+</ng-sidebar-container>

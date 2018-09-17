@@ -1,0 +1,43 @@
+.nav{
+    /* background-color: #303030; */
+    background-image: linear-gradient(#424242, #303030);
+    height: 50px;
+    box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav .app{
+    margin: auto;
+}
+.nav .app .nombre{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav .auth{
+    margin: auto 0 auto 0;
+    width: 45px;
+    height: 50px;
+    text-align: center;
+}
+.nav .auth .login{
+    color: #757575;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 50px;
+    transition: all .3s ease;    
+}
+    .nav .auth .login:hover{
+        color: #3bfa64;
+    }
+.nav .auth .logout{
+    color: #757575;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 50px;
+    transition: all .3s ease;
+}
+.nav .auth .logout:hover{
+    color: #fa3b3b;
+}

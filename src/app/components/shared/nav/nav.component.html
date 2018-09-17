@@ -1,0 +1,9 @@
+<div class="nav">
+  <div class="app">
+    <span class="nombre" [routerLink]="['/home']">myApp</span>
+  </div>
+  <div class="auth">
+    <span class="login" *ngIf="!_fs.usuario.uid" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i></span>
+    <span class="logout" *ngIf="_fs.usuario.uid" (click)="_fs.logout()"><i class="fas fa-sign-out-alt"></i></span>
+  </div>
+</div>
