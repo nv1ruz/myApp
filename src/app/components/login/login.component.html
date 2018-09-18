@@ -1,4 +1,4 @@
-<div class="contenedor animated fadeIn fast">
+<!-- <div class="contenedor animated fadeIn fast">
 
     <div class="nombreApp" *ngIf="!_fs.usuario.uid">
         <span>myApp</span>
@@ -15,4 +15,60 @@
             Ingresar con Google
         </span>
     </div>
+
+</div> -->
+
+
+<div class="container login animated fadeIn">
+    <br>
+    <form method="post">
+        <div class='center'> 
+            <h4>INICIAR SESIÓN</h4>
+        </div>
+        <br>
+        <div class="campos">
+            <div class='input-field col s12'>
+                <i class="material-icons prefix">mail_outline</i>
+                <input class='validate' type='email' name='email' id='email' />
+                <label for='email'>E-mail</label>
+            </div>
+            <div class='input-field col s12'>
+                <i class="material-icons prefix">lock_outline</i>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='password'>Contraseña</label>
+            </div>
+        </div>
+        <label style="float:right;">
+            <a class='red-text' href='#'><b>Olvidé mi Contraseña</b></a>
+        </label>
+        <br><br>
+        <div class="boton" *ngIf="!_fs.usuario.uid">
+            <span>
+                INGRESAR
+            </span>
+        </div>
+        <br>
+    </form>
+    <br>
+    <div class="redes-sociales">
+        <p class="opcIngreso">utilizar mi cuenta de</p>
+        <div class="row">
+            <div class="botonR" *ngIf="!_fs.usuario.uid">
+                <span>
+                    Facebook
+                </span>
+            </div>
+            <div class="botonR" *ngIf="!_fs.usuario.uid">
+                <span (click)="_fs.login('google')">
+                    Google
+                </span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="center crear-cuenta">
+        <p>¿Aun no tienes cuenta? - <a>Crear cuenta</a></p>
+    </div>
+    
 </div>
+    

@@ -1,4 +1,4 @@
-.contenedor{
+/* .contenedor{
     margin: 0;
     padding: 50px 0;
 }
@@ -51,4 +51,93 @@
 div.row .btn-red a{
     height: 35px;
     line-height: 35px;
+} */
+
+/* Nuevo */
+
+.input-field input[type=date]:focus + label,
+.input-field input[type=text]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field input[type=password]:focus + label {
+  color: #fe4918;
+}
+
+.input-field input[type=date]:focus,
+.input-field input[type=text]:focus,
+.input-field input[type=email]:focus,
+.input-field input[type=password]:focus {
+  border-bottom: 2px solid #fe4918;
+  box-shadow: none;
+}
+div.container{
+    padding: 0;
+}
+div.login form{
+    border-bottom: 1px solid rgb(196, 196, 196);
+}
+div.login h4 {
+    font-weight: bold;
+    font-size: 29px;
+}
+.container .boton{
+    margin: 20px 15%;
+    height: 40px;
+    border: 1px solid #fa3b7b;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.container .boton span{
+    font-weight: bold;
+    color: #fa3b7b;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.container .boton:hover,
+.container .boton span:hover{
+    background-color: #fa3b7b;
+    color: #ffffff;
+}
+div.login p.opcIngreso {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.redes-sociales .botonR{
+    margin: 0 auto;
+    height: 40px;
+    border: 1px solid #fa3b7b;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+    min-width: 45%;
+}
+.redes-sociales .botonR span{
+    font-weight: bold;
+    color: #fa3b7b;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.redes-sociales .botonR:hover,
+.redes-sociales .botonR span:hover{
+    background-color: #fa3b7b;
+    color: #ffffff;
+}
+div.crear-cuenta p {
+    color: black;
+}
+div.crear-cuenta a{
+  text-decoration: none;
+  color: #fe4918;
+  font-weight: bold;
+  text-transform: uppercase;
 }

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { FirebaseService } from '../../providers/firebase.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,8 +9,11 @@ import { FirebaseService } from '../../providers/firebase.service';
 })
 export class LoginComponent {
 
-  constructor( public _fs: FirebaseService ) { }
+  constructor( public _fs: FirebaseService ) {
 
-    
+  
+  }
+
+  
 
 }
