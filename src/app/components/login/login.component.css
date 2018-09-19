@@ -141,3 +141,23 @@ div.crear-cuenta a{
   font-weight: bold;
   text-transform: uppercase;
 }
+
+/* Bienvenida */
+.bienvenida{
+    margin-top: 40%;
+    padding: 0 15%;
+    text-align: center;
+}
+.bienvenida p{
+    font-weight: bold;
+    color: #b1b1b1;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 0;
+}
+.bienvenida .foto{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 15px;
+}
