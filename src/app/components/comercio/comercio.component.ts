@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var $:any;
 import { FirebaseService } from '../../providers/firebase.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -25,6 +25,7 @@ export class ComercioComponent implements OnInit {
   }
 
   ngOnInit() {
+    
 
     // obtiene y almacena los datos de un comercio(ID)
     this._fs.getComercio( this.refId ).subscribe( datos => {
@@ -40,7 +41,8 @@ export class ComercioComponent implements OnInit {
       // } else{
       //   this.comercio.delivery = '';
       // }
-    })
+      
+    });
 
     // obtiene y almacena los productos de un comercio(ID)
     this._fs.getProductos( this.refId ).subscribe( (prodSnapShot) => {
@@ -70,6 +72,7 @@ export class ComercioComponent implements OnInit {
       })
       console.log(this.productosSugeridos);
     });
+
 
   }
 

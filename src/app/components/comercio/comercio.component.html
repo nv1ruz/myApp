@@ -1,19 +1,19 @@
 <div class="cajaComercio animated fadeIn fast">
   <img src="{{ comercio.img }}">
   <p class="nombre">{{ comercio.nombre }}</p>
-  <p class="contacto">{{ comercio.contacto }}</p>
-  <p class="direccion">{{ comercio.direccion }}</p>
+  <!-- <p class="contacto">{{ comercio.contacto }}</p>
+  <p class="direccion">{{ comercio.direccion }}</p> -->
   <p class="estado">{{ comercio.estado }}</p>
   <span *ngIf="comercio.delivery == true" class="delivery"><i class="fas fa-shipping-fast"></i></span> 
 </div>
 
 <!-- <div class="tab">
-  <div class="item"  >
-    <p>Sugeridos</p>
-  </div>
-  <div class="item">
-    <p>Combos</p>
-  </div>
+	<div class="item"  >
+		<p>Sugeridos</p>
+	</div>
+	<div class="item">
+		<p>Combos</p>
+	</div>
 </div> -->
 
 
@@ -42,21 +42,68 @@
     
 </div> -->
 
+<!-- Tab -->
+<div class="nav nav-tabs tab" id="nav-tab" role="tablist">
+	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-sugeridos" role="tab">PRODUCTOS</a>
+	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-info" role="tab">INFORMACIÓN</a>
+</div>
+<div class="tab-content" id="nav-tabContent">
+	<div class="tab-pane fade show active" id="nav-sugeridos" role="tabpanel">
+			
+			<p class="txtProductos">platos sugeridos</p>
+			<div class="container-fluid animated fadeIn"  *ngFor="let prodSugerido of this.productosSugeridos ">
+				<div class="producto row align-items-center">  
+					<div class="caja1 col-auto">
+						<div class="foto">
+							<img src="{{ prodSugerido.data.img }}" width="100">
+						</div>
+					</div>
+					<div class="caja2 col">
+						<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
+						<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
+						<span class="precio">${{ prodSugerido.data.precio }}</span>
+					</div>   
+				</div>
+			</div>
+
+
+			<p class="txtProductos">todos los productos</p>
+			<div class="container-fluid animated fadeIn"  *ngFor="let producto of this.productos ">
+				<div class="producto row align-items-center">  
+					<div class="caja1 col-auto">
+						<div class="foto">
+							<img src="{{ producto.data.img }}" width="100">
+						</div>
+					</div>
+					<div class="caja2 col">
+						<span class="nombre">{{ producto.data.nombre }}</span>      
+						<span class="ingredientes">{{ producto.data.ingredientes }}</span>      
+						<span class="precio">${{ producto.data.precio }}</span>
+					</div>   
+				</div>
+			</div>
+	</div>
+	
+	<div class="tab-pane fade" id="nav-info" role="tabpanel">
+		<p>Información</p>
+	</div>
+</div>
+<!-- 
 <p class="txtProductos">platos sugeridos</p>
 
 <div class="container-fluid animated fadeIn"  *ngFor="let prodSugerido of this.productosSugeridos ">
   
   <div class="producto row align-items-center">  
-    <div class="caja1 col-auto">
-      <div class="foto">
-        <img src="{{ prodSugerido.data.img }}" width="100">
-      </div>
-    </div>
-    <div class="caja2 col">
-      <span class="nombre">{{ prodSugerido.data.nombre }}</span>      
-      <span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
-      <span class="precio">${{ prodSugerido.data.precio }}</span>
-    </div>   
+		<div class="caja1 col-auto">
+			<div class="foto">
+				<img src="{{ prodSugerido.data.img }}" width="100">
+			</div>
+		</div>
+		<div class="caja2 col">
+			<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
+			<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
+			<span class="precio">${{ prodSugerido.data.precio }}</span>
+		</div>   
   </div>
 
 </div>
@@ -79,4 +126,4 @@
     </div>   
   </div>
 
-</div>
+</div> -->
