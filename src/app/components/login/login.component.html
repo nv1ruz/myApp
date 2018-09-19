@@ -39,7 +39,7 @@
             </div>
         </div>
         <label style="float:right;">
-            <a class='red-text' href='#'><b>Olvidé mi Contraseña</b></a>
+            <a class='red-text' href=''><b>Olvidé mi Contraseña</b></a>
         </label>
         <br><br>
         <div class="boton" *ngIf="!_fs.usuario.uid">
@@ -67,7 +67,7 @@
     </div>
     <br>
     <div class="center crear-cuenta">
-        <p>¿Aun no tienes cuenta? - <a>Crear cuenta</a></p>
+        <p>¿Aun no tienes cuenta? - <a [routerLink]="['/register']">Crear cuenta</a></p>
     </div>
     
 </div>

@@ -24,6 +24,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { ComercioComponent } from './components/comercio/comercio.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ComercioComponent } from './components/comercio/comercio.component';
     LoginComponent,
     NavComponent,
     HomeComponent,
-    ComercioComponent
+    ComercioComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+<div class="container register animated fadeIn">
+  <br>
+  <form method="post">
+      <div class='center'> 
+          <h4>NUEVA CUENTA</h4>
+      </div>
+      <br>
+      <div class="campos">
+          <div class='input-field col s12'>
+              <i class="material-icons prefix">mail_outline</i>
+              <input class='validate' type='email' name='email' id='email' />
+              <label for='email'>E-mail</label>
+          </div>
+          <div class='input-field col s12'>
+              <i class="material-icons prefix">lock_outline</i>
+              <input class='validate' type='password' name='password' id='password' />
+              <label for='password'>Contraseña</label>
+          </div>
+      </div>
+      <label style="float:right;">
+          <a class='red-text' href='#'><b>Acepto los Terminos y Condiciones</b></a>
+      </label>
+      <br><br>
+      <div class="boton">
+          <span>
+              CREAR CUENTA
+          </span>
+      </div>
+      <br>
+  </form>
+  <br>
+  <div class="center crear-cuenta">
+      <p>¿Ya tienes una cuenta? - <a [routerLink]="['/login']">Inicia Sesión</a></p>
+  </div>
+  
+</div>
