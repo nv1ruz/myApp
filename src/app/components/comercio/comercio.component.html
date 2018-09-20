@@ -1,93 +1,158 @@
+
+<!-- Cabecera Braian-->
 <div class="cajaComercio animated fadeIn fast">
-  <img src="{{ comercio.img }}">
-  <p class="nombre">{{ comercio.nombre }}</p>
-  <!-- <p class="contacto">{{ comercio.contacto }}</p>
-  <p class="direccion">{{ comercio.direccion }}</p> -->
-  <p class="estado">{{ comercio.estado }}</p>
-  <span *ngIf="comercio.delivery == true" class="delivery"><i class="fas fa-shipping-fast"></i></span> 
+	<img src="{{ comercio.img }}">
+	<p class="nombre">{{ comercio.nombre }} </p>
+	<!-- <p class="contacto">{{ comercio.contacto }}</p>
+	<p class="direccion">{{ comercio.direccion }}</p> -->
+	<div class="row">
+		<div class="col-4 megusta">
+			<p><i class="fas fa-thumbs-up"></i> 135</p>
+		</div>
+		<div class="col-4 estado">
+			<p> {{ comercio.estado }}</p>
+		</div>
+		<div class="col-4 delivery">
+			<span *ngIf="comercio.delivery == true"><i class="fas fa-shipping-fast"></i> Gratis</span> 
+		</div>
+	</div>
 </div>
-
-<!-- <div class="tab">
-	<div class="item"  >
-		<p>Sugeridos</p>
-	</div>
-	<div class="item">
-		<p>Combos</p>
-	</div>
-</div> -->
-
 
 <!-- <div id="carouselSugeridos" class="carousel slide" data-ride="carousel">
 
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="http://placehold.it/600x400" alt="Sugeridos">
-    </div>
-    <div class="carousel-item" *ngFor="let prodSugerido of this.productosSugeridos">
-      <img class="d-block w-100" src="{{ prodSugerido.data.img }}" alt="Sugeridos">
-      <div class="carousel-caption">
-        <span>{{ prodSugerido.data.nombre }}</span>
-      </div>
-    </div>
-  </div>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img class="d-block w-100" src="http://placehold.it/600x400" alt="Sugeridos">
+		</div>
+		<div class="carousel-item" *ngFor="let prodSugerido of this.productosSugeridos">
+			<img class="d-block w-100" src="{{ prodSugerido.data.img }}" alt="Sugeridos">
+			<div class="carousel-caption">
+				<span>{{ prodSugerido.data.nombre }}</span>
+			</div>
+		</div>
+	</div>
 
-  <a class="carousel-control-prev" href="#carouselSugeridos" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselSugeridos" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-    
+	<a class="carousel-control-prev" href="#carouselSugeridos" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselSugeridos" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+		
 </div> -->
 
 <!-- Tab -->
 <div class="nav nav-tabs tab" id="nav-tab" role="tablist">
 	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-sugeridos" role="tab">PRODUCTOS</a>
-	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-info" role="tab">INFORMACIÓN</a>
+	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-info" role="tab">+ INFO</a>
 </div>
 <div class="tab-content" id="nav-tabContent">
 	<div class="tab-pane fade show active" id="nav-sugeridos" role="tabpanel">
 			
-			<p class="txtProductos">platos sugeridos</p>
-			<div class="container-fluid animated fadeIn"  *ngFor="let prodSugerido of this.productosSugeridos ">
-				<div class="producto row align-items-center">  
-					<div class="caja1 col-auto">
-						<div class="foto">
-							<img src="{{ prodSugerido.data.img }}" width="100">
-						</div>
+		<p class="txtProductos">Pizzas</p>
+		<div class="container-fluid animated fadeIn"  *ngFor="let prodSugerido of this.productosSugeridos ">
+			<div class="producto row align-items-center">  
+				<div class="caja1 col-auto">
+					<div class="foto">
+						<img src="{{ prodSugerido.data.img }}" width="100">
 					</div>
-					<div class="caja2 col">
-						<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
-						<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
-						<span class="precio">${{ prodSugerido.data.precio }}</span>
-					</div>   
 				</div>
+				<div class="caja2 col">
+					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
+					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
+					<span class="precio">${{ prodSugerido.data.precio }}</span>
+				</div>   
 			</div>
+		</div>
 
-
-			<p class="txtProductos">todos los productos</p>
-			<div class="container-fluid animated fadeIn"  *ngFor="let producto of this.productos ">
-				<div class="producto row align-items-center">  
-					<div class="caja1 col-auto">
-						<div class="foto">
-							<img src="{{ producto.data.img }}" width="100">
-						</div>
+		<p class="txtProductos">Lomos</p>
+		<div class="container-fluid animated fadeIn"  *ngFor="let producto of this.productos ">
+			<div class="producto row align-items-center">  
+				<div class="caja1 col-auto">
+					<div class="foto">
+						<img src="{{ producto.data.img }}" width="100">
 					</div>
-					<div class="caja2 col">
-						<span class="nombre">{{ producto.data.nombre }}</span>      
-						<span class="ingredientes">{{ producto.data.ingredientes }}</span>      
-						<span class="precio">${{ producto.data.precio }}</span>
-					</div>   
 				</div>
+				<div class="caja2 col">
+					<span class="nombre">{{ producto.data.nombre }}</span>      
+					<span class="ingredientes">{{ producto.data.ingredientes }}</span>      
+					<span class="precio">${{ producto.data.precio }}</span>
+				</div>   
 			</div>
+		</div>
+
+		<p class="txtProductos">Hamburguesas</p>
+		<div class="container-fluid animated fadeIn"  *ngFor="let prodSugerido of this.productosSugeridos ">
+			<div class="producto row align-items-center">  
+				<div class="caja1 col-auto">
+					<div class="foto">
+						<img src="{{ prodSugerido.data.img }}" width="100">
+					</div>
+				</div>
+				<div class="caja2 col">
+					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
+					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
+					<span class="precio">${{ prodSugerido.data.precio }}</span>
+				</div>   
+			</div>
+		</div>
 	</div>
 	
-	<div class="tab-pane fade" id="nav-info" role="tabpanel">
-		<p>Información</p>
+	<div class="tab-pane fade" id="nav-info">
+		<div class="info">
+			<ul class="collapsible">
+				<li class="active">
+					<div class="collapsible-header">
+						<i class="material-icons">assistant</i>
+						Nosotros
+						<span class="new badge"></span>
+					</div>
+					<div class="collapsible-body nosotros">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dolorem odit ut repellat tempora, ad harum aliquam tenetur itaque magnam, quod quae est voluptatum praesentium veritatis sint? Culpa, error perferendis?</p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">
+						<i class="material-icons">access_alarm</i>
+						Horario de Atención
+						<span class="badge"></span>
+					</div>
+					<div class="collapsible-body horario">
+						<p><span>Lunes a Viernes: </span>8hs a 12hs - 18hs a 23hs</p>
+						<p><span>Sabados: </span>18hs a 23hs</p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">
+						<i class="material-icons">place</i>
+						Ubicación
+						<span class="badge"></span>
+					</div>
+					<div class="collapsible-body ubicacion">
+						<p>Victoria Romero, 221 - Barrio Angel V. Peñaloza </p>
+						<img src="https://ep01.epimg.net/tecnologia/imagenes/2017/10/11/actualidad/1507722505_765166_1507722864_miniatura_normal.jpg">
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header">
+						<i class="material-icons">chat</i>
+						Contacto
+						<span class="badge"></span>
+					</div>
+					<div class="collapsible-body contacto">
+						<p><i class="fab fa-whatsapp"></i> 3826403155 <span> (Personal)</span></p>
+						<p><i class="fas fa-phone"></i> 3826425592 <span> (Claro)</span></p>
+						<p><i class="fab fa-facebook"></i> DonLuna-Chamical </p>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
 </div>
+
+
 <!-- 
 <p class="txtProductos">platos sugeridos</p>
 
@@ -107,7 +172,6 @@
   </div>
 
 </div>
-
 
 <p class="txtProductos">todos los productos</p>
 

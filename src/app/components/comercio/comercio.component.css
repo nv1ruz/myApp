@@ -1,23 +1,55 @@
+/* Cabecera Franco*/
+/* div.cabecera {
+    height: 170px!important;
+    background-color: rgb(255, 196, 228);
+}
+div.cabecera img{
+    width: 100%;
+    max-height: 170px;
+}
+div.info-rapida{
+    margin-top: -5px;
+}
+div.info-rapida p.nombre-negocio{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 2px 20px;
+    color: #ff3e7f;
+}
+div.info-rapida span{
+    font-size: 13px;
+    color: #23d32c;
+}
+div.info-rapida i{
+    line-height: 1;
+} */
+
+
+
+/* Cabera Braian */
 .cajaComercio{
     text-align: center;
-    padding: 10px 20px;
+    padding: 5px 10px;
     /* box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2); */
     /* background-color: #ff3e7f;     */
     background-image: linear-gradient(#910030, #ff3e7f);
+    height: 215px;
 }
+
 .cajaComercio img{
-    width: 120px;
-    height: 120px;
+    width: 100%;
+    height: 150px;
     /* border-radius: 100px; */
-    margin: 10px 0;
+    margin: 5px 0 0 0;
     border: 2px solid #910030;
     box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.6);
     transition: all .3s ease;
 }
-    .cajaComercio img:hover{
-        width: 160px;
-        height: 160px;
-    }
+    /* .cajaComercio img:hover{
+        width: 100%;
+    } */
 .cajaComercio .nombre{
     /* color: #666666; */
     color: white;
@@ -39,16 +71,45 @@
     letter-spacing: 1px;
     margin-bottom: 0;  
 }
+.cajaComercio .megusta{
+    color: whitesmoke;
+    text-align: left!important;
+    font-size: 14px;
+    margin-bottom: 0;   
+    font-weight: 600;
+}
 .cajaComercio .estado{
     /* color: #b4b4b4; */
     color: whitesmoke;
-    font-size: 12px;
-    margin-bottom: 0;    
+    font-size: 14px;
+    margin-bottom: 0;   
+    font-weight: 600;
 }
+.cajaComercio .estado p{
+    margin-bottom: 0;
+    width: auto;
+    border: 1px solid #e1e1e1;
+}
+
 .cajaComercio .delivery{
-    color: #23d32c;
+    color: whitesmoke;
     font-size: 14px;
     font-weight: 600;
+    margin: 0;
+    text-align: right;
+}
+.cajaComercio .megusta i{
+    color: rgb(56, 214, 241);
+}
+.cajaComercio .estado i{
+    color: rgb(255, 119, 29);
+}
+.cajaComercio .delivery i{
+    color: #23d32c;
+}
+.cajaComercio i{
+    font-size: 17px;
+    font-weight: bold;
 }
 
 /* Tabs */
@@ -192,4 +253,41 @@
     font-size: 14px;
     font-weight: bold;
     float: left;
+}
+
+/* + Info */
+#nav-info .collapsible-header{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fa3b7b;
+}
+#nav-info .collapsible-body{
+    padding: 10px 20px 0 20px;
+}
+#nav-info .nosotros{
+    text-align: center;
+    font-weight: bold;
+}
+#nav-info .horario span{
+    font-weight: bold;
+}
+#nav-info .ubicacion p{
+    text-align: center;
+}
+#nav-info .ubicacion img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contacto i{
+    font-size: 17px;
+}
+.contacto i.fa-whatsapp{
+    color: #23d32c;
+    font-weight: bold;
+}
+.contacto i.fa-phone{
+    color: black;
+}
+.contacto i.fa-facebook{
+    color: rgb(51, 51, 212);
 }
