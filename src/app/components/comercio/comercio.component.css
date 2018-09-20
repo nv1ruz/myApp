@@ -1,58 +1,25 @@
-/* Cabecera Franco*/
-/* div.cabecera {
-    height: 170px!important;
-    background-color: rgb(255, 196, 228);
-}
-div.cabecera img{
-    width: 100%;
-    max-height: 170px;
-}
-div.info-rapida{
-    margin-top: -5px;
-}
-div.info-rapida p.nombre-negocio{
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0 auto;
-    padding: 2px 20px;
-    color: #ff3e7f;
-}
-div.info-rapida span{
-    font-size: 13px;
-    color: #23d32c;
-}
-div.info-rapida i{
-    line-height: 1;
-} */
-
-
-
-/* Cabera Braian */
+/* Cabera */
 .cajaComercio{
     text-align: center;
     padding: 5px 10px;
     /* box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2); */
     /* background-color: #ff3e7f;     */
-    background-image: linear-gradient(#910030, #ff3e7f);
-    height: 215px;
+    /* background-image: linear-gradient(#910030, #ff3e7f); */
+    height: auto;
 }
 
 .cajaComercio img{
     width: 100%;
     height: 150px;
     /* border-radius: 100px; */
-    margin: 5px 0 0 0;
-    border: 2px solid #910030;
-    box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.6);
+    margin: 5px 0 5px 0;
+    /* border: 2px solid #910030; */
+    /* box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.6); */
     transition: all .3s ease;
 }
-    /* .cajaComercio img:hover{
-        width: 100%;
-    } */
 .cajaComercio .nombre{
-    /* color: #666666; */
-    color: white;
+    color: #666666;
+    /* color: white; */
     font-size: 18px;
     font-weight: bold; 
     text-transform: capitalize;
@@ -72,15 +39,18 @@ div.info-rapida i{
     margin-bottom: 0;  
 }
 .cajaComercio .megusta{
-    color: whitesmoke;
+    color: #b4b4b4;
     text-align: left!important;
     font-size: 14px;
     margin-bottom: 0;   
     font-weight: 600;
 }
+.cajaComercio .megusta p{
+    margin-bottom: 0;   
+}
 .cajaComercio .estado{
-    /* color: #b4b4b4; */
-    color: whitesmoke;
+    color: #b4b4b4;
+    /* color: whitesmoke; */
     font-size: 14px;
     margin-bottom: 0;   
     font-weight: 600;
@@ -88,11 +58,11 @@ div.info-rapida i{
 .cajaComercio .estado p{
     margin-bottom: 0;
     width: auto;
-    border: 1px solid #e1e1e1;
+    /* border: 1px solid #e1e1e1; */
 }
 
 .cajaComercio .delivery{
-    color: whitesmoke;
+    /* color: whitesmoke; */
     font-size: 14px;
     font-weight: 600;
     margin: 0;
@@ -106,6 +76,9 @@ div.info-rapida i{
 }
 .cajaComercio .delivery i{
     color: #23d32c;
+}
+.cajaComercio .delivery{
+    color: #b4b4b4;
 }
 .cajaComercio i{
     font-size: 17px;
@@ -125,7 +98,7 @@ div.info-rapida i{
 }
 .tab .item{
     width: 50%;  
-    border: 1px solid #b3b1b1;
+    /* border: 1px solid #b3b1b1; */
     /* border-radius: 8px; */
 }
 .tab a.item{
@@ -143,42 +116,6 @@ div.info-rapida i{
     color: #ffffff;
 }
 
-/* Carousel */
-.carousel {
-    width: 100%;
-    height: 200px;
-    white-space:nowrap;
-    overflow: hidden;
-    margin-bottom: 10px;
-}
-.carousel-item img{
-    width: 100%;
-    height: 200px;
-}
-.carousel-item span{
-    color: white;
-    text-shadow: 2px 2px 4px #000000;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .carousel {
-        width: 600px;
-        height: 400px;
-        margin: auto;
-        border-radius: 5%;
-    }
-    .carousel-item img{
-        width: 600px;
-        height: 400px;
-    }
-    .carousel-item span{
-        font-size: 24px;
-    }
-}
 
 
 
@@ -195,18 +132,21 @@ div.info-rapida i{
     /* border-bottom: 1px solid #ececec; */
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
-
+.contenedor{
+    padding: 0;
+}
 .producto {
     border-bottom: 1px solid #ececec;
     padding: 0;     
     transition: all .3s ease;
     cursor: pointer;
+    margin: 0;
 }
-.producto:hover{
+/* .producto:hover{
     background: #f5f5f5;
     box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.4);
     padding: 20px 0;
-}
+} */
 
 .producto .caja1 {
     padding: 10px 5px 10px 10px;

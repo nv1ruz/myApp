@@ -10,14 +10,16 @@ ng-sidebar-container{
 
 .sidebar .cajaUsuario{
     height: auto;
-    background-image: linear-gradient(#910030, #ff3e7f);
-    padding: 15px;
+    /* background-image: linear-gradient(#910030, #ff3e7f); */
+    background-color: #fa3b7b;
+    padding: 10px 5px;
+    margin-bottom: 0;
 }
 .sidebar .cajaUsuario .foto{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 100px;
-    margin-bottom: 10px;
+    padding: 0;
 }
 .sidebar .cajaUsuario .nombre{
     font-family: 'Open Sans', sans-serif;
@@ -31,14 +33,6 @@ ng-sidebar-container{
     font-size: 12px;
     color: #ffffff;
     margin: 0;
-}
-.sidebar .cajaUsuario .salir{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    color: #ffffff;
-    margin: 0;
-    text-align: right;
-    cursor: pointer;
 }
 
 .sidebar hr {
@@ -68,7 +62,8 @@ ng-sidebar-container{
 .nav{
     height: 50px;
     /* background: #38a85a; */
-    background-image: linear-gradient(#910030, #ff3e7f);
+    /* background-image: linear-gradient(#910030, #ff3e7f); */
+    background-color: #fa3b7b;
     align-content: center;
     align-items: center;
 }

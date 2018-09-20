@@ -17,6 +17,8 @@ import { AppRoutingModule } from './app.routes';
 
 // providers
 import { FirebaseService } from './providers/firebase.service';
+import { CarritoService } from './providers/carrito.service';
+
 
 // componentes
 import { AppComponent } from './app.component';
@@ -45,7 +47,8 @@ import { RegisterComponent } from './components/register/register.component';
     AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
   providers: [
-    FirebaseService
+    FirebaseService,
+    CarritoService
   ],
   bootstrap: [AppComponent]
 })

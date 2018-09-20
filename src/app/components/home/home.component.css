@@ -12,12 +12,16 @@
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
+.comerciosCerrados{
+    padding: 0;
+}
 .comerciosCerrados .comercio {
     border-bottom: 1px solid #ececec;
     padding: 10px 0;   
     cursor: pointer;
     /* box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2); */
     transition: all .3s ease;
+    margin-bottom: 0;
 }
     .comerciosCerrados .comercio:hover{
         background: #f5f5f5;
@@ -82,13 +86,16 @@
     border-bottom: 1px solid #ececec;
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
-
+.comerciosAbiertos{
+    padding: 0;
+}
 .comerciosAbiertos .comercio {
     border-bottom: 1px solid #ececec;
     padding: 10px 0;   
     cursor: pointer;
     /* box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2); */
     transition: all .3s ease;
+    margin-bottom: 0;
 }
     .comerciosAbiertos .comercio:hover{
         background: #f5f5f5;

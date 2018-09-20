@@ -41,16 +41,16 @@ export class HomeComponent implements OnInit {
       this.comerciosAbiertos = [];
       comerciosSnapshot.forEach( (comerciosData: any) =>{
         if( comerciosData.payload.doc.data().estado == true ){
-          console.log(`${comerciosData.payload.doc.data().nombre} abierto`);
+          // console.log(`${comerciosData.payload.doc.data().nombre} abierto`);
           this.comerciosAbiertos.push({
             id: comerciosData.payload.doc.id,
             data: comerciosData.payload.doc.data()
           });
         } else{
-          console.log(`${comerciosData.payload.doc.data().nombre} cerrado`);
+          // console.log(`${comerciosData.payload.doc.data().nombre} cerrado`);
         }
       })
-      console.log(this.comerciosAbiertos);
+      // console.log(this.comerciosAbiertos);
     });
 
     // obtiene y almacena solo los comercios "cerrados"
@@ -58,16 +58,16 @@ export class HomeComponent implements OnInit {
       this.comerciosCerrados = [];
       comerciosSnapshot.forEach( (comerciosData: any) =>{
         if( comerciosData.payload.doc.data().estado == false ){
-          console.log(`${comerciosData.payload.doc.data().nombre} cerrado`);
+          // console.log(`${comerciosData.payload.doc.data().nombre} cerrado`);
           this.comerciosCerrados.push({
             id: comerciosData.payload.doc.id,
             data: comerciosData.payload.doc.data()
           });
         } else{
-          console.log(`${comerciosData.payload.doc.data().nombre} abierto`);
+          // console.log(`${comerciosData.payload.doc.data().nombre} abierto`);
         }
       })
-      console.log(this.comerciosCerrados);
+      // console.log(this.comerciosCerrados);
     });
 
   }

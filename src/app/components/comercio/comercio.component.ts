@@ -3,6 +3,9 @@ declare var $:any;
 import { FirebaseService } from '../../providers/firebase.service';
 import { ActivatedRoute } from '@angular/router';
 
+import { CarritoService } from '../../providers/carrito.service';
+
+
 @Component({
   selector: 'app-comercio',
   templateUrl: './comercio.component.html',
@@ -15,7 +18,7 @@ export class ComercioComponent implements OnInit {
   public productos = [];
   public productosSugeridos = [];
 
-  constructor( public _fs: FirebaseService, private activatedRoute: ActivatedRoute ) {
+  constructor( public _fs: FirebaseService, private activatedRoute: ActivatedRoute, public _cs: CarritoService ) {
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {
@@ -57,7 +60,7 @@ export class ComercioComponent implements OnInit {
           data: productosData.payload.doc.data()
         });
       })
-      console.log(this.productos);
+      // console.log(this.productos);
     });
 
     // obtiene y almacena los productos sugeridos de un comercio(ID)
@@ -65,16 +68,16 @@ export class ComercioComponent implements OnInit {
       this.productosSugeridos = [];
       prodSnapShot.forEach( (productosData: any) => {        
         if( productosData.payload.doc.data().sugerido == true ){
-          console.log(`${productosData.payload.doc.data().nombre} sugerido`);
+          // console.log(`${productosData.payload.doc.data().nombre} sugerido`);
           this.productosSugeridos.push({
             id: productosData.payload.doc.id,
             data: productosData.payload.doc.data()
           });
         }else{
-          console.log(`${productosData.payload.doc.data().nombre} no sugerido`);
+          // console.log(`${productosData.payload.doc.data().nombre} no sugerido`);
         }
       })
-      console.log(this.productosSugeridos);
+      // console.log(this.productosSugeridos);
     });
 
 

@@ -11,13 +11,17 @@
         [(opened)]="_opened"
         [mode]="'over'"
         [showBackdrop]="'false'"
-        [closeOnClickOutside]="'true'">
+        [closeOnClickOutside]='false'
+        [closeOnClickBackdrop]='true'>
         <div class="sidebar"  *ngIf="_fs.usuario.uid">
-            <div class="cajaUsuario">
-                <p class="salir" (click)="_fs.logout()" [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</p>
-                <img class="foto" src="{{ _fs.usuario.foto }}">
-                <p class="nombre">{{ _fs.usuario.nombre }}</p>
-                <p class="email">{{ _fs.usuario.email }}</p>
+            <div class="row cajaUsuario align-items-center">
+                <div class="col-4">
+                    <img class="foto" src="{{ _fs.usuario.foto }}">
+                </div>
+                <div class="col-8">
+                    <p class="nombre">{{ _fs.usuario.nombre }}</p>
+                    <p class="email">{{ _fs.usuario.email }}</p>
+                </div>
             </div>
             <div class="caja">
                 <a [routerLink]="['/home']"><i class="fas fa-home"></i><span>Página principal</span></a>
@@ -34,7 +38,7 @@
             </div>
             <hr>
             <div class="caja">
-                <a href="#"><i class="fas fa-shopping-cart"></i><span>Mi Carrito</span></a>
+                <a (click)="_fs.logout()" [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i><span>Cerrar sesión</span></a>
             </div>     
             <hr>
             <div class="caja">
