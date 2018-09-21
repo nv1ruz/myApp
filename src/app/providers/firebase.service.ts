@@ -33,7 +33,8 @@ export class FirebaseService {
 
   // login del usuario
   login( proveedor: string ) {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    // this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.afAuth.auth.signInWithRedirect(new auth.GoogleAuthProvider());
   }
 
   // logout del usuario

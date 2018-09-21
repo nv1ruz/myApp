@@ -42,8 +42,10 @@
 					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
 					<span class="precio">${{ prodSugerido.data.precio }}</span>
 
-					<button (click)="_cs.agregarProducto( prodSugerido.id, prodSugerido.data.nombre, prodSugerido.data.precio )">+</button>
-					<button (click)="_cs.borrarProducto( prodSugerido.id )">-</button>
+					<!-- <button (click)="_cs.agregarProducto( prodSugerido.id, prodSugerido.data.nombre, prodSugerido.data.precio )">+</button> -->
+					<!-- <button (click)="_cs.borrarProducto( prodSugerido.id )">-</button> -->
+
+					<button type="button" class="btnAgregar"><i class="fas fa-plus"></i></button>
 					
 				</div>   
 			</div>
@@ -61,6 +63,7 @@
 					<span class="nombre">{{ producto.data.nombre }}</span>      
 					<span class="ingredientes">{{ producto.data.ingredientes }}</span>      
 					<span class="precio">${{ producto.data.precio }}</span>
+					<button type="button" class="btnAgregar"><i class="fas fa-plus"></i></button>
 				</div>   
 			</div>
 		</div>
@@ -77,6 +80,7 @@
 					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
 					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
 					<span class="precio">${{ prodSugerido.data.precio }}</span>
+					<button type="button" class="btnAgregar"><i class="fas fa-plus"></i></button>
 				</div>   
 			</div>
 		</div>

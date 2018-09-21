@@ -3,8 +3,11 @@
 
 .txtComercios{
     color: #666666;
-    font-size: 14px;
-    font-weight: 500;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15pt;
     text-transform: uppercase;
     margin: 15px 0 5px 0;    
     padding: 5px 10px 3px 10px;
@@ -48,14 +51,20 @@
 }
 .comerciosCerrados .comercio .caja2 .nombre {
     color: #666666;
-    font-size: 10px;
-    font-weight: 600;
-    margin-bottom: 0;
-    text-transform: uppercase;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    text-transform: capitalize;
 }
 .comerciosCerrados .comercio .caja2 .estado {
     color: #b4b4b4;
-    font-size: 10px;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.25pt;
     text-transform: capitalize;
     float: left;
 }
@@ -77,8 +86,11 @@
 
 .txtComerciosAbiertos{
     color: #666666;
-    font-size: 14px;
-    font-weight: 500;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15pt;
     text-transform: uppercase;
     margin: 15px 0 10px 0;    
     padding: 5px 10px 3px 10px;
@@ -121,16 +133,21 @@
 }
 .comerciosAbiertos .comercio .caja2 .nombre {
     color: #666666;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 0;
-    text-transform: uppercase;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+    text-transform: capitalize;
 }
 .comerciosAbiertos .comercio .caja2 .estado {
     color: #fa3b7b;
     /* color: #b4b4b4; */
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
+    letter-spacing: 0.25pt;
     float: left;
 }
 .comerciosAbiertos .comercio .caja2 .delivery {

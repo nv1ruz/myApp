@@ -18,11 +18,14 @@
     transition: all .3s ease;
 }
 .cajaComercio .nombre{
-    color: #666666;
-    /* color: white; */
-    font-size: 18px;
-    font-weight: bold; 
-    text-transform: capitalize;
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.15pt;
+    text-transform: uppercase;
     margin-bottom: 0;
 }
 .cajaComercio .direccion{
@@ -39,21 +42,26 @@
     margin-bottom: 0;  
 }
 .cajaComercio .megusta{
-    color: #b4b4b4;
-    text-align: left!important;
+    color: #000000;
+    opacity: 0.6;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1pt;
     margin-bottom: 0;   
-    font-weight: 600;
+    text-align: left!important;
 }
 .cajaComercio .megusta p{
     margin-bottom: 0;   
 }
 .cajaComercio .estado{
-    color: #b4b4b4;
-    /* color: whitesmoke; */
+    color: #000000;
+    opacity: 0.6;
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1pt;
     margin-bottom: 0;   
-    font-weight: 600;
 }
 .cajaComercio .estado p{
     margin-bottom: 0;
@@ -62,9 +70,10 @@
 }
 
 .cajaComercio .delivery{
-    /* color: whitesmoke; */
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 0.1pt;
     margin: 0;
     text-align: right;
 }
@@ -78,7 +87,8 @@
     color: #23d32c;
 }
 .cajaComercio .delivery{
-    color: #b4b4b4;
+    color: #000000;
+    opacity: 0.6;
 }
 .cajaComercio i{
     font-size: 17px;
@@ -103,13 +113,14 @@
 }
 .tab a.item{
     color: #fa3b7b;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    font-weight: 500; 
+    font-weight: 500;
     text-align: center;
-    /* margin-bottom: 0; */
+    letter-spacing: 0.75pt;
     cursor: pointer;
     transition: all .3s ease;
-    /* border-radius: 8px; */
 }
 .tab a.item:hover{
     background-color: #fa3b7b;
@@ -124,10 +135,13 @@
 
 .txtProductos{
     color: #666666;
-    font-size: 14px;
-    font-weight: 500;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15pt;
     text-transform: uppercase;
-    margin: 0 0 5px 0;    
+    margin: 15px 0 5px 0;    
     padding: 5px 10px 3px 10px;
     /* border-bottom: 1px solid #ececec; */
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -176,43 +190,83 @@
     padding: 10px 10px 10px 5px;
 }
 .producto .caja2 .nombre{
-    color: #666666;
-    font-size: 14px;
-    font-weight: 500;
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     text-transform: capitalize;
 }
 .producto .caja2 .ingredientes {
     display: block;
-    color: #b4b4b4;
+    color: #000000;
+    opacity: 0.6;
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.25pt;
     text-transform: capitalize;
     /* margin-bottom: 10px; */
 }
 .producto .caja2 .precio {
     color: #fa3b7b;
-    font-size: 14px;
-    font-weight: bold;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
     float: left;
+}
+.producto .caja2 .btnAgregar {
+    color: #fa3b7b;
+    font-size: 12px;
+    float: right;
+    background: none;
+    border: 2px solid #fa3b7b;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
 /* + Info */
 #nav-info .collapsible-header{
-    font-weight: bold;
     text-transform: uppercase;
     color: #fa3b7b;
+
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.75pt;
 }
 #nav-info .collapsible-body{
     padding: 10px 20px 0 20px;
 }
 #nav-info .nosotros{
     text-align: center;
-    font-weight: bold;
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 #nav-info .horario span{
-    font-weight: bold;
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 #nav-info .ubicacion p{
     text-align: center;
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 #nav-info .ubicacion img{
     width: 100%;
@@ -220,6 +274,14 @@
 }
 .contacto i{
     font-size: 17px;
+}
+#nav-info .contacto p{
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 .contacto i.fa-whatsapp{
     color: #23d32c;

@@ -15,30 +15,30 @@
         [closeOnClickBackdrop]='true'>
         <div class="sidebar"  *ngIf="_fs.usuario.uid">
             <div class="row cajaUsuario align-items-center">
-                <div class="col-4">
+                <div class="col-auto p-0">
                     <img class="foto" src="{{ _fs.usuario.foto }}">
                 </div>
                 <div class="col-8">
-                    <p class="nombre">{{ _fs.usuario.nombre }}</p>
+                    <p class="nombre">¡Hola {{ _fs.usuario.nombre }}!</p>
                     <p class="email">{{ _fs.usuario.email }}</p>
                 </div>
             </div>
-            <div class="caja">
-                <a [routerLink]="['/home']"><i class="fas fa-home"></i><span>Página principal</span></a>
+            <div class="caja" [routerLink]="['/home']">
+                <a><i class="fas fa-home"></i><span>Inicio</span></a>
+            </div>
+            <!-- <hr> -->
+            <div class="caja" [routerLink]="['/notificaciones']">
+                <a><i class="fas fa-bell"></i><span>Notificaciones</span></a>
+            </div>
+            <div class="caja" [routerLink]="['/favoritos']">
+                <a><i class="fas fa-heart"></i><span>Favoritos</span></a>
+            </div>
+            <div class="caja" [routerLink]="['/micuenta']">
+                <a><i class="fas fa-user"></i><span>Mi cuenta</span></a>
             </div>
             <hr>
-            <div class="caja">
-                <a href="#"><i class="fas fa-shipping-fast"></i><span>Item 1</span></a>
-            </div>
-            <div class="caja">
-                <a href="#"><i class="fas fa-shipping-fast"></i><span>Item 2</span></a>
-            </div>
-            <div class="caja">
-                <a href="#"><i class="fas fa-shipping-fast"></i><span>Item 3</span></a>
-            </div>
-            <hr>
-            <div class="caja">
-                <a (click)="_fs.logout()" [routerLink]="['/login']"><i class="fas fa-sign-out-alt"></i><span>Cerrar sesión</span></a>
+            <div class="caja" (click)="_fs.logout()" [routerLink]="['/login']">
+                <a><i class="fas fa-power-off"></i><span>Cerrar sesión</span></a>
             </div>     
             <hr>
             <div class="caja">
