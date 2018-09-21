@@ -227,6 +227,16 @@
     cursor: pointer;
     margin-right: 10px;
 }
+.producto .caja2 .boton-modal{
+    text-align: right;
+}
+.producto .caja2 .btn-floating{
+    height: 30px;
+    width: 30px;
+}
+.producto .caja2 .precio-cant{
+    margin: 5px 0 0 0;
+}
 
 /* + Info */
 #nav-info .collapsible-header{
@@ -292,4 +302,82 @@
 }
 .contacto i.fa-facebook{
     color: rgb(51, 51, 212);
+}
+
+/* Modal */
+
+div.modal {
+    text-align: center;
+    width: 90%;
+    margin-top: 10px;
+    overflow-y: hidden!important;
+    height: auto;
+    max-height: 72%;
+}
+
+.modal-content{
+    padding: 0;
+    border: none;
+}
+.modal-content .modal-header{
+    padding: 0 5px 0 5px;
+    border-bottom: none;
+}
+.modal-content .modal-header img{
+    margin: 0 auto;
+    width: 100%;
+}
+.modal-content .modal-title{
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+}
+.modal-content .modal-body{
+    padding: 0 5px 5px 5px;
+}
+.modal .modal-content .row{
+    margin-bottom: 0;
+}
+.modal .modal-content .row .input-field{
+    margin-bottom: 5px;
+}
+div.modal .modal-content p.precio{
+    color: green;
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 0;
+    text-align: left;
+}
+div.modal .modal-content p.descripcion{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: left;
+}
+
+.modal .modal-content .cantidad {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.modal .modal-content .cantidad .test{
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 0;
+    height: auto;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.modal .modal-content .cantidad .helper-text{
+    color: #838282;
+}
+.modal .modal-content .modal-body .textarea-descripcion{
+    padding: 0!important;
+}
+.modal .modal-content button{
+    width: 97%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-transform: uppercase;
 }

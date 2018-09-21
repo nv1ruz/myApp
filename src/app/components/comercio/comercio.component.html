@@ -29,6 +29,7 @@
 <div class="tab-content" id="nav-tabContent">
 	<div class="tab-pane fade show active" id="nav-sugeridos" role="tabpanel">
 			
+		<!-- Listado Productos -->
 		<p class="txtProductos">Pizzas</p>
 		<div class="container-fluid animated fadeIn contenedor">
 			<div class="producto row align-items-center"  *ngFor="let prodSugerido of this.productosSugeridos">  
@@ -40,17 +41,25 @@
 				<div class="caja2 col">
 					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
 					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
-					<span class="precio">${{ prodSugerido.data.precio }}</span>
-
+					<div class="precio-cant">
+						<div class="col s6 ">
+							<span class="precio">${{ prodSugerido.data.precio }}</span>
+						</div>
+						<div class="col s6 boton-modal">
+							<!-- <a class="btn-floating btn-small waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add_shopping_cart</i></a> -->
+							<button type="button" class="btn-floating btn-small waves-effect waves-light red" data-toggle="modal" data-target="#modal1">
+								<i class="material-icons">add_shopping_cart</i>
+							</button>
+						</div>
+					</div>
 					<!-- <button (click)="_cs.agregarProducto( prodSugerido.id, prodSugerido.data.nombre, prodSugerido.data.precio )">+</button> -->
 					<!-- <button (click)="_cs.borrarProducto( prodSugerido.id )">-</button> -->
-
-					<button type="button" class="btnAgregar"><i class="fas fa-plus"></i></button>
-					
+					<!-- <button type="button" class="btnAgregar"><i class="fas fa-plus"></i></button> -->
 				</div>   
 			</div>
 		</div>
 
+		
 		<p class="txtProductos">Lomos</p>
 		<div class="container-fluid animated fadeIn contenedor">
 			<div class="producto row align-items-center"  *ngFor="let producto of this.productos">  
@@ -62,8 +71,14 @@
 				<div class="caja2 col">
 					<span class="nombre">{{ producto.data.nombre }}</span>      
 					<span class="ingredientes">{{ producto.data.ingredientes }}</span>      
-					<span class="precio">${{ producto.data.precio }}</span>
-					<button type="button" class="btnAgregar"><i class="fas fa-plus"></i></button>
+					<div class="precio-cant">
+						<div class="col s6">
+							<span class="precio">${{ producto.data.precio }}</span>
+						</div>
+						<div class="col s6 boton-modal">
+							<a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+						</div>
+					</div>
 				</div>   
 			</div>
 		</div>
@@ -79,13 +94,20 @@
 				<div class="caja2 col">
 					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
 					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
-					<span class="precio">${{ prodSugerido.data.precio }}</span>
-					<button type="button" class="btnAgregar"><i class="fas fa-plus"></i></button>
+					<div class="precio-cant">
+						<div class="col s6">
+							<span class="precio">${{ prodSugerido.data.precio }}</span>
+						</div>
+						<div class="col s6 boton-modal">
+							<a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
+						</div>
+					</div>
 				</div>   
 			</div>
 		</div>
 	</div>
 	
+	<!-- Listado Informacion -->
 	<div class="tab-pane fade" id="nav-info">
 		<div class="info">
 			<ul class="collapsible">
@@ -138,3 +160,71 @@
 	</div>
 </div>
 
+<!-- Modal  -->
+<!-- <div id="modal1" class="modal">
+	<div class="card">
+		<div class="card-image">
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzDx5jEHWRGHe-MbHWUY2_w4YwRbpdNeI6tPxhg6NM9rbHpTpi">
+			<span class="card-title">Lomo Especial con Papas</span>
+		</div>
+		<div class="card-content">
+			<p class="precio">$130</p>
+			<p>lomo, lechuga, tomate, pepino, jamon, queso, papas</p>
+			<hr>
+			<div class='row'>
+				<div class='input-field col s12'>
+					<textarea class="materialize-textarea" data-length="120" name='comentario' id='comentario'></textarea>
+					<label for='comentario'>Comentario (opcional)</label>
+				</div>
+			</div>
+			<div class="row cantidad">
+				<div class="col s3">
+						<a class="down btn-floating waves-effect waves-light red"><i class="material-icons">remove</i></a> 
+					</div>
+				<div class="col s6">
+					<input type="text" class="test" value="1" disabled/>
+					<span class="helper-text">Cantidad (max: 10)</span>
+				</div>
+				<div class="col s3">
+					<a class="up btn-floating waves-effect waves-light red"><i class="material-icons">add</i></a> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<p class="modal-title">Lomo Especial con Papas</p>
+			<div class="modal-header">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzDx5jEHWRGHe-MbHWUY2_w4YwRbpdNeI6tPxhg6NM9rbHpTpi">
+			</div>
+			<div class="modal-body">
+				<p class="precio">$130</p>
+				<p class="descripcion">lomo, lechuga, tomate, pepino, jamon, queso, papas</p>
+				
+				<div class="row cantidad">
+					<div class="col-3">
+							<a class="down btn-floating waves-effect waves-light red"><i class="material-icons">remove</i></a> 
+						</div>
+					<div class="col-6">
+						<input type="text" class="test" value="1" disabled/>
+						<span class="helper-text">Cantidad (max: 10)</span>
+					</div>
+					<div class="col-3">
+						<a class="up btn-floating waves-effect waves-light red"><i class="material-icons">add</i></a> 
+					</div>
+				</div>
+				
+				<div class='textarea-descripcion'>
+					<textarea rows="2" maxlength="120" data-length="120" name='comentario' id='comentario' placeholder="Comentario (opcional)"></textarea>
+				</div>
+			</div>
+			<button type="button" class="btn-small waves-effect waves-light pink">
+					Agregar al carrito
+			</button>
+		</div>
+		
+		
+	</div>
+</div>

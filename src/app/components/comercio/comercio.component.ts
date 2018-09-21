@@ -28,6 +28,7 @@ export class ComercioComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     // +info
     $(document).ready(function(){
       $('.collapsible').collapsible();
@@ -79,6 +80,36 @@ export class ComercioComponent implements OnInit {
       })
       // console.log(this.productosSugeridos);
     });
+
+    // Modal
+    $('#modal1').on('shown.bs.modal', function () {
+      $('#modal1').trigger('focus')
+    })
+
+      //Modal: Contador Comentario
+      $(document).ready(function() {
+        $('input#input_text, textarea#comentario').characterCounter();
+      });  
+
+      //Modal: Cantidad Modal
+      $(document).ready( function() { 
+        var el = $('.test'); 
+        function change( amt ) { 
+        el.val( parseInt( el.val(), 10 ) + amt ); 
+        } 
+        $('.up').click( function() { 
+          if(el.val()<10){
+            change( 1 );
+          } else{
+          }
+        } ); 
+        $('.down').click( function() { 
+          if(el.val()>1){
+            change( -1 ); 
+          }
+        } ); 
+      } ); 
+
 
 
   }
