@@ -81,8 +81,13 @@ export class ComercioComponent implements OnInit {
       // console.log(this.productosSugeridos);
     });
 
-    // Modal
-    $('#modal1').on('shown.bs.modal', function () {
+    // Modal Boostrap
+    // $('#modal1').on('shown.bs.modal', function () { 
+    // });
+
+    //Modal Materialize
+    $(document).ready(function(){
+      $('.modal').modal();
     });
 
       //Modal: Contador Comentario
