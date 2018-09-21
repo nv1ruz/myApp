@@ -83,8 +83,7 @@ export class ComercioComponent implements OnInit {
 
     // Modal
     $('#modal1').on('shown.bs.modal', function () {
-      $('#modal1').trigger('focus')
-    })
+    });
 
       //Modal: Contador Comentario
       $(document).ready(function() {

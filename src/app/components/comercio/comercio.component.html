@@ -1,13 +1,14 @@
 
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
+	<a class="btn-floating waves-effect waves-light pink"><i class="material-icons">shopping_cart</i></a>
 	<img src="{{ comercio.img }}">
 	<p class="nombre">{{ comercio.nombre }} </p>
 	<!-- <p class="contacto">{{ comercio.contacto }}</p>
 	<p class="direccion">{{ comercio.direccion }}</p> -->
 	<div class="row align-items-center m-0">
 		<div class="col-4 megusta">
-			<p><i class="fas fa-thumbs-up"></i> 35M</p>
+			<p><i class="fas fa-heart"></i> 35M</p>
 		</div>
 		<div class="col-4 estado">
 			<p> {{ comercio.estado }}</p>
@@ -161,37 +162,7 @@
 </div>
 
 <!-- Modal  -->
-<!-- <div id="modal1" class="modal">
-	<div class="card">
-		<div class="card-image">
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzDx5jEHWRGHe-MbHWUY2_w4YwRbpdNeI6tPxhg6NM9rbHpTpi">
-			<span class="card-title">Lomo Especial con Papas</span>
-		</div>
-		<div class="card-content">
-			<p class="precio">$130</p>
-			<p>lomo, lechuga, tomate, pepino, jamon, queso, papas</p>
-			<hr>
-			<div class='row'>
-				<div class='input-field col s12'>
-					<textarea class="materialize-textarea" data-length="120" name='comentario' id='comentario'></textarea>
-					<label for='comentario'>Comentario (opcional)</label>
-				</div>
-			</div>
-			<div class="row cantidad">
-				<div class="col s3">
-						<a class="down btn-floating waves-effect waves-light red"><i class="material-icons">remove</i></a> 
-					</div>
-				<div class="col s6">
-					<input type="text" class="test" value="1" disabled/>
-					<span class="helper-text">Cantidad (max: 10)</span>
-				</div>
-				<div class="col s3">
-					<a class="up btn-floating waves-effect waves-light red"><i class="material-icons">add</i></a> 
-				</div>
-			</div>
-		</div>
-	</div>
-</div> -->
+
 <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -220,11 +191,12 @@
 					<textarea rows="2" maxlength="120" data-length="120" name='comentario' id='comentario' placeholder="Comentario (opcional)"></textarea>
 				</div>
 			</div>
-			<button type="button" class="btn-small waves-effect waves-light pink">
-					Agregar al carrito
-			</button>
+			<div class="modal-footer">
+					<button type="button" class="btn-small waves-effect waves-light pink">
+							Agregar al carrito
+					</button>
+			</div>
 		</div>
-		
-		
 	</div>
 </div>
+
