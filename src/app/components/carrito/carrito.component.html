@@ -1,11 +1,14 @@
 <div class="cajaCarrito">
+	<a class="btn-floating waves-effect waves-light pink"><i class="material-icons">close</i></a>
 	<p class="titulo">Mi Pedido </p>
 	<div class="carrito-header">
 		<img src="http://guiaelasesor.com/tucuman/wp-content/uploads/2012/06/940-LEGUI-300x275.jpg" alt="">
 		<p class="nombre">Pizzeria "Don Luna"</p>
 		<p class="estado">Abierto</p>
 	</div>
+	
 	<div class="carrito-body">
+		<p class="txtProductos">Productos</p>
 		<ul class="collapsible">
 			<li>
 				<div class="collapsible-header row">
@@ -21,7 +24,7 @@
 					<!-- <p><span class="cant-numero">2</span> Pizza Mozzarella</p> -->
 				</div>
 				<div class="collapsible-body">
-					<div class="container-fluid animated fadeIn contenedor">
+					<div class=" animated fadeIn contenedor">
 						<div class="producto row align-items-center">  
 							<div class="caja1 col-auto">
 								<div class="foto">
@@ -29,15 +32,16 @@
 								</div>
 							</div>
 							<div class="caja2 col">
-								<p class="nombre">Pizza Mozzarella</p>      
+								<!-- <p class="nombre">Pizza Mozzarella</p>       -->
 								<p class="ingredientes">Mozzarela, Aceituna, Orégano</p>      
 								<div class="precio-cant">
 									<div class="col s2 precio">
 										<span>$120</span>
 									</div>
 									<div class="col s10 cantidad">
-										<a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">delete_forever
-											</i></a>
+										<a class="btn-floating btn-small waves-effect waves-light red">
+											<i class="material-icons">delete_forever</i>
+										</a>
 									</div>
 								</div>
 							</div>   
@@ -59,19 +63,24 @@
 					<!-- <p><span class="cant-numero">2</span> Pizza Mozzarella</p> -->
 				</div>
 				<div class="collapsible-body">
-					<div class="container-fluid animated fadeIn contenedor">
+					<div class="animated fadeIn contenedor">
 						<div class="producto row align-items-center">  
 							<div class="caja1 col-auto">
 								<div class="foto">
-									<img src="https://previews.123rf.com/images/ryzhkov86/ryzhkov861308/ryzhkov86130800096/21472186-pizza-con-jam%C3%B3n-salami-tomates-y-queso-mozzarella.jpg" width="100">
+									<img src="https://cdn77.gurudeofertas.com/image.php?image=/images/offers/2c5a9615bcafd3d65c50a589574b3952.jpg" width="100">
 								</div>
 							</div>
 							<div class="caja2 col">
-								<p class="nombre">Pizza Mozzarella</p>      
-								<p class="ingredientes">Mozzarela, Aceituna, Orégano</p>      
+								<!-- <p class="nombre">Lomo Especial con Papas</p>       -->
+								<p class="ingredientes">Lomo, queso, lechuga, tomate, huevo, papas</p>      
 								<div class="precio-cant">
-									<div class="col s6">
-										<span class="precio">$100</span>
+									<div class="col s2 precio">
+										<span>$200</span>
+									</div>
+									<div class="col s10 cantidad">
+										<a class="btn-floating btn-small waves-effect waves-light red">
+											<i class="material-icons">delete_forever</i>
+										</a>
 									</div>
 								</div>
 							</div>   
@@ -93,7 +102,7 @@
 					<!-- <p><span class="cant-numero">2</span> Pizza Mozzarella</p> -->
 				</div>
 				<div class="collapsible-body">
-					<div class="container-fluid animated fadeIn contenedor">
+					<div class="animated fadeIn contenedor">
 						<div class="producto row align-items-center">  
 							<div class="caja1 col-auto">
 								<div class="foto">
@@ -101,11 +110,16 @@
 								</div>
 							</div>
 							<div class="caja2 col">
-								<p class="nombre">Pizza Mozzarella</p>      
-								<p class="ingredientes">Mozzarela, Aceituna, Orégano</p>      
+								<!-- <p class="nombre">Pizza Mozzarella</p>       -->
+								<p class="ingredientes">Mozzarela, Aceituna, Orégano </p>      
 								<div class="precio-cant">
-									<div class="col s6">
-										<span class="precio">$100</span>
+									<div class="col s2 precio">
+										<span>$120</span>
+									</div>
+									<div class="col s10 cantidad">
+										<a class="btn-floating btn-small waves-effect waves-light red">
+											<i class="material-icons">delete_forever</i>
+										</a>
 									</div>
 								</div>
 							</div>   
@@ -114,25 +128,61 @@
 				</div>
 			</li>
 		</ul>
-		<ul class="collapsible">
-			<li class="active">
+		<p class="txtProductos">Forma de Entrega</p>
+		<ul class="form-entrega">
+			<li>
 				<div class="collapsible-header row">
 					<div class="col-1 cant-prod">
 						<i class="material-icons">motorcycle</i>
 					</div>
-					<div class="col-8 nombre-prod">
-						<p>Delivery</p>
+					<div class="col-9 entrega-prod input-field">
+						<select>
+							<option value="" disabled selected>Selecciona la forma de entrega</option>
+							<option value="1">Delivery</option>
+							<option value="2">Retiro por el local</option>
+						</select>
 					</div>
-					<div class="col-3 prec-prod">
+					<div class="col-2 prec-prod">
 						<p>$ 30</p>
 					</div>
 				</div>
-				<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+				<!-- <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div> -->
 			</li>
 		</ul>
+
+		<p class="txtProductos">Dirección</p>
+		<ul class="form-entrega">
+			<li>
+				<div class="collapsible-header row">
+					<div class="col-1 cant-prod">
+						<i class="material-icons">location_on</i>
+					</div>
+					<div class="col-11 entrega-prod input-field">
+						<select>
+							<option value="" disabled selected>Selecciona la dirección</option>
+							<option value="1">Victoria Romero, 221</option>
+							<option value="2">Av. Luis Vernet, 1230</option>
+							<option value="3">Santa Rosa, S/N</option>
+						</select>
+					</div>
+					<div class="col-2 prec-prod">
+						<p></p>
+					</div>
+				</div>
+			</li>
+		</ul>
+
+		<div class="row total">
+			<div class="col-9 total-titulo">
+				<p>Total</p>
+			</div>
+			<div class="col-3 total-numero">
+				<p>$ 1525</p>
+			</div>
+		</div>
 		
 	</div>
-	<div class="carrito-footer">
-
+	<div class="boton">
+		<span>Enviar Pedido</span>
 	</div>
 </div>

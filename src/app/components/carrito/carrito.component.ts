@@ -15,6 +15,10 @@ export class CarritoComponent implements OnInit {
       $('.collapsible').collapsible();
     });
 
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+
   }
 
 }

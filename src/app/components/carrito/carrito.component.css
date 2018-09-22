@@ -1,4 +1,15 @@
 
+.cajaCarrito > a{
+    position: absolute;
+    top: 0.55%;
+    right: 5%;
+}
+.cajaCarrito > a i {
+    background-color: #fff;
+    color: #fa3b7b;
+    font-size: 20px;
+    font-weight: bold;
+}
 /* Carrito Header */
 .cajaCarrito{
     text-align: center;
@@ -9,8 +20,8 @@
     margin: 0;
 }
 .cajaCarrito .carrito-header {
-    border-bottom: 2px solid #e1e1e1;
-    margin: 5px auto;
+    border-bottom: 2px solid #fe3918;
+    margin: 5px auto 10px auto;
 }
 .cajaCarrito .titulo {
     font-size: 25px;
@@ -35,8 +46,24 @@
 }
 
 /* Carrito Body */
+.txtProductos{
+    color: #fe3918;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.15pt;
+    text-transform: uppercase;
+    margin: 15px 0 5px 0;    
+    padding: 5px 10px 3px 10px;
+    /* border-bottom: 1px solid #ececec; */
+    /* box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2); */
+    text-align: left;
+}
+
 .cajaCarrito .carrito-body .collapsible{
     margin-top: 0;
+    box-shadow: none;
 }
 .cajaCarrito .carrito-body .collapsible-header{
     padding: 5px;
@@ -47,7 +74,7 @@
     border-right: 2px solid #e1e1e1;
     padding: 0;
     text-align: center;
-    color: #fe3918;
+    color: #666;
     font-weight: 600;
 }
 .cajaCarrito .carrito-body .collapsible-header .nombre-prod{
@@ -59,6 +86,7 @@
     padding: 0 5px 0 0;
     font-size: 14px;
     font-weight: 650;
+    color: #666;
 }
 .cajaCarrito .carrito-body .collapsible-body {
     padding: 5px;
@@ -73,4 +101,64 @@
 }
 .cajaCarrito .carrito-body .collapsible-body .precio-cant .cantidad{
     text-align: right;
+}
+.cajaCarrito .carrito-body .collapsible-body .producto{
+    margin-bottom: 5px;
+}
+
+
+/* Forma de Entrega */
+.carrito-body .form-entrega .collapsible-header{
+    border-top: 1px solid #ddd;
+}
+.carrito-body .form-entrega .entrega-prod {
+    margin: -8px auto;
+    align-content: center;
+}
+
+/* Total */
+.carrito-body .total{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #e1e1e1;
+    margin-top: 7%;
+    padding: 5px;
+}
+.carrito-body .total .total-titulo{
+    padding: 0;
+    color: #fe3918;
+}
+.carrito-body .total .total-numero{
+    border-left: 2px solid #e1e1e1;
+    padding: 0;
+    color: #666;
+}
+.carrito-body .total .total-numero p{
+    text-align: center!important;
+}
+
+/* boton */
+.boton{
+    margin: 20px 15%;
+    height: 40px;
+    border: 1px solid #fa3b7b;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.boton span{
+    font-weight: bold;
+    color: #fa3b7b;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.boton:hover,
+.boton span:hover{
+    background-color: #fa3b7b;
+    color: #ffffff;
 }
