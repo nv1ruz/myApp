@@ -1,0 +1,76 @@
+
+/* Carrito Header */
+.cajaCarrito{
+    text-align: center;
+    padding: 0 0 5px 0;
+    height: auto;
+}
+.cajaCarrito p{
+    margin: 0;
+}
+.cajaCarrito .carrito-header {
+    border-bottom: 2px solid #e1e1e1;
+    margin: 5px auto;
+}
+.cajaCarrito .titulo {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e1e1e1;
+    color: #fe3918;
+}
+.cajaCarrito .carrito-header img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fe3918;
+    border-radius: 50%;
+}
+.cajaCarrito .carrito-header .nombre {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666464;
+}
+.cajaCarrito .carrito-header .estado{
+    color: #858282;
+}
+
+/* Carrito Body */
+.cajaCarrito .carrito-body .collapsible{
+    margin-top: 0;
+}
+.cajaCarrito .carrito-body .collapsible-header{
+    padding: 5px;
+    font-size: 17px;
+    margin: 0;
+}
+.cajaCarrito .carrito-body .collapsible-header .cant-prod{
+    border-right: 2px solid #e1e1e1;
+    padding: 0;
+    text-align: center;
+    color: #fe3918;
+    font-weight: 600;
+}
+.cajaCarrito .carrito-body .collapsible-header .nombre-prod{
+    text-align: left;
+    padding: 0 0 0 5px;
+}
+.cajaCarrito .carrito-body .collapsible-header .prec-prod{
+    text-align: right;
+    padding: 0 5px 0 0;
+    font-size: 14px;
+    font-weight: 650;
+}
+.cajaCarrito .carrito-body .collapsible-body {
+    padding: 5px;
+}
+.cajaCarrito .carrito-body .collapsible-body .caja2{
+    text-align: left;
+    padding: 0;
+}
+.cajaCarrito .carrito-body .collapsible-body .precio{
+    font-size: 20px;
+    padding: 0;
+}
+.cajaCarrito .carrito-body .collapsible-body .precio-cant .cantidad{
+    text-align: right;
+}

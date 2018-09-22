@@ -1,7 +1,7 @@
 
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
-	<a class="btn-floating waves-effect waves-light pink"><i class="material-icons">shopping_cart</i></a>
+	<a class="btn-floating waves-effect waves-light pink" [routerLink]="['/carrito']"><i class="material-icons">shopping_cart</i></a>
 	<img src="{{ comercio.img }}">
 	<p class="nombre">{{ comercio.nombre }} </p>
 	<!-- <p class="contacto">{{ comercio.contacto }}</p>
@@ -47,10 +47,10 @@
 							<span class="precio">${{ prodSugerido.data.precio }}</span>
 						</div>
 						<div class="col s6 boton-modal">
-							<a class="btn-floating btn-small waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add_shopping_cart</i></a>
-							<!-- <button type="button" class="btn-floating btn-small waves-effect waves-light red" data-toggle="modal" data-target="#modal1">
+							<!-- <a class="btn-floating btn-small waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add_shopping_cart</i></a> -->
+							<button type="button" class="btn-floating btn-small waves-effect waves-light red" data-toggle="modal" data-target="#modal1">
 								<i class="material-icons">add_shopping_cart</i>
-							</button> -->
+							</button>
 						</div>
 					</div>
 					<!-- <button (click)="_cs.agregarProducto( prodSugerido.id, prodSugerido.data.nombre, prodSugerido.data.precio )">+</button> -->
@@ -163,7 +163,7 @@
 
 <!-- Modal  Boostrap-->
 
-<!-- <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<p class="modal-title">Lomo Especial con Papas</p>
@@ -198,10 +198,10 @@
 			</div>
 		</div>
 	</div>
-</div> -->
+</div>
 
 <!-- Modal Materialize -->
-<div id="modal1" class="modal">
+<!-- <div id="modal1" class="modal">
 	<div class="card">
 		<div class="card-image">
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzDx5jEHWRGHe-MbHWUY2_w4YwRbpdNeI6tPxhg6NM9rbHpTpi">
@@ -212,7 +212,6 @@
 			<p class="precio">$100</p>
 			<p>queso, huevo frito, papas fritas, salsa golf, orégano, ajo, perejil, tomate, lechuga</p>
 			<hr>
-			<!-- <textarea name="aclaracion" class="materialize-textarea" data-length="120" id="aclaracion" cols="30" rows="10" placeholder="Añadir aclaración (opcional)"></textarea> -->
 			<div class='row'>
 				<div class='input-field col s12'>
 					<textarea class="materialize-textarea" data-length="120" name='comentario' id='comentario'></textarea>
@@ -232,8 +231,7 @@
 				</div>
 			</div>
 			
-			<!-- <a class="waves-effect waves-light btn"><i class="material-icons left">add_shopping_cart</i>Agregar</a> -->
 		</div>
 	</div>
-</div>
+</div> -->
 

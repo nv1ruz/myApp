@@ -82,13 +82,13 @@ export class ComercioComponent implements OnInit {
     });
 
     // Modal Boostrap
-    // $('#modal1').on('shown.bs.modal', function () { 
-    // });
+    $('#modal1').on('shown.bs.modal', function () { 
+    });
 
     //Modal Materialize
-    $(document).ready(function(){
-      $('.modal').modal();
-    });
+    // $(document).ready(function(){
+    //   $('.modal').modal();
+    // });
 
       //Modal: Contador Comentario
       $(document).ready(function() {
