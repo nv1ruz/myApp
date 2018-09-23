@@ -99,6 +99,9 @@
     font-size: 20px;
     padding: 0;
 }
+.cajaCarrito .carrito-body .collapsible-body .precio-cant{
+    margin-top: 5px;
+}
 .cajaCarrito .carrito-body .collapsible-body .precio-cant .cantidad{
     text-align: right;
 }
@@ -161,4 +164,22 @@
 .boton span:hover{
     background-color: #fa3b7b;
     color: #ffffff;
+}
+
+/* Cantidad Editar */
+.cantidad {
+    text-align: center!important;
+    margin: 0 auto;
+}
+.cantidad .test{
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 0;
+    height: auto;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    color: black;
+    font-weight: 550;
+    font-size: 17px;
+    width: 40px;
 }
