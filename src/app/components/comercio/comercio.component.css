@@ -9,14 +9,13 @@
 }
 .cajaComercio a{
     position: absolute;
-    float: left;
-    top: 0.55%;
+    float: left;    
+    top: 1.75%;
     right: 4%;
 }
 .cajaComercio a i{
-    background-color: #fff;
-    color: #fa3b7b;
-    font-size: 20px;
+    color: #fff;
+    font-size: 18px;
 }
 .cajaComercio img{
     width: 100%;
@@ -237,7 +236,13 @@
     border-radius: 50px;
     cursor: pointer;
     margin-right: 10px;
+    transition: all .3s ease;
 }
+    .producto .caja2 .btnAgregar:hover{
+        color: #ffffff;
+        background: #fa3b7b;
+        border: 2px solid #fa3b7b;
+    }
 .producto .caja2 .boton-modal{
     text-align: right;
 }
@@ -315,135 +320,137 @@
     color: rgb(51, 51, 212);
 }
 
-/* Modal Boostrap*/
 
-div.modal {
+/* modal bootstrap BRAIAN */
+#modalProducto{
+    padding-top: 50px;
+}
+#modalProducto .modal-header{
+    display: block;
+    padding: 5px 10px;
+}
+#modalProducto .modal-content{
+    border-radius: 3px;
     text-align: center;
-    width: 90%;
-    margin-top: 10px;
-    overflow-y: hidden!important;
-    height: auto;
-    max-height: 72%;
 }
-
-.modal-content{
-    padding: 0;
-    border: none;
-}
-.modal-content .modal-header{
-    padding: 0 5px 0 5px;
-    border-bottom: none;
-}
-.modal-content .modal-header img{
-    margin: 0 auto;
+#modalProducto.fade{
     width: 100%;
 }
-.modal-content .modal-title{
-    font-weight: bold;
-    color: #666666;
-    text-align: center;
+#modalProducto.fade.show {
+    max-height: 100%;
+    width: 100%;
 }
-.modal-content .modal-body{
-    padding: 0 5px 5px 5px;
+#modalProducto .foto img{
+    width: 90%;
+    height: 200px;
+    border-radius: 3px;
 }
-.modal .modal-content .row{
-    margin-bottom: 0;
+#modalProducto .nom p{
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 5px 0 0 0;
 }
-.modal .modal-content .row .input-field{
-    margin-bottom: 5px;
+#modalProducto .ing p{
+    color: #000000;
+    opacity: 0.6;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.25pt;
+    text-transform: capitalize;
+    margin: 0 0 10px 0;
 }
-div.modal .modal-content p.precio{
-    color: green;
-    font-weight: bold;
-    font-size: 19px;
-    margin-bottom: 0;
-    text-align: left;
+#modalProducto .cant button{
+    color: #fa3b7b;
+    width: 26.5px;
+    height: 26px;
+    font-size: 12px;
+    /* float: right; */
+    background: none;
+    /* border: 2px solid #ececec; */
+    border: none;
+    border-radius: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
-div.modal .modal-content p.descripcion{
-    margin-bottom: 15px;
-    border-bottom: 1px solid #e1e1e1;
-    text-align: left;
-}
-
-.modal .modal-content .cantidad {
-    text-align: center;
+#modalProducto .cant{
     margin-bottom: 10px;
 }
-.modal .modal-content .cantidad .test{
-    text-align: center;
-    border-bottom: none;
-    margin-bottom: 0;
-    height: auto;
-    border: 2px solid #e1e1e1;
-    border-radius: 10px;
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-}
-.modal .modal-content .cantidad .helper-text{
-    color: #838282;
-}
-.modal .modal-content .modal-body .textarea-descripcion{
-    padding: 0!important;
-}
-.modal .modal-content button{
-    width: 97%;
-    margin: 0 auto;
+#modalProducto .cant input{
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    text-transform: uppercase;
-}
+    font-weight: 400;
 
-/* Modal Materialize */
-/* div.modal {
-    border: 5px solid #fe4918;
-    width: 95%;
-    height: auto;
-    max-height: none;
+    background: none;
+    text-align: center;
+    width: 60px;
+    border: none;
+    border-radius: 5px;
 }
-.card{
+#modalProducto .nota{    
+    /* padding-top: 5px; */
+    /* border-top: 1px solid #ececec; */
+    margin-bottom: 10px;
+}
+#modalProducto .nota textarea{
+    width: 100%;
+    margin: 0px auto;
+    /* padding: 0 20px; */
+    text-align: center;
+
+    color: #000000;
+    opacity: 0.6;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25pt;
+}
+    .form-control:focus{
+        border-color: #fa3b7b;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(255, 112, 236, 0.25);
+    }
+
+#modalProducto .modal-footer .pre p{
+    color: #fa3b7b;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
     margin: 0;
-    padding: 0;
-    height: auto;
-}
-.card-image{
     width: auto;
 }
-.card-content{
-    padding: 10px!important;
-}
-.modal .card-content .row{
-    margin-bottom: 0;
-}
-.modal .card-content .row .input-field{
-    margin-bottom: 5px;
-}
-div.modal .card-content p.precio{
-    color: green;
-    font-weight: bold;
-    font-size: 19px;
-}
-.card-title{
-    font-weight: bold;
-    -webkit-text-fill-color: #fff;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 0.1px;
-    line-height: 1.1;
-}
-.modal .card-content .cantidad {
+#modalProducto .modal-footer button{
+    width: auto;
+    height: 30px;
+    color: #fa3b7b;
+    background: none;
+    border: none;
+    margin: 0 0 0 20%;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
     text-align: center;
+    letter-spacing: 0.75pt;
+    transition: all .3s ease;
+    border-radius: 3px;
 }
-.modal .card-content .cantidad .test{
-    text-align: center;
-    border-bottom: none;
-    margin-bottom: 0;
-    height: auto;
-    border: 2px solid #e1e1e1;
-    border-radius: 10px;
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
+#modalProducto .modal-footer button:hover{
+    background-color: #fa3b7b;
+    color: #ffffff!important;
+    height: 30px;
+    border-radius: 3px;
 }
-.modal .card-content .cantidad .helper-text{
-    color: #757373;
-} */
-

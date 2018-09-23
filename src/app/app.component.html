@@ -23,21 +23,21 @@
                     <p class="email">{{ _fs.usuario.email }}</p>
                 </div>
             </div>
-            <div class="caja" [routerLink]="['/home']">
+            <div class="caja" [routerLink]="['/home']" (click)="_toggleOpened()">
                 <a><i class="fas fa-home"></i><span>Inicio</span></a>
             </div>
             <!-- <hr> -->
-            <div class="caja" [routerLink]="['/notificaciones']">
+            <div class="caja" [routerLink]="['/notificaciones']" (click)="_toggleOpened()">
                 <a><i class="fas fa-bell"></i><span>Notificaciones</span></a>
             </div>
-            <div class="caja" [routerLink]="['/favoritos']">
+            <div class="caja" [routerLink]="['/favoritos']" (click)="_toggleOpened()">
                 <a><i class="fas fa-heart"></i><span>Favoritos</span></a>
             </div>
-            <div class="caja" [routerLink]="['/micuenta']">
+            <div class="caja" [routerLink]="['/micuenta']" (click)="_toggleOpened()">
                 <a><i class="fas fa-user"></i><span>Mi cuenta</span></a>
             </div>
             <hr>
-            <div class="caja" (click)="_fs.logout()" [routerLink]="['/login']">
+            <div class="caja" (click)="_fs.logout()" [routerLink]="['/login']" (click)="_toggleOpened()">
                 <a><i class="fas fa-power-off"></i><span>Cerrar sesión</span></a>
             </div>     
             <hr>
@@ -54,7 +54,7 @@
     <div ng-sidebar-content>
         <div class="nav">
             <button class="btnMenu" *ngIf="_fs.usuario.uid" (click)="_toggleOpened()"><i class="fas fa-bars"></i></button>
-            <span class="titulo" [routerLink]="['/home']">miApp</span>
+            <span class="titulo" [routerLink]="['/home']">MyApp</span>
             <button class="btnIngresar" *ngIf="!_fs.usuario.uid" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
         </div>
         

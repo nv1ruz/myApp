@@ -1,7 +1,7 @@
 
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
-	<a class="btn-floating waves-effect waves-light pink" [routerLink]="['/carrito']"><i class="material-icons">shopping_cart</i></a>
+	<a class="btnCarrito" [routerLink]="['/carrito']"><i class="fas fa-shopping-cart"></i></a>
 	<img src="{{ comercio.img }}">
 	<p class="nombre">{{ comercio.nombre }} </p>
 	<!-- <p class="contacto">{{ comercio.contacto }}</p>
@@ -41,25 +41,58 @@
 				</div>
 				<div class="caja2 col">
 					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
-					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
-					<div class="precio-cant">
-						<div class="col s6 ">
-							<span class="precio">${{ prodSugerido.data.precio }}</span>
-						</div>
-						<div class="col s6 boton-modal">
-							<!-- <a class="btn-floating btn-small waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add_shopping_cart</i></a> -->
-							<button type="button" class="btn-floating btn-small waves-effect waves-light red" data-toggle="modal" data-target="#modal1">
-								<i class="material-icons">add_shopping_cart</i>
-							</button>
-						</div>
-					</div>
+					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>    
+					<span class="precio">${{ prodSugerido.data.precio }}</span>
+						
 					<!-- <button (click)="_cs.agregarProducto( prodSugerido.id, prodSugerido.data.nombre, prodSugerido.data.precio )">+</button> -->
 					<!-- <button (click)="_cs.borrarProducto( prodSugerido.id )">-</button> -->
-					<!-- <button type="button" class="btnAgregar"><i class="fas fa-plus"></i></button> -->
+					
+					<!-- boton modal -->
+					<button (click)="cargarProducto( prodSugerido )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
+					
+
 				</div>   
 			</div>
 		</div>
 
+		<!-- Modal Bootstrap BRAIAN -->
+		<div class="modal fade" id="modalProducto" tabindex="-1" role="dialog" aria-labelledby="modalProductoTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<!-- <h5 class="modal-title" id="modalProductoTitle">{{ producto.nombre }}</h5> -->
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				</div>
+				<div class="modal-body">
+					<div class="foto">
+						<img src="{{ producto.img }}" alt="">
+					</div>
+					<div class="nom">
+						<p>{{ producto.nombre }}</p>
+					</div>
+					<div class="ing">
+						<p>{{ producto.ingredientes }}</p>
+					</div>
+					<div class="cant">
+						<button (click)="restarCantidad()" type="button"><i class="fas fa-minus"></i></button>
+						<input type="text" value="{{ producto.cant }}" disabled/>
+						<button (click)="sumarCantidad()" type="button"><i class="fas fa-plus"></i></button>
+					</div>
+					<div class="nota">
+						<textarea class="form-control" id="textArea" #text rows="1" placeholder="Agregar nota (opcional)"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="pre">
+						<p>${{ producto.precioTotal }}</p>
+					</div>
+					<button type="button" (click)="agregar( producto, text.value )" data-dismiss="modal"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+				</div>
+			</div>
+			</div>
+		</div>
 		
 		<p class="txtProductos">Lomos</p>
 		<div class="container-fluid animated fadeIn contenedor">

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { $ } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
@@ -15,12 +16,28 @@ export class CarritoService {
 
 
 
-  agregarProducto( idx, nom, pre ){
-    this.carrito.push({
-      id: idx,
-      nombre: nom,
-      precio: pre
-    });
+  // agregarProducto( idx, nom, pre ){
+  //   this.carrito.push({
+  //     id: idx,
+  //     nombre: nom,
+  //     precio: pre
+  //   });
+    
+  //   this.guardarStorage();
+  //   console.log( this.carrito );
+  // }
+
+  agregarProducto( prod, text ){
+    this.carrito.push( {
+      id: prod.id,
+      img: prod.img,
+      nombre: prod.nombre,
+      ing: prod.ingredientes,
+      cant: prod.cant,
+      pre: prod.precio,
+      preTot: prod.precioTotal,
+      nota: text
+    } );
     
     this.guardarStorage();
     console.log( this.carrito );

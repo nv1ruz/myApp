@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 declare var $:any;
 import { FirebaseService } from '../../providers/firebase.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouteConfigLoadEnd } from '@angular/router';
 
 import { CarritoService } from '../../providers/carrito.service';
 
@@ -17,8 +17,10 @@ export class ComercioComponent implements OnInit {
   public comercio: any = {};
   public productos = [];
   public productosSugeridos = [];
+  public producto:any = {};
 
-  constructor( public _fs: FirebaseService, private activatedRoute: ActivatedRoute, public _cs: CarritoService ) {
+
+  constructor( public _fs: FirebaseService, private activatedRoute: ActivatedRoute, private _cs: CarritoService ) {
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {
@@ -114,8 +116,47 @@ export class ComercioComponent implements OnInit {
         } ); 
       } ); 
 
+  }
 
+  cargarProducto( param ){
 
+    this.producto.id = param.id;
+    this.producto.img = param.data.img;
+    this.producto.nombre = param.data.nombre
+    this.producto.ingredientes = param.data.ingredientes
+    this.producto.precio = param.data.precio
+    this.producto.precioTotal = param.data.precio;
+    this.producto.cant = 1;
+    
+
+    console.log( this.producto );
+
+  }
+
+  sumarCantidad(){
+    if( this.producto.cant >= 10 ){
+      // console.log("maximo");
+    } else{
+      this.producto.cant = parseInt( this.producto.cant ) + 1;
+      // console.log(this.producto.cant);
+      this.producto.precioTotal = parseInt( this.producto.precio ) * this.producto.cant;
+    }
+    
+  }
+
+  restarCantidad(){
+    if( this.producto.cant == 1 ){
+      // console.log("minimo");
+    } else{
+      this.producto.cant = parseInt( this.producto.cant ) - 1;
+      // console.log(this.producto.cant);
+      this.producto.precioTotal = parseInt( this.producto.precio ) * this.producto.cant;
+    }
+  }
+
+  // agrega el producto al carrito
+  agregar( producto, text ){
+    this._cs.agregarProducto( producto, text );
   }
 
 }
