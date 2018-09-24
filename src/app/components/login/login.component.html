@@ -18,32 +18,45 @@
 
 </div> -->
 
-<div class="container bienvenida" *ngIf="_fs.usuario.uid">
+<!-- <div class="container bienvenida" *ngIf="_fs.usuario.uid">
     <img  class="foto animated fadeIn" src="{{ _fs.usuario.foto }}">
     <p class="animated fadeIn">Bienvenid@ {{ _fs.usuario.nombre }}.</p>
-</div>
+</div> -->
 
 <div class="container login animated fadeIn"  *ngIf="!_fs.usuario.uid">
     <br>
     <form method="post">
-        <div class='center'> 
+        <div> 
             <h4>INICIAR SESIÓN</h4>
         </div>
-        <br>
+        <br><br>
         <div class="campos">
-            <div class='input-field col s12'>
-                <i class="material-icons prefix">mail_outline</i>
-                <input class='validate' type='email' name='email' id='email' />
-                <label for='email'>E-mail</label>
+            <div class='input-field col-12'>
+                <label class="sr-only">Correo Electronico</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Correo Electrónico">
+                </div>
             </div>
-            <div class='input-field col s12'>
-                <i class="material-icons prefix">lock_outline</i>
-                <input class='validate' type='password' name='password' id='password' />
-                <label for='password'>Contraseña</label>
+            <br>
+            <div class='input-field col-12'>
+                <label class="sr-only">Contraseña</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-key"></i>
+                        </div>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Contraseña">
+                </div>
             </div>
         </div>
-        <label style="float:right;">
-            <a class='red-text' href=''><b>Olvidé mi Contraseña</b></a>
+        <label class="olvidar-pass">
+            <a href=''><b>Olvidé mi Contraseña</b></a>
         </label>
         <br><br>
         <div class="boton" *ngIf="!_fs.usuario.uid">

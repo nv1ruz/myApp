@@ -1,8 +1,19 @@
 <div class="cajaCarrito animated fadeIn fast">
 	<a class="" [routerLink]="['/comercio']"><i class="fa fa-times-circle"></i></a>
-	<p class="titulo">Mi Pedido </p>
+	<div class="row titulo">
+		<div class="col-3">
+			<!-- <i class="fa fa-check"></i> -->
+		</div>
+		<div class="col-6" >
+			<p class="">Mi Pedido</p>
+		</div>
+		<div class="col-3 estado-pedido">
+			<i class="fa fa-check"></i>
+		</div>
+	</div>
+	
 	<div class="carrito-header">
-		<img src="http://guiaelasesor.com/tucuman/wp-content/uploads/2012/06/940-LEGUI-300x275.jpg" alt="">
+		<img src="https://es.seaicons.com/wp-content/uploads/2015/11/cart-icon.png" alt="">
 		<p class="nombre">Pizzeria "Don Luna"</p>
 		<p class="estado">Abierto</p>
 	</div>
@@ -20,13 +31,13 @@
 						<p>Pizza Mozzarella</p>
 					</div>
 					<div class="col-3 prec-prod">
-						<p>$ 1200</p>
+						<p>$ 1500</p>
 					</div>
 				</div>
 				<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#acordion">
 					<div class="card-body">
 						<div class=" animated fadeIn">
-							<div class="producto row align-items-center">  
+							<div class="producto row align-items-center row">  
 								<div class="caja1 col-auto">
 									<div class="foto">
 										<img src="https://previews.123rf.com/images/ryzhkov86/ryzhkov861308/ryzhkov86130800096/21472186-pizza-con-jam%C3%B3n-salami-tomates-y-queso-mozzarella.jpg" width="100">
@@ -35,10 +46,10 @@
 								<div class="caja2 col">
 									<p class="ingredientes">Mozzarela, Aceituna, Orégano</p>      
 									<div class="precio-cant row">
-										<div class="col-2 precio">
-											<span>$120</span>
+										<div class="col-3 precio">
+											<span>$150</span>
 										</div>
-										<div class="col-8 cantidad">
+										<div class="col-7 cantidad">
 											<a class="down">
 												<i class="fa fa-minus"></i>
 											</a> 
@@ -68,7 +79,7 @@
 						<p>Lomo Especial con Papas</p>
 					</div>
 					<div class="col-3 prec-prod">
-						<p>$ 200</p>
+						<p>$ 390</p>
 					</div>
 				</div>
 				<div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#acordion">
@@ -83,10 +94,10 @@
 								<div class="caja2 col">
 									<p class="ingredientes">Lomo, queso, lechuga, tomate, huevo, papas</p>      
 									<div class="precio-cant row">
-										<div class="col-2 precio">
-											<span>$120</span>
+										<div class="col-3 precio">
+											<span>$130</span>
 										</div>
-										<div class="col-8 cantidad">
+										<div class="col-7 cantidad">
 											<a class="down">
 												<i class="fa fa-minus"></i>
 											</a> 
@@ -116,7 +127,7 @@
 						<p>Barroluco</p>
 					</div>
 					<div class="col-3 prec-prod">
-						<p>$ 95</p>
+						<p>$ 140</p>
 					</div>
 				</div>
 				<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#acordion">
@@ -125,16 +136,16 @@
 							<div class="producto row align-items-center">  
 								<div class="caja1 col-auto">
 									<div class="foto">
-										<img src="https://previews.123rf.com/images/ryzhkov86/ryzhkov861308/ryzhkov86130800096/21472186-pizza-con-jam%C3%B3n-salami-tomates-y-queso-mozzarella.jpg" width="100">
+										<img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/2d/15/18/barroluco-clasico.jpg" width="100">
 									</div>
 								</div>
 								<div class="caja2 col">
 									<p class="ingredientes">Mozzarela, Aceituna, Orégano </p>      
 									<div class="precio-cant row">
-										<div class="col-2 precio">
-											<span>$120</span>
+										<div class="col-3 precio">
+											<span>$140</span>
 										</div>
-										<div class="col-8 cantidad">
+										<div class="col-7 cantidad">
 											<a class="down">
 												<i class="fa fa-minus"></i>
 											</a> 
@@ -171,7 +182,7 @@
 					</select>
 				</div>
 				<div class="col-2 prec-prod">
-					<p>$ 30</p>
+					<p>$ 10</p>
 				</div>
 			</div>
 		</div>
@@ -189,6 +200,9 @@
 						<option value="3">Santa Rosa, S/N</option>
 					</select>
 				</div>
+				<div class="col-2 center">
+					<i class="fa fa-plus"></i>
+				</div>
 			</div>
 		</div>
 
@@ -197,7 +211,7 @@
 				<p>Total</p>
 			</div>
 			<div class="col-3 total-numero">
-				<p>$ 1525</p>
+				<p>$ 2040</p>
 			</div>
 		</div>
 		
