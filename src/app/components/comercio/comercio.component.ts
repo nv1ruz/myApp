@@ -43,13 +43,7 @@ export class ComercioComponent implements OnInit {
         this.comercio.estado = 'Abierto';
       } else{
         this.comercio.estado = 'Cerrado';
-      }
-      // if( this.comercio.delivery == true ){
-      //   this.comercio.delivery = '- Delivery';
-      // } else{
-      //   this.comercio.delivery = '';
-      // }
-      
+      }      
     });
 
     // obtiene y almacena los productos de un comercio(ID)
@@ -81,43 +75,9 @@ export class ComercioComponent implements OnInit {
       // console.log(this.productosSugeridos);
     });
 
-    // Modal Boostrap
-    $('#modal1').on('shown.bs.modal', function () { 
-    });
-
-    //Modal Materialize
-    // $(document).ready(function(){
-    //   $('.modal').modal();
-    // });
-
-      //Modal: Contador Comentario
-      $(document).ready(function() {
-        $('input#input_text, textarea#comentario').characterCounter();
-      });  
-
-      //Modal: Cantidad Modal
-      $(document).ready( function() { 
-        var el = $('.test'); 
-        function change( amt ) { 
-        el.val( parseInt( el.val(), 10 ) + amt ); 
-        } 
-        $('.up').click( function() { 
-          if(el.val()<10){
-            change( 1 );
-          } else{
-          }
-        } ); 
-        $('.down').click( function() { 
-          if(el.val()>1){
-            change( -1 ); 
-          }
-        } ); 
-      } ); 
-
   }
 
   cargarProducto( param ){
-
     this.producto.id = param.id;
     this.producto.img = param.data.img;
     this.producto.nombre = param.data.nombre
@@ -125,10 +85,7 @@ export class ComercioComponent implements OnInit {
     this.producto.precio = param.data.precio
     this.producto.precioTotal = param.data.precio;
     this.producto.cant = 1;
-    
-
     console.log( this.producto );
-
   }
 
   sumarCantidad(){
@@ -138,8 +95,7 @@ export class ComercioComponent implements OnInit {
       this.producto.cant = parseInt( this.producto.cant ) + 1;
       // console.log(this.producto.cant);
       this.producto.precioTotal = parseInt( this.producto.precio ) * this.producto.cant;
-    }
-    
+    }    
   }
 
   restarCantidad(){

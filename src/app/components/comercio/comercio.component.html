@@ -1,4 +1,3 @@
-
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
 	<a class="btnCarrito" [routerLink]="['/carrito']"><i class="fas fa-shopping-cart"></i></a>
@@ -19,8 +18,6 @@
 	</div>
 </div>
 
-
-
 <!-- Tab -->
 <div class="nav nav-tabs tab" id="nav-tab" role="tablist">
 	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-sugeridos" role="tab">PRODUCTOS</a>
@@ -31,7 +28,7 @@
 	<div class="tab-pane fade show active" id="nav-sugeridos" role="tabpanel">
 			
 		<!-- Listado Productos -->
-		<p class="txtProductos">Pizzas</p>
+		<p class="txtProductos">Productos Sugeridos</p>
 		<div class="container-fluid animated fadeIn contenedor">
 			<div class="producto row align-items-center"  *ngFor="let prodSugerido of this.productosSugeridos">  
 				<div class="caja1 col-auto">
@@ -50,51 +47,13 @@
 					<!-- boton modal -->
 					<button (click)="cargarProducto( prodSugerido )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
 					
-
 				</div>   
 			</div>
 		</div>
 
-		<!-- Modal Bootstrap BRAIAN -->
-		<div class="modal fade" id="modalProducto" tabindex="-1" role="dialog" aria-labelledby="modalProductoTitle" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-				<!-- <h5 class="modal-title" id="modalProductoTitle">{{ producto.nombre }}</h5> -->
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				</div>
-				<div class="modal-body">
-					<div class="foto">
-						<img src="{{ producto.img }}" alt="">
-					</div>
-					<div class="nom">
-						<p>{{ producto.nombre }}</p>
-					</div>
-					<div class="ing">
-						<p>{{ producto.ingredientes }}</p>
-					</div>
-					<div class="cant">
-						<button (click)="restarCantidad()" type="button"><i class="fas fa-minus"></i></button>
-						<input type="text" value="{{ producto.cant }}" disabled/>
-						<button (click)="sumarCantidad()" type="button"><i class="fas fa-plus"></i></button>
-					</div>
-					<div class="nota">
-						<textarea class="form-control" id="textArea" #text rows="1" placeholder="Agregar nota (opcional)"></textarea>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<div class="pre">
-						<p>${{ producto.precioTotal }}</p>
-					</div>
-					<button type="button" (click)="agregar( producto, text.value )" data-dismiss="modal"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
-				</div>
-			</div>
-			</div>
-		</div>
 		
-		<p class="txtProductos">Lomos</p>
+		
+		<p class="txtProductos">Productos</p>
 		<div class="container-fluid animated fadeIn contenedor">
 			<div class="producto row align-items-center"  *ngFor="let producto of this.productos">  
 				<div class="caja1 col-auto">
@@ -104,94 +63,17 @@
 				</div>
 				<div class="caja2 col">
 					<span class="nombre">{{ producto.data.nombre }}</span>      
-					<span class="ingredientes">{{ producto.data.ingredientes }}</span>      
-					<div class="precio-cant">
-						<div class="col s6">
-							<span class="precio">${{ producto.data.precio }}</span>
-						</div>
-						<div class="col s6 boton-modal">
-							<a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-						</div>
-					</div>
+					<span class="ingredientes">{{ producto.data.ingredientes }}</span>   
+					<span class="precio">${{ producto.data.precio }}</span>
+						
+					<!-- boton modal -->
+					<button (click)="cargarProducto( producto )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
+					
 				</div>   
 			</div>
 		</div>
 
-		<p class="txtProductos">Hamburguesas</p>
-		<div class="container-fluid animated fadeIn contenedor"  >
-			<div class="producto row align-items-center"*ngFor="let prodSugerido of this.productosSugeridos">  
-				<div class="caja1 col-auto">
-					<div class="foto">
-						<img src="{{ prodSugerido.data.img }}" width="100">
-					</div>
-				</div>
-				<div class="caja2 col">
-					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
-					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>      
-					<div class="precio-cant">
-						<div class="col s6">
-							<span class="precio">${{ prodSugerido.data.precio }}</span>
-						</div>
-						<div class="col s6 boton-modal">
-							<a class="btn-floating btn-small waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-						</div>
-					</div>
-				</div>   
-			</div>
-		</div>
-	</div>
-	
-	<!-- Listado Informacion MATERIALIZE-->
-	<!-- <div class="tab-pane fade" id="nav-info">
-		<div class="info">
-			<ul class="collapsible">
-				<li class="active">
-					<div class="collapsible-header">
-						<i class="material-icons">assistant</i>
-						Nosotros
-						<span class="new badge"></span>
-					</div>
-					<div class="collapsible-body nosotros">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dolorem odit ut repellat tempora, ad harum aliquam tenetur itaque magnam, quod quae est voluptatum praesentium veritatis sint? Culpa, error perferendis?</p>
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header">
-						<i class="material-icons">access_alarm</i>
-						Horario de Atención
-						<span class="badge"></span>
-					</div>
-					<div class="collapsible-body horario">
-						<p><span>Lunes a Viernes: </span>8hs a 12hs - 18hs a 23hs</p>
-						<p><span>Sabados: </span>18hs a 23hs</p>
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header">
-						<i class="material-icons">place</i>
-						Ubicación
-						<span class="badge"></span>
-					</div>
-					<div class="collapsible-body ubicacion">
-						<p>Victoria Romero, 221 - Barrio Angel V. Peñaloza </p>
-						<img src="https://ep01.epimg.net/tecnologia/imagenes/2017/10/11/actualidad/1507722505_765166_1507722864_miniatura_normal.jpg">
-					</div>
-				</li>
-				<li>
-					<div class="collapsible-header">
-						<i class="material-icons">chat</i>
-						Contacto
-						<span class="badge"></span>
-					</div>
-					<div class="collapsible-body contacto">
-						<p><i class="fab fa-whatsapp"></i> 3826403155 <span> (Personal)</span></p>
-						<p><i class="fas fa-phone"></i> 3826425592 <span> (Claro)</span></p>
-						<p><i class="fab fa-facebook"></i> DonLuna-Chamical </p>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div> -->
+	</div>	
 
 	<!-- +Info -->
 	<div class="tab-pane fade" id="nav-info">
@@ -199,7 +81,7 @@
 			<div class="card">
 				<div class="card-header" id="heading1" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
 					<i class="fas fa-university"></i>
-					Horario
+					Nosotros
 				</div>
 				<div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#acordion">
 					<div class="card-body nosotros">
@@ -249,77 +131,44 @@
 
 </div>
 
-<!-- Modal  Boostrap-->
 
-<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="modalProducto" tabindex="-1" role="dialog" aria-labelledby="modalProductoTitle" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-			<p class="modal-title">Lomo Especial con Papas</p>
 			<div class="modal-header">
-				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzDx5jEHWRGHe-MbHWUY2_w4YwRbpdNeI6tPxhg6NM9rbHpTpi">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
 			</div>
 			<div class="modal-body">
-				<p class="precio">$130</p>
-				<p class="descripcion">lomo, lechuga, tomate, pepino, jamon, queso, papas</p>
-				
-				<div class="row cantidad">
-					<div class="col-3">
-							<a class="down btn-floating waves-effect waves-light red"><i class="material-icons">remove</i></a> 
-						</div>
-					<div class="col-6">
-						<input type="text" class="test" value="1" disabled/>
-						<span class="helper-text">Cantidad (max: 10)</span>
-					</div>
-					<div class="col-3">
-						<a class="up btn-floating waves-effect waves-light red"><i class="material-icons">add</i></a> 
-					</div>
+				<div class="foto">
+					<img src="{{ producto.img }}" alt="">
 				</div>
-				
-				<div class='textarea-descripcion'>
-					<textarea rows="2" maxlength="120" data-length="120" name='comentario' id='comentario' placeholder="Comentario (opcional)"></textarea>
+				<div class="nom">
+					<p>{{ producto.nombre }}</p>
+				</div>
+				<div class="ing">
+					<p>{{ producto.ingredientes }}</p>
+				</div>
+				<div class="cant">
+					<button (click)="restarCantidad()" type="button"><i class="fas fa-minus"></i></button>
+					<input type="text" value="{{ producto.cant }}" disabled/>
+					<button (click)="sumarCantidad()" type="button"><i class="fas fa-plus"></i></button>
+				</div>
+				<div class="nota">
+					<textarea class="form-control" id="textArea" #text rows="1" placeholder="Agregar nota (opcional)"></textarea>
 				</div>
 			</div>
 			<div class="modal-footer">
-					<button type="button" class="btn-small waves-effect waves-light pink">
-							Agregar al carrito
-					</button>
+				<div class="pre">
+					<p>${{ producto.precioTotal }}</p>
+				</div>
+				
+				<button type="button" (click)="agregar( producto, text.value )" data-dismiss="modal"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+
 			</div>
 		</div>
 	</div>
 </div>
-
-<!-- Modal Materialize -->
-<!-- <div id="modal1" class="modal">
-	<div class="card">
-		<div class="card-image">
-			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzDx5jEHWRGHe-MbHWUY2_w4YwRbpdNeI6tPxhg6NM9rbHpTpi">
-			<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add_shopping_cart</i></a>
-			<span class="card-title">Milanesa a Caballo con Ensalada o Papas Fritas</span>
-		</div>
-		<div class="card-content">
-			<p class="precio">$100</p>
-			<p>queso, huevo frito, papas fritas, salsa golf, orégano, ajo, perejil, tomate, lechuga</p>
-			<hr>
-			<div class='row'>
-				<div class='input-field col s12'>
-					<textarea class="materialize-textarea" data-length="120" name='comentario' id='comentario'></textarea>
-					<label for='comentario'>Comentario (opcional)</label>
-				</div>
-			</div>
-			<div class="row cantidad">
-				<div class="col s3">
-						<a class="down btn-floating waves-effect waves-light red"><i class="material-icons">remove</i></a> 
-					</div>
-				<div class="col s6">
-					<input type="text" class="test" value="1" disabled/>
-					<span class="helper-text">Cantidad (max: 10)</span>
-				</div>
-				<div class="col s3">
-					<a class="up btn-floating waves-effect waves-light red"><i class="material-icons">add</i></a> 
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</div> -->
-

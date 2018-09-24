@@ -12,11 +12,11 @@ export class CarritoComponent implements OnInit {
   ngOnInit() {
 
     $(document).ready(function(){
-      $('.collapsible').collapsible();
+      // $('.collapsible').collapsible();
     });
 
     $(document).ready(function(){
-      $('select').formSelect();
+      // $('select').formSelect();
     });
 
     //Cantidad
