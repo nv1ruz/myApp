@@ -1,13 +1,13 @@
 
 .cajaCarrito > a{
     position: absolute;
-    top: 0.55%;
-    right: 5%;
+    float: left;    
+    top: 1.5%;
+    right: 4%;
 }
 .cajaCarrito > a i {
-    background-color: #fff;
-    color: #fa3b7b;
-    font-size: 20px;
+    color: #fff;
+    font-size: 25px;
     font-weight: bold;
 }
 /* Carrito Header */
@@ -62,6 +62,7 @@
     /* box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2); */
     text-align: left;
 }
+
 .producto .caja2 {
     padding: 10px 10px 10px 5px;
 }
@@ -161,16 +162,34 @@
 
 /* Forma de Entrega */
 .carrito-body .form-entrega .card-header{
-    border-top: 1px solid #ddd;
+    border: 1px solid #ddd;
 }
-.carrito-body .form-entrega .entrega-prod {
-    margin: -8px auto;
-    align-content: center;
+.carrito-body .form-entrega .custom-select{
+    border: none;
+    border-bottom: 1px solid #666;
+    border-radius: 0;
+    padding: 0;
+    color: #666;
+    background: none;
+    background-color: #fff;
+    -webkit-appearance: menulist;
+    font-size: 16px;
+}
+.carrito-body .form-entrega .cant-prod {
+    text-align: center;
+}
+.carrito-body .form-entrega .prec-prod{
+    line-height: 2.6;
 }
 .carrito-body .form-entrega i{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 2em;
+    color: green;
 }
+.carrito-body .form-entrega .select{
+    padding: 0;
+}
+
 
 /* Total */
 .carrito-body .total{

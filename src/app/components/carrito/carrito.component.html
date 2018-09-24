@@ -1,5 +1,5 @@
-<div class="cajaCarrito">
-	<a class="btn-floating waves-effect waves-light pink" [routerLink]="['/comercio']"><i class="material-icons">close</i></a>
+<div class="cajaCarrito animated fadeIn fast">
+	<a class="" [routerLink]="['/comercio']"><i class="fa fa-times-circle"></i></a>
 	<p class="titulo">Mi Pedido </p>
 	<div class="carrito-header">
 		<img src="http://guiaelasesor.com/tucuman/wp-content/uploads/2012/06/940-LEGUI-300x275.jpg" alt="">
@@ -163,7 +163,7 @@
 				<div class="col-2 cant-prod">
 					<i class="fas fa-motorcycle"></i>
 				</div>
-				<div class="col-8 input-field">
+				<div class="col-8 input-field select">
 					<select class="custom-select" required>
 						<option value="" disabled selected>Selecciona la forma de entrega</option>
 						<option value="1">Delivery</option>
@@ -175,23 +175,19 @@
 				</div>
 			</div>
 		</div>
-		<br>
 		<p class="txtProductos">Dirección</p>
 		<div class="form-entrega">
 			<div class="card-header row">
 				<div class="col-2 cant-prod">
 					<i class="fas fa-map-marker-alt"></i>
 				</div>
-				<div class="col-8 input-field">
+				<div class="col-8 input-field select">
 					<select class="custom-select" required>
 						<option value="" disabled selected>Selecciona la dirección</option>
 						<option value="1">Victoria Romero, 221</option>
 						<option value="2">Av. Luis Vernet, 1230</option>
 						<option value="3">Santa Rosa, S/N</option>
 					</select>
-				</div>
-				<div class="col-2 prec-prod">
-					<p></p>
 				</div>
 			</div>
 		</div>
