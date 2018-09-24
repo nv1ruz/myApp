@@ -1,33 +1,94 @@
 <div class="container register animated fadeIn">
   <br>
   <form method="post">
-      <div class='center'> 
-          <h4>NUEVA CUENTA</h4>
-      </div>
-      <br>
-      <div class="campos">
-          <div class='input-field col s12'>
-              <i class="material-icons prefix">mail_outline</i>
-              <input class='validate' type='email' name='email' id='email' />
-              <label for='email'>E-mail</label>
-          </div>
-          <div class='input-field col s12'>
-              <i class="material-icons prefix">lock_outline</i>
-              <input class='validate' type='password' name='password' id='password' />
-              <label for='password'>Contraseña</label>
-          </div>
-      </div>
-      <label style="float:right;">
-          <a class='red-text' href='#'><b>Acepto los Terminos y Condiciones</b></a>
-      </label>
-      <br><br>
-      <div class="boton">
-          <span>
-              CREAR CUENTA
-          </span>
-      </div>
-      <br>
-  </form>
+        <div> 
+            <h4>CREAR CUENTA</h4>
+        </div>
+        <br>
+        <div class='input-field col-12'>
+            <label class="sr-only">Nombre</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <input type="text" class="form-control" placeholder="Nombre/s" required>
+            </div>
+        </div>
+        <br>
+        <div class='input-field col-12'>
+            <label class="sr-only">Apellido</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </div>
+                <input type="text" class="form-control" placeholder="Apellido/s" required>
+            </div>
+        </div>
+        <br>
+        <div class="campos">
+            <div class='input-field col-12'>
+                <label class="sr-only">Correo Electronico</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Correo Electrónico" required>
+                </div>
+            </div>
+            <br>
+            <div class='input-field col-12'>
+                <label class="sr-only">Contraseña</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-key"></i>
+                        </div>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Contraseña" required>
+                </div>
+            </div>
+            <br>
+            <div class='input-field col-12'>
+                <label class="sr-only">Repite la Contraseña</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-key"></i>
+                        </div>
+                    </div>
+                    <input type="password" class="form-control" placeholder="Repite la Contraseña" required>
+                </div>
+            </div>
+            <br>
+            <div class='input-field col-12'>
+                <label class="sr-only">Teléfono</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                    </div>
+                    <input type="number" class="form-control" placeholder="Teléfono" required>
+                </div>
+            </div>
+        </div>
+        <label class="terminos">
+            <a href=''><b>He leído los Términos y Condiciones</b></a>
+        </label>
+        <br><br>
+        <div class="boton">
+            <span>
+                REGISTRAR
+            </span>
+        </div>
+        <br>
+    </form>
   <br>
   <div class="center crear-cuenta">
       <p>¿Ya tienes una cuenta? - <a [routerLink]="['/login']">Inicia Sesión</a></p>
