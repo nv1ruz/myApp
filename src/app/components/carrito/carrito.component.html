@@ -8,10 +8,11 @@
 	</div>
 	
 	<div class="carrito-body">
+
 		<p class="txtProductos">Productos</p>
-		<ul class="collapsible">
-			<li>
-				<div class="collapsible-header row">
+		<div class="accordion" id="acordion">
+			<div class="card">
+				<div class="card-header row" id="heading1" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
 					<div class="col-1 cant-prod">
 						<p>10</p>
 					</div>
@@ -21,45 +22,45 @@
 					<div class="col-3 prec-prod">
 						<p>$ 1200</p>
 					</div>
-					<!-- <p><span class="cant-numero">2</span> Pizza Mozzarella</p> -->
 				</div>
-				<div class="collapsible-body">
-					<div class=" animated fadeIn contenedor">
-						<div class="producto row align-items-center">  
-							<div class="caja1 col-auto">
-								<div class="foto">
-									<img src="https://previews.123rf.com/images/ryzhkov86/ryzhkov861308/ryzhkov86130800096/21472186-pizza-con-jam%C3%B3n-salami-tomates-y-queso-mozzarella.jpg" width="100">
+				<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#acordion">
+					<div class="card-body">
+						<div class=" animated fadeIn">
+							<div class="producto row align-items-center">  
+								<div class="caja1 col-auto">
+									<div class="foto">
+										<img src="https://previews.123rf.com/images/ryzhkov86/ryzhkov861308/ryzhkov86130800096/21472186-pizza-con-jam%C3%B3n-salami-tomates-y-queso-mozzarella.jpg" width="100">
+									</div>
 								</div>
+								<div class="caja2 col">
+									<p class="ingredientes">Mozzarela, Aceituna, Orégano</p>      
+									<div class="precio-cant row">
+										<div class="col-2 precio">
+											<span>$120</span>
+										</div>
+										<div class="col-8 cantidad">
+											<a class="down">
+												<i class="fa fa-minus"></i>
+											</a> 
+											<input type="text" class="test" value="1" disabled/>
+											<a class="up">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+										<div class="col-2">
+											<a class="eliminar">
+												<i class="fa fa-trash-alt"></i>
+											</a> 
+										</div>
+									</div>
+								</div>   
 							</div>
-							<div class="caja2 col">
-								<!-- <p class="nombre">Pizza Mozzarella</p>       -->
-								<p class="ingredientes">Mozzarela, Aceituna, Orégano</p>      
-								<div class="precio-cant">
-									<div class="col s2 precio">
-										<span>$120</span>
-									</div>
-									<div class="col s8 cantidad">
-										<a class="down btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">remove</i>
-										</a> 
-										<input type="text" class="test" value="10" disabled/>
-										<a class="up btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">add</i>
-										</a>
-									</div>
-									<div class="col s2">
-										<a class="btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">delete_forever</i>
-										</a> 
-									</div>
-								</div>
-							</div>   
 						</div>
 					</div>
 				</div>
-			</li>
-			<li>
-				<div class="collapsible-header row">
+			</div>
+			<div class="card">
+				<div class="card-header row" id="heading2" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
 					<div class="col-1 cant-prod">
 						<p>3</p>
 					</div>
@@ -69,45 +70,45 @@
 					<div class="col-3 prec-prod">
 						<p>$ 200</p>
 					</div>
-					<!-- <p><span class="cant-numero">2</span> Pizza Mozzarella</p> -->
 				</div>
-				<div class="collapsible-body">
-					<div class="animated fadeIn contenedor">
-						<div class="producto row align-items-center">  
-							<div class="caja1 col-auto">
-								<div class="foto">
-									<img src="https://cdn77.gurudeofertas.com/image.php?image=/images/offers/2c5a9615bcafd3d65c50a589574b3952.jpg" width="100">
+				<div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#acordion">
+					<div class="card-body">
+						<div class="animated fadeIn">
+							<div class="producto row align-items-center">  
+								<div class="caja1 col-auto">
+									<div class="foto">
+										<img src="https://cdn77.gurudeofertas.com/image.php?image=/images/offers/2c5a9615bcafd3d65c50a589574b3952.jpg" width="100">
+									</div>
 								</div>
+								<div class="caja2 col">
+									<p class="ingredientes">Lomo, queso, lechuga, tomate, huevo, papas</p>      
+									<div class="precio-cant row">
+										<div class="col-2 precio">
+											<span>$120</span>
+										</div>
+										<div class="col-8 cantidad">
+											<a class="down">
+												<i class="fa fa-minus"></i>
+											</a> 
+											<input type="text" class="test" value="1" disabled/>
+											<a class="up">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+										<div class="col-2">
+											<a class="eliminar">
+												<i class="fa fa-trash-alt"></i>
+											</a> 
+										</div>
+									</div>
+								</div>   
 							</div>
-							<div class="caja2 col">
-								<!-- <p class="nombre">Lomo Especial con Papas</p>       -->
-								<p class="ingredientes">Lomo, queso, lechuga, tomate, huevo, papas</p>      
-								<div class="precio-cant">
-									<div class="col s2 precio">
-										<span>$120</span>
-									</div>
-									<div class="col s8 cantidad">
-										<a class="down btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">remove</i>
-										</a> 
-										<input type="text" class="test" value="10" disabled/>
-										<a class="up btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">add</i>
-										</a>
-									</div>
-									<div class="col s2">
-										<a class="btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">delete_forever</i>
-										</a> 
-									</div>
-								</div>
-							</div>   
 						</div>
 					</div>
 				</div>
-			</li>
-			<li>
-				<div class="collapsible-header row">
+			</div>
+			<div class="card">
+				<div class="card-header row" id="heading3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
 					<div class="col-1 cant-prod">
 						<p>1</p>
 					</div>
@@ -117,87 +118,83 @@
 					<div class="col-3 prec-prod">
 						<p>$ 95</p>
 					</div>
-					<!-- <p><span class="cant-numero">2</span> Pizza Mozzarella</p> -->
 				</div>
-				<div class="collapsible-body">
-					<div class="animated fadeIn contenedor">
-						<div class="producto row align-items-center">  
-							<div class="caja1 col-auto">
-								<div class="foto">
-									<img src="https://previews.123rf.com/images/ryzhkov86/ryzhkov861308/ryzhkov86130800096/21472186-pizza-con-jam%C3%B3n-salami-tomates-y-queso-mozzarella.jpg" width="100">
+				<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#acordion">
+					<div class="card-body">
+						<div class="animated fadeIn">
+							<div class="producto row align-items-center">  
+								<div class="caja1 col-auto">
+									<div class="foto">
+										<img src="https://previews.123rf.com/images/ryzhkov86/ryzhkov861308/ryzhkov86130800096/21472186-pizza-con-jam%C3%B3n-salami-tomates-y-queso-mozzarella.jpg" width="100">
+									</div>
 								</div>
+								<div class="caja2 col">
+									<p class="ingredientes">Mozzarela, Aceituna, Orégano </p>      
+									<div class="precio-cant row">
+										<div class="col-2 precio">
+											<span>$120</span>
+										</div>
+										<div class="col-8 cantidad">
+											<a class="down">
+												<i class="fa fa-minus"></i>
+											</a> 
+											<input type="text" class="test" value="1" disabled/>
+											<a class="up">
+												<i class="fa fa-plus"></i>
+											</a>
+										</div>
+										<div class="col-2">
+											<a class="eliminar">
+												<i class="fa fa-trash-alt"></i>
+											</a> 
+										</div>
+									</div>
+								</div>   
 							</div>
-							<div class="caja2 col">
-								<!-- <p class="nombre">Pizza Mozzarella</p>       -->
-								<p class="ingredientes">Mozzarela, Aceituna, Orégano </p>      
-								<div class="precio-cant">
-									<div class="col s2 precio">
-										<span>$120</span>
-									</div>
-									<div class="col s8 cantidad">
-										<a class="down btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">remove</i>
-										</a> 
-										<input type="text" class="test" value="1" disabled/>
-										<a class="up btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">add</i>
-										</a>
-									</div>
-									<div class="col s2">
-										<a class="btn-floating btn-small waves-effect waves-light red">
-											<i class="material-icons">delete_forever</i>
-										</a> 
-									</div>
-								</div>
-							</div>   
 						</div>
 					</div>
 				</div>
-			</li>
-		</ul>
+			</div>
+		</div>
+		<br>
 		<p class="txtProductos">Forma de Entrega</p>
-		<ul class="form-entrega">
-			<li>
-				<div class="collapsible-header row">
-					<div class="col-1 cant-prod">
-						<i class="material-icons">motorcycle</i>
-					</div>
-					<div class="col-9 entrega-prod input-field">
-						<select>
-							<option value="" disabled selected>Selecciona la forma de entrega</option>
-							<option value="1">Delivery</option>
-							<option value="2">Retiro por el local</option>
-						</select>
-					</div>
-					<div class="col-2 prec-prod">
-						<p>$ 30</p>
-					</div>
+		<div class="form-entrega">
+			<div class="card-header row">
+				<div class="col-2 cant-prod">
+					<i class="fas fa-motorcycle"></i>
 				</div>
-				<!-- <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div> -->
-			</li>
-		</ul>
-
+				<div class="col-8 input-field">
+					<select class="custom-select" required>
+						<option value="" disabled selected>Selecciona la forma de entrega</option>
+						<option value="1">Delivery</option>
+						<option value="2">Retiro por el local</option>
+					</select>
+				</div>
+				<div class="col-2 prec-prod">
+					<p>$ 30</p>
+				</div>
+			</div>
+		</div>
+		<br>
 		<p class="txtProductos">Dirección</p>
-		<ul class="form-entrega">
-			<li>
-				<div class="collapsible-header row">
-					<div class="col-1 cant-prod">
-						<i class="material-icons">location_on</i>
-					</div>
-					<div class="col-11 entrega-prod input-field">
-						<select>
-							<option value="" disabled selected>Selecciona la dirección</option>
-							<option value="1">Victoria Romero, 221</option>
-							<option value="2">Av. Luis Vernet, 1230</option>
-							<option value="3">Santa Rosa, S/N</option>
-						</select>
-					</div>
-					<div class="col-2 prec-prod">
-						<p></p>
-					</div>
+		<div class="form-entrega">
+			<div class="card-header row">
+				<div class="col-2 cant-prod">
+					<i class="fas fa-map-marker-alt"></i>
 				</div>
-			</li>
-		</ul>
+				<div class="col-8 input-field">
+					<select class="custom-select" required>
+						<option value="" disabled selected>Selecciona la dirección</option>
+						<option value="1">Victoria Romero, 221</option>
+						<option value="2">Av. Luis Vernet, 1230</option>
+						<option value="3">Santa Rosa, S/N</option>
+					</select>
+				</div>
+				<div class="col-2 prec-prod">
+					<p></p>
+				</div>
+			</div>
+		</div>
 
 		<div class="row total">
 			<div class="col-9 total-titulo">

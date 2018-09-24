@@ -32,9 +32,7 @@ export class ComercioComponent implements OnInit {
   ngOnInit() {
     
     // +info
-    $(document).ready(function(){
-      $('.collapsible').collapsible();
-    });
+    $('.collapse').collapse()
     
 
     // obtiene y almacena los datos de un comercio(ID)

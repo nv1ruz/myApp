@@ -11,6 +11,8 @@
     font-weight: bold;
 }
 /* Carrito Header */
+
+
 .cajaCarrito{
     text-align: center;
     padding: 0 0 5px 0;
@@ -60,63 +62,114 @@
     /* box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2); */
     text-align: left;
 }
-
-.cajaCarrito .carrito-body .collapsible{
+.producto .caja2 {
+    padding: 10px 10px 10px 5px;
+}
+.cajaCarrito .carrito-body card{
     margin-top: 0;
     box-shadow: none;
 }
-.cajaCarrito .carrito-body .collapsible-header{
-    padding: 5px;
-    font-size: 17px;
+.carrito-body .card-header{
+    text-transform: uppercase;
+    color: #666666;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.75pt;
+    background-color: #fff;
     margin: 0;
+    padding: 5px;
+    border-bottom: none;
 }
-.cajaCarrito .carrito-body .collapsible-header .cant-prod{
-    border-right: 2px solid #e1e1e1;
+.carrito-body .card-header .cant-prod{
     padding: 0;
     text-align: center;
     color: #666;
     font-weight: 600;
 }
-.cajaCarrito .carrito-body .collapsible-header .nombre-prod{
+.carrito-body .card-header .nombre-prod{
     text-align: left;
     padding: 0 0 0 5px;
 }
-.cajaCarrito .carrito-body .collapsible-header .prec-prod{
+.carrito-body .card-header .prec-prod{
     text-align: right;
     padding: 0 5px 0 0;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 650;
     color: #666;
 }
-.cajaCarrito .carrito-body .collapsible-body {
-    padding: 5px;
+.carrito-body .card-body {
+    padding: 5px 10px 5px 10px;
 }
-.cajaCarrito .carrito-body .collapsible-body .caja2{
+.carrito-body .card-body .caja2{
     text-align: left;
     padding: 0;
 }
-.cajaCarrito .carrito-body .collapsible-body .precio{
+.carrito-body .card-body .precio{
     font-size: 20px;
     padding: 0;
 }
-.cajaCarrito .carrito-body .collapsible-body .precio-cant{
-    margin-top: 5px;
+.carrito-body .card-body .precio-cant{
+    margin: 10px 10px 0 0;
 }
-.cajaCarrito .carrito-body .collapsible-body .precio-cant .cantidad{
+.carrito-body .card-body .precio-cant .cantidad{
     text-align: right;
 }
-.cajaCarrito .carrito-body .collapsible-body .producto{
+.carrito-body .card-body .producto{
     margin-bottom: 5px;
 }
+.carrito-body .card-body .producto .ingredientes{
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
 
+/* Cantidad Editar */
+.carrito-body .cantidad {
+    text-align: center!important;
+    margin: 0 auto;
+}
+.carrito-body .cantidad .test{
+    text-align: center;
+    border-bottom: none;
+    margin-bottom: 0;
+    height: auto;
+    border: 2px solid #e1e1e1;
+    border-radius: 50px;
+    color: black;
+    background-color: #fff;
+    font-weight: 550;
+    font-size: 17px;
+    width: 40px;
+    margin: 0 10px;
+}
+.carrito-body .cantidad i{
+    color: #fa3b7b;
+    border: 2px solid red;
+    padding: 4px;
+    border-radius: 50%;
+}
+.carrito-body .eliminar{
+    line-height:2em;
+}
+.carrito-body .eliminar i{
+    color: red;
+    font-size: 20px;
+    
+}
 
 /* Forma de Entrega */
-.carrito-body .form-entrega .collapsible-header{
+.carrito-body .form-entrega .card-header{
     border-top: 1px solid #ddd;
 }
 .carrito-body .form-entrega .entrega-prod {
     margin: -8px auto;
     align-content: center;
+}
+.carrito-body .form-entrega i{
+    font-size: 20px;
+    line-height: 2em;
 }
 
 /* Total */
@@ -166,20 +219,3 @@
     color: #ffffff;
 }
 
-/* Cantidad Editar */
-.cantidad {
-    text-align: center!important;
-    margin: 0 auto;
-}
-.cantidad .test{
-    text-align: center;
-    border-bottom: none;
-    margin-bottom: 0;
-    height: auto;
-    border: 2px solid #e1e1e1;
-    border-radius: 10px;
-    color: black;
-    font-weight: 550;
-    font-size: 17px;
-    width: 40px;
-}

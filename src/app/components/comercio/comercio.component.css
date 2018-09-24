@@ -109,12 +109,14 @@
 
 .tab{
     margin-top: 1px;
-    margin-bottom: 1px;
+    margin-bottom: 0;
+    border-bottom: 2px solid #fa3b7b;
     display: flex;
 }
 .tab a.active{
     background-color: #fa3b7b;
     color: #ffffff!important;
+    border-bottom: 2px solid #fa3b7b;
 }
 .tab .item{
     width: 50%;  
@@ -136,9 +138,6 @@
     background-color: #fa3b7b;
     color: #ffffff;
 }
-
-
-
 
 
 
@@ -229,7 +228,7 @@
 }
 .producto .caja2 .btnAgregar {
     color: #fa3b7b;
-    font-size: 12px;
+    font-size: 16px;
     float: right;
     background: none;
     border: 2px solid #fa3b7b;
@@ -254,18 +253,25 @@
     margin: 5px 0 0 0;
 }
 
-/* + Info */
-#nav-info .collapsible-header{
-    text-transform: uppercase;
-    color: #fa3b7b;
 
+/* +Info */
+#nav-info .card-header{
+    text-transform: uppercase;
+    /* color: #fa3b7b; */
+    color: #666666;
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.75pt;
+    background-color: #fff;
 }
-#nav-info .collapsible-body{
+#nav-info .card-header i{
+    font-size: 18px;
+    padding-right: 5px;
+    color: #fa3b7b;
+}
+#nav-info .card-body{
     padding: 10px 20px 0 20px;
 }
 #nav-info .nosotros{
@@ -277,7 +283,7 @@
     font-size: 16px;
     font-weight: 400;
 }
-#nav-info .horario span{
+#nav-info .horario{
     color: #000000;
     opacity: 0.87;
     /* light 300, regular 400, medium 500, bold 700 */
@@ -320,8 +326,7 @@
     color: rgb(51, 51, 212);
 }
 
-
-/* modal bootstrap BRAIAN */
+/* modal*/
 #modalProducto{
     padding-top: 50px;
 }
