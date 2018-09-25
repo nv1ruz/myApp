@@ -14,23 +14,23 @@
 	
 	<div class="carrito-header">
 		<img src="https://es.seaicons.com/wp-content/uploads/2015/11/cart-icon.png" alt="">
-		<p class="nombre">Don Luna</p>
-		<p class="estado">Abierto</p>
+		<p class="nombre">{{ comercio.nombre }}</p>
+		<p class="estado">{{ comercio.estado }}</p>
 	</div>
 	
-	<div class="carrito-body">
+	<div class="carrito-body" *ngIf="comercio.estado === 'Abierto'">
 
 		<p class="txtProductos">Productos</p>
 		<div class="accordion" id="acordion">
-			<div class="card" *ngFor="let producto of this._cs.carrito; let i=index">
+			<div class="card" *ngFor="let producto of this._cs.carrito">
 				<div class="card-header row" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1">
 					<div class="col-1 cant-prod">
 						<p>{{ producto.cant }}</p>
 					</div>
-					<div class="col-8 nombre-prod">
+					<div class="col-auto nombre-prod">
 						<p>{{ producto.nombre }}</p>
 					</div>
-					<div class="col-3 prec-prod">
+					<div class="col prec-prod">
 						<p>$ {{ producto.preTot }}</p>
 					</div>
 				</div>
@@ -40,23 +40,24 @@
 							<div class="producto row align-items-center row">  
 								<div class="caja1 col-auto">
 									<div class="foto">
-										<img src="https://previews.123rf.com/images/ryzhkov86/ryzhkov861308/ryzhkov86130800096/21472186-pizza-con-jam%C3%B3n-salami-tomates-y-queso-mozzarella.jpg" width="100">
+										<img src="{{ producto.img }}" width="100">
 									</div>
 								</div>
 								<div class="caja2 col">
 									<p class="ingredientes">{{ producto.ing }}</p>      
 									<div class="precio-cant row">
 										<div class="col-3 precio">
-											<span>{{ producto.pre }}</span>
+											<span>${{ producto.pre }}</span>
 										</div>
 										<div class="col-7 cantidad">
-											<a class="down">
+											<button class="down" (click)="restarCantidad( producto )">
 												<i class="fa fa-minus"></i>
-											</a> 
-											<input type="text" class="test" value="{{ producto.cant }}" disabled/>
-											<a class="up">
+											</button> 
+											<!-- <input type="text" class="test" value="{{ producto.cant }}" disabled/> -->
+											<!-- <input type="text" value="{{ producto.cant }}" disabled/> -->
+											<button class="up" (click)="sumarCantidad( producto )">
 												<i class="fa fa-plus"></i>
-											</a>
+											</button>
 										</div>
 										<div class="col-2">
 											<a class="eliminar">
@@ -74,18 +75,18 @@
 		<br>
 		<p class="txtProductos">Forma de Entrega</p>
 		<div class="form-entrega">
-			<div class="card-header row">
+			<div class="card-header row d-flex align-items-center">
 				<div class="col-2 cant-prod">
 					<i class="fas fa-motorcycle"></i>
 				</div>
-				<div class="col-8 input-field select">
+				<div class="col-auto input-field select">
 					<select class="custom-select" required>
-						<option value="" disabled selected>Selecciona la forma de entrega</option>
-						<option value="1">Delivery</option>
+						<option value="" disabled selected>Forma de entrega</option>
+						<option value="1" *ngIf="comercio.delivery == true">Delivery</option>
 						<option value="2">Retiro por el local</option>
 					</select>
 				</div>
-				<div class="col-2 prec-prod">
+				<div class="col prec-prod">
 					<p>$ 10</p>
 				</div>
 			</div>
@@ -120,7 +121,7 @@
 		</div>
 		
 	</div>
-	<div class="boton">
+	<div class="boton" *ngIf="comercio.estado === 'Abierto'">
 		<span>Enviar Pedido</span>
 	</div>
 </div>

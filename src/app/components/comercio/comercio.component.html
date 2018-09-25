@@ -1,6 +1,6 @@
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
-	<a class="btnCarrito" [routerLink]="['/carrito']"><i class="fas fa-shopping-cart"></i></a>
+	<a class="btnCarrito" (click)="verComercio()"><i class="fas fa-shopping-cart"></i></a>
 	<img src="{{ comercio.img }}">
 	<p class="nombre">{{ comercio.nombre }} </p>
 	<!-- <p class="contacto">{{ comercio.contacto }}</p>

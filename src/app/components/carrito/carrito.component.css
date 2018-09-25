@@ -51,18 +51,18 @@
 }
 
 /* Carrito Body */
-.txtProductos{
-    color: #fe3918;
+.carrito-body .txtProductos{
+    color: #666666;
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.15pt;
     text-transform: uppercase;
-    margin: 15px 0 5px 0;    
+    margin: 5px 0 5px 0;    
     padding: 5px 10px 3px 10px;
     /* border-bottom: 1px solid #ececec; */
-    /* box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2); */
+    box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
     text-align: left;
 }
 .producto .caja1 {
@@ -76,35 +76,49 @@
     margin-top: 0;
     box-shadow: none;
 }
+.carrito-body .card{
+    border-top: none;
+    border-bottom: 1px solid #ececec;
+}
 .carrito-body .card-header{
-    text-transform: uppercase;
-    color: #666666;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.75pt;
+    text-transform: capitalize;
     background-color: #fff;
     margin: 0;
-    padding: 5px;
+    padding: 0 5px;
     border-bottom: none;
+}
+.carrito-body .card-header p{
+    height: 30px;
 }
 .carrito-body .card-header .cant-prod{
     padding: 0;
+    color: #000000;
+    opacity: 0.67;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    background: none;
     text-align: center;
-    color: #666;
-    font-weight: 600;
+    line-height: 1.8em;
 }
 .carrito-body .card-header .nombre-prod{
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     text-align: left;
     padding: 0 0 0 5px;
+    line-height: 1.8em;
 }
 .carrito-body .card-header .prec-prod{
     text-align: right;
-    padding: 0 5px 0 0;
-    font-size: 15px;
-    font-weight: 650;
-    color: #666;
+    color: #fa3b7b;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 .carrito-body .card-body {
     padding: 5px 10px 5px 10px;
@@ -114,11 +128,16 @@
     padding: 0;
 }
 .carrito-body .card-body .precio{
-    font-size: 20px;
     padding: 0;
+    color: #000000;
+    opacity: 0.57;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 }
 .carrito-body .card-body .precio-cant{
-    margin: 10px 10px 0 0;
+    margin: 5px 10px 0 0;
 }
 .carrito-body .card-body .precio-cant .cantidad{
     text-align: right;
@@ -127,9 +146,14 @@
     margin-bottom: 5px;
 }
 .carrito-body .card-body .producto .ingredientes{
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+        display: block;
+        color: #000000;
+        opacity: 0.6;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.25pt;
+        text-transform: capitalize;
 }
 
 /* Cantidad Editar */
@@ -138,28 +162,37 @@
     margin: 0 auto;
     padding: 0;
 }
-.carrito-body .cantidad .test{
+.carrito-body .cantidad input{
+    color: #000000;
+    opacity: 0.87;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    background: none;
     text-align: center;
-    border-bottom: none;
-    margin-bottom: 0;
-    height: auto;
-    border: 2px solid #e1e1e1;
-    border-radius: 50px;
-    color: black;
-    background-color: #fff;
-    font-weight: 550;
-    font-size: 17px;
     width: 40px;
-    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
 }
-.carrito-body .cantidad i{
+.carrito-body .cantidad button{
     color: #fa3b7b;
-    border: 2px solid red;
-    padding: 4px;
-    border-radius: 50%;
+    width: 26.5px;
+    height: 26px;
+    font-size: 12px;
+    /* float: right; */
+    background: none;
+    /* border: 2px solid #ececec; */
+    border: none;
+    border-radius: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
+
 .carrito-body .eliminar{
-    line-height:2em;
+    /* line-height:2em; */
     padding: 0;
 }
 .carrito-body .eliminar i{
@@ -187,7 +220,11 @@
     text-align: center;
 }
 .carrito-body .form-entrega .prec-prod{
-    line-height: 2.6;
+    color: #fa3b7b;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
 }
 .carrito-body .form-entrega i{
     font-size: 18px;
@@ -196,6 +233,7 @@
 }
 .carrito-body .form-entrega .select{
     padding: 0;
+    width: auto;
 }
 
 

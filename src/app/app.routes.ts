@@ -14,7 +14,7 @@ const ROUTES: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'comercio/:id', component: ComercioComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'carrito', component: CarritoComponent },
+    { path: 'carrito/:id', component: CarritoComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

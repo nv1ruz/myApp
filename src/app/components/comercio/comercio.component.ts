@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 declare var $:any;
+import { Router } from '@angular/router';
 import { FirebaseService } from '../../providers/firebase.service';
 import { ActivatedRoute, RouteConfigLoadEnd } from '@angular/router';
 
@@ -20,7 +21,7 @@ export class ComercioComponent implements OnInit {
   public producto:any = {};
 
 
-  constructor( public _fs: FirebaseService, private activatedRoute: ActivatedRoute, private _cs: CarritoService ) {
+  constructor( public _fs: FirebaseService, private activatedRoute: ActivatedRoute, private _cs: CarritoService, private router: Router ) {
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {
@@ -111,6 +112,10 @@ export class ComercioComponent implements OnInit {
   // agrega el producto al carrito
   agregar( producto, text ){
     this._cs.agregarProducto( producto, text );
+  }
+
+  verComercio(){
+    this.router.navigate(['/carrito', this.refId]);
   }
 
 }
