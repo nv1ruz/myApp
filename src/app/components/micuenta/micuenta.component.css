@@ -1,0 +1,48 @@
+
+.container{
+    margin-top: 5%;
+    text-align: center;
+    padding: 0 20px 0 20px;
+}
+.container form{
+    border-bottom: 1px solid rgb(196, 196, 196);
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+}
+.micuenta-header h4 {
+    font-weight: bold;
+    font-size: 29px;
+    margin-bottom: 10px;
+}
+.micuenta-header img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fe3918;
+    border-radius: 50%;
+}
+.input-group-text {
+    background-color: #fff;
+}
+.container .boton{
+    margin: 20px 15%;
+    height: 40px;
+    border: 1px solid #fa3b7b;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.container .boton span{
+    font-weight: bold;
+    color: #fa3b7b;
+    font-size: 18px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.container .boton:hover,
+.container .boton span:hover{
+    background-color: #fa3b7b;
+    color: #ffffff;
+}

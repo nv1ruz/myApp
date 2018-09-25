@@ -1,0 +1,57 @@
+<div class="container animated fadeIn">
+	<br>
+	<form method="post">
+			<div class="micuenta-header"> 
+				<h4>MI CUENTA</h4>
+				<img src="{{ _fs.usuario.foto }}" alt="">
+			</div>
+			<br>
+			<div class='input-field col-12'>
+				<label class="sr-only">Nombre</label>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<i class="fa fa-user"></i>
+						</div>
+					</div>
+					<input type="text" class="form-control" value="{{ _fs.usuario.nombre }}" required>
+				</div>
+			</div>
+			<br>
+			<div class="campos">
+				<div class='input-field col-12'>
+					<label class="sr-only">Correo Electronico</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<div class="input-group-text">
+								<i class="fa fa-envelope"></i>
+							</div>
+						</div>
+						<input type="email" class="form-control" value="{{ _fs.usuario.email }}" disabled>
+					</div>
+				</div>
+				<br>
+				<div class='input-field col-12'>
+					<label class="sr-only">Teléfono</label>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<div class="input-group-text">
+								<i class="fa fa-phone"></i>
+							</div>
+						</div>
+						<input type="number" class="form-control" placeholder="Teléfono" required>
+					</div>
+				</div>
+			</div>
+			<br><br>
+			<div class="boton">
+				<span>
+					GUARDAR
+				</span>
+			</div>
+			<br>
+		</form>
+	<br>
+	<hr>
+	
+	</div>

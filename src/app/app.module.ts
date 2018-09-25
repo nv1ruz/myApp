@@ -28,6 +28,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ComercioComponent } from './components/comercio/comercio.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
+import { MicuentaComponent } from './components/micuenta/micuenta.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     HomeComponent,
     ComercioComponent,
     RegisterComponent,
-    CarritoComponent
+    CarritoComponent,
+    MicuentaComponent
   ],
   imports: [
     BrowserModule,
