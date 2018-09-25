@@ -25,7 +25,7 @@ export class FirebaseService {
       this.usuario.uid = user.uid;
       this.usuario.foto = user.photoURL
       this.usuario.email = user.email
-      // setTimeout( ()=> this.router.navigate(['home']), 5000 );
+      setTimeout( ()=> this.router.navigate(['home']), 3000 );
 
     } )
 

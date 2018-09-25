@@ -9,9 +9,10 @@
 }
 .cajaComercio a{
     position: absolute;
-    float: left;    
-    top: 1.75%;
-    right: 4%;
+    /* top: 1.75%;
+    right: 4%; */
+    top: 15px;
+    right: 25px;
 }
 .cajaComercio a i{
     color: #fff;

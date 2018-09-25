@@ -1,9 +1,8 @@
 
 .cajaCarrito > a{
-    position: absolute;
-    float: left;    
-    top: 1.5%;
-    right: 4%;
+    position: absolute;  
+    top: 12px;
+    right: 22px;
 }
 .cajaCarrito > a i {
     color: #fff;

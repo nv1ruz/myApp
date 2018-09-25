@@ -1,4 +1,4 @@
-<div class="cajaCarrito animated fadeIn fast">
+<div class="cajaCarrito animated fadeIn fast" *ngIf="_fs.usuario.uid">
 	<a class="" [routerLink]="['/comercio']"><i class="fa fa-times-circle"></i></a>
 	<div class="row titulo">
 		<div class="col-3">
@@ -87,7 +87,7 @@
 					</select>
 				</div>
 				<div class="col prec-prod">
-					<p>$ 10</p>
+					<p>$ {{ comercio.deliveryPrecio }}</p>
 				</div>
 			</div>
 		</div>
