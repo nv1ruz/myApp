@@ -14,7 +14,7 @@
 	
 	<div class="carrito-header">
 		<img src="https://es.seaicons.com/wp-content/uploads/2015/11/cart-icon.png" alt="">
-		<p class="nombre">Pizzeria "Don Luna"</p>
+		<p class="nombre">Don Luna</p>
 		<p class="estado">Abierto</p>
 	</div>
 	
@@ -22,19 +22,19 @@
 
 		<p class="txtProductos">Productos</p>
 		<div class="accordion" id="acordion">
-			<div class="card">
-				<div class="card-header row" id="heading1" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+			<div class="card" *ngFor="let producto of this._cs.carrito; let i=index">
+				<div class="card-header row" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1">
 					<div class="col-1 cant-prod">
-						<p>10</p>
+						<p>{{ producto.cant }}</p>
 					</div>
 					<div class="col-8 nombre-prod">
-						<p>Pizza Mozzarella</p>
+						<p>{{ producto.nombre }}</p>
 					</div>
 					<div class="col-3 prec-prod">
-						<p>$ 1500</p>
+						<p>$ {{ producto.preTot }}</p>
 					</div>
 				</div>
-				<div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#acordion">
+				<div id="a{{producto.id}}" class="collapse" aria-labelledby="heading1" data-parent="#acordion">
 					<div class="card-body">
 						<div class=" animated fadeIn">
 							<div class="producto row align-items-center row">  
@@ -44,112 +44,16 @@
 									</div>
 								</div>
 								<div class="caja2 col">
-									<p class="ingredientes">Mozzarela, Aceituna, Orégano</p>      
+									<p class="ingredientes">{{ producto.ing }}</p>      
 									<div class="precio-cant row">
 										<div class="col-3 precio">
-											<span>$150</span>
+											<span>{{ producto.pre }}</span>
 										</div>
 										<div class="col-7 cantidad">
 											<a class="down">
 												<i class="fa fa-minus"></i>
 											</a> 
-											<input type="text" class="test" value="1" disabled/>
-											<a class="up">
-												<i class="fa fa-plus"></i>
-											</a>
-										</div>
-										<div class="col-2">
-											<a class="eliminar">
-												<i class="fa fa-trash-alt"></i>
-											</a> 
-										</div>
-									</div>
-								</div>   
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-header row" id="heading2" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-					<div class="col-1 cant-prod">
-						<p>3</p>
-					</div>
-					<div class="col-8 nombre-prod">
-						<p>Lomo Especial con Papas</p>
-					</div>
-					<div class="col-3 prec-prod">
-						<p>$ 390</p>
-					</div>
-				</div>
-				<div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#acordion">
-					<div class="card-body">
-						<div class="animated fadeIn">
-							<div class="producto row align-items-center">  
-								<div class="caja1 col-auto">
-									<div class="foto">
-										<img src="https://cdn77.gurudeofertas.com/image.php?image=/images/offers/2c5a9615bcafd3d65c50a589574b3952.jpg" width="100">
-									</div>
-								</div>
-								<div class="caja2 col">
-									<p class="ingredientes">Lomo, queso, lechuga, tomate, huevo, papas</p>      
-									<div class="precio-cant row">
-										<div class="col-3 precio">
-											<span>$130</span>
-										</div>
-										<div class="col-7 cantidad">
-											<a class="down">
-												<i class="fa fa-minus"></i>
-											</a> 
-											<input type="text" class="test" value="1" disabled/>
-											<a class="up">
-												<i class="fa fa-plus"></i>
-											</a>
-										</div>
-										<div class="col-2">
-											<a class="eliminar">
-												<i class="fa fa-trash-alt"></i>
-											</a> 
-										</div>
-									</div>
-								</div>   
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-header row" id="heading3" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-					<div class="col-1 cant-prod">
-						<p>1</p>
-					</div>
-					<div class="col-8 nombre-prod">
-						<p>Barroluco</p>
-					</div>
-					<div class="col-3 prec-prod">
-						<p>$ 140</p>
-					</div>
-				</div>
-				<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#acordion">
-					<div class="card-body">
-						<div class="animated fadeIn">
-							<div class="producto row align-items-center">  
-								<div class="caja1 col-auto">
-									<div class="foto">
-										<img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/2d/15/18/barroluco-clasico.jpg" width="100">
-									</div>
-								</div>
-								<div class="caja2 col">
-									<p class="ingredientes">Mozzarela, Aceituna, Orégano </p>      
-									<div class="precio-cant row">
-										<div class="col-3 precio">
-											<span>$140</span>
-										</div>
-										<div class="col-7 cantidad">
-											<a class="down">
-												<i class="fa fa-minus"></i>
-											</a> 
-											<input type="text" class="test" value="1" disabled/>
+											<input type="text" class="test" value="{{ producto.cant }}" disabled/>
 											<a class="up">
 												<i class="fa fa-plus"></i>
 											</a>
@@ -220,3 +124,4 @@
 		<span>Enviar Pedido</span>
 	</div>
 </div>
+

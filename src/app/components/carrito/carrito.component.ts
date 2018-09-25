@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CarritoService } from '../../providers/carrito.service';
+
 declare var $:any;
 @Component({
   selector: 'app-carrito',
@@ -7,9 +9,11 @@ declare var $:any;
 })
 export class CarritoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _cs: CarritoService) { }
 
   ngOnInit() {
+    
+
 
     $(document).ready(function(){
       // $('.collapsible').collapsible();
