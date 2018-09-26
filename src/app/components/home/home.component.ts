@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../providers/firebase.service';
 import { Router } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { CarritoService } from '../../providers/carrito.service';
+
 
 
 @Component({
@@ -19,7 +21,11 @@ export class HomeComponent implements OnInit {
 
     
 
-  constructor( public _fs: FirebaseService, private router: Router, private afs: AngularFirestore ) { }
+  constructor( public _fs: FirebaseService, private router: Router, private afs: AngularFirestore, private _cs: CarritoService ) { 
+
+    this._cs.carrito = [];
+
+  }
 
 
   ngOnInit() {

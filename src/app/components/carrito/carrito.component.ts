@@ -13,6 +13,7 @@ export class CarritoComponent implements OnInit {
   
   public refId:string;
   public comercio:any = {};
+  precioTotal:number = 0;
 
   constructor( private activatedRoute: ActivatedRoute, public _fs: FirebaseService, public _cs: CarritoService ) { 
 
@@ -21,9 +22,6 @@ export class CarritoComponent implements OnInit {
       this.refId = param.id;
     })
 
-  }
-
-  ngOnInit() {
 
     // obtiene y almacena los datos de un comercio(ID)
     this._fs.getComercio( this.refId ).subscribe( datos => {
@@ -35,6 +33,12 @@ export class CarritoComponent implements OnInit {
         this.comercio.estado = 'Cerrado';
       }       
     });
+    
+    this.sumarTotal();
+
+  }
+
+  ngOnInit() {
 
   }
 
@@ -48,6 +52,7 @@ export class CarritoComponent implements OnInit {
       prod.preTot = parseInt( prod.pre ) * prod.cant;
       console.log(prod.preTot);
     }    
+    this.sumarTotal();
   }
 
   restarCantidad( prod ){
@@ -59,6 +64,19 @@ export class CarritoComponent implements OnInit {
       prod.preTot = parseInt( prod.pre ) * prod.cant;
       console.log(prod.preTot);
     }
+    this.sumarTotal();
+  }
+
+  sumarTotal(){
+    this.precioTotal = 0;
+    this._cs.carrito.forEach( dato => {
+      this.precioTotal += parseInt( dato.preTot );
+    });
+  }
+
+  quitarProducto( id ){
+    this._cs.borrarProducto( id )
+    this.sumarTotal();
   }
 
 

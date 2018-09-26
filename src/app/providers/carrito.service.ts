@@ -39,7 +39,7 @@ export class CarritoService {
       nota: text
     } );
     
-    this.guardarStorage();
+    // this.guardarStorage();
     console.log( this.carrito );
   }
 
@@ -50,7 +50,7 @@ export class CarritoService {
     });
     
     // console.log(this.carrito);
-    this.guardarStorage();
+    // this.guardarStorage();
 
   }
 
