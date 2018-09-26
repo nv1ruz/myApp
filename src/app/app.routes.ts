@@ -6,7 +6,8 @@ import {
     LoginComponent,
     ComercioComponent,
     RegisterComponent,
-    CarritoComponent
+    CarritoComponent,
+    MicuentaComponent
  } from './components/index.paginas';
 
 const ROUTES: Routes = [
@@ -15,6 +16,7 @@ const ROUTES: Routes = [
     { path: 'comercio/:id', component: ComercioComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'carrito/:id', component: CarritoComponent },
+    { path: 'micuenta', component: MicuentaComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
