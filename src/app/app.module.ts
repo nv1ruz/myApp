@@ -29,6 +29,7 @@ import { ComercioComponent } from './components/comercio/comercio.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { MicuentaComponent } from './components/micuenta/micuenta.component';
+import { DireccionesComponent } from './components/direcciones/direcciones.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MicuentaComponent } from './components/micuenta/micuenta.component';
     ComercioComponent,
     RegisterComponent,
     CarritoComponent,
-    MicuentaComponent
+    MicuentaComponent,
+    DireccionesComponent
   ],
   imports: [
     BrowserModule,
