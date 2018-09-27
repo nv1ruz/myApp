@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../providers/firebase.service';
 import { CarritoService } from '../../providers/carrito.service';
-
+declare var $:any;
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -39,8 +39,33 @@ export class CarritoComponent implements OnInit {
   }
 
   ngOnInit() {
+    
 
+    // Mostrar-Ocultar Direccion y Precio Delivery
+    $('#cambiarentrega').change(function(){
+      var valorCambiado =$(this).val();
+      console.log(valorCambiado);
+      if(valorCambiado == '2'){
+        $('#direcc').css('display','none');
+        $('p.direcc').css('display','none');
+        $('p.valordelivery').css('display','none');
+        // $('input.valordelivery').css('display','none');
+        // $('input.valordelivery').val('0');
+      }
+      else if(valorCambiado == '1')
+      {
+        $('#direcc').css('display','block');
+        $('p.direcc').css('display','block');
+        $('p.valordelivery').css('display','block');
+        // $('input.valordelivery').css('display','block');
+        // $('input.valordelivery').val('1');
+        
+      }
+    }); 
+
+    
   }
+  
 
 
   sumarCantidad( prod ){
@@ -69,9 +94,20 @@ export class CarritoComponent implements OnInit {
 
   sumarTotal(){
     this.precioTotal = 0;
-    this._cs.carrito.forEach( dato => {
-      this.precioTotal += parseInt( dato.preTot );
-    });
+    if( $('p.valordelivery').is(":visible") ){
+      console.log(this.comercio.deliveryPrecio);
+      this._cs.carrito.forEach( dato => {
+        this.precioTotal += parseInt( dato.preTot );
+      });
+      this.precioTotal = this.precioTotal + this.comercio.deliveryPrecio;
+    }else{
+      console.log("none");
+      this._cs.carrito.forEach( dato => {
+        this.precioTotal += parseInt( dato.preTot );
+      });
+    }
+    console.log(this.precioTotal);
+   
   }
 
   quitarProducto( id ){
@@ -79,5 +115,7 @@ export class CarritoComponent implements OnInit {
     this.sumarTotal();
   }
 
+
+  
 
 }

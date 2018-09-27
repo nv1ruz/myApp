@@ -1,7 +1,8 @@
-<div class="cajaCarrito animated fadeIn fast" *ngIf="_fs.usuario.uid">
+<!-- <div class="cajaCarrito animated fadeIn fast" *ngIf="_fs.usuario.uid"> -->
+<div class="cajaCarrito animated fadeIn fast">
 	<div class="row titulo m-0 d-flex align-items-center">
 		<div class="col-3">
-			<a class="" [routerLink]="['/comercio', refId]"><i class="fa fa-shopping-basket"></i></a>
+			<a ><i class="fa fa-shopping-basket"></i></a>
 			<!-- <i class="fa fa-check"></i> -->
 		</div>
 		<div class="col-6">
@@ -20,8 +21,8 @@
 		<!-- <p class="estado">{{ comercio.estado }}</p> -->
 	</div>
 	
-	<div class="carrito-body" *ngIf="comercio.estado === 'Abierto'">
-
+	<!-- <div class="carrito-body" *ngIf="comercio.estado === 'Abierto'"> -->
+	<div class="carrito-body">
 		<p class="txtProductos">Mi pedido</p>
 		<div *ngIf="this._cs.carrito.length == 0">
 			<p>Tu carrito está vacío</p>
@@ -84,20 +85,21 @@
 				<div class="col-2 cant-prod">
 					<i class="fas fa-shipping-fast"></i>
 				</div>
-				<div class="col-auto input-field select">
-					<select class="custom-select" required>
-						<option value="" disabled selected>Forma de entrega</option>
+				<div class="col-auto input-field select"> 
+					<select class="custom-select" id="cambiarentrega" name="cambiarentrega" required>
+						<option value="0" disabled selected>Forma de entrega</option>
 						<option value="1" *ngIf="comercio.delivery == true">Delivery</option>
 						<option value="2">Retiro por el local</option>
 					</select>
 				</div>
 				<div class="col prec-prod">
-					<p *ngIf="comercio.delivery == true">$ {{ comercio.deliveryPrecio }}</p>
+					<p class="valordelivery" *ngIf="comercio.delivery == true">$ {{ comercio.deliveryPrecio }}</p>
+					<!-- <input type="text" class="valordelivery" value="{{ comercio.deliveryPrecio }}" disabled> -->
 				</div>
 			</div>
 		</div>
-		<p class="txtProductos" *ngIf="comercio.delivery == true">Dirección</p>
-		<div class="form-entrega"  *ngIf="comercio.delivery == true">
+		<p class="txtProductos direcc">Dirección</p>
+		<div class="form-entrega animated fadeIn" id="direcc" >
 			<div class="card-header row">
 				<div class="col-2 cant-prod">
 					<i class="fas fa-map-marker-alt"></i>
@@ -126,8 +128,15 @@
 		</div>
 		
 	</div>
-	<div class="boton" *ngIf="comercio.estado === 'Abierto'">
+	<div class="boton" *ngIf="comercio.estado === 'Abierto' && this._cs.carrito.length != 0">
 		<span>Enviar Pedido</span>
 	</div>
+	<div class="boton" *ngIf="comercio.estado === 'Abierto' && this._cs.carrito.length == 0">
+			<span [routerLink]="['/comercio', refId]">Agregar productos</span>
+		</div>
+	<div class="boton" *ngIf="comercio.estado === 'Cerrado'">
+		<span>Cerrado</span>
+	</div>
 </div>
+
 

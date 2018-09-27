@@ -1,16 +1,4 @@
 
-/* .cajaCarrito > a{
-    position: absolute;  
-    top: 12px;
-    right: 22px;
-    
-}
-.cajaCarrito > a i {
-    color: #fff;
-    font-size: 25px;
-    font-weight: bold;
-    
-} */
 /* Carrito Header */
 
 
@@ -245,6 +233,16 @@
     font-size: 20px;
     font-weight: 400;
 }
+.carrito-body .form-entrega .prec-prod input{
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    text-align: right;
+    color: #fa3b7b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
 .carrito-body .form-entrega i{
     font-size: 18px;
     line-height: 2em;
@@ -254,7 +252,15 @@
     padding: 0;
     width: auto;
 }
-
+p.direcc{
+    display: none;
+}
+div#direcc{
+    display: none;
+}
+p.valordelivery {
+    display: none;
+}
 
 /* Total */
 .carrito-body .total{
@@ -267,7 +273,7 @@
     letter-spacing: 0.15pt;
     text-transform: uppercase;
     border: 1px solid #e1e1e1;
-    margin-top: 7%;
+    margin-top: 10%!important;
     padding: 5px;
 }
 .carrito-body .total .total-titulo{
@@ -306,4 +312,6 @@
     background-color: #fa3b7b;
     color: #ffffff;
 }
+
+
 
