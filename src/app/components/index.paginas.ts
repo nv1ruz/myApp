@@ -4,3 +4,4 @@ export { ComercioComponent } from './comercio/comercio.component';
 export { RegisterComponent } from './register/register.component';
 export { CarritoComponent } from './carrito/carrito.component';
 export { MicuentaComponent } from './micuenta/micuenta.component';
+export { DireccionesComponent } from './direcciones/direcciones.component';
