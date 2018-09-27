@@ -17,7 +17,7 @@ export class FirebaseService {
   constructor( public afAuth: AngularFireAuth, private router: Router, private afs: AngularFirestore ) {
 
     this.afAuth.authState.subscribe( user => {
-      console.log( 'Estado del usuario: ', user );
+      // console.log( 'Estado del usuario: ', user );
       if( !user ){
         return;
       }

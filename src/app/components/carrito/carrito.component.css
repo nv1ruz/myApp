@@ -6,6 +6,7 @@
     text-align: center;
     padding: 0 0 5px 0;
     height: auto;
+    overflow-x: hidden;
 }
 .cajaCarrito p{
     margin: 0;
@@ -57,6 +58,9 @@
 }
 
 /* Carrito Body */
+.carrito-body{
+    margin-bottom: 80px;
+}
 .carrito-body .txtProductos{
     color: #666666;
     /* light 300, regular 400, medium 500, bold 700 */
@@ -123,7 +127,7 @@
     color: #fa3b7b;
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
 }
 .carrito-body .card-body {
@@ -202,9 +206,9 @@
     padding: 0;
 }
 .carrito-body .eliminar i{
-    color: red;
-    font-size: 20px;
-    
+    color: #d4d4d4;
+    font-size: 18px;    
+    font-weight: 300;
 }
 
 /* Forma de Entrega */
@@ -230,7 +234,7 @@
     color: #fa3b7b;
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
 }
 .carrito-body .form-entrega .prec-prod input{
@@ -264,54 +268,105 @@ p.valordelivery {
 
 /* Total */
 .carrito-body .total{
-    color: #000000;
-    opacity: 0.87;
+    border-top: 1px solid #ececec;
+    color: #fa3b7b;
+    background-color: #fff;
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.15pt;
     text-transform: uppercase;
-    border: 1px solid #e1e1e1;
     margin-top: 10%!important;
-    padding: 5px;
+    /* padding: 5px; */
 }
 .carrito-body .total .total-titulo{
-    padding: 0;
-    color: #666;
+    color: #fa3b7b;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.15pt;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    padding: 0 0 0 15px;
 }
 .carrito-body .total .total-numero{
-    border-left: 2px solid #e1e1e1;
-    padding: 0;
     color: #fa3b7b;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.15pt;
+    padding: 0 15px 0 0;
 }
 .carrito-body .total .total-numero p{
-    text-align: center!important;
+    text-align: right!important;    
+}
+.carrito-body .total .confirmar{
+    color: #ffffff;
+    background-color: #fa3b7b !important;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.75pt;
+    cursor: pointer;
+    
+    height: 40px;
+    width: 100%;
+    transition: all .3s ease;    
 }
 
 
-/* boton */
-.boton{
-    margin: 20px 15%;
-    height: 40px;
-    border: 1px solid #fa3b7b;
-    color: #fa3b7b;
-    background-color: #ffffff;
+
+
+.carrito-vacio i{
+    color: rgb(240, 240, 240);
+    font-size: 100px;
+    font-weight: 300;
+    margin-top: 25%;
+
+}
+.carrito-vacio p.uno{
+    color: rgb(148, 148, 148);
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
     text-align: center;
-    padding-top: 6px;
+    padding: 0 0 0 5px;
+    line-height: 1.8em;
+}
+.carrito-vacio p{
+    color: rgb(221, 221, 221);
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 0 0 5px;
+    line-height: 1.8em;
+}
+.carrito-vacio button{
+    color: #ffffff;
+    background-color: #3b87fa;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.75pt;
     cursor: pointer;
+
+    border: 0;
+    width: 185px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
     transition: all .3s ease;
 }
-.boton span{
-    font-weight: bold;
-    font-size: 18px;
-    text-transform: capitalize;
-    cursor: pointer;
+.carrito-vacio button:hover{
+    background-color: #2576f0;
 }
-.boton:hover{
-    background-color: #fa3b7b;
-    color: #ffffff;
-}
-
-
-

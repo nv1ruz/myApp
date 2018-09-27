@@ -39,7 +39,7 @@ export class ComercioComponent implements OnInit {
     // obtiene y almacena los datos de un comercio(ID)
     this._fs.getComercio( this.refId ).subscribe( datos => {
       this.comercio = datos.payload.data();
-      console.log(this.comercio);
+      // console.log(this.comercio);
       if( this.comercio.estado == true ){
         this.comercio.estado = 'Abierto';
       } else{
@@ -86,7 +86,7 @@ export class ComercioComponent implements OnInit {
     this.producto.precio = param.data.precio
     this.producto.precioTotal = param.data.precio;
     this.producto.cant = 1;
-    console.log( this.producto );
+    // console.log( this.producto );
   }
 
   sumarCantidad(){

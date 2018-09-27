@@ -11,7 +11,7 @@
 		</div>
 		<div class="col-3 estado-pedido">
 			<!-- <i class="fa fa-check"></i> -->
-			<a class="" [routerLink]="['/comercio', refId]"><i class="fa fa-arrow-circle-left"></i></a>
+			<a [routerLink]="['/comercio', refId]"><i class="fa fa-arrow-circle-left"></i></a>
 		</div>
 	</div>
 	
@@ -22,11 +22,9 @@
 	</div>
 	
 	<!-- <div class="carrito-body" *ngIf="comercio.estado === 'Abierto'"> -->
-	<div class="carrito-body">
+	<div class="carrito-body" *ngIf="_cs.carrito.length > 0">
 		<p class="txtProductos">Mi pedido</p>
-		<div *ngIf="this._cs.carrito.length == 0">
-			<p>Tu carrito está vacío</p>
-		</div>
+		
 		<div class="accordion" id="acordion">
 			<div class="card" *ngFor="let producto of this._cs.carrito">
 				<div class="card-header row" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1">
@@ -86,7 +84,7 @@
 					<i class="fas fa-shipping-fast"></i>
 				</div>
 				<div class="col-auto input-field select"> 
-					<select class="custom-select" id="cambiarentrega" name="cambiarentrega" required>
+					<select class="custom-select" (click)="sumarTotal(); mostrarOcultarDireccion()" id="cambiarentrega" name="cambiarentrega" required>
 						<option value="0" disabled selected>Forma de entrega</option>
 						<option value="1" *ngIf="comercio.delivery == true">Delivery</option>
 						<option value="2">Retiro por el local</option>
@@ -104,7 +102,7 @@
 				<div class="col-2 cant-prod">
 					<i class="fas fa-map-marker-alt"></i>
 				</div>
-				<div class="col-8 input-field select">
+				<div class="col-10 input-field select">
 					<select class="custom-select" required>
 						<option value="" disabled selected>Selecciona la dirección</option>
 						<option value="1">Victoria Romero, 221</option>
@@ -118,25 +116,33 @@
 			</div>
 		</div>
 
-		<div class="row total m-0">
-			<div class="col-9 total-titulo">
+		<div class="row total m-0 fixed-bottom align-items-center" *ngIf="_cs.carrito.length > 0">
+			<div class="col-4 total-titulo">
 				<p>Total</p>
 			</div>
-			<div class="col-3 total-numero">
-				<p>${{ precioTotal }}</p>
+			<div class="col-8 total-numero">
+				<p>{{ precioTotal | currency }}</p>
 			</div>
-		</div>
-		
+			<div class="row confirmar m-0 align-items-center">
+				<div class="col-12">
+					<span><i class="fas fa-concierge-bell"></i> Enviar pedido</span>
+				</div>
+			</div>
+		</div>		
 	</div>
-	<div class="boton" *ngIf="comercio.estado === 'Abierto' && this._cs.carrito.length != 0">
-		<span>Enviar Pedido</span>
+
+
+
+	<div class="carrito-vacio animated fadeIn fast" *ngIf="this._cs.carrito.length == 0">
+		<i class="fas fa-grimace"></i>
+		<p class="uno">Tu carrito está vacío</p>
+		<p>Parece que aún no elegiste</p>
+		<p>lo que vas a pedir.</p>
+		<button [routerLink]="['/comercio', refId]">Explorar</button>
 	</div>
-	<div class="boton" *ngIf="comercio.estado === 'Abierto' && this._cs.carrito.length == 0">
-			<span [routerLink]="['/comercio', refId]">Agregar productos</span>
-		</div>
-	<div class="boton" *ngIf="comercio.estado === 'Cerrado'">
-		<span>Cerrado</span>
-	</div>
+
+
+
 </div>
 
 
