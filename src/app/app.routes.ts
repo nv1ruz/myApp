@@ -7,7 +7,8 @@ import {
     ComercioComponent,
     RegisterComponent,
     CarritoComponent,
-    MicuentaComponent
+    MicuentaComponent,
+    DireccionesComponent
  } from './components/index.paginas';
 
 const ROUTES: Routes = [
@@ -17,6 +18,7 @@ const ROUTES: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'carrito/:id', component: CarritoComponent },
     { path: 'micuenta', component: MicuentaComponent },
+    { path: 'direcciones', component: DireccionesComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

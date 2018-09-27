@@ -1,3 +1,363 @@
-<p>
-  direcciones works!
-</p>
+<div class="container">
+	<div class="cajaListadirecciones">
+		<div class="row m-0 d-flex align-items-center">
+			<div class="col auto">
+				<p class="txttitulo">Mis direcciones</p>
+			</div>
+			<div class="col-2">
+				<a><i class="fa fa-plus-circle"></i></a>
+			</div>
+		</div>
+		<div class="accordion" id="acordion">
+			<div class="card">
+				<div class="card-header row" id="heading1" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+					<div class="col-2">
+						<p>#1</p>
+					</div>
+					<div class="col-auto">
+						<p>Victoria Romero, 221</p>
+					</div>
+					<div class="col">
+						<p></p>
+					</div>
+				</div>
+				<div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#acordion">
+							<div class="card-body was-validated">
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label for="provincia">Provincia *</label>
+											<select class="custom-select" id="provincia" required disabled>
+												<option value="0" disabled>Provincia...</option>
+												<option value="1" selected>La Rioja</option>
+											</select>
+											<div class="invalid-feedback">
+												Por favor, selecciona tu provincia.
+											</div>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<label for="ciudad">Ciudad *</label>
+											<select class="custom-select" id="ciudad" required disabled>
+												<option value="0" disabled>Ciudad...</option>
+												<option value="1" selected>Chamical</option>
+											</select>
+											<div class="invalid-feedback">
+												Por favor, selecciona tu ciudad.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="">Barrio *</label>
+									<input type="text" class="form-control" value="Angel V. Peñaloza" required>
+									<div class="invalid-feedback">
+										Por favor, escribe tu barrio.
+									</div>		
+								</div>
+								<div class="row">
+									<div class="col-7">
+										<div class="form-group">
+											<label for="">Calle *</label>
+											<input type="text" class="form-control" value="Victoria Romero" required>
+											<div class="invalid-feedback">
+												Por favor, escribe tu calle.
+											</div>		
+										</div>
+									</div>
+									<div class="col-5">
+										<div class="form-group">
+											<label for="">Número *</label>
+											<input type="text" class="form-control" value="221" required>
+											<div class="invalid-feedback">
+												Por favor, escribe tu numero de casa/depto.
+											</div>		
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="">Referencia (opcional)</label>
+									<textarea type="text" class="form-control" rows="3" placeholder="Alguna referencia para el delivery..."></textarea>
+								</div>
+							</div>
+							<div class="footer">
+								<div class="row">
+									<div class="boton" data-toggle="collapse" data-target="#collapse1">
+										<span>
+											Cancelar
+										</span>
+									</div>
+									<div class="boton">
+										<span>
+											Guardar
+										</span>
+									</div>
+								</div>
+							</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header row" id="heading1" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+					<div class="col-2">
+						<p>#2</p>
+					</div>
+					<div class="col-auto">
+						<p>Av Luis Vernet, 1230</p>
+					</div>
+					<div class="col">
+						<p></p>
+					</div>
+				</div>
+				<div id="collapse2" class="collapse show" aria-labelledby="heading1" data-parent="#acordion">
+							<div class="card-body was-validated">
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label for="provincia">Provincia *</label>
+											<select class="custom-select" id="provincia" required disabled>
+												<option value="0" disabled>Provincia...</option>
+												<option value="1" selected>La Rioja</option>
+											</select>
+											<div class="invalid-feedback">
+												Por favor, selecciona tu provincia.
+											</div>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<label for="ciudad">Ciudad *</label>
+											<select class="custom-select" id="ciudad" required disabled>
+												<option value="0" disabled>Ciudad...</option>
+												<option value="1" selected>Chamical</option>
+											</select>
+											<div class="invalid-feedback">
+												Por favor, selecciona tu ciudad.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="">Barrio *</label>
+									<input type="text" class="form-control" value="San Cayetano" required>
+									<div class="invalid-feedback">
+										Por favor, escribe tu barrio.
+									</div>		
+								</div>
+								<div class="row">
+									<div class="col-7">
+										<div class="form-group">
+											<label for="">Calle *</label>
+											<input type="text" class="form-control" value="Av. Luis Vernet" required>
+											<div class="invalid-feedback">
+												Por favor, escribe tu calle.
+											</div>		
+										</div>
+									</div>
+									<div class="col-5">
+										<div class="form-group">
+											<label for="">Número *</label>
+											<input type="text" class="form-control" value="1230" required>
+											<div class="invalid-feedback">
+												Por favor, escribe tu numero de casa/depto.
+											</div>		
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="">Referencia (opcional)</label>
+									<textarea type="text" class="form-control" rows="3" placeholder="Alguna referencia para el delivery..."></textarea>
+								</div>
+							</div>
+							<div class="footer">
+								<div class="row">
+									<div class="boton" data-toggle="collapse" data-target="#collapse2">
+										<span>
+											Cancelar
+										</span>
+									</div>
+									<div class="boton">
+										<span>
+											Guardar
+										</span>
+									</div>
+								</div>
+							</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header row" id="heading1" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+					<div class="col-2">
+						<p>#3</p>
+					</div>
+					<div class="col-auto">
+						<p>Santa Rosa, S/N</p>
+					</div>
+					<div class="col">
+						<p></p>
+					</div>
+				</div>
+				<div id="collapse3" class="collapse show" aria-labelledby="heading1" data-parent="#acordion">
+							<div class="card-body was-validated">
+								<div class="row">
+									<div class="col-6">
+										<div class="form-group">
+											<label for="provincia">Provincia *</label>
+											<select class="custom-select" id="provincia" required disabled>
+												<option value="0" disabled>Provincia...</option>
+												<option value="1" selected>La Rioja</option>
+											</select>
+											<div class="invalid-feedback">
+												Por favor, selecciona tu provincia.
+											</div>
+										</div>
+									</div>
+									<div class="col-6">
+										<div class="form-group">
+											<label for="ciudad">Ciudad *</label>
+											<select class="custom-select" id="ciudad" required disabled>
+												<option value="0" disabled>Ciudad...</option>
+												<option value="1" selected>Chamical</option>
+											</select>
+											<div class="invalid-feedback">
+												Por favor, selecciona tu ciudad.
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="">Barrio *</label>
+									<input type="text" class="form-control" value="Sagrado Corazón" required>
+									<div class="invalid-feedback">
+										Por favor, escribe tu barrio.
+									</div>		
+								</div>
+								<div class="row">
+									<div class="col-7">
+										<div class="form-group">
+											<label for="">Calle *</label>
+											<input type="text" class="form-control" value="Santa Rosa" required>
+											<div class="invalid-feedback">
+												Por favor, escribe tu calle.
+											</div>		
+										</div>
+									</div>
+									<div class="col-5">
+										<div class="form-group">
+											<label for="">Número *</label>
+											<input type="text" class="form-control" value="S/N" required>
+											<div class="invalid-feedback">
+												Por favor, escribe tu numero de casa/depto.
+											</div>		
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="">Referencia (opcional)</label>
+									<textarea type="text" class="form-control" rows="3" placeholder="Alguna referencia para el delivery..."></textarea>
+								</div>
+							</div>
+							<div class="footer">
+								<div class="row">
+									<div class="boton" data-toggle="collapse" data-target="#collapse3">
+										<span>
+											Cancelar
+										</span>
+									</div>
+									<div class="boton">
+										<span>
+											Guardar
+										</span>
+									</div>
+								</div>
+							</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="cajaNuevadireccion">
+		<div class="header">
+			<p class="txttitulo">Agregar nueva Dirección</p>
+		</div>
+		<div class="body was-validated">
+			<div class="row">
+				<div class="col-6">
+					<div class="form-group">
+						<label for="provincia">Provincia *</label>
+						<select class="custom-select" id="provincia" required disabled>
+							<option value="0" disabled>Provincia...</option>
+							<option value="1" selected>La Rioja</option>
+						</select>
+						<div class="invalid-feedback">
+							Por favor, selecciona tu provincia.
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="form-group">
+						<label for="ciudad">Ciudad *</label>
+						<select class="custom-select" id="ciudad" required disabled>
+							<option value="0" disabled>Ciudad...</option>
+							<option value="1" selected>Chamical</option>
+						</select>
+						<div class="invalid-feedback">
+							Por favor, selecciona tu ciudad.
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="">Barrio *</label>
+				<input type="text" class="form-control"  required>
+				<div class="invalid-feedback">
+					Por favor, escribe tu barrio.
+				</div>		
+			</div>
+			<div class="row">
+				<div class="col-7">
+					<div class="form-group">
+						<label for="">Calle *</label>
+						<input type="text" class="form-control" required>
+						<div class="invalid-feedback">
+							Por favor, escribe tu calle.
+						</div>		
+					</div>
+				</div>
+				<div class="col-5">
+					<div class="form-group">
+						<label for="">Número *</label>
+						<input type="text" class="form-control" required>
+						<div class="invalid-feedback">
+							Por favor, escribe tu numero de casa/depto.
+						</div>		
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="">Referencia (opcional)</label>
+				<textarea type="text" class="form-control" rows="3" placeholder="Alguna referencia para el delivery..."></textarea>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="row">
+				<div class="boton">
+					<span>
+						Cancelar
+					</span>
+				</div>
+				<div class="boton">
+					<span>
+						Guardar
+					</span>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	
+	
+</div>
+
+<!-- <div id="geolocation-test"></div> -->
+
+
