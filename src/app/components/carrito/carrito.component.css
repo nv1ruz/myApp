@@ -329,7 +329,8 @@ p.valordelivery {
     font-size: 100px;
     /* font-weight: 300; */
     margin: 0 auto;
-    margin-top: 25%;
+    margin-top: 30%;
+    padding: 0 0 10px 10px;
 }
 .carrito-vacio p.uno{
     color: rgb(148, 148, 148);
