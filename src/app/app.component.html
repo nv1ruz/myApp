@@ -26,6 +26,9 @@
             <div class="caja" [routerLink]="['/home']" (click)="_toggleOpened()">
                 <a><i class="fas fa-home"></i><span>Inicio</span></a>
             </div>
+            <div class="caja" [routerLink]="['/pedidos']" (click)="_toggleOpened()">
+                <a><i class="fas fa-edit"></i><span>Pedidos</span></a>
+            </div>
             <div class="caja" [routerLink]="['/notificaciones']" (click)="_toggleOpened()">
                 <a><i class="fas fa-bell"></i><span>Notificaciones</span></a>
             </div>
@@ -33,7 +36,7 @@
                 <a><i class="fas fa-heart"></i><span>Favoritos</span></a>
             </div>
             <div class="caja" [routerLink]="['/direcciones']" (click)="_toggleOpened()">
-                <a><i class="fas fa-map-marker-alt"></i><span>Direcciones</span></a>
+                <a><i class="fas fa-map-marker-alt"></i><span>Mis Direcciones</span></a>
             </div>
             <div class="caja" [routerLink]="['/micuenta']" (click)="_toggleOpened()">
                 <a><i class="fas fa-user"></i><span>Mi cuenta</span></a>
@@ -44,6 +47,7 @@
             </div>     
             <hr>
             <div class="caja">
+                <!-- earlybirds -->
                 <a href="#"><p>Ayuda y sugerencias</p></a>
                 <a href="#"><p>Preguntas Frecuentes</p></a>
                 <a href="#"><p>Contáctanos</p></a>
@@ -56,7 +60,7 @@
     <div ng-sidebar-content>
         <div class="nav">
             <button class="btnMenu" *ngIf="_fs.usuario.uid" (click)="_toggleOpened()"><i class="fas fa-bars"></i></button>
-            <span class="titulo" [routerLink]="['/home']">MyApp</span>
+            <span class="titulo" [routerLink]="['/home']"><i class="fab fa-earlybirds size"></i> MyApp</span>
             <button class="btnIngresar" *ngIf="!_fs.usuario.uid" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
         </div>
         
