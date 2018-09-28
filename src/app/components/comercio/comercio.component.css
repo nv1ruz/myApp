@@ -1,7 +1,7 @@
 /* Cabera */
 .cajaComercio{
     text-align: center;
-    padding: 0 0 5px 0;
+    padding: 0;
     /* box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2); */
     /* background-color: #ff3e7f;     */
     /* background-image: linear-gradient(#910030, #ff3e7f); */
@@ -106,23 +106,80 @@
     font-weight: bold;
 }
 
+
+
+
+.imagen-banner{
+    position: absolute;
+    width: 100%;
+}
+.imagen-banner img{
+    height: 100%;
+    -webkit-filter: brightness(.5);
+    filter: brightness(.5);
+}
+.comercio-header img{
+    width: 100px;
+    height: 100px;
+    margin: 15px auto 5px auto;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 30px 0 rgba(255, 255, 255, 0.6);
+}
+.comercio-header p{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.15pt;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+.comercio-info h5{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+.comercio-info p{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+
+
+
+
+
 /* Tabs */
 
 .tab{
-    margin-top: 1px;
+    margin-top: 0;
     margin-bottom: 0;
-    border-bottom: 2px solid #fa3b7b;
+    border-bottom: 1px solid #fa3b7b;
     display: flex;
 }
 .tab a.active{
     background-color: #fa3b7b;
     color: #ffffff!important;
-    border-bottom: 2px solid #fa3b7b;
+    border-bottom: 1px solid #fa3b7b;
+    border-radius: 0;
+    border: 0;
 }
 .tab .item{
     width: 50%;  
     /* border: 1px solid #b3b1b1; */
     /* border-radius: 8px; */
+    border: 0;
 }
 .tab a.item{
     color: #fa3b7b;

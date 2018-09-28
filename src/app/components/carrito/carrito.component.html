@@ -1,17 +1,14 @@
 <!-- <div class="cajaCarrito animated fadeIn fast" *ngIf="_fs.usuario.uid"> -->
 <div class="cajaCarrito animated fadeIn fast">
 	<div class="row titulo m-0 d-flex align-items-center">
-		<div class="col-3">
-			<a ><i class="fa fa-shopping-basket"></i></a>
-			<!-- <i class="fa fa-check"></i> -->
-		</div>
-		<div class="col-6">
+		
+		<div class="col-9">
 			<!-- <p class="">Mi Carrito</p> -->
 			<p class="nombre">{{ comercio.nombre }}</p>
 		</div>
-		<div class="col-3 estado-pedido">
+		<div class="col-3" style="text-align:right;">
 			<!-- <i class="fa fa-check"></i> -->
-			<a [routerLink]="['/comercio', refId]"><i class="fa fa-arrow-circle-left"></i></a>
+			<a [routerLink]="['/comercio', refId]"><i class="fa fa-times"></i></a>
 		</div>
 	</div>
 	
@@ -49,6 +46,7 @@
 								</div>
 								<div class="caja2 col">
 									<p class="ingredientes">{{ producto.ing }}</p>      
+									<p class="ingredientes">Nota: {{ producto.nota }}</p>      
 									<div class="precio-cant row">
 										<div class="col-3 precio">
 											<span>${{ producto.pre }}</span>
@@ -134,7 +132,7 @@
 
 
 	<div class="carrito-vacio animated fadeIn fast" *ngIf="this._cs.carrito.length == 0">
-		<i class="fas fa-grimace"></i>
+		<i class="fa fa-shopping-basket"></i>
 		<p class="uno">Tu carrito está vacío</p>
 		<p>Parece que aún no elegiste</p>
 		<p>lo que vas a pedir.</p>

@@ -23,6 +23,7 @@
     text-decoration: none;
     color: #fff;
     font-size: 30px;    
+    text-align: right;
 }
 .cajaCarrito .titulo p{
     color: #ffffff;
@@ -42,10 +43,11 @@
     letter-spacing: 0.15pt;
     text-transform: uppercase;
     margin-bottom: 0;
-
+    text-align: left;
 }
-.cajaCarrito .titulo .estado-pedido {
-    color: rgb(24, 192, 24);
+.cajaCarrito .titulo .estado-pedido i{
+    color: #fff;
+    /* font-weight: 300; */
 }
 .cajaCarrito .carrito-header img{
     width: 100px;
@@ -314,7 +316,7 @@ p.valordelivery {
     letter-spacing: 0.75pt;
     cursor: pointer;
     
-    height: 40px;
+    height: 50px;
     width: 100%;
     transition: all .3s ease;    
 }
@@ -325,9 +327,9 @@ p.valordelivery {
 .carrito-vacio i{
     color: rgb(240, 240, 240);
     font-size: 100px;
-    font-weight: 300;
+    /* font-weight: 300; */
+    margin: 0 auto;
     margin-top: 25%;
-
 }
 .carrito-vacio p.uno{
     color: rgb(148, 148, 148);

@@ -1,19 +1,29 @@
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
 	<a class="btnCarrito" *ngIf="_fs.usuario.uid" (click)="verComercio()"><i class="fas fa-shopping-cart"></i></a>
-	<img src="{{ comercio.img }}">
-	<p class="nombre">{{ comercio.nombre }} </p>
-	<!-- <p class="contacto">{{ comercio.contacto }}</p>
-	<p class="direccion">{{ comercio.direccion }}</p> -->
-	<div class="row align-items-center m-0">
-		<div class="col-4 megusta">
-			<p><i class="fas fa-heart"></i> 35M</p>
+	<div style="position: relative; height: 100%; overflow: hidden;">
+		<div class="imagen-banner">
+			<img src="{{ comercio.banner }}">
 		</div>
-		<div class="col-4 estado">
-			<p> {{ comercio.estado }}</p>
-		</div>
-		<div class="col-4 delivery">
-			<span *ngIf="comercio.delivery == true"><i class="fas fa-shipping-fast"></i> ${{ comercio.deliveryPrecio }}</span> 
+		<div class="comercio" style="position: relative;">
+			<div class="comercio-header row m-0">	
+				<div class="col-12 d-flex align-items-center">
+					<img src="{{ comercio.img }}">
+				</div>			
+				<div class="col-12">
+					<p>{{ comercio.nombre }}</p>	
+				</div>
+			</div>
+			<div class="comercio-info row m-0 align-items-center">
+				<div class="col">
+					<h5>Seguidores</h5>
+					<p>3.500</p>
+				</div>
+				<div class="col" *ngIf="comercio.delivery == true">
+					<h5>Costo de envío</h5>
+					<p>{{ comercio.deliveryPrecio | currency }}</p> 
+				</div>
+			</div>	
 		</div>
 	</div>
 </div>
