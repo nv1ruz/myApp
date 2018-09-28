@@ -5,3 +5,4 @@ export { RegisterComponent } from './register/register.component';
 export { CarritoComponent } from './carrito/carrito.component';
 export { MicuentaComponent } from './micuenta/micuenta.component';
 export { DireccionesComponent } from './direcciones/direcciones.component';
+export { PedidosComponent } from './pedidos/pedidos.component';
