@@ -9,7 +9,8 @@ import {
     CarritoComponent,
     MicuentaComponent,
     DireccionesComponent,
-    PedidosComponent
+    PedidosComponent,
+    RegisterComercioComponent
  } from './components/index.paginas';
 
 const ROUTES: Routes = [
@@ -21,6 +22,7 @@ const ROUTES: Routes = [
     { path: 'micuenta', component: MicuentaComponent },
     { path: 'direcciones', component: DireccionesComponent },
     { path: 'pedidos', component: PedidosComponent },
+    { path: 'registerComercio', component: RegisterComercioComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

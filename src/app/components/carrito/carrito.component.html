@@ -85,8 +85,8 @@
 				<div class="col-auto input-field select"> 
 					<select class="custom-select" (click)="sumarTotal(); mostrarOcultarDireccion()" id="cambiarentrega" name="cambiarentrega" required>
 						<option value="0" disabled selected>Forma de entrega</option>
-						<option value="1" *ngIf="comercio.delivery == true" (click)="sumarTotal(); mostrarOcultarDireccion(); mostrarOcultarDireccion()">Delivery</option>
-						<option value="2" (click)="sumarTotal(); mostrarOcultarDireccion(); mostrarOcultarDireccion()">Retiro por el local</option>
+						<option value="1" *ngIf="comercio.delivery == true" (click)="sumarTotal(); mostrarOcultarDireccion()">Delivery</option>
+						<option value="2" (click)="sumarTotal(); mostrarOcultarDireccion()">Retiro por el local</option>
 					</select>
 				</div>
 				<div class="col prec-prod">

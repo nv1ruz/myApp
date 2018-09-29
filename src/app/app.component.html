@@ -51,7 +51,7 @@
                 <a href="#"><p>Ayuda y sugerencias</p></a>
                 <a href="#"><p>Preguntas Frecuentes</p></a>
                 <a href="#"><p>Contáctanos</p></a>
-            </div>      
+            </div>   
 
         </div>
     </ng-sidebar>
@@ -60,7 +60,7 @@
     <div ng-sidebar-content>
         <div class="nav">
             <button class="btnMenu" *ngIf="_fs.usuario.uid" (click)="_toggleOpened()"><i class="fas fa-bars"></i></button>
-            <span class="titulo" [routerLink]="['/home']"><i class="fab fa-earlybirds size"></i> SOLOAQUI</span>
+            <span class="titulo" [routerLink]="['/home']"><i class="fab fa-phoenix-framework"></i> AQUI </span>
             <button class="btnIngresar" *ngIf="!_fs.usuario.uid" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
         </div>
         
