@@ -3,16 +3,168 @@
 		<p>Mis Pedidos</p>
 	</div>
 	<div class="cuerpo">
-		<div class="card-body">
+		<div class="pedido">
 			<div class="row">
-				<div class="col-2">
-					<p>#1</p>
+				<div class="col-2 ver">
+					<button type="button" class="badge badge-info" data-toggle="modal" data-target="#modalDetalle">Ver</button>
 				</div>
-				<div class="col-auto">
+				<div class="col-auto nombre">
 					<p>Pizzeria "Don Luna"</p>
 				</div>
-				<div class="col">
-					<p>Confirmado</p>
+				<div class="col estado">
+					<button type="button" class="badge badge-pill badge-primary" data-toggle="modal" data-target="#modalEstado">En Espera</button>
+				</div>
+			</div>
+		</div>
+		<div class=" pedido">
+			<div class="row">
+				<div class="col-2 ver">
+					<button type="button" class="badge badge-info" data-toggle="modal" data-target="#modalDetalle">Ver</button>
+				</div>
+				<div class="col-auto nombre">
+					<p>Pizzeria "Don Luna"</p>
+				</div>
+				<div class="col estado">
+						<button type="button" class="badge badge-pill badge-warning" data-toggle="modal" data-target="#modalEstado">Listo</button>
+				</div>
+			</div>
+		</div>
+		<div class=" pedido">
+			<div class="row">
+				<div class="col-2 ver">
+					<button type="button" class="badge badge-info" data-toggle="modal" data-target="#modalDetalle">Ver</button>
+				</div>
+				<div class="col-auto nombre">
+					<p>Urbano Resto Bar</p>
+				</div>
+				<div class="col estado">
+						<button type="button" class="badge badge-pill badge-danger" data-toggle="modal" data-target="#modalEstado">Cancelado</button>
+				</div>
+			</div>
+		</div>
+		<div class=" pedido">
+			<div class="row">
+				<div class="col-2 ver">
+					<button type="button" class="badge badge-info" data-toggle="modal" data-target="#modalDetalle">Ver</button>
+				</div>
+				<div class="col-auto nombre">
+					<p>Rey Del Lomito</p>
+				</div>
+				<div class="col estado">
+						<button type="button" class="badge badge-pill badge-secondary" data-toggle="modal" data-target="#modalEstado">Completado</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal Pedido:Estado -->
+<div class="modal fade modalEstado" id="modalEstado" tabindex="-1" role="dialog" aria-labelledby="modalEstadoTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<!-- <div class="modal-header">
+			
+			</div> -->
+			<div class="modal-body">
+				<i class="fa fa-dizzy"></i>
+				<p>¿Quieres Cancelar tu pedido?</p>
+				<span>(Esta acción no se puede deshacer)</span>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6 si">
+						<span >SI</span>
+					</div>
+					<div class="col-6 no" data-dismiss="modal">
+						<span>NO</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Pedido:Detalle -->
+<div class="modal fade modalDetalle" id="modalDetalle" tabindex="-1" role="dialog" aria-labelledby="modalDetalleTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="row">
+					<div class="col-6 titulo">
+						<p>Pedido #1578</p>
+					</div>
+					<div class="col-6 numero">
+						<p>x</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="titul">
+					<span>Producto</span>
+				</div>
+				<div class="producto row">
+					<div class="col-2 cantidad">
+						<p>1</p>
+					</div>
+					<div class="col-8 nombre">
+						<p>Barroluco</p>
+					</div>
+					<div class="col-2 precio">
+						<p>$140</p>
+					</div>
+				</div>
+				<div class="producto row">
+					<div class="col-2 cantidad">
+						<p>2</p>
+					</div>
+					<div class="col-8 nombre">
+						<p>Pizza Cuatro Quesos</p>
+					</div>
+					<div class="col-2 precio">
+						<p>$340</p>
+					</div>
+				</div>
+				<div class="producto row">
+					<div class="col-2 cantidad">
+						<p>1</p>
+					</div>
+					<div class="col-8 nombre">
+						<p>Lomo Especial</p>
+					</div>
+					<div class="col-2 precio">
+						<p>$150</p>
+					</div>
+				</div>
+				<br>
+				<div class="titul">
+					<span>Entrega</span>
+				</div>
+				<div class="delivery row">
+					<div class="col-6 tipoEntrega">
+						<p>Delivery</p>
+					</div>
+					<div class="col-6 precioDelivery">
+						<p>$20</p>
+					</div>
+				</div><br>
+				<div class="titul">
+					<span>Dirección</span>
+				</div>
+				<div class="direccion row">
+					<div class="col-12">
+						<p>Angel V. Peñaloza, 221</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="total row">
+					<div class="col-6 titulo">
+						<p>Total</p>
+					</div>
+					<div class="col-6 numero">
+						<p>$650</p>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,140 @@
+p{
+    margin: 0;
+}
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.container {
+    padding: 0 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.container .cabecera{
+    margin: 10px auto;
+    text-transform: uppercase;
+}
+.container .cabecera p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #fe3912;
+}
+.container .cuerpo .pedido{
+    padding: 10px 0;
+    border: 1px solid #e1e1e1;
+}
+.container .cuerpo .pedido .ver{
+    width: 20%;
+    border-right: 1px solid #e1e1e1;
+    padding: 0 5px;
+}
+.container .cuerpo .pedido .ver button{
+    width: 100%;
+    border: none;
+}
+.container .cuerpo .pedido .nombre{
+    padding-left: 5px;
+}
+.container .cuerpo .pedido .estado{
+    text-align: right;
+    padding-right: 5px;
+}
+.container .cuerpo .pedido .estado button{
+    width: 85px;
+    border: none;
+}
+
+
+/* Modal Estado */
+.modalEstado .modal-dialog{
+    margin-top: 55px;
+}
+.modalEstado .modal-content{
+    font-family: 'Roboto', sans-serif;
+    background-color: #fa3b7b;
+}
+.modalEstado .modal-body{
+    text-align: center
+}
+.modalEstado .modal-body i{
+    color: rgb(240, 240, 240);
+    font-size: 100px;
+    margin: 5px auto 10px auto;
+}
+.modalEstado .modal-footer{
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+.modalEstado .modal-footer .si{
+    border-right: 1px solid #e1e1e1;
+}
+.modalEstado .modal-body p{
+    color: #fff;
+    font-size: 19px;
+}
+.modalEstado .modal-body span{
+    color: #fff;
+    font-size: 14px;
+}
+.modalEstado .modal-footer span{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* Modal Detalle */
+.modalDetalle .modal-dialog{
+    margin-top: 55px;
+}
+.modalDetalle .modal-content{
+    font-family: 'Roboto', sans-serif;
+}
+.modalDetalle .modal-header {
+    padding: 10px 5px;
+    display: block;
+    background-color: #fa3b7b;
+}
+.modalDetalle .modal-header .titulo{
+    padding-left: 5px;
+}
+.modalDetalle .modal-header .titulo p{
+    font-size: 17px;
+    font-weight: 550;
+    color: #fff;
+}
+.modalDetalle .modal-header .numero {
+    text-align: right;
+}
+.modalDetalle .modal-header .numero p{
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(136, 135, 135);
+}
+.modalDetalle .modal-body {
+    padding: 5px;
+}
+.modalDetalle .modal-body .titul{
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+.modalDetalle .modal-body .producto .nombre {
+    padding-left: 5px;
+}
+.modalDetalle .modal-body .delivery .precioDelivery{
+    text-align: right;
+}
+.modalDetalle .modal-footer {
+    padding: 10px 5px;
+    display: block;
+    background-color: #fa3b7b;
+    text-align: right;
+}
+.modalDetalle .modal-footer p{
+    font-size: 17px;
+    font-weight: 550;
+    color: #fff;
+}
