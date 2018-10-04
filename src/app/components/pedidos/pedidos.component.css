@@ -96,29 +96,37 @@ p{
     display: block;
     background-color: #fa3b7b;
 }
-.modalDetalle .modal-header .titulo{
+.modalDetalle .modal-header .numero{
     padding-left: 5px;
 }
-.modalDetalle .modal-header .titulo p{
+.modalDetalle .modal-header .numero p{
     font-size: 17px;
     font-weight: 550;
     color: #fff;
 }
-.modalDetalle .modal-header .numero {
+.modalDetalle .modal-header .x {
     text-align: right;
 }
-.modalDetalle .modal-header .numero p{
-    font-size: 17px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: rgb(136, 135, 135);
+.modalDetalle .modal-header .x p{
+    font-size: 22px;
+    font-weight: 550;
+    color: #fff;
 }
 .modalDetalle .modal-body {
     padding: 5px;
 }
+.modalDetalle .modal-body .titulo1{
+    color: #fa3b7b;
+    text-align: center;
+    border-bottom: 1px solid #fa3b7b;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
 .modalDetalle .modal-body .titul{
     margin: 5px;
     text-transform: uppercase;
+    color: #fa3b7b;
 }
 
 .modalDetalle .modal-body .producto .nombre {
