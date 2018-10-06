@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from '../../providers/firebase.service';
+
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _fs: FirebaseService ) { }
 
   ngOnInit() {
+  }
+
+  registro( email: string, pass: string ){
+    this._fs.registroEmail( email, pass );
   }
 
 }

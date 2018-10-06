@@ -27,13 +27,39 @@ export class FirebaseService {
       this.usuario.email = user.email
       // setTimeout( ()=> this.router.navigate(['home']), 3000 );
 
-    } )
+    });
 
+    
+  }
+
+  // registrar cuenta con email y contraseña
+  registroEmail( email: string, pass: string ){
+    this.afAuth.auth.createUserWithEmailAndPassword( email, pass ).catch( function(error) {
+      // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    if( error ){
+      console.log( errorMessage );
+    }
+    // ...
+    });
+  }
+
+  // login con email y contraseña
+  loginEmailPass( email: string, pass: string ){
+    this.afAuth.auth.signInWithEmailAndPassword( email, pass ).catch( function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    if( error ){
+      console.log( errorMessage );
+    }
+    // ...
+    });
   }
 
   // login del usuario
-  login( proveedor: string ) {
-    // this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  login( proveedor: string ) {    
     this.afAuth.auth.signInWithRedirect(new auth.GoogleAuthProvider());
   }
 
@@ -58,5 +84,7 @@ export class FirebaseService {
     return this.afs.collection('comercios').doc(documentId)
                   .collection('productos').snapshotChanges();
   }
+
+
 
 }

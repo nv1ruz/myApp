@@ -38,7 +38,7 @@
                             <i class="fa fa-envelope"></i>
                         </div>
                     </div>
-                    <input type="email" class="form-control" placeholder="Correo Electrónico" required>
+                    <input type="email" class="form-control" #email placeholder="Correo Electrónico" required>
                 </div>
             </div>
             <br>
@@ -50,7 +50,7 @@
                             <i class="fa fa-key"></i>
                         </div>
                     </div>
-                    <input type="password" class="form-control" placeholder="Contraseña" required>
+                    <input type="password" class="form-control" #pass placeholder="Contraseña" required>
                 </div>
             </div>
             <br>
@@ -82,7 +82,7 @@
             <a href=''><b>He leído los Términos y Condiciones</b></a>
         </label>
         <br><br>
-        <div class="boton">
+        <div class="boton" (click)="registro( email.value, pass.value )">
             <span>
                 REGISTRAR
             </span>

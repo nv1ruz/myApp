@@ -9,11 +9,10 @@ import { FirebaseService } from '../../providers/firebase.service';
 })
 export class LoginComponent {
 
-  constructor( public _fs: FirebaseService ) {
+  constructor( public _fs: FirebaseService ) {  }
 
-  
+  private loginWithEmailAndPass( email: string, pass: string ){
+    this._fs.loginEmailPass( email, pass );
   }
-
-  
 
 }

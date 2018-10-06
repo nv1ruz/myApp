@@ -1,31 +1,4 @@
-<!-- <div class="contenedor animated fadeIn fast">
-
-    <div class="nombreApp" *ngIf="!_fs.usuario.uid">
-        <span>myApp</span>
-    </div>
-
-    <div class="descripcion">
-        <p *ngIf="!_fs.usuario.uid">Ingresa con tu cuenta favorita y difruta al máximo la sorprendente App de comidas.</p>
-        <img *ngIf="_fs.usuario.uid" class="foto animated fadeIn" src="{{ _fs.usuario.foto }}">
-        <p *ngIf="_fs.usuario.uid" class="animated fadeIn">Bienvenido {{ _fs.usuario.nombre }}.</p>
-    </div>
-
-    <div class="boton" *ngIf="!_fs.usuario.uid">
-        <span (click)="_fs.login('google')">
-            Ingresar con Google
-        </span>
-    </div>
-
-</div> -->
-
-<!-- <div class="container bienvenida" *ngIf="_fs.usuario.uid">
-    <img  class="foto animated fadeIn" src="{{ _fs.usuario.foto }}">
-    <p class="animated fadeIn">Bienvenid@ {{ _fs.usuario.nombre }}.</p>
-    <br>
-    <p>Redireccionando...</p>
-</div> -->
-
-<div class="container login animated fadeIn"  *ngIf="!_fs.usuario.uid">
+<!-- <div class="container login animated fadeIn"  *ngIf="!_fs.usuario.uid">
     <br>
     <form method="post">
         <div> 
@@ -41,7 +14,7 @@
                             <i class="fa fa-envelope"></i>
                         </div>
                     </div>
-                    <input type="email" class="form-control" placeholder="Correo Electrónico">
+                    <input type="email" class="form-control" #email placeholder="Correo Electrónico">
                 </div>
             </div>
             <br>
@@ -53,7 +26,7 @@
                             <i class="fa fa-key"></i>
                         </div>
                     </div>
-                    <input type="password" class="form-control" placeholder="Contraseña">
+                    <input type="password" class="form-control" #pass placeholder="Contraseña">
                 </div>
             </div>
         </div>
@@ -61,7 +34,7 @@
             <a href=''><b>Olvidé mi Contraseña</b></a>
         </label>
         <br><br>
-        <div class="boton" *ngIf="!_fs.usuario.uid">
+        <div class="boton" *ngIf="!_fs.usuario.uid" (click)="loginWithEmailAndPass( email.value, pass.value )">
             <span>
                 INGRESAR
             </span>
@@ -94,5 +67,37 @@
         <p><a [routerLink]="['/registerComercio']">Poseo cuenta Comercial</a></p>
     </div>
     
+</div> -->
+
+
+<div class="contenedor animated fadeIn fast">
+    <div class="caja-login">
+        <div class="redes-sociales">
+            <div class="encabezado">
+                <h4>Bienvenido!</h4>
+                <span>Conectate para empezar a disfrutar al máximo la App.</span>
+            </div>
+            <button class="gm" (click)="_fs.login('google')">
+                <span><img class="ico" src="/src/assets/img/auth/google.svg"></span>
+                <span class="text">Ingresar con Google</span>
+            </button>
+            <button class="fb">
+                <span><img class="ico" src="/src/assets/img/auth/facebook.svg"></span>
+                <span class="text">Ingresar con Facebook</span>
+            </button>
+        </div>
+
+        <p>O puedes ingresar con</p>
+
+        <div class="mail">
+            <input class="inp" type="email" placeholder="Email" #email>
+            <input type="password" placeholder="Password" #pass>
+            <span class="inf" style="cursor: pointer;">Olvidaste tu contraseña?</span>
+            <button class="ingresar" (click)="loginWithEmailAndPass( email.value, pass.value )">
+                <span class="text">Ingresar</span>
+            </button>
+            <span>No tienes una cuenta? <strong [routerLink]="['/register']" style="cursor: pointer;">Registrate</strong></span>
+        </div>
+
+    </div>
 </div>
-    
