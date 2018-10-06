@@ -32,6 +32,7 @@ import { MicuentaComponent } from './components/micuenta/micuenta.component';
 import { DireccionesComponent } from './components/direcciones/direcciones.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { RegisterComercioComponent } from './components/register-comercio/register-comercio.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { RegisterComercioComponent } from './components/register-comercio/regist
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) // imports firebase/storage only needed for storage features
   ],
   providers: [
     FirebaseService,
