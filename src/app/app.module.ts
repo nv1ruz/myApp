@@ -33,6 +33,7 @@ import { DireccionesComponent } from './components/direcciones/direcciones.compo
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { RegisterComercioComponent } from './components/register-comercio/register-comercio.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     MicuentaComponent,
     DireccionesComponent,
     PedidosComponent,
-    RegisterComercioComponent
+    RegisterComercioComponent,
+    FavoritosComponent
   ],
   imports: [
     BrowserModule,
