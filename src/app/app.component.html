@@ -16,11 +16,11 @@
         <div class="sidebar"  *ngIf="_fs.usuario.uid">
             <div class="row cajaUsuario align-items-center">
                 <div class="col-auto p-0">
-                    <img class="foto" src="{{ _fs.usuario.foto }}">
+                    <img class="foto" src="{{ usuario.foto }}">
                 </div>
                 <div class="col-8">
-                    <p class="nombre">¡Hola {{ _fs.usuario.nombre }}!</p>
-                    <p class="email">{{ _fs.usuario.email }}</p>
+                    <p class="nombre">¡Hola {{ usuario.nick }}!</p>
+                    <p class="email">{{ usuario.email }}</p>
                 </div>
             </div>
             <div class="caja" [routerLink]="['/home']" (click)="_toggleOpened()">

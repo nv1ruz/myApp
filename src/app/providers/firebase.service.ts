@@ -15,7 +15,7 @@ export class FirebaseService {
   public usuario: any = {};
   private bandera:boolean = false;
 
-  constructor( public afAuth: AngularFireAuth, private router: Router, private afs: AngularFirestore ) {
+  constructor( public afAuth: AngularFireAuth, private router: Router, public afs: AngularFirestore ) {
 
     this.afAuth.authState.subscribe( user => {
       // console.log( 'Estado del usuario: ', user );
@@ -24,18 +24,28 @@ export class FirebaseService {
         return;
       }
 
+      // creacion del objeto usuario
       if( !user.photoURL ){
         this.usuario.foto = "/src/assets/img/auth/noavatar.jpg"
       } else{
         this.usuario.foto = user.photoURL;
       }
-      if( !user.displayName ){
-        this.usuario.nombre = 'Usuario'
+      if( user.displayName ){
+        this.usuario.nick = user.displayName;
       } else{
-        this.usuario.nombre = user.displayName;
+        this.usuario.nick = 'Usuario'
+        // this.usuario.nombre = user.displayName;
       }
+      this.usuario.nombre = '';
+      this.usuario.apellido = '';
       this.usuario.email = user.email;
+      if( user.phoneNumber ){
+        this.usuario.movil = user.phoneNumber;
+      } else{
+        this.usuario.movil = '';
+      }
       this.usuario.uid = user.uid;
+      
       // setTimeout( ()=> this.router.navigate(['home']), 3000 );
       this.bandera = true;
       
@@ -101,11 +111,11 @@ export class FirebaseService {
                   .collection('productos').snapshotChanges();
   }
 
-
+  // crea la estructura o documento de un usuario
   private docUsuario( documentId: string ){
     this.afs.collection( 'usuarios' ).doc( documentId ).get().subscribe( doc => {
       if( doc.exists ){
-        console.log( "Document data:", doc.data() );
+        // console.log( "Document data:", doc.data() );
       } else{
         console.log( "No existe el documento" );
         this.afs.collection( 'usuarios' ).doc( this.usuario.uid ).set( this.usuario );
@@ -116,6 +126,10 @@ export class FirebaseService {
         console.log("Documento creado");
       }
     });
+  }
+
+  public getDatosUsuario( documentId: string ){
+    return this.afs.collection( 'usuarios' ).doc( documentId ).snapshotChanges();
   }
 
 
