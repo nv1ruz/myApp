@@ -4,6 +4,38 @@
 label {
     margin: 0;
 }
+input,
+select,
+textarea {
+    border-radius: 0;
+}
+
+#collapseNuevadireccion {
+    margin: 0 20px 10px 20px;
+    padding: 0 15px 5px 15px;
+    /* border-bottom: 5px solid #fa3b7b; */
+    /* border-top: 5px solid #fa3b7b; */
+    border: 5px solid #fa3b7b;
+}
+#collapseNuevadireccion .txtnuevaDireccion{
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15pt;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+    padding: 0px 10px 3px 10px;
+    border-bottom: 1px solid #ececec;
+    background-color: #fa3b7b;
+}
+#collapseNuevadireccion label{
+    color: #fa3b7b;
+}
+#collapseNuevadireccion .footer{
+    border-bottom: none;
+}
 
 .cajaNuevadireccion {
     margin: 5px 0;
