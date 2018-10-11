@@ -1,7 +1,6 @@
 
 /* Carrito Header */
 
-
 .cajaCarrito{
     text-align: center;
     padding: 0 0 5px 0;
@@ -324,7 +323,7 @@ p.valordelivery {
 
 
 
-
+/* Carrito Vacio */
 .carrito-vacio i{
     color: rgb(240, 240, 240);
     font-size: 100px;
@@ -373,4 +372,85 @@ p.valordelivery {
 }
 .carrito-vacio button:hover{
     background-color: #2576f0;
+}
+
+
+/* Modal Nueva Direccion */
+.modalNuevadireccion p{
+    margin: 0;
+}
+.modalNuevadireccion input,
+.modalNuevadireccion textarea,
+.modalNuevadireccion select {
+    border-radius: 0;
+}
+.modalNuevadireccion label{
+    color: #fa3b7b;
+    margin-bottom: 0;
+}
+.modalNuevadireccion .modal-dialog{
+    margin-top: 55px;
+}
+.modalNuevadireccion .modal-content{
+    font-family: 'Roboto', sans-serif;
+}
+.modalNuevadireccion .modal-header {
+    /* padding: 10px 5px; */
+    display: block;
+    background-color: #fa3b7b;
+    padding: 10px 1rem;
+}
+
+.modalNuevadireccion .modal-header .tituloDireccion p{
+    font-size: 17px;
+    font-weight: 550;
+    color: #fff;
+    text-transform: uppercase;
+}
+.modalNuevadireccion .modal-header .x {
+    text-align: right;
+}
+.modalNuevadireccion .modal-header .x p{
+    font-size: 22px;
+    font-weight: 550;
+    color: #fff;
+}
+.modalNuevadireccion .modal-body {
+    padding: 5px;
+}
+.modalNuevadireccion .card-body{
+    padding: 10px 20px 0 20px;
+}
+.modalNuevadireccion .boton{
+    margin: 10px auto 0 auto;
+    height: 40px;
+    border: 1px solid #fa3b7b;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+    min-width: 40%;
+    font-weight: bold;
+    color: #fa3b7b;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.modalNuevadireccion .boton:hover{
+    background-color: #fa3b7b;
+    color: #ffffff;
+}
+.modalNuevadireccion .modal-footer {
+    padding: 10px 5px;
+    display: block;
+    background-color: #fa3b7b;
+    text-align: center;
+}
+.modalNuevadireccion .modal-footer span{
+    font-size: 17px;
+    font-weight: 550;
+    color: #fff;
+}
+.modalNuevadireccion .modal-footer .cancelar{
+    border-right: 1px solid #e1e1e1;
 }
