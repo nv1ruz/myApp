@@ -109,7 +109,7 @@
 						<option value="3">Santa Rosa, S/N</option>
 					</select>
 				</div>
-				<div class="col-2 center"  [routerLink]="['/direcciones']">
+				<div class="col-2 center" data-toggle="modal" data-target="#modalNuevadireccion">
 					<i class="fa fa-plus"></i>
 				</div>
 			</div>
@@ -145,3 +145,92 @@
 </div>
 
 
+<!-- Modal Bootstrap Nueva Direccion -->
+<div class="modal fade modalNuevadireccion" id="modalNuevadireccion" tabindex="-1" role="dialog" aria-labelledby="modalNuevadireccionTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="row d-flex align-items-center">
+					<div class="col-6 tituloDireccion">
+						<p>Nueva dirección</p>
+					</div>
+					<div class="col-6 x" data-dismiss="modal">
+						<p><i class="fa fa-times"></i></p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-body">
+				<div class="card-body was-validated">
+					<div class="row">
+						<div class="col-6">
+							<div class="form-group">
+								<label for="provincia">Provincia *</label>
+								<select class="custom-select" id="provincia" required disabled>
+									<option value="0" disabled>Provincia...</option>
+									<option value="1" selected>La Rioja</option>
+								</select>
+								<div class="invalid-feedback">
+									Por favor, selecciona tu provincia.
+								</div>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="ciudad">Ciudad *</label>
+								<select class="custom-select" id="ciudad" required disabled>
+									<option value="0" disabled>Ciudad...</option>
+									<option value="1" selected>Chamical</option>
+								</select>
+								<div class="invalid-feedback">
+									Por favor, selecciona tu ciudad.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="">Barrio *</label>
+						<input type="text" class="form-control" value="Angel V. Peñaloza" required>
+						<div class="invalid-feedback">
+							Por favor, escribe tu barrio.
+						</div>		
+					</div>
+					<div class="row">
+						<div class="col-7">
+							<div class="form-group">
+								<label for="">Calle *</label>
+								<input type="text" class="form-control" value="Victoria Romero" required>
+								<div class="invalid-feedback">
+									Por favor, escribe tu calle.
+								</div>		
+							</div>
+						</div>
+						<div class="col-5">
+							<div class="form-group">
+								<label for="">Número *</label>
+								<input type="text" class="form-control" value="221" required>
+								<div class="invalid-feedback">
+									Por favor, escribe tu número de casa/depto.
+								</div>		
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="">Referencia (opcional)</label>
+						<textarea type="text" class="form-control" rows="3" placeholder="Alguna referencia para el delivery..."></textarea>
+					</div>
+				</div>
+				
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6 cancelar" data-dismiss="modal">
+						<span >Cancelar</span>
+					</div>
+					<div class="col-6 crear">
+						<span>Crear</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
