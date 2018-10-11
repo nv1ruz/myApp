@@ -2,6 +2,36 @@
     margin: 0;
     padding: 0;
 }
+p{
+    padding: 10px 6px 0 6px;
+    margin: 0;
+    display: block;
+    color: #495057;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;  
+}
+
+.direccion{
+    padding: 10px 20px 0 20px;
+}
+.direccion span{
+    display: block;
+    color: #495057;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+}
+.direccion span:first-child{    
+    font-size: 16px;
+    font-weight: 400;  
+}
+.direccion span:last-child{
+    font-size: 12px;
+    font-weight: 400;
+    border-bottom: 1px solid #cccccc;
+}
+
 
 button.agregar{
     width: 100%;

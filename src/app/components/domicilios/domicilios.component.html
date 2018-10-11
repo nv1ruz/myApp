@@ -1,34 +1,41 @@
 <div class="conenedor">
-  <button class="agregar">
+
+  <p>Mis direcciones</p>
+  <div class="direccion" *ngFor="let domicilio of domicilios">
+      <span>{{ domicilio.calle }} {{ domicilio.numero }}</span>
+      <span>{{ domicilio.cp }} - {{ domicilio.provincia }} - {{ domicilio.ciudad }}</span>
+  </div>
+
+
+
+
+
+  <button class="agregar" (click)="toggle()">
     <span>Agregar domicilio</span>
   </button>
 
-  <div class="domicilio">
+  <div class="domicilio" *ngIf="visible">
     <span>Calle</span>
-      <input type="text" value="Victoria Romero">
+      <input type="text" placeholder="Ingresa tu calle" value="" #cal>
     <span>Número</span>
-      <input type="text" value="221">
+      <input type="text" placeholder="Ingresa tu número" value="" #num>
     <span>Piso/Depto</span><span class="opc">(Opcional)</span>
-      <input type="text" placeholder="Ej.: Piso 8, Departamento 6" value="">
+      <input type="text" placeholder="Ej.: Piso 8, Departamento 6" value="" #pis>
     <span>Entre calles</span><span class="opc">(Opcional)</span>
-      <input type="text" placeholder="Ej.: Av. Corrientes y Libertad" value="">
+      <input type="text" placeholder="Ej.: Av. Corrientes y Libertad" value="" #ent>
     <span>Referencias</span><span class="opc">(Opcional)</span>
-      <input type="text" placeholder="Ej.: Casa con rejas negras" value="">
-  </div>
+      <input type="text" placeholder="Ej.: Casa con rejas negras" value="" #ref>
 
-  <div class="domicilio">
     <span>Código postal</span>
-      <input type="text" value="5380" readonly>
+      <input type="text" value="5380" readonly #cp>
     <span>Provincia</span>
-      <input type="text" value="La Rioja" readonly>
+      <input type="text" value="La Rioja" readonly #pro>
     <span>Ciudad</span>
-      <input type="text" placeholder="Ingresa tu ciudad" value="Chamical" readonly>
-  </div>
+      <input type="text" placeholder="Ingresa tu ciudad" value="Chamical" readonly #ciu>
 
-  <div class="domicilio">
-    <button class="guardar">
+
+    <button class="guardar" (click)="guardarDomicilio( cal.value, num.value, pis.value, ent.value, ref.value, cp.value, pro.value, ciu.value )">
       <span>Guardar</span>
     </button>
-  </div>
 
-</div>
+  </div>
