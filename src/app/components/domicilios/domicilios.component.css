@@ -1,0 +1,87 @@
+.contenedor{
+    margin: 0;
+    padding: 0;
+}
+
+button.agregar{
+    width: 100%;
+    height: 36px;
+    background-color: #fff;
+    border: 0;
+    outline: 0;
+    text-align: left;
+}
+.agregar span{
+    display: block;
+    color: #495057;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;    
+}
+
+.domicilio{
+    padding: 10px 20px;
+}
+.domicilio span{
+    display: inline-block;
+    margin-top: 15px;
+    color: #495057;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;  
+}
+.domicilio .opc{
+    padding-left: 5px;
+    color: #cccccc;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;  
+}
+.domicilio input{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    outline: 0;
+
+    color: #495057;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;  
+}
+.domicilio input:focus{
+    border-bottom: 1px solid #fa3b7b;
+}
+
+.domicilio button{
+    display: block;
+    margin: 0 auto;
+    padding: 8px 16px;
+    width: 100%;
+    /* max-width: 264px; */
+    height: auto;
+    border-radius: 3px;  
+    background-color: #18ad7c;
+    border: 1px solid #18ad7c;
+    cursor: pointer;
+}
+.domicilio button:hover{
+    outline: 0;
+    background-color: #1ec58d;
+    border: 1px solid #1ec58d;
+}
+.domicilio button span{
+    margin: 0;
+    color: #ffffff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25pt;
+    width: 100%;    
+}
