@@ -201,6 +201,7 @@
     margin: 0 5px;
     cursor: pointer;
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
+    outline: 0;
 }
 
 .carrito-body .eliminar{

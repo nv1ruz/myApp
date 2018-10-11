@@ -1,48 +1,65 @@
-
-.container{
-    margin-top: 5%;
-    text-align: center;
-    padding: 0 20px 0 20px;
-}
-.container form{
-    border-bottom: 1px solid rgb(196, 196, 196);
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-}
-.micuenta-header h4 {
-    font-weight: bold;
-    font-size: 29px;
-    margin-bottom: 10px;
-}
-.micuenta-header img{
+.caja-datos img{
+    display: block;
     width: 100px;
     height: 100px;
-    border: 2px solid #fe3918;
+    border: 1px solid #495057;
     border-radius: 50%;
+    margin: 20px auto;
 }
-.input-group-text {
-    background-color: #fff;
+.caja-datos span{
+    display: block;
+    color: #495057;
+    width: 264px;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 auto;
 }
-.container .boton{
-    margin: 20px 15%;
-    height: 40px;
-    border: 1px solid #fa3b7b;
-    background-color: #ffffff;
-    text-align: center;
-    padding-top: 6px;
+.caja-datos input{
+    display: block;
+    color: #495057;
+    width: 264px;
+    border: 1px solid #ced4da;
+    /* border: 0; */
+    border-radius: 5px;
+    padding: 6px 16px;
+    margin: 0 auto 15px auto;
+
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+}
+.caja-datos input:hover{
+    border-color: #80bdff;
+    outline: 0;
+    /* box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25); */
+}
+.caja-datos button{
+    display: block;
+    margin: 0 auto;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 264px;
+    height: auto;
+    border-radius: 3px;  
+    background-color: #18ad7c;
+    border: 1px solid #18ad7c;
     cursor: pointer;
-    transition: all .3s ease;
 }
-.container .boton span{
-    font-weight: bold;
-    color: #fa3b7b;
-    font-size: 18px;
-    text-transform: capitalize;
-    cursor: pointer;
-    transition: all .3s ease;
+.caja-datos button:hover{
+    outline: 0;
+    background-color: #1ec58d;
+    border: 1px solid #1ec58d;
 }
-.container .boton:hover,
-.container .boton span:hover{
-    background-color: #fa3b7b;
+.caja-datos button span{
     color: #ffffff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25pt;
+    width: 100%;
 }

@@ -19,7 +19,7 @@ export class ComercioComponent implements OnInit {
   public productos = [];
   public productosSugeridos = [];
   public producto:any = {};
-
+  private vinculo: boolean = false;
 
   constructor( public _fs: FirebaseService, private activatedRoute: ActivatedRoute, private _cs: CarritoService, private router: Router ) {
 
@@ -40,6 +40,16 @@ export class ComercioComponent implements OnInit {
     this._fs.getComercio( this.refId ).subscribe( datos => {
       this.comercio = datos.payload.data();
       // console.log(this.comercio);
+
+      // vincular comercio y usuario
+      if( this.comercio.uid == this._fs.usuario.uid ){
+        this.vinculo = true;
+        console.log("Existe un vínculo");
+      } else{
+        this.vinculo = false;
+        console.log("No existe vínculo");
+      }
+
       if( this.comercio.estado == true ){
         this.comercio.estado = 'Abierto';
       } else{
@@ -75,6 +85,8 @@ export class ComercioComponent implements OnInit {
       })
       // console.log(this.productosSugeridos);
     });
+
+   
 
   }
 

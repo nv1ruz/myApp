@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 // firebase auth
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -13,22 +13,38 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class FirebaseService {
 
   public usuario: any = {};
+  private bandera:boolean = false;
 
   constructor( public afAuth: AngularFireAuth, private router: Router, private afs: AngularFirestore ) {
 
     this.afAuth.authState.subscribe( user => {
       // console.log( 'Estado del usuario: ', user );
       if( !user ){
+        this.bandera = false
         return;
       }
-      this.usuario.nombre = user.displayName;
+
+      if( !user.photoURL ){
+        this.usuario.foto = "/src/assets/img/auth/noavatar.jpg"
+      } else{
+        this.usuario.foto = user.photoURL;
+      }
+      if( !user.displayName ){
+        this.usuario.nombre = 'Usuario'
+      } else{
+        this.usuario.nombre = user.displayName;
+      }
+      this.usuario.email = user.email;
       this.usuario.uid = user.uid;
-      this.usuario.foto = user.photoURL
-      this.usuario.email = user.email
       // setTimeout( ()=> this.router.navigate(['home']), 3000 );
+      this.bandera = true;
+      
+      if( this.bandera ){
+        this.docUsuario( this.usuario.uid );
+      }
 
     });
-
+    
     
   }
 
@@ -85,6 +101,22 @@ export class FirebaseService {
                   .collection('productos').snapshotChanges();
   }
 
+
+  private docUsuario( documentId: string ){
+    this.afs.collection( 'usuarios' ).doc( documentId ).get().subscribe( doc => {
+      if( doc.exists ){
+        console.log( "Document data:", doc.data() );
+      } else{
+        console.log( "No existe el documento" );
+        this.afs.collection( 'usuarios' ).doc( this.usuario.uid ).set( this.usuario );
+        this.afs.collection( 'usuarios' ).doc( this.usuario.uid )
+                .collection( 'pedidos' ).add({});
+        this.afs.collection( 'usuarios' ).doc( this.usuario.uid )
+                .collection( 'direcciones' ).add({});
+        console.log("Documento creado");
+      }
+    });
+  }
 
 
 }

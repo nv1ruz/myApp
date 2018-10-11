@@ -18,9 +18,6 @@ export class HomeComponent implements OnInit {
   public comerciosAbiertos = [];
   public comerciosCerrados = [];
 
-
-    
-
   constructor( public _fs: FirebaseService, private router: Router, private afs: AngularFirestore, private _cs: CarritoService ) { 
 
     this._cs.carrito = [];
@@ -29,6 +26,8 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
+
+    
 
     // obtiene los datos de los comercios y los almacena en un arreglo
     this._fs.getComercios().subscribe( (comerciosSnapshot) => {
@@ -75,6 +74,7 @@ export class HomeComponent implements OnInit {
       })
       // console.log(this.comerciosCerrados);
     });
+
 
   }
 

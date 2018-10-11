@@ -46,6 +46,7 @@ ng-sidebar-container{
 .sidebar .caja {
     padding: 10px 0 10px 20px;
     transition: all .3s ease;
+    outline: 0;
 }
     .sidebar .caja:hover{
         background-color: #f1f1f1;
@@ -101,6 +102,7 @@ ng-sidebar-container{
     color: #ffffff;
     padding: 0 20px;
     font-size: 20px;
+    outline: 0;
 }
 .nav .titulo{
     color: #ffffff;
@@ -111,6 +113,7 @@ ng-sidebar-container{
     letter-spacing: 0.025rem;
     margin-left: 20px;
     margin-right: auto;
+    outline: 0;
 }
 .nav .btnIngresar{
     color: #ffffff;
