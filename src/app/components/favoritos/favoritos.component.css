@@ -50,7 +50,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    margin: 0 0 15px 0;
+    margin: 0;
     text-transform: capitalize;
 }
 .comerciosFavoritos .comercio .caja2 .estado {
@@ -71,11 +71,21 @@
     padding-right: 20px;
     padding-left: 10px;
 }
-.comerciosFavoritos .comercio .caja2 .fav {
-    /* color: #b4b4b4; */
-    color: #fa3b7b;
-    font-size: 25px;
-    font-weight: 400;
+.boton{
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    border: 1px solid #fa3b7b;
+    background-color: #ffffff;
     float: right;
-    padding-right: 20px;
+    min-width: 20%;
+    font-weight: bold;
+    color: #fa3b7b;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all .3s ease;
+    padding: 5px;
+}
+.boton:hover{
+    background-color: #fa3b7b;
+    color: #ffffff;
 }

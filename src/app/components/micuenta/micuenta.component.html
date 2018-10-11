@@ -4,11 +4,11 @@
 		<span>Usuario</span>
 		<input type="text" value="Nickname">
 		<span>Nombre</span>
-		<input type="text" value="Braian">
+		<input type="text" value="{{ _fs.usuario.nombre }}">
 		<span>Apellido</span>
-		<input type="text" value="Martinez">
+		<input type="text" value="">
 		<span>Correo electrónico</span>
-		<input type="email" value="braian.martz@gmail.com" readonly disabled>
+		<input type="email" value="{{ _fs.usuario.email }}" readonly disabled>
 		<span>Teléfono</span>
 		<input type="text" value="3804 697822">
 		<button class="guardar">
