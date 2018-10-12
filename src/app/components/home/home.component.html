@@ -6,7 +6,7 @@
 
 <div class="container-fluid animated fadeIn comerciosAbiertos">
 
-  <div class="comercio row align-items-center" (click)="verComercio(comercioAbierto.id)" *ngFor="let comercioAbierto of comerciosAbiertos">  
+  <div class="comercio row align-items-center" (click)="verComercio( comercioAbierto.id )" *ngFor="let comercioAbierto of comerciosAbiertos">  
     <div class="caja1 col-auto">
       <div class="foto">
         <img src="{{ comercioAbierto.data.img }}" width="100">
@@ -27,7 +27,7 @@
 
 <div class="container-fluid animated fadeIn comerciosCerrados">
 
-  <div class="comercio row align-items-center" (click)="verComercio(comerciosCerrado.id)" *ngFor="let comerciosCerrado of comerciosCerrados">  
+  <div class="comercio row align-items-center" (click)="verComercio( comerciosCerrado.id )" *ngFor="let comerciosCerrado of comerciosCerrados">  
     <div class="caja1 col-auto">
       <div class="foto">
         <img src="{{ comerciosCerrado.data.img }}" width="100">

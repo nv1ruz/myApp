@@ -18,6 +18,9 @@ import { AppRoutingModule } from './app.routes';
 // providers
 import { FirebaseService } from './providers/firebase.service';
 import { CarritoService } from './providers/carrito.service';
+import { ComercioService } from './providers/comercio.service';
+import { AutenticacionService } from './providers/autenticacion.service';
+import { UsuarioService } from './providers/usuario.service';
 
 
 // componentes
@@ -63,7 +66,10 @@ import { DomiciliosComponent } from './components/domicilios/domicilios.componen
   ],
   providers: [
     FirebaseService,
-    CarritoService
+    AutenticacionService,
+    UsuarioService,
+    CarritoService,
+    ComercioService
   ],
   bootstrap: [AppComponent]
 })

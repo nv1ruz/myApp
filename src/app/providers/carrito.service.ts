@@ -1,46 +1,34 @@
 import { Injectable } from '@angular/core';
-import { $ } from 'protractor';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarritoService {
 
-  carrito = [];
+  public carrito = [];
 
-  constructor() { 
-
-    this.cargarStorage();
-
-  }
+  constructor() { }
 
 
 
-  // agregarProducto( idx, nom, pre ){
-  //   this.carrito.push({
-  //     id: idx,
-  //     nombre: nom,
-  //     precio: pre
-  //   });
-    
-  //   this.guardarStorage();
-  //   console.log( this.carrito );
-  // }
+  // MÉTODOS ***************************************
 
-  agregarProducto( prod, text ){
+  // añade o actualiza el producto al carrito
+  public addProducto( prod: any, text: string ){
 
     let existe:boolean = false;
 
-    this.carrito.forEach( data => {
-      if( data.id == prod.id ){
+    this.carrito.forEach( param => {
+
+      if( param.id == prod.id ){
         existe = true;
-        data.cant += prod.cant;
-        console.log(`${data.nombre} cantidad actualizada`);
+        param.cant += prod.cant;
+        // console.log(`${param.nombre} cantidad actualizada`);
       } else{
         // console.log("no existe el producto");
       }
-    });
 
+    });
 
     if( !existe ){
       this.carrito.push( {
@@ -53,39 +41,16 @@ export class CarritoService {
         preTot: prod.precioTotal,
         nota: text
       } );
-      console.log(`${prod.nombre} agregado al carrito`);
-    }
-    
-    // this.guardarStorage();
-    // console.log("Productos del carrito :", this.carrito );
+      // console.log(`${prod.nombre} agregado al carrito`);
+    }   
+     
   }
 
-
-  borrarProducto(idx: string){
+  // elimina el producto del carrito
+  public deletProducto(idx: string){
     this.carrito = this.carrito.filter( data =>{
       return data.id !== idx;
     });
-    
-    // console.log(this.carrito);
-    // this.guardarStorage();
-
   }
-
-
-  guardarStorage(){
-    localStorage.setItem('data', JSON.stringify( this.carrito ));
-  }
-
-
-  cargarStorage(){
-    // if( localStorage.getItem('data') ){
-    //   this.carrito = JSON.parse( localStorage.getItem('data') );
-    //   console.log(this.carrito);
-    // } else{
-    //   this.carrito = [];
-    // }
-    this.carrito = [];
-  }
-
 
 }

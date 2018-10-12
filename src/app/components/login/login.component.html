@@ -77,11 +77,11 @@
                 <h4>Bienvenido!</h4>
                 <span>Conectate para empezar a disfrutar al máximo la App.</span>
             </div>
-            <button class="gm" (click)="_fs.login('google')">
+            <button class="gm" (click)="iniciarSesion( 'google' )">
                 <span><img class="ico" src="/src/assets/img/auth/google.svg"></span>
                 <span class="text">Ingresar con Google</span>
             </button>
-            <button class="fb">
+            <button class="fb" (click)="iniciarSesion( 'facebook' )">
                 <span><img class="ico" src="/src/assets/img/auth/facebook.svg"></span>
                 <span class="text">Ingresar con Facebook</span>
             </button>
@@ -93,7 +93,7 @@
             <input class="inp" type="email" placeholder="Email" #email>
             <input type="password" placeholder="Password" #pass>
             <span class="inf" style="cursor: pointer;">Olvidaste tu contraseña?</span>
-            <button class="ingresar" (click)="loginWithEmailAndPass( email.value, pass.value )">
+            <button class="ingresar" (click)="iniciarSesion( 'email', email.value, pass.value )">
                 <span class="text">Ingresar</span>
             </button>
             <span>No tienes una cuenta? <strong [routerLink]="['/register']" style="cursor: pointer;">Registrate</strong></span>

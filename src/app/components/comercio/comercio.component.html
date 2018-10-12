@@ -1,6 +1,6 @@
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
-	<a class="btnCarrito" *ngIf="_fs.usuario.uid" (click)="verComercio()"><i class="fas fa-shopping-cart"></i></a>
+	<a class="btnCarrito" *ngIf="_fs.usuario.uid" (click)="verCarrito()"><i class="fas fa-shopping-cart"></i></a>
 	<div style="position: relative; height: 100%; overflow: hidden;">
 		<div class="imagen-banner">
 			<img src="{{ comercio.banner }}">
@@ -50,12 +50,9 @@
 					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
 					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>    
 					<span class="precio">${{ prodSugerido.data.precio }}</span>
-						
-					<!-- <button (click)="_cs.agregarProducto( prodSugerido.id, prodSugerido.data.nombre, prodSugerido.data.precio )">+</button> -->
-					<!-- <button (click)="_cs.borrarProducto( prodSugerido.id )">-</button> -->
-					
+											
 					<!-- boton modal -->
-					<button *ngIf="_fs.usuario.uid" (click)="cargarProducto( prodSugerido )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
+					<button *ngIf="_fs.usuario.uid" (click)="cargarModal( prodSugerido )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
 					<button *ngIf="!_fs.usuario.uid" [routerLink]="['/login']" type="button" class="btnAgregar"><i class="fas fa-plus"></i></button>
 				</div>   
 			</div>
@@ -77,7 +74,7 @@
 					<span class="precio">${{ producto.data.precio }}</span>
 						
 					<!-- boton modal -->
-					<button (click)="cargarProducto( producto )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
+					<button (click)="cargarModal( producto )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
 					
 				</div>   
 			</div>
@@ -168,7 +165,7 @@
 					<button (click)="sumarCantidad()" type="button"><i class="fas fa-plus"></i></button>
 				</div>
 				<div class="nota">
-					<textarea class="form-control" id="textArea" #text rows="1" placeholder="Agregar nota (opcional)"></textarea>
+					<textarea class="form-control" id="textArea" #nota rows="1" placeholder="Agregar nota (opcional)"></textarea>
 				</div>
 			</div>
 			<div class="modal-footer">
@@ -176,7 +173,7 @@
 					<p>${{ producto.precioTotal }}</p>
 				</div>
 				
-				<button type="button" (click)="agregar( producto, text.value )" data-dismiss="modal"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
+				<button type="button" (click)="agregarProducto( producto, nota.value )" data-dismiss="modal"><i class="fas fa-cart-plus"></i> Agregar al carrito</button>
 
 			</div>
 		</div>
