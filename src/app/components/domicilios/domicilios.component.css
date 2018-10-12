@@ -22,37 +22,98 @@ p{
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
 }
-.direccion span:first-child{    
-    font-size: 16px;
+.direccion span:first-child{   
+    font-size: 18px;
     font-weight: 400;  
 }
 .direccion span:last-child{
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     border-bottom: 1px solid #cccccc;
+    padding-left: 5px;
 }
 
+.no-existe{
+    padding: 25% 20px 0 20px;
+    text-align: center;
+}
+.no-existe span{
+    display: block;
+    color: #cccccc;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;  
+}
 
-button.agregar{
+.caja{
+    padding: 10px 20px;
+}
+.caja button.agregar{
+    display: block;
+    margin: 5px auto;
     width: 100%;
     height: 36px;
-    background-color: #fff;
+    background-color: #1c65c4;
     border: 0;
+    border-radius: 5px;
     outline: 0;
-    text-align: left;
+    text-align: center;
 }
-.agregar span{
+.caja button.agregar:hover{
+    background-color: #2074e2;
+}
+.caja .agregar span{
     display: block;
-    color: #495057;
+    /* color: #495057; */
+    color: #fff;
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
-    font-weight: 400;    
+    font-weight: 500;  
+    letter-spacing: 0.025rem;  
+}
+
+.caja2{
+    background-color: #fa3b7b;
+    height: 36px;
+}
+.caja2 button.cancelar{
+    /* display: block; */
+    margin: 0 20px 0 auto;
+    width: auto;
+    height: 36px;
+    background-color: #fa3b7b;
+    border: 0;
+    outline: 0;
+    text-align: right;
+    float: right;
+}
+.caja2 .cancelar span{
+    display: block;
+    color: #fff;
+    /* color: #fff; */
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;  
+    letter-spacing: 0.025rem;
+}
+.caja2 span.titulo{
+    /* display: block; */
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;  
+    margin-left: 20px;  
+    line-height: 2.5;
 }
 
 .domicilio{
     padding: 10px 20px;
 }
+
 .domicilio span{
     display: inline-block;
     margin-top: 15px;
@@ -77,6 +138,7 @@ button.agregar{
     border: 0;
     border-bottom: 1px solid #cccccc;
     outline: 0;
+    padding-left: 5px;
 
     color: #495057;
     /* light 300, regular 400, medium 500, bold 700 */
@@ -90,15 +152,14 @@ button.agregar{
 
 .domicilio button{
     display: block;
-    margin: 0 auto;
-    padding: 8px 16px;
+    margin: 15px auto;
     width: 100%;
-    /* max-width: 264px; */
-    height: auto;
-    border-radius: 3px;  
+    height: 36px;
     background-color: #18ad7c;
-    border: 1px solid #18ad7c;
-    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    text-align: center;
 }
 .domicilio button:hover{
     outline: 0;
@@ -106,12 +167,12 @@ button.agregar{
     border: 1px solid #1ec58d;
 }
 .domicilio button span{
+    display: block;
     margin: 0;
-    color: #ffffff;
+    color: #fff;
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.25pt;
-    width: 100%;    
+    font-size: 12px;
+    font-weight: 500;  
+    letter-spacing: 0.025rem;    
 }
