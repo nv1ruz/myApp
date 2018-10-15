@@ -26,7 +26,7 @@ export class AutenticacionService {
         if( user.displayName ){
           this.usuarioNew.nick = user.displayName;
         } else{
-          this.usuarioNew.nick = 'Usuario'
+          this.usuarioNew.nick = 'Usuario';
         }
         if( user.phoneNumber ){
           this.usuarioNew.movil = user.phoneNumber;

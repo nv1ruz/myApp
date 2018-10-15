@@ -176,3 +176,7 @@ p{
     font-weight: 500;  
     letter-spacing: 0.025rem;    
 }
+
+button:disabled {
+    background-color: #e1e1e1!important;
+}

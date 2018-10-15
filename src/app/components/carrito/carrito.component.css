@@ -454,3 +454,112 @@ p.valordelivery {
 .modalNuevadireccion .modal-footer .cancelar{
     border-right: 1px solid #e1e1e1;
 }
+
+
+/* Pagina: Nueva Direccion */
+.caja2{
+    background-color: #fa3b7b;
+    height: 36px;
+}
+.caja2 button.cancelar{
+    /* display: block; */
+    margin: 0 20px 0 auto;
+    width: auto;
+    height: 36px;
+    background-color: #fa3b7b;
+    border: 0;
+    outline: 0;
+    text-align: right;
+    float: right;
+}
+.caja2 .cancelar span{
+    display: block;
+    color: #fff;
+    /* color: #fff; */
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;  
+    letter-spacing: 0.025rem;
+}
+.caja2 span.titulo{
+    /* display: block; */
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;  
+    margin-left: 20px;  
+    line-height: 2.5;
+}
+
+.domicilio{
+    padding: 10px 20px;
+}
+
+.domicilio span{
+    display: inline-block;
+    margin-top: 15px;
+    color: #495057;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;  
+}
+.domicilio .opc{
+    padding-left: 5px;
+    color: #cccccc;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;  
+}
+.domicilio input{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    outline: 0;
+    padding-left: 5px;
+
+    color: #495057;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;  
+}
+.domicilio input:focus{
+    border-bottom: 1px solid #fa3b7b;
+}
+
+.domicilio button{
+    display: block;
+    margin: 15px auto;
+    width: 100%;
+    height: 36px;
+    background-color: #18ad7c;
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    text-align: center;
+}
+.domicilio button:hover{
+    outline: 0;
+    background-color: #1ec58d;
+    border: 1px solid #1ec58d;
+}
+.domicilio button span{
+    display: block;
+    margin: 0;
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;  
+    letter-spacing: 0.025rem;    
+}
+
+button:disabled {
+    background-color: #e1e1e1!important;
+}

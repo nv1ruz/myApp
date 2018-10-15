@@ -1,5 +1,5 @@
 <!-- <div class="cajaCarrito animated fadeIn fast" *ngIf="_fs.usuario.uid"> -->
-<div class="cajaCarrito animated fadeIn fast">
+<div class="cajaCarrito animated fadeIn fast" *ngIf="!visible">
 	<div class="row titulo m-0 d-flex align-items-center">
 		
 		<div class="col-9">
@@ -102,16 +102,17 @@
 					<i class="fas fa-map-marker-alt"></i>
 				</div>
 				<div class="col-8 input-field select">
-					<select class="custom-select" required>
+					<select class="custom-select"  required>
 						<option value="" disabled selected>Selecciona la dirección</option>
-						<option value="1">Victoria Romero, 221</option>
-						<option value="2">Av. Luis Vernet, 1230</option>
-						<option value="3">Santa Rosa, S/N</option>
+						<option *ngFor="let domicilio of domicilios" [value]="0">{{domicilio.calle}}, {{domicilio.numero}}</option>
 					</select>
 				</div>
-				<div class="col-2 center" data-toggle="modal" data-target="#modalNuevadireccion">
+				<div class="col-2 center" (click)="toggle()">
 					<i class="fa fa-plus"></i>
 				</div>
+				<!-- <div class="col-2 center" data-toggle="modal" data-target="#modalNuevadireccion">
+					<i class="fa fa-plus"></i>
+				</div> -->
 			</div>
 		</div>
 
@@ -146,7 +147,7 @@
 
 
 <!-- Modal Bootstrap Nueva Direccion -->
-<div class="modal fade modalNuevadireccion" id="modalNuevadireccion" tabindex="-1" role="dialog" aria-labelledby="modalNuevadireccionTitle" aria-hidden="true">
+<!-- <div class="modal fade modalNuevadireccion" id="modalNuevadireccion" tabindex="-1" role="dialog" aria-labelledby="modalNuevadireccionTitle" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -189,7 +190,7 @@
 					</div>
 					<div class="form-group">
 						<label for="">Barrio *</label>
-						<input type="text" class="form-control" value="Angel V. Peñaloza" required>
+						<input type="text" class="form-control" value="" required>
 						<div class="invalid-feedback">
 							Por favor, escribe tu barrio.
 						</div>		
@@ -198,7 +199,7 @@
 						<div class="col-7">
 							<div class="form-group">
 								<label for="">Calle *</label>
-								<input type="text" class="form-control" value="Victoria Romero" required>
+								<input type="text" class="form-control" value="" required>
 								<div class="invalid-feedback">
 									Por favor, escribe tu calle.
 								</div>		
@@ -207,7 +208,7 @@
 						<div class="col-5">
 							<div class="form-group">
 								<label for="">Número *</label>
-								<input type="text" class="form-control" value="221" required>
+								<input type="text" class="form-control" value="" required>
 								<div class="invalid-feedback">
 									Por favor, escribe tu número de casa/depto.
 								</div>		
@@ -233,4 +234,62 @@
 			</div>
 		</div>
 	</div>
+</div> -->
+
+
+<!-- Pagina: Nueva Direccion -->
+<div class="caja2" *ngIf="visible">    
+	<span class="titulo">Nueva dirección</span>
+	<button class="cancelar" (click)="toggle()">
+	<span>Volver</span>
+	</button>
 </div>
+
+<form class="domicilio animated was-validated fadeIn fast" *ngIf="visible" [formGroup]="rForm">
+	<div class="form-group">
+		<span>Calle*</span>
+		<input type="text" formControlName="calle" class="form-control" placeholder="Ingresa tu calle" value="" #cal maxlength="50" required>
+		<div class="invalid-feedback">
+			Por favor, ingresa tu calle.
+		</div>
+	</div>
+	<div class="form-group">
+		<span>Número*</span>
+		<input type="text" formControlName="numero" class="form-control" placeholder="Ingresa tu número" value="" #num maxlength="10" required>
+		<div class="invalid-feedback">
+			Por favor, ingresa tu numero de casa.
+		</div>
+	</div>
+	<div class="form-group">
+		<span>Piso/Depto</span><span class="opc">(Opcional)</span>
+		<input type="text" placeholder="Ej.: Piso 8, Departamento 6" value="" maxlength="10" #pis>
+	</div>
+	<div class="form-group">
+		<span>Entre calles</span><span class="opc">(Opcional)</span>
+		<input type="text"  placeholder="Ej.: Av. Corrientes y Libertad" value="" maxlength="50" #ent>
+	</div>
+	<div class="form-group">
+		<span>Barrio*</span>
+		<input type="text" formControlName="barrio" class="form-control" placeholder="Ingresa tu barrio" value="" #bar maxlength="50" required>
+		<div class="invalid-feedback">
+			Por favor, ingresa tu barrio.
+		</div>
+		<!-- <div class="alert" *ngIf="!rForm.controls['barrio'].valid">Campo requerido.</div> -->
+	</div>
+	<div class="form-group">
+		<span>Referencias</span><span class="opc">(Opcional)</span>
+		<input type="text" placeholder="Ej.: Casa con rejas negras" value="" #ref maxlength="200">
+	</div>
+
+	<!-- <span>Código postal</span>
+	<input type="text" value="5380" readonly #cp>
+	<span>Provincia</span>
+	<input type="text" value="La Rioja" readonly #pro>
+	<span>Ciudad</span>
+	<input type="text" placeholder="Ingresa tu ciudad" value="Chamical" readonly #ciu> -->
+
+	<button type="submit" [disabled]="!rForm.valid" class="guardar" (click)="guardarDomicilio( cal.value, num.value, pis.value, ent.value, bar.value, ref.value ); toggle(); clearForm()">
+		<span>Guardar</span>
+	</button>
+
+</form>

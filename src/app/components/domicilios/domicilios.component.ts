@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../providers/firebase.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -8,14 +9,28 @@ import { FirebaseService } from '../../providers/firebase.service';
   styleUrls: ['./domicilios.component.css']
 })
 export class DomiciliosComponent implements OnInit {
- 
+  public iduser: string = this._fs.usuario.uid;
   public visible: boolean = false;
   public txtBtn: string = 'Agregar dirección';
-  public domicilios = [];
+  public domicilios = []; 
+  
 
-  constructor( private _fs: FirebaseService ) { }
+  // Validacion de Campos
+  rForm: FormGroup;
+  calle:string = '';
+  numero:string = '';
+  barrio:string = '';
+
+  constructor( private _fs: FirebaseService , private _fb: FormBuilder) {
+    this.rForm = _fb.group({
+      'calle': [null, Validators.compose([Validators.required, Validators.maxLength(50)]) ],
+      'numero': [null, Validators.compose([Validators.required, Validators.maxLength(10)]) ],
+      'barrio': [null, Validators.compose([Validators.required, Validators.maxLength(50)]) ]
+    })
+   }
 
   ngOnInit() {
+
     this.getDomicilios().subscribe( (snap) => {
       console.log( snap );
       if( snap.length > 0){
@@ -67,7 +82,7 @@ export class DomiciliosComponent implements OnInit {
   }
 
   getDomicilios(){
-    return this._fs.afs.collection( 'usuarios' ).doc( 'VUPmhwq57BVGwVLh1YRtpvE21Bt1' )
+    return this._fs.afs.collection( 'usuarios' ).doc( this.iduser )
     .collection('direcciones').snapshotChanges();
   }
 
@@ -79,5 +94,13 @@ export class DomiciliosComponent implements OnInit {
     }
     this.visible = !this.visible;
   }
+
+  clearForm() { 
+    this.rForm.reset({ 
+      'calle': '', 
+      'numero': '',
+      'barrio': ''
+    }); 
+  } 
 
 }

@@ -33,7 +33,8 @@ export class FirebaseService {
       if( user.displayName ){
         this.usuario.nick = user.displayName;
       } else{
-        this.usuario.nick = 'Usuario'
+        var NewUserId = user.uid.substring(8,0);
+        this.usuario.nick = 'Usuario'+NewUserId;
         // this.usuario.nombre = user.displayName;
       }
       this.usuario.nombre = '';
