@@ -457,11 +457,11 @@ p.valordelivery {
 
 
 /* Pagina: Nueva Direccion */
-.caja2{
+.caja3{
     background-color: #fa3b7b;
     height: 36px;
 }
-.caja2 button.cancelar{
+.caja3 button.cancelar{
     /* display: block; */
     margin: 0 20px 0 auto;
     width: auto;
@@ -472,7 +472,7 @@ p.valordelivery {
     text-align: right;
     float: right;
 }
-.caja2 .cancelar span{
+.caja3 .cancelar span{
     display: block;
     color: #fff;
     /* color: #fff; */
@@ -482,7 +482,7 @@ p.valordelivery {
     font-weight: 500;  
     letter-spacing: 0.025rem;
 }
-.caja2 span.titulo{
+.caja3 span.titulo{
     /* display: block; */
     color: #fff;
     /* light 300, regular 400, medium 500, bold 700 */
