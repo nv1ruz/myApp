@@ -22,6 +22,8 @@ export class DomiciliosComponent implements OnInit {
   barrio:string = '';
 
   constructor( private _fs: FirebaseService , private _fb: FormBuilder) {
+
+    // Validacion de Campos
     this.rForm = _fb.group({
       'calle': [null, Validators.compose([Validators.required, Validators.maxLength(50)]) ],
       'numero': [null, Validators.compose([Validators.required, Validators.maxLength(10)]) ],

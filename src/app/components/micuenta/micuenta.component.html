@@ -1,18 +1,32 @@
 <div class="contenedor">
-	<div class="caja-datos">
+	<form class="caja-datos">
 		<img src="{{ usuario.foto }}" alt="">
-		<span>Usuario</span>
-		<input type="text" value="{{ usuario.nick }}" #nic>
-		<span>Nombre</span>
-		<input type="text" value="{{ usuario.nombre }}" #nom>
-		<span>Apellido</span>
-		<input type="text" value="{{ usuario.apellido }}" #ape>
-		<span>Correo electrónico</span>
-		<input type="email" value="{{ usuario.email }}" readonly disabled>
-		<span>Movil</span>
-		<input type="text" value="{{ usuario.movil }}" #mov>
-		<button class="guardar" (click)="actualizarDatos( nic.value, nom.value, ape.value, mov.value )">
+		<div class="form-group">
+			<span>Usuario*</span>
+			<input type="text" class="form-control" value="{{ usuario.nick }}" #nic maxlength="15" required>
+			
+		</div>
+		<div class="form-group">
+			<span>Nombre*</span>
+			<input type="text" class="form-control" value="{{ usuario.nombre }}" #nom maxlength="20" required>
+			
+		</div>
+		<div class="form-group">
+			<span>Apellido*</span>
+			<input type="text" class="form-control" value="{{ usuario.apellido }}" #ape maxlength="20" required>
+			
+		</div>
+		<div class="form-group">
+			<span>Correo electrónico</span>
+			<input type="email" class="form-control" value="{{ usuario.email }}" readonly disabled>
+		</div>
+		<div class="form-group">
+			<span>Movil</span>
+			<input type="text" value="{{ usuario.movil }}" #mov>
+		</div>
+
+		<button type="submit" class="guardar" (click)="actualizarDatos( nic.value, nom.value, ape.value, mov.value)">
 			<span class="text">Guardar</span>
 		</button>
-	</div>
+	</form>
 </div>

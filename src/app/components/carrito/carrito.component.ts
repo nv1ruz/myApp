@@ -17,6 +17,7 @@ export class CarritoComponent implements OnInit {
   public refId:string;
   public comercio:any = {};
   public precioTotal:number = 0;
+  public iduser: string = this._fs.usuario.uid;
 
   // Validacion de Campos
   rForm: FormGroup;
@@ -89,7 +90,7 @@ export class CarritoComponent implements OnInit {
   }
 
   getDomicilios(){
-    return this._fs.afs.collection( 'usuarios' ).doc( 'W4ALCvquSBcAmiA2J4xM1sMO8JR2' )
+    return this._fs.afs.collection( 'usuarios' ).doc( this.iduser)
     .collection('direcciones').snapshotChanges();
   }
 

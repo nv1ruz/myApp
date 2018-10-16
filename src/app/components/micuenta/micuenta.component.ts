@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../providers/firebase.service';
 import { AngularFireAuth } from '@angular/fire/auth';
+// import { userInfo } from 'os';
 
 @Component({
   selector: 'app-micuenta',
@@ -12,7 +13,11 @@ export class MicuentaComponent implements OnInit {
   private refUID: string;
   public usuario:any = {};
 
-  constructor( public _fs: FirebaseService,  ) { 
+
+
+  constructor( public _fs: FirebaseService) { 
+
+
 
     // observador de estado de autenticación
     this._fs.afAuth.authState.subscribe( user => {

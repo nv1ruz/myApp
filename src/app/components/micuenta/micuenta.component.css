@@ -63,3 +63,6 @@
     letter-spacing: 0.25pt;
     width: 100%;
 }
+button:disabled {
+    background-color: #e1e1e1!important;
+}

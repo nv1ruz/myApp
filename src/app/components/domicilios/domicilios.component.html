@@ -30,7 +30,7 @@
 		</button>
 	</div>
 
-	<form class="domicilio animated was-validated fadeIn fast" *ngIf="visible" [formGroup]="rForm">
+	<form class="domicilio animated was-validated fadeIn fast" *ngIf="visible" [formGroup]="rForm"> 
 		<div class="form-group">
 			<span>Calle*</span>
 			<input type="text" formControlName="calle" class="form-control" placeholder="Ingresa tu calle" value="" #cal maxlength="50" required>
@@ -59,7 +59,6 @@
 			<div class="invalid-feedback">
 				Por favor, ingresa tu barrio.
 			</div>
-			<!-- <div class="alert" *ngIf="!rForm.controls['barrio'].valid">Campo requerido.</div> -->
 		</div>
 		<div class="form-group">
 			<span>Referencias</span><span class="opc">(Opcional)</span>
