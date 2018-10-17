@@ -17,12 +17,11 @@ export class DomiciliosComponent implements OnInit {
   lng: number = -66.314116;
   zm: number = 15;
 
-  public iduser: string;
   public visible: boolean = false;
   public txtBtn: string = 'Agregar dirección';
   public domicilios = []; 
-  private userId: string;
-  
+  public userId: string;
+  public marcador:{ lat: number, lng: number };  
 
   // Validacion de Campos
   rForm: FormGroup;
@@ -31,6 +30,11 @@ export class DomiciliosComponent implements OnInit {
   barrio:string = '';
 
   constructor( private _fs: FirebaseService , private _fb: FormBuilder, private _us: UsuarioService) {
+
+    this.marcador = {
+      lat: 0,
+      lng: 0
+    }
 
     // Validacion de Campos
     this.rForm = _fb.group({
@@ -92,26 +96,14 @@ export class DomiciliosComponent implements OnInit {
 
   // MÉTODOS ***************************************
 
-  guardarDomicilio( cal: string, num: string, pis: string, ent: string, bar: string, ref: string ){
-    this._fs.afs.collection( 'usuarios' ).doc( this._fs.usuario.uid )
-    .collection( 'direcciones' ).add({
-      calle: cal,
-      numero:  num,
-      pisoDepto: pis,
-      entreCalles: ent,
-      barrio: bar,
-      referencias: ref,
-      cp: '5380',
-      provincia: 'La Rioja',
-      ciudad: 'Chamical'
-      // cp: cp,
-      // provincia: pro,
-      // ciudad: ciu
-    }).then( function() {
-      console.log( "El documento se guardó correctamente");
-    }).catch( function(error) {
-      console.log( "Hubo un error al guardar el documento: ", error);
-    });
+  private agregarMarcador( evento ){
+    const coords: { lat: number, lng: number } = evento.coords;
+    this.marcador = { lat: coords.lat, lng: coords.lng };
+    console.log(this.marcador);
+  }
+
+  private guardarDomicilio( refId:string, cal: string, num: number, pis: string, ent: string, bar: string, ref: string, lat: number, lng: number ){
+    return this._us.pushDireccion( refId, cal, num, pis, ent, bar, ref, lat, lng );
   }
 
   private obtenerDomicilios( refId: string ){
