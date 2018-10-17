@@ -13,6 +13,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { environment } from '../environments/environment';
 
+// (AGM) Angular Google Maps
+import { AgmCoreModule } from '@agm/core';
+
 // rutas
 import { AppRoutingModule } from './app.routes';
 
@@ -65,7 +68,10 @@ import { DomiciliosComponent } from './components/domicilios/domicilios.componen
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), // imports firebase/storage only needed for storage features
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBBghU-HAg9wpwoszhmnK_ljHTOh3Th4Js'
+    })
   ],
   providers: [
     FirebaseService,

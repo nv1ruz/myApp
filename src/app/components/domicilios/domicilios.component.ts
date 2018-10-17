@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../providers/firebase.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { UsuarioService } from '../../providers/usuario.service';
+
 
 @Component({
   selector: 'app-domicilios',
@@ -9,10 +11,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./domicilios.component.css']
 })
 export class DomiciliosComponent implements OnInit {
-  public iduser: string = this._fs.usuario.uid;
+
+  // (AGM) Angular Google Maps
+  lat: number = -30.361148;
+  lng: number = -66.314116;
+  zm: number = 15;
+
+  public iduser: string;
   public visible: boolean = false;
   public txtBtn: string = 'Agregar dirección';
   public domicilios = []; 
+  private userId: string;
   
 
   // Validacion de Campos
@@ -21,7 +30,7 @@ export class DomiciliosComponent implements OnInit {
   numero:string = '';
   barrio:string = '';
 
-  constructor( private _fs: FirebaseService , private _fb: FormBuilder) {
+  constructor( private _fs: FirebaseService , private _fb: FormBuilder, private _us: UsuarioService) {
 
     // Validacion de Campos
     this.rForm = _fb.group({
@@ -29,37 +38,59 @@ export class DomiciliosComponent implements OnInit {
       'numero': [null, Validators.compose([Validators.required, Validators.maxLength(10)]) ],
       'barrio': [null, Validators.compose([Validators.required, Validators.maxLength(50)]) ]
     })
+
    }
 
+
+   
   ngOnInit() {
 
-    this.getDomicilios().subscribe( (snap) => {
-      console.log( snap );
-      if( snap.length > 0){
-        console.log("existen direcciones");
-        this.domicilios = [];
-        snap.forEach( (data: any) => {
-          // console.log( data.payload.doc.data() );
-          this.domicilios.push({
-            id: data.payload.doc.id,
-            // data: data.payload.doc.data(),
-            calle: data.payload.doc.data().calle,
-            numero: data.payload.doc.data().numero,
-            barrio: data.payload.doc.data().barrio,
-            cp: '5380',
-            provincia: 'La Rioja',
-            ciudad: 'Chamical'
-            // cp: data.payload.doc.data().cp,
-            // provincia: data.payload.doc.data().provincia,
-            // ciudad: data.payload.doc.data().ciudad
-          });
+    this._us.afAuth.authState.subscribe( user => {
+
+      if( user ){
+        this.userId = user.uid;
+
+        this.obtenerDomicilios( this.userId ).subscribe( (snap) => {
+          console.log( snap );
+          if( snap.length > 0){
+            console.log("existen direcciones");
+            this.domicilios = [];
+            snap.forEach( (data: any) => {
+              // console.log( data.payload.doc.data() );
+              this.domicilios.push({
+                id: data.payload.doc.id,
+                // data: data.payload.doc.data(),
+                calle: data.payload.doc.data().calle,
+                numero: data.payload.doc.data().numero,
+                barrio: data.payload.doc.data().barrio,
+                cp: '5380',
+                provincia: 'La Rioja',
+                ciudad: 'Chamical'
+                // cp: data.payload.doc.data().cp,
+                // provincia: data.payload.doc.data().provincia,
+                // ciudad: data.payload.doc.data().ciudad
+              });
+            });
+            // console.log(this.domicilios);
+          } else{
+            console.log( 'No existe ninguna direccion' );
+          }
         });
-        // console.log(this.domicilios);
+
+
       } else{
-        console.log( 'No existe ninguna direccion' );
+        return;
       }
+
     });
+
+          
+    
   }
+
+
+
+  // MÉTODOS ***************************************
 
   guardarDomicilio( cal: string, num: string, pis: string, ent: string, bar: string, ref: string ){
     this._fs.afs.collection( 'usuarios' ).doc( this._fs.usuario.uid )
@@ -83,12 +114,11 @@ export class DomiciliosComponent implements OnInit {
     });
   }
 
-  getDomicilios(){
-    return this._fs.afs.collection( 'usuarios' ).doc( this.iduser )
-    .collection('direcciones').snapshotChanges();
+  private obtenerDomicilios( refId: string ){
+    return this._us.getDomicilios( refId );
   }
 
-  toggle(){
+  public toggle(){
     if( this.visible ){
       this.txtBtn = 'Agregar dirección';
     } else{

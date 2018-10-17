@@ -72,6 +72,20 @@
 		<span>Ciudad</span>
 		<input type="text" placeholder="Ingresa tu ciudad" value="Chamical" readonly #ciu> -->
 
+
+
+		<!-- (AGM) Angular Google Maps -->
+		<!-- this creates a google map on the page with the given lat/lng from -->
+		<!-- the component as the initial center of the map: -->
+		<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zm">
+		<!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker> -->
+		</agm-map>
+
+
+
+
+
+
 		<button type="submit" [disabled]="!rForm.valid" class="guardar" (click)="guardarDomicilio( cal.value, num.value, pis.value, ent.value, bar.value, ref.value ); toggle(); clearForm()">
 			<span>Guardar</span>
 		</button>

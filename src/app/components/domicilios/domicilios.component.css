@@ -180,3 +180,11 @@ p{
 button:disabled {
     background-color: #e1e1e1!important;
 }
+
+
+
+
+
+agm-map {
+    height: 300px;
+  }
