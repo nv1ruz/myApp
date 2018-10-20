@@ -20,31 +20,59 @@ export class UsuarioService {
 
   public getDomicilios( refId: string ){
     return this.afs.collection( 'usuarios' ).doc( refId )
-    .collection('direcciones').snapshotChanges();
+                    .collection('direcciones').snapshotChanges();
+  }
+
+  public getDireccion( userId: string, dirId: string ){
+    return this.afs.collection( 'usuarios' ).doc( userId )
+                    .collection( 'direcciones' ).doc( dirId ).snapshotChanges();
   }
 
   public pushDireccion( refId: string, cal: string, num: number, pis: string, ent: string, bar: string, ref: string, lat: number, lng: number){
     return this.afs.collection( 'usuarios' ).doc( refId )
-    .collection( 'direcciones' ).add({
-      calle: cal,
-      numero:  num,
-      pisoDepto: pis,
-      entreCalles: ent,
-      barrio: bar,
-      referencias: ref,
-      cp: '5380',
-      provincia: 'La Rioja',
-      ciudad: 'Chamical',
-      // cp: cp,
-      // provincia: pro,
-      // ciudad: ciu
-      lat: lat,
-      lng: lng
-    }).then( function() {
-      console.log( "El documento se guardó correctamente");
-    }).catch( function(error) {
-      console.log( "Hubo un error al guardar el documento: ", error);
-    });
+                    .collection( 'direcciones' ).add({
+                      calle: cal,
+                      numero:  num,
+                      pisoDepto: pis,
+                      entreCalles: ent,
+                      barrio: bar,
+                      referencias: ref,
+                      cp: '5380',
+                      provincia: 'La Rioja',
+                      ciudad: 'Chamical',
+                      // cp: cp,
+                      // provincia: pro,
+                      // ciudad: ciu
+                      lat: lat,
+                      lng: lng
+                    }).then( function() {
+                      console.log( "El documento se guardó correctamente");
+                    }).catch( function(error) {
+                      console.log( "Hubo un error al guardar el documento: ", error);
+                    });
+  }
+
+  public updDireccion( refId: string, dirId: string, cal: string, num: number, pis: string, ent: string, bar: string, ref: string, lat: number, lng: number ){
+    return this.afs.collection( 'usuarios' ).doc( refId )
+                    .collection( 'direcciones' ).doc( dirId ).update({
+                      calle: cal,
+                      numero:  num,
+                      pisoDepto: pis,
+                      entreCalles: ent,
+                      barrio: bar,
+                      referencias: ref,
+                      cp: '5380',
+                      provincia: 'La Rioja',
+                      ciudad: 'Chamical',
+                      lat: lat,
+                      lng: lng
+                    })
+                    .then( function() {
+                      console.log( "Documento actualizado con exito" );
+                    })
+                    .catch( function(error) {
+                      console.log( "Error al actualizar el documento" );
+                    });
   }
 
 }

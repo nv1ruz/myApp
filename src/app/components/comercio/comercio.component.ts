@@ -177,7 +177,7 @@ export class ComercioComponent implements OnInit {
     this.producto.cant = 1;
   }
 
-  private sumarCantidad(){
+  public sumarCantidad(){
     if( this.producto.cant >= 10 ){
       // console.log("maximo");
     } else{
@@ -186,7 +186,7 @@ export class ComercioComponent implements OnInit {
     }    
   }
 
-  private restarCantidad(){
+  public restarCantidad(){
     if( this.producto.cant == 1 ){
       // console.log("minimo");
     } else{
@@ -195,7 +195,7 @@ export class ComercioComponent implements OnInit {
     }
   }
 
-  private agregarProducto( prod:any, nota:string ){
+  public agregarProducto( prod:any, nota:string ){
     this._cs.addProducto( prod, nota );
   }
 

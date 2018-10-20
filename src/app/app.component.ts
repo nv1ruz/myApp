@@ -5,6 +5,9 @@ import { AutenticacionService } from './providers/autenticacion.service';
 import { UsuarioService } from './providers/usuario.service';
 
 
+import { Router, RoutesRecognized  } from '@angular/router';
+import { filter, pairwise } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-root',
@@ -17,8 +20,23 @@ export class AppComponent {
   private refUID: string;
   public usuario:any = {};
   public exist:boolean = false;
+
+  public prevUrl: string;
   
-  constructor( private _as: AutenticacionService, private _us: UsuarioService ) { 
+  constructor( private _as: AutenticacionService, private _us: UsuarioService, private router: Router ) { 
+
+    // captura la url previa
+    this.router.events
+    .pipe(filter((e: any) => e instanceof RoutesRecognized),
+        pairwise()
+    ).subscribe((e: any) => {
+        console.log(e[0].urlAfterRedirects); // previous url
+        this.prevUrl = e[0].urlAfterRedirects;
+    });
+
+
+
+
 
     // observador de estado de autenticación
     this._as.afAuth.authState.subscribe( user => {

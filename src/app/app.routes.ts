@@ -9,7 +9,7 @@ import {
     CarritoComponent,
     MicuentaComponent,
     DireccionesComponent,
-    DomiciliosComponent,
+    DireccionComponent,
     PedidosComponent,
     RegisterComercioComponent,
     FavoritosComponent
@@ -22,7 +22,8 @@ const ROUTES: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'carrito/:id', component: CarritoComponent },
     { path: 'micuenta', component: MicuentaComponent },
-    { path: 'domicilios', component: DomiciliosComponent },
+    { path: 'direccion/:id', component: DireccionComponent },
+    { path: 'direccion', component: DireccionComponent },
     { path: 'direcciones', component: DireccionesComponent },
     { path: 'pedidos', component: PedidosComponent },
     { path: 'registerComercio', component: RegisterComercioComponent },

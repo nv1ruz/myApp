@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-declare let L;
-declare var $:any;
+import { FirebaseService } from '../../providers/firebase.service';
+
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UsuarioService } from '../../providers/usuario.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-direcciones',
   templateUrl: './direcciones.component.html',
@@ -8,55 +12,121 @@ declare var $:any;
 })
 export class DireccionesComponent implements OnInit {
 
-  constructor() { }
+    // (AGM) Angular Google Maps
+    public lat: number = -30.361148;
+    public lng: number = -66.314116;
+    public zm: number = 15;
+  
+    public userId: string;
+    public domicilios = []; 
+    public marcador:{ lat: number, lng: number };  
+
+    public max:boolean = false;
+  
+    // Validacion de Campos
+    rForm: FormGroup;
+    calle:string = '';
+    numero:string = '';
+    barrio:string = '';
+
+  constructor( private _fs: FirebaseService , private _fb: FormBuilder, private _us: UsuarioService, private router: Router ) {
+
+    this.marcador = {
+      lat: 0,
+      lng: 0
+    }
+
+    // Validacion de Campos
+    this.rForm = _fb.group({
+      'calle': [null, Validators.compose([Validators.required, Validators.maxLength(50)]) ],
+      'numero': [null, Validators.compose([Validators.required, Validators.maxLength(10)]) ],
+      'barrio': [null, Validators.compose([Validators.required, Validators.maxLength(50)]) ]
+    });
+
+  }
 
   ngOnInit() {
 
-    $('.collapse').collapse();
+    this._us.afAuth.authState.subscribe( user => {
 
-    // geolocalizacion Web
-    // (function(){
-    //   var content = document.getElementById("geolocation-test");
-    //   console.log(content);
-    //   if (navigator.geolocation)
-    //   {
-    //     navigator.geolocation.getCurrentPosition(function(objPosition)
-    //     {
-    //       var lon = objPosition.coords.longitude;
-    //       var lat = objPosition.coords.latitude;
-    //       content.innerHTML = "<p><strong>Latitud:</strong> " + lat + "</p><p><strong>Longitud:</strong> " + lon + "</p>";
-    //     }, function(objPositionError)
-    //     {
-    //       switch (objPositionError.code)
-    //       {
-    //         case objPositionError.PERMISSION_DENIED:
-    //           content.innerHTML = "No se ha permitido el acceso a la posición del usuario.";
-    //         break;
-    //         case objPositionError.POSITION_UNAVAILABLE:
-    //           content.innerHTML = "No se ha podido acceder a la información de su posición.";
-    //         break;
-    //         case objPositionError.TIMEOUT:
-    //           content.innerHTML = "El servicio ha tardado demasiado tiempo en responder.";
-    //         break;
-    //         default:
-    //           content.innerHTML = "Error desconocido.";
-    //       }
-    //     }, {
-    //       maximumAge: 75000,
-    //       timeout: 15000
-    //     });
-    //   }
-    //   else
-    //   {
-    //     content.innerHTML = "Su navegador no soporta la API de geolocalización.";
-    //   }
-    // })();
+      if( user ){
+        this.userId = user.uid;
+
+        this.obtenerDomicilios( this.userId ).subscribe( (snap) => {
+
+          if( snap.length > 0){
+            // console.log("existen direcciones");
+            this.domicilios = [];
+            snap.forEach( (data: any) => {
+              // console.log( data.payload.doc.data() );
+              this.domicilios.push({
+                id: data.payload.doc.id,
+                // data: data.payload.doc.data(),
+                calle: data.payload.doc.data().calle,
+                numero: data.payload.doc.data().numero,
+                barrio: data.payload.doc.data().barrio,
+                cp: '5380',
+                provincia: 'La Rioja',
+                ciudad: 'Chamical'
+              });
+            });
+            
+            if( snap.length == 5 ){
+              this.max = true;
+            } else{
+              this.max = false;
+            }
+            
+          } else{
+            console.log( 'No existe ninguna direccion' );
+          }
+
+        });
 
 
+      } else{
+        return;
+      }
+
+    });
    
 
   }
 
+
+
+  // MÉTODOS ***************************************
+
+  private agregarMarcador( evento ){
+    const coords: { lat: number, lng: number } = evento.coords;
+    this.marcador = { lat: coords.lat, lng: coords.lng };
+    console.log(this.marcador);
+  }
+
+  private guardarDomicilio( refId:string, cal: string, num: number, pis: string, ent: string, bar: string, ref: string, lat: number, lng: number ){
+    return this._us.pushDireccion( refId, cal, num, pis, ent, bar, ref, lat, lng );
+  }
+
+  private obtenerDomicilios( refId: string ){
+    return this._us.getDomicilios( refId );
+  }
+
+  private irDireccion(){
+    this.router.navigate(['/direccion']);
+  }
+
+  private actualizar( id: string ){
+    this.router.navigate(['/direccion', id]);
+  }
+
+
+  clearForm() { 
+    this.rForm.reset({ 
+      'calle': '', 
+      'numero': '',
+      'barrio': ''
+    }); 
+  }  
   
 
 

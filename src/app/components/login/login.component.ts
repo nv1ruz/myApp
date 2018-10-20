@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   // MÉTODOS ***************************************
   
-  private iniciarSesion( proveedor: string, email:string, pass:string ){
+  public iniciarSesion( proveedor: string, email:string, pass:string ){
     return this._as.logIn( proveedor, email, pass );
   }
   

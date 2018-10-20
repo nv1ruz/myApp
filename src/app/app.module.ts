@@ -41,7 +41,7 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { RegisterComercioComponent } from './components/register-comercio/register-comercio.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
-import { DomiciliosComponent } from './components/domicilios/domicilios.component';
+import { DireccionComponent } from './components/direccion/direccion.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +57,7 @@ import { DomiciliosComponent } from './components/domicilios/domicilios.componen
     PedidosComponent,
     RegisterComercioComponent,
     FavoritosComponent,
-    DomiciliosComponent
+    DireccionComponent
   ],
   imports: [
     BrowserModule,

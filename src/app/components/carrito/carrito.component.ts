@@ -5,7 +5,7 @@ declare var $:any;
 
 import { ComercioService } from '../../providers/comercio.service';
 import { CarritoService } from '../../providers/carrito.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -27,7 +27,7 @@ export class CarritoComponent implements OnInit {
 
   public domicilios = [];
 
-  constructor( public _cs: CarritoService, private _co: ComercioService, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
+  constructor( public _cs: CarritoService, private _co: ComercioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {
@@ -196,6 +196,10 @@ export class CarritoComponent implements OnInit {
       }
     });  
 
+  }
+
+  private nuevaDireccion(){
+    this.router.navigate(['/direccion']);
   }
 
 }
