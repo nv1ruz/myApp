@@ -1,13 +1,16 @@
-<div class="caja2">    
+<div class="caja-nav">    
 	<button class="regresar" [routerLink]=[anterior]>
 		<i class="fas fa-angle-left"></i>
 	</button>
+	<!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+	<i class="fas fa-bars"></i>
+	</button> -->
 	<span class="titulo">Nueva dirección</span>
 </div>
 
-<form class="domicilio animated was-validated fadeIn fast" [formGroup]="rForm"> 
 
-	
+
+<form class="domicilio animated was-validated fadeIn fast" [formGroup]="rForm"> 
 
 	<div class="form-group">
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
 import { FirebaseService } from '../../providers/firebase.service';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -29,7 +30,7 @@ export class DireccionesComponent implements OnInit {
     numero:string = '';
     barrio:string = '';
 
-  constructor( private _fs: FirebaseService , private _fb: FormBuilder, private _us: UsuarioService, private router: Router ) {
+  constructor( public ap: AppComponent, private _fs: FirebaseService , private _fb: FormBuilder, private _us: UsuarioService, private router: Router ) {
 
     this.marcador = {
       lat: 0,

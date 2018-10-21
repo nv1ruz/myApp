@@ -1,3 +1,14 @@
+<div class="caja-nav">    
+    <!-- <button class="regresar" [routerLink]="['/comercio', refId]">
+      <i class="fas fa-angle-left"></i>
+    </button> -->
+    <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+    <i class="fas fa-bars"></i>
+    </button>
+    <span class="titulo">Mis favoritos</span>
+</div>
+
+
 <p class="txtComerciosFavoritos">Mis Favoritos</p>
 
 <div class="container-fluid animated fadeIn comerciosFavoritos">

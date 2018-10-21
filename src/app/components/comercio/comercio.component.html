@@ -1,3 +1,19 @@
+<div class="caja-nav">    
+	<!-- <button class="regresar" [routerLink]="['/comercio', refId]">
+		<i class="fas fa-angle-left"></i>
+	</button> -->
+	<button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+	<i class="fas fa-bars"></i>
+	</button>
+	<span class="titulo">Comercio</span>
+</div>
+
+
+
+
+
+
+
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
 	<a class="btnCarrito" *ngIf="_fs.usuario.uid" (click)="verCarrito()"><i class="fas fa-shopping-cart"></i></a>
@@ -179,4 +195,3 @@
 		</div>
 	</div>
 </div>
-

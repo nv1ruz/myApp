@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AutenticacionService } from '../../providers/autenticacion.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,17 @@ import { AutenticacionService } from '../../providers/autenticacion.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private _as: AutenticacionService ) {   }
+  constructor( private _as: AutenticacionService, private router: Router ) {  
+
+    this._as.afAuth.authState.subscribe( user => {
+      if( user ){
+        this.router.navigate(['/home']);
+      } else{
+        return;
+      }
+    });
+
+   }
 
 
 

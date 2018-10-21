@@ -1,3 +1,94 @@
+.caja-nav{
+    background-color: #fa3b7b;
+    /* height: 36px; */
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.caja-nav button.regresar{
+    color: #ffffff;
+    background: none;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    margin-left: 20px;
+    padding: 0;
+}
+.caja-nav button i{
+    color: #fff;
+    font-size: 22px;
+}
+.caja-nav span.titulo{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;  
+    margin-left: 35px;  
+    /* margin: 0 auto; */
+}
+.caja-nav button.menu{
+    color: #ffffff;
+    background: none;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    margin-left: 20px;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.nav{
+    height: 50px;
+    /* background: #38a85a; */
+    /* background-image: linear-gradient(#910030, #ff3e7f); */
+    background-color: #fa3b7b;
+    align-content: center;
+    align-items: center;
+}
+.nav .btnMenu{
+    background: none;
+    border: 0;
+    color: #ffffff;
+    padding: 0 20px;
+    font-size: 20px;
+    outline: 0;
+}
+.nav .titulo{
+    color: #ffffff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    margin-left: 20px;
+    margin-right: auto;
+    outline: 0;
+}
+.nav .btnIngresar{
+    color: #ffffff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    border: 0;
+    padding: 0 20px;
+    background: none;
+}
+
+
+
+
+
+
 
 /* Carrito Header */
 

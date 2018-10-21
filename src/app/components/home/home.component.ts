@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 import { CarritoService } from '../../providers/carrito.service';
 import { ComercioService } from '../../providers/comercio.service';
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   public comerciosAbiertos = [];
   public comerciosCerrados = [];
 
-  constructor( private _co: ComercioService, private _cs: CarritoService, private router: Router) { 
+  constructor( public ap: AppComponent, private _co: ComercioService, private _cs: CarritoService, private router: Router) { 
 
     this._cs.carrito = [];
 

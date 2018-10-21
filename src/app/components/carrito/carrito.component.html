@@ -1,24 +1,17 @@
-<!-- <div class="cajaCarrito animated fadeIn fast" *ngIf="_fs.usuario.uid"> -->
+<div class="caja-nav">    
+	<button class="regresar" [routerLink]="['/comercio', refId]">
+		<i class="fas fa-angle-left"></i>
+	</button>
+	<!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+	<i class="fas fa-bars"></i>
+	</button> -->
+	<span class="titulo">Tu pedido</span>
+</div>
+
+
+
 <div class="cajaCarrito animated fadeIn fast" *ngIf="!visible">
-	<div class="row titulo m-0 d-flex align-items-center">
-		
-		<div class="col-9">
-			<!-- <p class="">Mi Carrito</p> -->
-			<p class="nombre">{{ comercio.nombre }}</p>
-		</div>
-		<div class="col-3" style="text-align:right;">
-			<!-- <i class="fa fa-check"></i> -->
-			<a [routerLink]="['/comercio', refId]"><i class="fa fa-times"></i></a>
-		</div>
-	</div>
-	
-	<div class="carrito-header">
-		<!-- <img src="https://es.seaicons.com/wp-content/uploads/2015/11/cart-icon.png" alt=""> -->
-		<!-- <p class="nombre">{{ comercio.nombre }}</p> -->
-		<!-- <p class="estado">{{ comercio.estado }}</p> -->
-	</div>
-	
-	<!-- <div class="carrito-body" *ngIf="comercio.estado === 'Abierto'"> -->
+
 	<div class="carrito-body" *ngIf="_cs.carrito.length > 0">
 		<p class="txtProductos">Mi pedido</p>
 		
@@ -55,8 +48,7 @@
 											<button class="down" (click)="restarCantidad( producto )">
 												<i class="fa fa-minus"></i>
 											</button> 
-											<!-- <input type="text" class="test" value="{{ producto.cant }}" disabled/> -->
-											<!-- <input type="text" value="{{ producto.cant }}" disabled/> -->
+											
 											<button class="up" (click)="sumarCantidad( producto )">
 												<i class="fa fa-plus"></i>
 											</button>
@@ -91,7 +83,6 @@
 				</div>
 				<div class="col prec-prod">
 					<p class="valordelivery" *ngIf="comercio.delivery == true">$ {{ comercio.deliveryPrecio }}</p>
-					<!-- <input type="text" class="valordelivery" value="{{ comercio.deliveryPrecio }}" disabled> -->
 				</div>
 			</div>
 		</div>
@@ -110,9 +101,6 @@
 				<div class="col-2 center" (click)="nuevaDireccion()">
 					<i class="fa fa-plus"></i>
 				</div>
-				<!-- <div class="col-2 center" data-toggle="modal" data-target="#modalNuevadireccion">
-					<i class="fa fa-plus"></i>
-				</div> -->
 			</div>
 		</div>
 

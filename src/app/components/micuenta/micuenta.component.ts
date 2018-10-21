@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
+
+
 import { FirebaseService } from '../../providers/firebase.service';
 import { AngularFireAuth } from '@angular/fire/auth';
 // import { userInfo } from 'os';
@@ -15,7 +18,7 @@ export class MicuentaComponent implements OnInit {
 
 
 
-  constructor( public _fs: FirebaseService) { 
+  constructor( public ap: AppComponent, public _fs: FirebaseService) { 
 
 
 

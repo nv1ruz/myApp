@@ -30,10 +30,10 @@
                 <a><i class="fas fa-user"></i><span>Mi cuenta</span></a>
             </div>
             <div class="caja" [routerLink]="['/direcciones']" (click)="_toggleOpened()">
-                <a><i class="fas fa-map-marker-alt"></i><span>Mis Direcciones</span></a>
+                <a><i class="fas fa-compass"></i><span>Direcciones</span></a>
             </div>
             <div class="caja" [routerLink]="['/pedidos']" (click)="_toggleOpened()">
-                <a><i class="fas fa-edit"></i><span>Pedidos</span></a>
+                <a><i class="fas fa-clipboard"></i><span>Pedidos</span></a>
             </div>
             <div class="caja" [routerLink]="['/favoritos']" (click)="_toggleOpened()">
                 <a><i class="fas fa-heart"></i><span>Favoritos</span></a>
@@ -58,13 +58,15 @@
 
     <!-- Page content -->
     <div ng-sidebar-content>
-        <div class="nav">
+
+        <!-- <div class="nav">
             <button class="btnMenu" *ngIf="exist" (click)="_toggleOpened()"><i class="fas fa-bars"></i></button>
             <span class="titulo" [routerLink]="['/home']"><i class="fab fa-phoenix-framework"></i> AQUI </span>
             <button class="btnIngresar" *ngIf="!exist" [routerLink]="['/login']"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
-        </div>
+        </div> -->
         
         <router-outlet></router-outlet>
+        <!-- <app-home></app-home> -->
     </div>
 
    

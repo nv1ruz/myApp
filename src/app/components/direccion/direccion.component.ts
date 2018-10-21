@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { UsuarioService } from '../../providers/usuario.service';
 import { ActivatedRoute, Router  } from '@angular/router';
-import { AppComponent } from '../../app.component';
 
 
 @Component({

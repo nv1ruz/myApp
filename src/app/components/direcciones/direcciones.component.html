@@ -1,7 +1,17 @@
+<div class="caja-nav">    
+	<!-- <button class="regresar" [routerLink]="['/comercio', refId]">
+		<i class="fas fa-angle-left"></i>
+	</button> -->
+	<button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+	<i class="fas fa-bars"></i>
+	</button>
+	<span class="titulo">Mis direcciones</span>
+</div>
+
+
 <div class="conenedor">
 
 	<div class="animated fadeIn fast">
-		<p class="titulo" *ngIf="domicilios.length > 0">Mis direcciones</p>
 		<div class="direccion" *ngFor="let domicilio of domicilios" (click)="actualizar( domicilio.id)">
 			<span>{{ domicilio.calle }}, {{ domicilio.numero }}</span>
 			<span>B° {{ domicilio.barrio }} - {{ domicilio.ciudad }} <i class="fa fa-trash-alt"></i></span>			

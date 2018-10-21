@@ -1,8 +1,27 @@
+<div class="caja-nav">    
+  <!-- <button class="regresar" [routerLink]="['/comercio', refId]">
+		<i class="fas fa-angle-left"></i>
+  </button> -->
+  <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+    <i class="fas fa-bars"></i>
+  </button>
+	<span class="titulo">Home</span>
+</div>
 
 
 
 
-<p class="txtComerciosAbiertos">en este momento</p>
+
+
+
+
+
+
+
+
+<div class="caja-abierto">
+  <span>Abiertos</span>
+</div>
 
 <div class="container-fluid animated fadeIn comerciosAbiertos">
 
@@ -23,7 +42,12 @@
 </div>
 
 
-<p class="txtComercios">comercios cerrados</p>
+
+
+
+<div class="caja-cerrado">
+  <span>Cerrados</span>
+</div>
 
 <div class="container-fluid animated fadeIn comerciosCerrados">
 
@@ -42,3 +66,4 @@
   </div>
 
 </div>
+

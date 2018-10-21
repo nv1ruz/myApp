@@ -7,6 +7,8 @@ import { ComercioService } from '../../providers/comercio.service';
 import { CarritoService } from '../../providers/carrito.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { AppComponent } from '../../app.component';
+
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.component.html',
@@ -27,7 +29,7 @@ export class CarritoComponent implements OnInit {
 
   public domicilios = [];
 
-  constructor( public _cs: CarritoService, private _co: ComercioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
+  constructor( public ap: AppComponent, public _cs: CarritoService, private _co: ComercioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {

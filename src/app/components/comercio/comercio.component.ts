@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../../app.component';
 
 import { FirebaseService } from '../../providers/firebase.service';
 import { ActivatedRoute, RouteConfigLoadEnd } from '@angular/router';
@@ -22,7 +23,7 @@ export class ComercioComponent implements OnInit {
   public productos = [];
   // private vinculo: boolean = false;
 
-  constructor( private _co: ComercioService, private _cs: CarritoService, public _fs: FirebaseService, private router: Router, private activatedRoute: ActivatedRoute ) {
+  constructor( public ap: AppComponent, private _co: ComercioService, private _cs: CarritoService, public _fs: FirebaseService, private router: Router, private activatedRoute: ActivatedRoute ) {
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {

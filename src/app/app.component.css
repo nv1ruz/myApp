@@ -68,7 +68,15 @@ ng-sidebar-container{
 .sidebar .caja a i {
     margin-right: 20px;
 }
+.sidebar .caja a .fa-compass{
+    margin-right: 20px;
+    font-weight: 400;
+}
 .sidebar .caja a .fa-bell{
+    margin-right: 20px;
+    font-weight: 400;
+}
+.sidebar .caja a .fa-clipboard{
     margin-right: 20px;
     font-weight: 400;
 }
