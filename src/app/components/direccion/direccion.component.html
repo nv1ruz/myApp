@@ -10,7 +10,7 @@
 
 
 
-<form class="domicilio animated was-validated fadeIn fast" [formGroup]="rForm"> 
+<form class="domicilio animated fadeIn fast" [formGroup]="rForm"> 
 
 	<div class="form-group">
 
@@ -26,31 +26,22 @@
 
 		<span>Calle</span>
 		<input type="text" formControlName="calle" class="form-control" placeholder="Ingresa tu calle" value="" #cal maxlength="50" required>
-		<div class="invalid-feedback">
-			Por favor, ingresa tu calle.
-		</div>
 	</div>
 	<div class="form-group">
 		<span>Número</span>
 		<input type="text" formControlName="numero" class="form-control" placeholder="Ingresa tu número" value="" #num maxlength="10" required>
-		<div class="invalid-feedback">
-			Por favor, ingresa tu numero de casa.
-		</div>
-	</div>
-	<div class="form-group">
-		<span>Piso/Depto</span><span class="opc">(Opcional)</span>
-		<input type="text" formControlName="piso" placeholder="Ej.: Piso 8, Departamento 6" value="" maxlength="10" #pis>
-	</div>
-	<div class="form-group">
-		<span>Entre calles</span><span class="opc">(Opcional)</span>
-		<input type="text" formControlName="entre" placeholder="Ej.: Av. Corrientes y Libertad" value="" maxlength="50" #ent>
 	</div>
 	<div class="form-group">
 		<span>Barrio</span>
 		<input type="text" formControlName="barrio" class="form-control" placeholder="Ingresa tu barrio" value="" #bar maxlength="50" required>
-		<div class="invalid-feedback">
-			Por favor, ingresa tu barrio.
-		</div>
+	</div>
+	<div class="form-group">
+		<span>Piso/Depto</span><span class="opc">(Opcional)</span>
+		<input type="text" formControlName="piso" placeholder="Ej.: Piso 8, Departamento 6" value="" maxlength="50" #pis>
+	</div>
+	<div class="form-group">
+		<span>Entre calles</span><span class="opc">(Opcional)</span>
+		<input type="text" formControlName="entre" placeholder="Ej.: Av. Corrientes y Libertad" value="" maxlength="50" #ent>
 	</div>
 	<div class="form-group">
 		<span>Referencias</span><span class="opc">(Opcional)</span>

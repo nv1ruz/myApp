@@ -28,6 +28,7 @@ export class CarritoComponent implements OnInit {
   barrio:string = '';
 
   public domicilios = [];
+  public max:boolean = false;
 
   constructor( public ap: AppComponent, public _cs: CarritoService, private _co: ComercioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
 
@@ -81,6 +82,11 @@ export class CarritoComponent implements OnInit {
           });
         });
         // console.log(this.domicilios);
+        if( snap.length == 5 ){
+          this.max = true;
+        } else{
+          this.max = false;
+        }
       } else{
         console.log( 'No existe ninguna direccion' );
       }

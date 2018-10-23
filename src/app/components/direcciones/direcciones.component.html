@@ -11,10 +11,24 @@
 
 <div class="conenedor">
 
-	<div class="animated fadeIn fast">
+	<!-- <div class="animated fadeIn fast">
 		<div class="direccion" *ngFor="let domicilio of domicilios" (click)="actualizar( domicilio.id)">
 			<span>{{ domicilio.calle }}, {{ domicilio.numero }}</span>
 			<span>B° {{ domicilio.barrio }} - {{ domicilio.ciudad }} <i class="fa fa-trash-alt"></i></span>			
+		</div>
+	</div> -->
+
+	<div class="animated fadeIn fast">
+		<div class="direccion" *ngFor="let domicilio of domicilios" >
+			<div class="row">
+				<div class="col-10" (click)="actualizar( domicilio.id)">
+					<span>{{ domicilio.calle }}, {{ domicilio.numero }}</span>
+					<span>B° {{ domicilio.barrio }} - {{ domicilio.ciudad }}</span>
+				</div>
+				<div class="col-2 btn-eliminar">
+					<i class="fa fa-trash-alt"></i>
+				</div>
+			</div>	
 		</div>
 	</div>
 

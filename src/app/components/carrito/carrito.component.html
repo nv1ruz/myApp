@@ -98,8 +98,11 @@
 						<option *ngFor="let domicilio of domicilios" [value]="0">{{domicilio.calle}}, {{domicilio.numero}}</option>
 					</select>
 				</div>
-				<div class="col-2 center" (click)="nuevaDireccion()">
+				<div class="col-2 center" (click)="nuevaDireccion()" *ngIf="!max">
 					<i class="fa fa-plus"></i>
+				</div>
+				<div class="col-2 center" *ngIf="max">
+					<i class="fa fa-angle-right"></i>
 				</div>
 			</div>
 		</div>
