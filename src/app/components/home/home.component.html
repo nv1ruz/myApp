@@ -1,16 +1,25 @@
 <div class="caja-nav">    
-  <!-- <button class="regresar" [routerLink]="['/comercio', refId]">
-		<i class="fas fa-angle-left"></i>
-  </button> -->
-  <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
-    <i class="fas fa-bars"></i>
-  </button>
-	<span class="titulo">Home</span>
+
+	<div class="row">
+		<div class="col-3">
+			<button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+				<i class="fas fa-bars"></i>
+			</button>
+		</div>
+		<div class="col-6">
+			<span class="titulo"><i class="fas fa-car"></i> MyApp</span>
+		</div>
+		<div class="col-3">
+			<button class="btnLogin" *ngIf="!this.ap.exist" [routerLink]="['/login']">
+				<span>Ingresar</span>
+			</button>
+			<a class="btnLogin" *ngIf="this.ap.exist" style="color:#fa3b7b">
+				<span>Ingresar</span>
+			</a>
+		</div>
+	</div>
+		
 </div>
-
-
-
-
 
 
 
