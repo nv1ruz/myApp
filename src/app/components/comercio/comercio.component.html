@@ -66,53 +66,51 @@
 
 <!-- Tab -->
 <div class="nav nav-tabs tab" id="nav-tab" role="tablist">
-	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-sugeridos" role="tab">PRODUCTOS</a>
-	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-info" role="tab">+ INFO</a>
+	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-sugeridos" role="tab">Menú</a>
+	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-info" role="tab">Información</a>
 </div>
 
 <div class="tab-content" id="nav-tabContent">
-	<div class="tab-pane fade show active" id="nav-sugeridos" role="tabpanel">
-			
+	<div class="tab-pane fade show active" id="nav-sugeridos" role="tabpanel">		
+
+		<!-- NEW -->
+		<div class="caja-texto">
+			<span>Productos sugeridos</span>
+		</div>		
 		<!-- Listado Productos -->
-		<p class="txtProductos">Productos Sugeridos</p>
-		<div class="container-fluid animated fadeIn contenedor">
+		<div class="container-fluid animated fadeIn caja-producto">
 			<div class="producto row align-items-center"  *ngFor="let prodSugerido of this.productosSugeridos">  
-				<div class="caja1 col-auto">
-					<div class="foto">
-						<img src="{{ prodSugerido.data.img }}" width="100">
-					</div>
+				<div class="caja-foto col-auto">
+					<img src="{{ prodSugerido.data.img }}" width="100">
 				</div>
-				<div class="caja2 col">
+				<div class="caja-descripcion col">
 					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
 					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>    
 					<span class="precio">${{ prodSugerido.data.precio }}</span>
-											
-					<!-- boton modal -->
-					<button *ngIf="_fs.usuario.uid" (click)="cargarModal( prodSugerido )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
-					<button *ngIf="!_fs.usuario.uid" [routerLink]="['/login']" type="button" class="btnAgregar"><i class="fas fa-plus"></i></button>
-				</div>   
+				</div>
+				<div class="caja-boton">
+					<button *ngIf="_fs.usuario.uid" (click)="cargarModal( prodSugerido )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-cart-plus"></i></button>
+					<button *ngIf="!_fs.usuario.uid" [routerLink]="['/login']" type="button" class="btnAgregar"><i class="fas fa-cart-plus"></i></button>
+				</div>				
 			</div>
 		</div>
-
 		
-		
-		<p class="txtProductos">Productos</p>
-		<div class="container-fluid animated fadeIn contenedor">
+		<div class="caja-texto">
+			<span>Productos</span>
+		</div>	
+		<div class="container-fluid animated fadeIn caja-producto">
 			<div class="producto row align-items-center"  *ngFor="let producto of this.productos">  
-				<div class="caja1 col-auto">
-					<div class="foto">
-						<img src="{{ producto.data.img }}" width="100">
-					</div>
+				<div class="caja-foto col-auto">
+					<img src="{{ producto.data.img }}" width="100">
 				</div>
-				<div class="caja2 col">
+				<div class="caja-descripcion col">
 					<span class="nombre">{{ producto.data.nombre }}</span>      
 					<span class="ingredientes">{{ producto.data.ingredientes }}</span>   
-					<span class="precio">${{ producto.data.precio }}</span>
-						
-					<!-- boton modal -->
-					<button (click)="cargarModal( producto )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-plus"></i></button>
-					
+					<span class="precio">${{ producto.data.precio }}</span>					
 				</div>   
+				<div class="caja-boton">	
+					<button (click)="cargarModal( producto )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-cart-plus"></i></button>
+				</div>
 			</div>
 		</div>
 
@@ -152,7 +150,10 @@
 				<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#acordion">
 					<div class="card-body ubicacion">
 						<p>Victoria Romero, 221 - Barrio Angel V. Peñaloza </p>
-						<img src="https://ep01.epimg.net/tecnologia/imagenes/2017/10/11/actualidad/1507722505_765166_1507722864_miniatura_normal.jpg">
+						<!-- <img src="https://ep01.epimg.net/tecnologia/imagenes/2017/10/11/actualidad/1507722505_765166_1507722864_miniatura_normal.jpg"> -->
+						<agm-map [latitude]="-30.361148" [longitude]="-66.314116" [zoom]="15">
+							<agm-marker [latitude]="-30.361148" [longitude]="-66.314116"></agm-marker>
+						</agm-map>
 					</div>
 				</div>
 			</div>

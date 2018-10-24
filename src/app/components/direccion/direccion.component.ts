@@ -132,13 +132,13 @@ export class DireccionComponent implements OnInit {
 
   // MÉTODOS ***************************************
 
-  private agregarMarcador( evento ){
+  public agregarMarcador( evento ){
     const coords: { lat: number, lng: number } = evento.coords;
     this.marcador = { lat: coords.lat, lng: coords.lng };
     console.log(this.marcador);
   }
 
-  private guardarDomicilio( refId:string, cal: string, num: number, pis: string, ent: string, bar: string, ref: string, lat: number, lng: number ){
+  public guardarDomicilio( refId:string, cal: string, num: number, pis: string, ent: string, bar: string, ref: string, lat: number, lng: number ){
     if( this.editar ){
       // console.log("es verdadero");
       this._us.updDireccion( refId, this.dirId, cal, num, pis, ent, bar, ref, lat, lng )
