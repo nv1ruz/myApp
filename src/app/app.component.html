@@ -23,10 +23,9 @@
                     <p class="email">{{ usuario.email }}</p>
                 </div>
             </div>
-            <div class="caja" (click)="_toggleOpened()">
-                <a><i class="fas fa-archway"></i><span>Mi Comercio</span></a>
+            <div class="caja-comercio" [routerLink]="['/micomercio']" (click)="_toggleOpened()" *ngIf="comerciante">
+                <a><i class="fas fa-store"></i><span>Mi comercio</span></a>
             </div>     
-            <hr>
             <div class="caja" [routerLink]="['/home']" (click)="_toggleOpened()">
                 <a><i class="fas fa-home"></i><span>Inicio</span></a>
             </div>

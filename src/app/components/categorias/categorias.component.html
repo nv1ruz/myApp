@@ -1,0 +1,41 @@
+<div class="caja-nav">    
+  <button class="regresar" [routerLink]=[anterior]>
+    <i class="fas fa-angle-left"></i>
+  </button>
+  <!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+  <i class="fas fa-bars"></i>
+  </button> -->
+  <span class="titulo">Categorías</span>
+</div>
+
+
+<div class="caja-items">
+
+  <div class="item" *ngFor="let categoria of categorias">
+    <div class="texto">
+      <span>{{ categoria.nombre }}</span>
+    </div>
+    <div class="icono" (click)="borrarCategoria( this.usuario.idCom, categoria.id )">
+      <i class="fas fa-trash-alt"></i>
+    </div>
+  </div>
+
+</div>
+
+<div class="caja-boton" (click)="toggle()">
+  <button>
+  <span>{{ txtBtn }}</span>
+  </button>
+</div>
+
+<form [formGroup]="myGroup" *ngIf="nuevo" class="animated fadeIn fast">
+  <div class="caja-texto">
+      <input type="text" formControlName="fCategoria" placeholder="Nombre de la categoria" value="" #cat required>
+  </div>
+  
+  <div class="caja-boton-agregar">
+    <button type="submit" [disabled]="!myGroup.valid" (click)="guardarCategoria( this.usuario.idCom, cat.value )">
+    <span>Agregar dirección</span>
+    </button>
+  </div>
+</form>

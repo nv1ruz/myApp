@@ -20,6 +20,7 @@ export class AppComponent {
   private refUID: string;
   public usuario:any = {};
   public exist:boolean = false;
+  public comerciante:boolean = false;
 
   public prevUrl: string;
   
@@ -46,7 +47,14 @@ export class AppComponent {
         this.refUID = user.uid;
         // obtiene el documento del usuario desde FireBase
         this.obtenerDocUsuario( this.refUID ).subscribe( param => {
-          this.usuario = param.payload.data();
+          this.usuario = param.payload.data();     
+          if( this.usuario.typeAcc == 2 ){
+            console.log( "Tipo de cuenta: Comerciante" );
+            this.comerciante = true;
+          } else{
+            console.log( "Otro tipo de cuenta" );
+            this.comerciante = false;
+          }
         });
       } else{
         this.exist = false;

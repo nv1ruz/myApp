@@ -37,6 +37,8 @@ export class AutenticacionService {
         this.usuarioNew.apellido = '';
         this.usuarioNew.email = user.email;
         this.usuarioNew.uid = user.uid;
+        this.usuarioNew.typeAcc = 1;
+        this.usuarioNew.idCom = '';
 
         this.bandera = true;
         

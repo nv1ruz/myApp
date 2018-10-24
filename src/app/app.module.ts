@@ -42,6 +42,8 @@ import { RegisterComercioComponent } from './components/register-comercio/regist
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { DireccionComponent } from './components/direccion/direccion.component';
+import { MiComercioComponent } from './components/mi-comercio/mi-comercio.component';
+import { CategoriasComponent } from './components/categorias/categorias.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { DireccionComponent } from './components/direccion/direccion.component';
     PedidosComponent,
     RegisterComercioComponent,
     FavoritosComponent,
-    DireccionComponent
+    DireccionComponent,
+    MiComercioComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ ng-sidebar-container{
     height: 90px;
     /* background-image: linear-gradient(#910030, #ff3e7f); */
     background-color: #fa3b7b;
-    padding: 10px 5px 10px 30px;
+    padding: 10px 5px 0 30px;
     margin-bottom: 0;
 }
 .sidebar .cajaUsuario .foto{
@@ -38,6 +38,25 @@ ng-sidebar-container{
     font-weight: 400;
     margin: 0;
 }
+
+.caja-comercio{
+    background-color: #fa3b7b;
+    padding: 0 0 10px 20px;
+    outline: 0;
+}
+.caja-comercio i{
+    color: #fff;
+    font-size: 12px;
+    margin-right: 20px;
+}
+.caja-comercio span{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15pt;
+}
+
 
 .sidebar hr {
     margin-top: 5px;
@@ -67,6 +86,7 @@ ng-sidebar-container{
 }
 .sidebar .caja a i {
     margin-right: 20px;
+    width: 12px;
 }
 .sidebar .caja a .fa-compass{
     margin-right: 20px;

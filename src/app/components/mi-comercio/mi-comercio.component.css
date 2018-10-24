@@ -1,0 +1,125 @@
+.caja-nav{
+    background-color: #fa3b7b;
+    width: 100%;
+    height: 55px;
+    max-height: 55px;
+    /* display: flex; */
+    /* align-items: center; */
+    text-align: center;
+    padding: 12px 0 11px 0;
+}
+.caja-nav .row{
+    margin: 0!important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.caja-nav button i{
+    color: #fff;
+    font-size: 22px;
+}
+.caja-nav .menu{
+    color: #ffffff;
+    background: none;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    padding: 0 0 0 5px;
+}
+.caja-nav .titulo{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;  
+}
+
+
+
+.cajaComercio{
+    padding: 0;
+    height: auto;
+}
+.imagen-banner{
+    position: absolute;
+    width: 100%;
+}
+.imagen-banner img{
+    width: 100%;
+    height: 100%;
+    -webkit-filter: brightness(.5);
+    filter: brightness(.5);
+}
+.comercio-header{
+    padding: 10px 0 0 0;
+}
+.comercio-header img{
+    width: 100px;
+    height: 100px;
+    margin: 15px auto 5px auto;
+    border-radius: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 30px 0 rgba(255, 255, 255, 0.6);
+}
+.comercio-header p{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.15pt;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 0;
+}
+.comercio-info h5{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 5px 0 0 0;
+}
+.comercio-info p{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+
+
+.caja-items{
+    padding: 10px 10px;
+    background-color: #f4f4f4;
+}
+.item{
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border-bottom: 1px solid #ececec;
+}
+.item .texto{
+    display: inline-block;
+    width: 90%;
+}
+.item .texto span{
+    color: #435296;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;  
+}
+.item .icono{
+    display: inline-block;
+    width: 10%;    
+    text-align: right;
+}
+.item .icono i{
+    color: #cecece;
+    margin: auto 0;
+}
