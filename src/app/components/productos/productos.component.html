@@ -1,0 +1,31 @@
+<div class="caja-nav">    
+  <button class="regresar" [routerLink]=[anterior]>
+    <i class="fas fa-angle-left"></i>
+  </button>
+  <!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+  <i class="fas fa-bars"></i>
+  </button> -->
+  <span class="titulo">Productos</span>
+</div>
+
+
+<div class="caja-productos">
+  
+  <div class="producto row align-items-center"  *ngFor="let producto of this.productos">  
+    <div class="caja-foto col-auto">
+      <img src="{{ producto.img }}" width="100">
+    </div>
+    <div class="caja-descripcion col">
+      <span class="nombre">{{ producto.nombre }}</span>      
+      <span class="ingredientes">{{ producto.ingredientes }}</span>   
+      <span class="precio">${{ producto.precio }}</span>					
+    </div>  
+  </div>
+  
+</div>
+
+<div class="caja-boton fixed-bottom">
+  <button>
+  <span>Nuevo producto</span>
+  </button>
+</div>

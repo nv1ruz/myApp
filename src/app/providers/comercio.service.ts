@@ -23,7 +23,7 @@ export class ComercioService {
   }
 
   // obtiene la colección de productos de un comercio específico (Firebase)
-  public getProductos( documentId: string ){
+  public getProductos( documentId: string ){    
     return this.afs.collection( 'comercios' ).doc( documentId )
                     .collection( 'productos' ).snapshotChanges();
   }

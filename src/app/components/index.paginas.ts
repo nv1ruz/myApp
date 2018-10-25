@@ -6,6 +6,8 @@ export { CarritoComponent } from './carrito/carrito.component';
 
 export { MiComercioComponent } from './mi-comercio/mi-comercio.component';
 export { CategoriasComponent } from './categorias/categorias.component';
+export { ProductosComponent } from './productos/productos.component';
+
 
 export { MicuentaComponent } from './micuenta/micuenta.component';
 export { DireccionesComponent } from './direcciones/direcciones.component';
