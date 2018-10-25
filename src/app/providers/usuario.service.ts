@@ -75,4 +75,9 @@ export class UsuarioService {
                     });
   }
 
+  public deleteDomicilio( documentId: string, domicilioId: string ){
+    return this.afs.collection( 'usuarios' ).doc( documentId )
+                    .collection( 'direcciones' ).doc( domicilioId ).delete()
+  }
+
 }

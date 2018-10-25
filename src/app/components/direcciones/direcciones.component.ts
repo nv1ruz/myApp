@@ -49,13 +49,10 @@ export class DireccionesComponent implements OnInit {
   ngOnInit() {
 
     this._us.afAuth.authState.subscribe( user => {
-
       if( user ){
         this.userId = user.uid;
-
         this.obtenerDomicilios( this.userId ).subscribe( (snap) => {
-
-          if( snap.length > 0){
+          if( snap.length >= 0){
             // console.log("existen direcciones");
             this.domicilios = [];
             snap.forEach( (data: any) => {
@@ -128,6 +125,11 @@ export class DireccionesComponent implements OnInit {
       'barrio': ''
     }); 
   }  
+
+
+  public borrarDomicilio( documentId: string , domicilioId: string ){
+    return this._us.deleteDomicilio( documentId, domicilioId );
+  }
   
 
 
