@@ -1,5 +1,5 @@
 <div class="caja-nav">    
-  <button class="regresar" [routerLink]=[anterior]>
+  <button class="regresar" [routerLink]="['/micomercio']">
     <i class="fas fa-angle-left"></i>
   </button>
   <!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
@@ -10,24 +10,38 @@
 
 <div style="padding-bottom: 65px;">
   <div *ngFor="let c of categorias">
-    <div class="caja-texto">
-      <span>{{ c.nombre }}</span>
+
+    <div class="caja-texto">      
+      <div class="texto">
+        <i class="fas fa-haykal"></i>
+        <span>{{ c.nombre }}</span>
+      </div>
     </div>
 
     <div class="caja-producto">
       <div *ngFor="let p of productos">
         <div class="producto row" *ngIf="c.nombre == p.categoria">        
-          <div class="caja-foto col-auto">
+          <div class="caja-foto col-auto" (click)="editarProducto( p.id )">
               <img src="{{ p.foto }}" width="100">
           </div>
-          <div class="caja-descripcion col">
+          <div class="caja-descripcion col" (click)="editarProducto( p.id )">
             <span class="nombre">{{ p.nombre }}</span>      
             <span class="ingredientes">{{ p.ingredientes }}</span>   
             <span class="precio">${{ p.precio }}</span>		
           </div>
-          <div class="caja-boton"></div>        
+          <div class="caja-boton-new"></div>        
         </div>
       </div>
+
+      <div class="caja-boton-agregar" [routerLink]="['producto', c.nombre]">
+        <div class="texto">
+          <span>Añadir producto</span>
+        </div>
+        <div class="icono">
+          <i class="fas fa-plus"></i>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -35,8 +49,5 @@
 <div class="caja-boton fixed-bottom">
   <button class="cat" [routerLink]="['categoria']">
     <span>Añadir categoría</span>
-  </button>
-  <button class="pro" [routerLink]="['producto']">
-    <span>Añadir producto</span>
   </button>
 </div>

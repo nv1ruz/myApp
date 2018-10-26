@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../../app.component';
+import { Router } from '@angular/router';
 
 import { UsuarioService } from '../../providers/usuario.service';
 import { ComercioService } from '../../providers/comercio.service';
@@ -11,16 +11,13 @@ import { ComercioService } from '../../providers/comercio.service';
 })
 export class MenuComponent implements OnInit {
 
-  public anterior: string;
-
   public usuario:any = {};
   public categorias = [];
   public productos = [];
 
-  constructor(  public ap: AppComponent, private _cs: ComercioService, private _us: UsuarioService  ) { 
+  constructor(  private _cs: ComercioService, private _us: UsuarioService, private router: Router  ) { 
 
-    // string con la urlAnterior
-    this.anterior = this.ap.prevUrl;
+    
 
   }
 
@@ -75,6 +72,10 @@ export class MenuComponent implements OnInit {
 
     private obtenerProductos( comercioId: string ){
       return this._cs.getProductos( comercioId );
+    }
+
+    public editarProducto( id: string ){
+      this.router.navigate(['/micomercio/menu/producto', id]);
     }
 
 }

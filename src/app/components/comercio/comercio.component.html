@@ -61,9 +61,17 @@
 		
 		<!-- Productos -->
 		<div *ngFor="let c of categorias">
-			<div class="caja-texto">
+			<!-- <div class="caja-texto">
 				<span>{{ c.nombre }}</span>
+			</div> -->
+
+			<div class="caja-texto">      
+				<div class="texto">
+					<i class="fas fa-haykal"></i>
+					<span>{{ c.nombre }}</span>
+				</div>
 			</div>
+
 			<div class="container-fluid animated fadeIn caja-producto">
 				<div *ngFor="let p of productos">
 					<div class="producto row align-items-center" *ngIf="c.nombre == p.categoria">  

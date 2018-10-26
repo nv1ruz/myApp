@@ -28,6 +28,12 @@ export class ComercioService {
                     .collection( 'productos' ).snapshotChanges();
   }
 
+  // obtiene el documento de un producto específico (Firebase)
+  public getProducto( comId: string, prodId: string ){    
+    return this.afs.collection( 'comercios' ).doc( comId )
+                    .collection( 'productos' ).doc( prodId ).snapshotChanges();
+  }
+
   public pushProducto( comercioId: string, nombre: string, ingredientes: string, categoria: string, precio: number ){
     return this.afs.collection( 'comercios' ).doc( comercioId )
                     .collection( 'productos' ).add({
@@ -37,6 +43,27 @@ export class ComercioService {
                       categoria: categoria,
                       precio: precio
                     });
+  }
+
+  public updProducto( comercioId: string, prodId: string, nombre: string, ingredientes: string, categoria: string, precio: number ){
+    return this.afs.collection( 'comercios' ).doc( comercioId )
+                    .collection( 'productos' ).doc( prodId ).update({
+                      nombre: nombre,
+                      ingredientes: ingredientes,
+                      categoria: categoria,
+                      precio: precio
+                    })
+                    .then( function() {
+                      console.log( "Documento actualizado con exito" );
+                    })
+                    .catch( function(error) {
+                      console.log( "Error al actualizar el documento" );
+                    });
+  }
+
+  public deleteProducto( comercioId: string, prodId: string ){
+    return this.afs.collection( 'comercios' ).doc( comercioId )
+                    .collection( 'productos' ).doc( prodId ).delete();
   }
 
   // obtiene la colección de categorías de un comercio específico (Firebase)
