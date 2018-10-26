@@ -44,8 +44,8 @@ export class CategoriasComponent implements OnInit {
               this.categorias.push({
                 id: data.payload.doc.id,
                 nombre: data.payload.doc.data().nombre
-              });
-            });
+              });      
+            });            
             // console.log(this.categorias);
           });          
         });
@@ -53,6 +53,8 @@ export class CategoriasComponent implements OnInit {
         return;
       }
     }); 
+
+
 
   }
   
@@ -87,5 +89,11 @@ export class CategoriasComponent implements OnInit {
   public borrarCategoria( documentId: string , categoriaId: string ){
     return this._cs.deleteCategoria( documentId, categoriaId );
   }
+
+  private obtenerProductos( documentId: string, nameCat: string ){
+    return this._cs.afs.collection( 'comercios' ).doc( documentId )
+                    .collection( 'productos', ref => ref.where( 'categoria', '==', nameCat ) ).valueChanges();
+  }
+
 
 }

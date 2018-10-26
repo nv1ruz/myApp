@@ -1,0 +1,21 @@
+<div class="caja-nav">    
+  <button class="regresar" [routerLink]="['/micomercio/menu']">
+    <i class="fas fa-angle-left"></i>
+  </button>
+  <!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+  <i class="fas fa-bars"></i>
+  </button> -->
+  <span class="titulo">Añadir nueva categoría</span>
+</div>
+
+<div class="caja-texto">
+    <span>Nombre</span>
+    <input type="text" placeholder="Ingresa el nombre de la categoria" value="" #cat required>
+</div>
+
+
+<div class="caja-boton fixed-bottom">
+  <button class="cat" (click)="guardarCategoria( this.usuario.idCom, cat.value)">
+    <span>Guardar</span>
+  </button>
+</div>

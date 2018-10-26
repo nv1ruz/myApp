@@ -1,0 +1,33 @@
+<p>Prueba de componente</p>
+
+<div *ngFor="let cat of categorias">
+  <p>{{ cat.nombre }}</p>
+
+  <div *ngFor="let prod of productos">
+
+    <div *ngIf="cat.nombre == prod.categoria">
+      <span>{{ prod.nombre }}</span>
+    </div>
+
+  </div>
+
+  <div class="caja-texto">
+    <input type="text" placeholder="Nombre del producto" value="" #prod required>
+  </div>
+  <div class="caja-boton-producto">
+    <button type="submit" (click)="pushProducto( 'I8NViOS79Lap4LsPpJH0', prod.value, cat.nombre )">
+      <span>Agregar producto</span>
+    </button>
+  </div>
+  <br>
+  <br>
+</div>
+
+<div class="caja-texto">
+  <input type="text" placeholder="Nombre de la categoria" value="" #cat required>
+</div>
+<div class="caja-boton-categoria">
+  <button type="submit" (click)="guardarCategoria( 'I8NViOS79Lap4LsPpJH0', cat.value )">
+    <span>Agregar categoria</span>
+  </button>
+</div>

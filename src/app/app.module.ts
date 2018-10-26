@@ -46,6 +46,9 @@ import { MiComercioComponent } from './components/mi-comercio/mi-comercio.compon
 import { CategoriasComponent } from './components/categorias/categorias.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { PruebaComponent } from './components/prueba/prueba.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { CategoriaComponent } from './components/categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,10 @@ import { ProductosComponent } from './components/productos/productos.component';
     MiComercioComponent,
     CategoriasComponent,
     ProductoComponent,
-    ProductosComponent
+    ProductosComponent,
+    PruebaComponent,
+    MenuComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,

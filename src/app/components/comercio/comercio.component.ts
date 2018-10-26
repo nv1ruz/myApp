@@ -4,8 +4,9 @@ import { AppComponent } from '../../app.component';
 import { FirebaseService } from '../../providers/firebase.service';
 import { ActivatedRoute, RouteConfigLoadEnd } from '@angular/router';
 
-import { CarritoService } from '../../providers/carrito.service';
+import { UsuarioService } from '../../providers/usuario.service';
 import { ComercioService } from '../../providers/comercio.service';
+import { CarritoService } from '../../providers/carrito.service';
 import { Router } from '@angular/router';
 
 
@@ -20,10 +21,12 @@ export class ComercioComponent implements OnInit {
   public comercio: any = {};
   public producto:any = {};
   public productosSugeridos = [];
+
+  public categorias = [];
   public productos = [];
   // private vinculo: boolean = false;
 
-  constructor( public ap: AppComponent, private _co: ComercioService, private _cs: CarritoService, public _fs: FirebaseService, private router: Router, private activatedRoute: ActivatedRoute ) {
+  constructor( public ap: AppComponent, public _fs: FirebaseService, private _co: ComercioService, private _cs: CarritoService, private _us: UsuarioService, private router: Router, private activatedRoute: ActivatedRoute ) {
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {
@@ -33,7 +36,6 @@ export class ComercioComponent implements OnInit {
   }
 
   ngOnInit() {
-    
 
     this.obtenerComercio( this.refId ).subscribe( param => {
 
@@ -42,120 +44,59 @@ export class ComercioComponent implements OnInit {
 
     });
 
-    // ********************************************
-
-    this.obtenerProductos( this.refId ).subscribe( snap => {
-
-      this.productosSugeridos = [];
-      this.productos = [];
-
-      snap.forEach( param => {
-        if( param.payload.doc.data().sugerido == true ){
-          this.productosSugeridos.push({
-            id: param.payload.doc.id,
-            data: param.payload.doc.data()
-          });
-        } else{
-          this.productos.push({
-            id: param.payload.doc.id,
-            data: param.payload.doc.data()
-          });
-        }
-      });
-
-    });
-
-    // ********************************************
-
-
-
-
-
-
-
-    // // +info
-    // $('.collapse').collapse();
     
+          this.obtenerCategorias( this.refId ).subscribe( snap => {
+            this.categorias = [];
+            snap.forEach( data => {
+              this.categorias.push({
+                id: data.payload.doc.id,
+                nombre: data.payload.doc.data().nombre
+              });      
+            }); 
+            // console.log( this.categorias );
+          });
+          this.obtenerProductos( this.refId ).subscribe( snap => {
+            this.productos = [];
+            snap.forEach( data => {
+              this.productos.push({
+                id: data.payload.doc.id,
+                foto: data.payload.doc.data().img,
+                nombre: data.payload.doc.data().nombre,
+                categoria: data.payload.doc.data().categoria,
+                ingredientes: data.payload.doc.data().ingredientes,
+                precio: data.payload.doc.data().precio
+              });
+            });
+            // console.log( this.productos );
+          });
+        
 
-    // // obtiene y almacena los datos de un comercio(ID)
-    // this._fs.getComercio( this.refId ).subscribe( datos => {
-    //   this.comercio = datos.payload.data();
-    //   // console.log(this.comercio);
 
-    //   // vincular comercio y usuario
-    //   if( this.comercio.uid == this._fs.usuario.uid ){
-    //     this.vinculo = true;
-    //     console.log("Existe un vínculo");
-    //   } else{
-    //     this.vinculo = false;
-    //     console.log("No existe vínculo");
-    //   }
 
-    //   if( this.comercio.estado == true ){
-    //     this.comercio.estado = 'Abierto';
-    //   } else{
-    //     this.comercio.estado = 'Cerrado';
-    //   }      
-    // });
+    // ********************************************
 
-    // // obtiene y almacena los productos de un comercio(ID)
-    // this._fs.getProductos( this.refId ).subscribe( (prodSnapShot) => {
-    //   this.productos = [];
-    //   prodSnapShot.forEach( (productosData: any) => {
-    //     this.productos.push({
-    //       id: productosData.payload.doc.id,
-    //       data: productosData.payload.doc.data()
-    //     });
-    //   })
-    //   // console.log(this.productos);
-    // });
+    // this.obtenerProductos( this.refId ).subscribe( snap => {
 
-    // // obtiene y almacena los productos sugeridos de un comercio(ID)
-    // this._fs.getProductos( this.refId ).subscribe( (prodSnapShot) => {
     //   this.productosSugeridos = [];
-    //   prodSnapShot.forEach( (productosData: any) => {        
-    //     if( productosData.payload.doc.data().sugerido == true ){
-    //       // console.log(`${productosData.payload.doc.data().nombre} sugerido`);
-    //       this.productosSugeridos.push({
-    //         id: productosData.payload.doc.id,
-    //         data: productosData.payload.doc.data()
-    //       });
-    //     }else{
-    //       // console.log(`${productosData.payload.doc.data().nombre} no sugerido`);
-    //     }
-    //   })
-    //   // console.log(this.productosSugeridos);
-    // });
+    //   this.productos = [];
 
-   
+    //   snap.forEach( param => {
+    //     if( param.payload.doc.data().sugerido == true ){
+    //       this.productosSugeridos.push({
+    //         id: param.payload.doc.id,
+    //         data: param.payload.doc.data()
+    //       });
+    //     } else{
+    //       this.productos.push({
+    //         id: param.payload.doc.id,
+    //         data: param.payload.doc.data()
+    //       });
+    //     }
+    //   });
+
+    // });
 
   }
-
-  // cargarProducto( param ){
-  //   this.producto.id = param.id;
-  //   this.producto.img = param.data.img;
-  //   this.producto.nombre = param.data.nombre
-  //   this.producto.ingredientes = param.data.ingredientes
-  //   this.producto.precio = param.data.precio
-  //   this.producto.precioTotal = param.data.precio;
-  //   this.producto.cant = 1;
-  //   // console.log( this.producto );
-  // }
-
-
-
-  // // agrega el producto al carrito
-  // agregar( producto, text ){
-  //   this._cs.addProducto( producto, text );
-  // }
-
-  // verComercio(){
-  //   this.router.navigate(['/carrito', this.refId]);
-  // }
-
-
-
-
 
 
   // MÉTODOS ************************************
@@ -164,17 +105,21 @@ export class ComercioComponent implements OnInit {
     return this._co.getComercio( documentId );
   }
 
+  private obtenerCategorias( documentId: string ){
+    return this._co.getCategorias( documentId );
+  }
+
   private obtenerProductos( documentId: string ){
     return this._co.getProductos( documentId );
   }
 
-  private cargarModal( param:any ){
+  public cargarModal( param:any ){
     this.producto.id = param.id;
-    this.producto.img = param.data.img;
-    this.producto.nombre = param.data.nombre
-    this.producto.ingredientes = param.data.ingredientes
-    this.producto.precio = param.data.precio
-    this.producto.precioTotal = param.data.precio;
+    this.producto.img = param.foto;
+    this.producto.nombre = param.nombre
+    this.producto.ingredientes = param.ingredientes
+    this.producto.precio = param.precio
+    this.producto.precioTotal = param.precio;
     this.producto.cant = 1;
   }
 

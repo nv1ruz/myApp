@@ -32,9 +32,6 @@
 
 
 
-
-
-
 .caja-texto span{
     display: inline-block;
     /* margin-top: 15px; */
@@ -70,13 +67,15 @@
 
 
 
+
+
 .caja-boton{
     background-color: #f4f4f4;
     padding: 10px 10px;
     margin: 0 auto;
     text-align: center;
 }
-.caja-boton button.pro{
+.caja-boton button.cat{
     /* display: block; */
     padding: 0;
     width: 100%;
@@ -92,6 +91,6 @@
     border-radius: 5px;
     outline: 0;
 }
-.caja-boton button.pro:hover{
+.caja-boton button.cat:hover{
     background-color: #0aaa1f;
 }

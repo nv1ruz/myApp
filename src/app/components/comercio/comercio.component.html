@@ -1,12 +1,4 @@
-<!-- <div class="caja-nav"> 
-	<button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
-	<i class="fas fa-bars"></i>
-	</button>
-	<span class="titulo">Comercio</span>
-</div> -->
-
 <div class="caja-nav">    
-
 	<div class="row">
 		<div class="col-3" style="text-align:left">
 			<button class="menu" *ngIf="_fs.usuario.uid" (click)="this.ap._toggleOpened()">
@@ -24,19 +16,12 @@
 				<a class="btnCarrito" (click)="verCarrito()"><i class="fas fa-shopping-cart"></i></a>
 			</a>
 		</div>
-	</div>
-		
+	</div>		
 </div>
-
-
-
-
-
 
 
 <!-- Cabecera -->
 <div class="cajaComercio animated fadeIn fast">
-	<!-- <a class="btnCarrito" *ngIf="_fs.usuario.uid" (click)="verCarrito()"><i class="fas fa-shopping-cart"></i></a> -->
 	<div style="position: relative; height: 100%; overflow: hidden;">
 		<div class="imagen-banner">
 			<img src="{{ comercio.banner }}">
@@ -64,6 +49,7 @@
 	</div>
 </div>
 
+
 <!-- Tab -->
 <div class="nav nav-tabs tab" id="nav-tab" role="tablist">
 	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-sugeridos" role="tab">Menú</a>
@@ -71,52 +57,35 @@
 </div>
 
 <div class="tab-content" id="nav-tabContent">
-	<div class="tab-pane fade show active" id="nav-sugeridos" role="tabpanel">		
-
-		<!-- NEW -->
-		<div class="caja-texto">
-			<span>Productos sugeridos</span>
-		</div>		
-		<!-- Listado Productos -->
-		<div class="container-fluid animated fadeIn caja-producto">
-			<div class="producto row align-items-center"  *ngFor="let prodSugerido of this.productosSugeridos">  
-				<div class="caja-foto col-auto">
-					<img src="{{ prodSugerido.data.img }}" width="100">
-				</div>
-				<div class="caja-descripcion col">
-					<span class="nombre">{{ prodSugerido.data.nombre }}</span>      
-					<span class="ingredientes">{{ prodSugerido.data.ingredientes }}</span>    
-					<span class="precio">${{ prodSugerido.data.precio }}</span>
-				</div>
-				<div class="caja-boton">
-					<button *ngIf="_fs.usuario.uid" (click)="cargarModal( prodSugerido )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-cart-plus"></i></button>
-					<button *ngIf="!_fs.usuario.uid" [routerLink]="['/login']" type="button" class="btnAgregar"><i class="fas fa-cart-plus"></i></button>
-				</div>				
-			</div>
-		</div>
+	<div class="tab-pane fade show active" id="nav-sugeridos" role="tabpanel">	
 		
-		<div class="caja-texto">
-			<span>Productos</span>
-		</div>	
-		<div class="container-fluid animated fadeIn caja-producto">
-			<div class="producto row align-items-center"  *ngFor="let producto of this.productos">  
-				<div class="caja-foto col-auto">
-					<img src="{{ producto.data.img }}" width="100">
-				</div>
-				<div class="caja-descripcion col">
-					<span class="nombre">{{ producto.data.nombre }}</span>      
-					<span class="ingredientes">{{ producto.data.ingredientes }}</span>   
-					<span class="precio">${{ producto.data.precio }}</span>					
-				</div>   
-				<div class="caja-boton">	
-					<button (click)="cargarModal( producto )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-cart-plus"></i></button>
+		<!-- Productos -->
+		<div *ngFor="let c of categorias">
+			<div class="caja-texto">
+				<span>{{ c.nombre }}</span>
+			</div>
+			<div class="container-fluid animated fadeIn caja-producto">
+				<div *ngFor="let p of productos">
+					<div class="producto row align-items-center" *ngIf="c.nombre == p.categoria">  
+						<div class="caja-foto col-auto">
+							<img src="{{ p.foto }}" width="100">
+						</div>
+						<div class="caja-descripcion col">
+							<span class="nombre">{{ p.nombre }}</span>      
+							<span class="ingredientes">{{ p.ingredientes }}</span>   
+							<span class="precio">${{ p.precio }}</span>					
+						</div>   
+						<div class="caja-boton">	
+							<button *ngIf="_fs.usuario.uid" (click)="cargarModal( p )" type="button" class="btnAgregar" data-toggle="modal" data-target="#modalProducto"><i class="fas fa-cart-plus"></i></button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 
 	</div>	
 
-	<!-- +Info -->
+	<!-- Información -->
 	<div class="tab-pane fade" id="nav-info">
 		<div class="accordion" id="acordion">
 			<div class="card">

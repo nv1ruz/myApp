@@ -28,6 +28,17 @@ export class ComercioService {
                     .collection( 'productos' ).snapshotChanges();
   }
 
+  public pushProducto( comercioId: string, nombre: string, ingredientes: string, categoria: string, precio: number ){
+    return this.afs.collection( 'comercios' ).doc( comercioId )
+                    .collection( 'productos' ).add({
+                      img: 'https://previews.123rf.com/images/olgaolmix/olgaolmix1701/olgaolmix170100144/70737458-conjunto-de-comida-r%C3%A1pida-dibujado-a-mano-vector-de-recogida-chatarra-alimentos-poco-saludables-hambur.jpg',
+                      nombre: nombre,
+                      ingredientes: ingredientes,
+                      categoria: categoria,
+                      precio: precio
+                    });
+  }
+
   // obtiene la colección de categorías de un comercio específico (Firebase)
   public getCategorias( documentId: string ){
     return this.afs.collection( 'comercios' ).doc( documentId )

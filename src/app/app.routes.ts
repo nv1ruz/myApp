@@ -8,6 +8,9 @@ import {
     RegisterComponent,
     CarritoComponent,
     MiComercioComponent,
+    MenuComponent,
+    CategoriaComponent,
+    ProductoComponent,
     CategoriasComponent,
     ProductosComponent,
     MicuentaComponent,
@@ -15,7 +18,8 @@ import {
     DireccionComponent,
     PedidosComponent,
     RegisterComercioComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    PruebaComponent
  } from './components/index.paginas';
 
 const ROUTES: Routes = [
@@ -25,6 +29,9 @@ const ROUTES: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'carrito/:id', component: CarritoComponent },
     { path: 'micomercio', component: MiComercioComponent },
+    { path: 'micomercio/menu', component: MenuComponent },
+    { path: 'micomercio/menu/categoria', component: CategoriaComponent },
+    { path: 'micomercio/menu/producto', component: ProductoComponent },
     { path: 'micomercio/categorias', component: CategoriasComponent },
     { path: 'micomercio/productos', component: ProductosComponent },
     { path: 'micuenta', component: MicuentaComponent },
@@ -34,6 +41,7 @@ const ROUTES: Routes = [
     { path: 'pedidos', component: PedidosComponent },
     { path: 'registerComercio', component: RegisterComercioComponent },
     { path: 'favoritos', component: FavoritosComponent },
+    { path: 'prueba', component: PruebaComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

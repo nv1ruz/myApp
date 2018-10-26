@@ -5,15 +5,17 @@ import { UsuarioService } from '../../providers/usuario.service';
 import { ComercioService } from '../../providers/comercio.service';
 
 @Component({
-  selector: 'app-producto',
-  templateUrl: './producto.component.html',
-  styleUrls: ['./producto.component.css']
+  selector: 'app-categoria',
+  templateUrl: './categoria.component.html',
+  styleUrls: ['./categoria.component.css']
 })
-export class ProductoComponent implements OnInit {
+export class CategoriaComponent implements OnInit {
 
   public usuario:any = {};
 
-  constructor( private _cs: ComercioService, private _us: UsuarioService, private router: Router ) {
+  constructor( private _cs: ComercioService, private _us: UsuarioService, private router: Router ) { }
+
+  ngOnInit() {
 
     this._us.afAuth.authState.subscribe( user => {
       if( user ){
@@ -27,8 +29,8 @@ export class ProductoComponent implements OnInit {
 
   }
 
-  ngOnInit() {
-  }
+
+    
 
   // MÉTODOS ***************************************
 
@@ -36,9 +38,10 @@ export class ProductoComponent implements OnInit {
     return this._us.getDocUsuario( id );
   }
 
-  public guardarProducto( comercioId: string, nombre: string, ingredientes: string, categoria: string, precio: number ){
-    this._cs.pushProducto( comercioId, nombre, ingredientes, categoria, precio );
+  public guardarCategoria( documentId: string, nombre: string ){
+    this._cs.pushCategoria( documentId, nombre );
     this.router.navigate(['/micomercio/menu']);
   }
 
+  
 }

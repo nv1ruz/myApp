@@ -5,8 +5,16 @@ export { RegisterComponent } from './register/register.component';
 export { CarritoComponent } from './carrito/carrito.component';
 
 export { MiComercioComponent } from './mi-comercio/mi-comercio.component';
+export { MenuComponent } from './menu/menu.component';
+export { CategoriaComponent } from './categoria/categoria.component';
+export { ProductoComponent } from './producto/producto.component';
+
+
 export { CategoriasComponent } from './categorias/categorias.component';
 export { ProductosComponent } from './productos/productos.component';
+
+export { PruebaComponent } from './prueba/prueba.component';
+
 
 
 export { MicuentaComponent } from './micuenta/micuenta.component';

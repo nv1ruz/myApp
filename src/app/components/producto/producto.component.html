@@ -1,3 +1,32 @@
-<p>
-  producto works!
-</p>
+<div class="caja-nav">    
+  <button class="regresar" [routerLink]="['/micomercio/menu']">
+    <i class="fas fa-angle-left"></i>
+  </button>
+  <!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
+  <i class="fas fa-bars"></i>
+  </button> -->
+  <span class="titulo">Añadir nuevo producto</span>
+</div>
+
+<div class="caja-texto">
+    <span>Nombre</span>
+    <input type="text" placeholder="Ingresa el nombre" value="" #nom required>
+</div>
+<div class="caja-texto">
+    <span>Ingredientes</span>
+    <input type="text" placeholder="Ingresa los ingredientes" value="" #ing required>
+</div>
+<div class="caja-texto">
+    <span>Categoria</span>
+    <input type="text" placeholder="Selecciona una categoria" value="" #cat required>
+</div>
+<div class="caja-texto">
+    <span>Precio</span>
+    <input type="text" placeholder="Ingresa el precio" value="" #pre required>
+</div>
+
+<div class="caja-boton fixed-bottom">
+  <button class="pro" (click)="guardarProducto( this.usuario.idCom , nom.value, ing.value, cat.value, pre.value )">
+    <span>Guardar</span>
+  </button>
+</div>

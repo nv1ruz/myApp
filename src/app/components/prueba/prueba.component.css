@@ -1,0 +1,65 @@
+.caja-texto{
+    padding: 30px 20px 10px 20px;
+}
+.caja-texto input{
+    display: block;
+    width: 100%;
+    height: 36px;
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    outline: 0;
+    padding-left: 5px;
+    color: #495057;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;  
+}
+
+.caja-boton-categoria{
+    padding: 10px 20px;
+}
+.caja-boton-categoria button{
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: #24ad5d;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;  
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    text-align: center;
+}
+.caja-boton-categoria button:hover{
+    background-color: #0eb955;
+}
+
+
+
+
+
+.caja-boton-producto{
+    padding: 10px 20px;
+}
+.caja-boton-producto button{
+    display: block;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: #2454ad;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;  
+    border: 0;
+    border-radius: 5px;
+    outline: 0;
+    text-align: center;
+}
+.caja-boton-producto button:hover{
+    background-color: #0e6cb9;
+}
