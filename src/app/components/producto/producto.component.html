@@ -1,12 +1,28 @@
 <div class="caja-nav">    
-  <button class="regresar" [routerLink]="['/micomercio/menu']">
+  <!-- <button class="regresar" [routerLink]="['/micomercio/menu']">
     <i class="fas fa-angle-left"></i>
-  </button>  
+  </button>   -->
   <!-- <span class="titulo">Añadir nuevo producto</span> -->
-  <span class="titulo">{{ titulo }}</span>
+  <!-- <span class="titulo">{{ titulo }}</span>
   <button class="delete" *ngIf="this.editar" (click)="eliminarProducto()">
     <i class="fas fa-trash-alt"></i>
-  </button>
+  </button> -->
+
+  <div class="row">
+		<div class="col-2" style="text-align:left" [routerLink]="['/micomercio/menu']">
+			<button class="regresar">
+        <i class="fas fa-angle-left"></i>
+      </button>
+		</div>
+		<div class="col-8" style="text-align:left">
+			<span class="titulo">{{ titulo }}</span>
+		</div>
+		<div class="col-2" (click)="eliminarProducto()">
+			<button class="delete" *ngIf="this.editar">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+		</div>
+	</div>
 </div>
 
 <form [formGroup]="fProducto" class="animated fadeIn fast">
