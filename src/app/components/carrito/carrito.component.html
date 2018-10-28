@@ -1,11 +1,25 @@
 <div class="caja-nav">    
-	<button class="regresar" [routerLink]="['/comercio', refId]">
+	<!-- <button class="regresar" [routerLink]="['/comercio', refId]">
 		<i class="fas fa-angle-left"></i>
-	</button>
+	</button> -->
 	<!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
 	<i class="fas fa-bars"></i>
 	</button> -->
-	<span class="titulo">Tu pedido</span>
+	<!-- <span class="titulo">Tu pedido</span> -->
+
+	<div class="row">
+		<div class="col-2" style="text-align:left" [routerLink]="['/comercio', refId]">
+			<button class="regresar">
+				<i class="fas fa-angle-left"></i>
+			</button>
+		</div>
+		<div class="col-8" style="text-align:left">
+			<span class="titulo">Tu pedido</span>
+		</div>
+		<div class="col-2">
+			
+		</div>
+	</div>
 </div>
 
 
@@ -77,8 +91,8 @@
 				<div class="col-auto input-field select"> 
 					<select class="custom-select" (click)="sumarTotal(); mostrarOcultarDireccion()" id="cambiarentrega" name="cambiarentrega" required>
 						<option value="0" disabled selected>Forma de entrega</option>
-						<option value="1" *ngIf="comercio.delivery == true" (click)="sumarTotal(); mostrarOcultarDireccion()">Delivery</option>
-						<option value="2" (click)="sumarTotal(); mostrarOcultarDireccion()">Retiro por el local</option>
+						<option value="1" *ngIf="comercio.delivery == true" >Delivery</option>
+						<option value="2" >Retiro por el local</option>
 					</select>
 				</div>
 				<div class="col prec-prod">
