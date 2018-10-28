@@ -142,21 +142,34 @@ export class CarritoComponent implements OnInit {
   }
 
   private sumarTotal(){
+    // this.precioTotal = 0;
+    // if( $('p.valordelivery').is(":visible") ){
+    //   this._cs.carrito.forEach( param => {
+    //     this.precioTotal += parseInt( param.preTot );
+    //   });
+    //   this.precioTotal += this.comercio.deliveryPrecio;
+    // }else{
+    //   this._cs.carrito.forEach( param => {
+    //     this.precioTotal += parseInt( param.preTot );
+    //   });
+    // }
 
     this.precioTotal = 0;
-
-    if( $('p.valordelivery').is(":visible") ){
+    if( $('#cambiarentrega').val() == '1' ){
+      console.log('valor 1');
       this._cs.carrito.forEach( param => {
         this.precioTotal += parseInt( param.preTot );
       });
       this.precioTotal += this.comercio.deliveryPrecio;
     }else{
+      console.log('valor 0 o 2');
       this._cs.carrito.forEach( param => {
         this.precioTotal += parseInt( param.preTot );
       });
     }
-
   }
+
+
 
   private sumarCantidad( prod ){
     if( prod.cant >= 10 ){
@@ -200,7 +213,8 @@ export class CarritoComponent implements OnInit {
         // console.log("Delivery: opción", valorCambiado);
         $('#direcc').css('display','block');
         $('p.direcc').css('display','block');
-        $('p.valordelivery').css('display','block');      
+        $('p.valordelivery').css('display','block');   
+           
       }
     });  
 
