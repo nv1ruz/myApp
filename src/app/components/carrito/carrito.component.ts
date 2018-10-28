@@ -141,28 +141,14 @@ export class CarritoComponent implements OnInit {
     return this._co.getComercio( documentId );
   }
 
-  private sumarTotal(){
-    // this.precioTotal = 0;
-    // if( $('p.valordelivery').is(":visible") ){
-    //   this._cs.carrito.forEach( param => {
-    //     this.precioTotal += parseInt( param.preTot );
-    //   });
-    //   this.precioTotal += this.comercio.deliveryPrecio;
-    // }else{
-    //   this._cs.carrito.forEach( param => {
-    //     this.precioTotal += parseInt( param.preTot );
-    //   });
-    // }
-
+  public sumarTotal(){
     this.precioTotal = 0;
-    if( $('#cambiarentrega').val() == '1' ){
-      console.log('valor 1');
+    if( $('p.valordelivery').is(":visible") ){
       this._cs.carrito.forEach( param => {
         this.precioTotal += parseInt( param.preTot );
       });
       this.precioTotal += this.comercio.deliveryPrecio;
     }else{
-      console.log('valor 0 o 2');
       this._cs.carrito.forEach( param => {
         this.precioTotal += parseInt( param.preTot );
       });
@@ -196,10 +182,11 @@ export class CarritoComponent implements OnInit {
     this.sumarTotal();
   }
 
-  private mostrarOcultarDireccion(){
+  public mostrarOcultarDireccion(){
 
     // Mostrar-Ocultar Direccion y Precio Delivery
     $('#cambiarentrega').change(function(){
+
       var valorCambiado =$(this).val();
       // console.log(valorCambiado);
       if(valorCambiado == '2'){
@@ -213,7 +200,7 @@ export class CarritoComponent implements OnInit {
         // console.log("Delivery: opción", valorCambiado);
         $('#direcc').css('display','block');
         $('p.direcc').css('display','block');
-        $('p.valordelivery').css('display','block');   
+        $('p.valordelivery').css('display','block');
            
       }
     });  
