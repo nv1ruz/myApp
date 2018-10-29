@@ -25,10 +25,15 @@
 <div style="padding-bottom: 65px;">
   <div *ngFor="let c of categorias">
 
-    <div class="caja-texto">      
-      <div class="texto">
-        <i class="fas fa-haykal"></i>
-        <span>{{ c.nombre }}</span>
+    <div class="caja-categoria">      
+      <div class="categoria row m-0">
+        <div class="col-8" [routerLink]="['categoria', c.id]">
+          <i class="fas fa-haykal"></i>
+          <span>{{ c.nombre }}</span>
+        </div>
+        <div class="opciones col-4">
+          
+        </div>
       </div>
     </div>
 

@@ -18,7 +18,6 @@ export class CategoriasComponent implements OnInit {
   public anterior: string;
   public txtBtn: string = "Nueva categoría";
   public nuevo:boolean = false;
-
   public myGroup: FormGroup;
 
   constructor( public ap: AppComponent, private _cs: ComercioService, private _us: UsuarioService ) { 

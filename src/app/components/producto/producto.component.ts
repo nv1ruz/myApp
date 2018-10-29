@@ -29,27 +29,6 @@ export class ProductoComponent implements OnInit {
       'precio': new FormControl()
     });
 
-    // captura y almacena el ID enviado por parametro
-    // this.activatedRoute.params.subscribe( param => {
-    //   this.prodId = param.id;
-    //   // console.log(this.prodId);
-    //   if( this.prodId ){
-    //     // console.log("existe un parametro");
-    //     this.editar = true;
-    //     this.titulo = 'Editar producto';
-    //     this.txtBoton = 'Actualizar';
-    //   } else{
-    //     // console.log("no existe un parametro");
-    //     this.editar = false;
-    //     this.titulo = 'Añadir nuevo producto'
-    //     this.txtBoton = 'Guardar';
-    //   }
-    // });
-
-
-
-
-
     this.activatedRoute.params.subscribe( param => {
       this.prodId = param.id;
       // console.log(this.prodId);
@@ -70,25 +49,6 @@ export class ProductoComponent implements OnInit {
       if( user ){
         this.obtenerDocUsuario( user.uid ).subscribe( param => {
           this.usuario = param.payload.data();
-
-
-          // if( this.editar && this.prodId ){
-          //   this.obtenerProducto( this.usuario.idCom, this.prodId ).subscribe( param => {
-          //     this.producto = param.payload.data();
-          //     // console.log( this.producto );
-          //     if( this.producto ){
-          //       this.fProducto.controls['nombre'].setValue( this.producto.nombre );
-          //       this.fProducto.controls['ingredientes'].setValue( this.producto.ingredientes );
-          //       this.fProducto.controls['categoria'].setValue( this.producto.categoria );
-          //       this.fProducto.controls['precio'].setValue( this.producto.precio );
-          //     } else{
-          //       return;
-          //     }
-          //   });
-          // } else{
-          //   return;
-          // }
-
 
           if( this.prodId ){
             this.obtenerProducto( this.usuario.idCom, this.prodId ).subscribe( param => {
@@ -113,9 +73,6 @@ export class ProductoComponent implements OnInit {
           } else{
             return;
           }
-
-
-
         });
       } else{
         return;

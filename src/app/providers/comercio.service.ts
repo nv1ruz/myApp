@@ -34,6 +34,12 @@ export class ComercioService {
                     .collection( 'productos' ).doc( prodId ).snapshotChanges();
   }
 
+  // obtiene la colección de productos de un comercio con la categoría especificada (Firebase)
+  public getProductosSegunCategoria( comercioId: string, categoriaNombre: string ){
+    return this.afs.collection( 'comercios' ).doc( comercioId )
+                 .collection( 'productos', ref => ref.where( 'categoria', '==', categoriaNombre ) ).snapshotChanges();
+  }
+
   public pushProducto( comercioId: string, nombre: string, ingredientes: string, categoria: string, precio: number ){
     return this.afs.collection( 'comercios' ).doc( comercioId )
                     .collection( 'productos' ).add({
@@ -72,6 +78,18 @@ export class ComercioService {
                     .collection( 'categorias' ).snapshotChanges();
   }
 
+  public getCategoria( documentId: string, categoriaId: string ){
+    return this.afs.collection( 'comercios' ).doc( documentId )
+                    .collection( 'categorias' ).doc( categoriaId ).snapshotChanges();
+  }
+
+  public updCategoria( documentId: string, categoriaId: string, categoriaNombre: string ){
+    return this.afs.collection( 'comercios' ).doc( documentId )
+                    .collection( 'categorias' ).doc( categoriaId ).update({
+                      nombre: categoriaNombre
+                    });
+  }
+
   public pushCategoria( documentId: string, nombre: string ){
     return this.afs.collection( 'comercios' ).doc( documentId )
                     .collection( 'categorias' ).add({
@@ -85,7 +103,7 @@ export class ComercioService {
 
   public deleteCategoria( documentId: string, categoriaId: string ){
     return this.afs.collection( 'comercios' ).doc( documentId )
-                    .collection( 'categorias' ).doc( categoriaId ).delete()
+                    .collection( 'categorias' ).doc( categoriaId ).delete();
   }
 
 }

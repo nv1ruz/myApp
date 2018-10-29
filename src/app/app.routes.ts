@@ -31,6 +31,7 @@ const ROUTES: Routes = [
     { path: 'micomercio', component: MiComercioComponent },
     { path: 'micomercio/menu', component: MenuComponent },
     { path: 'micomercio/menu/categoria', component: CategoriaComponent },
+    { path: 'micomercio/menu/categoria/:id', component: CategoriaComponent },
     { path: 'micomercio/menu/producto', component: ProductoComponent },
     { path: 'micomercio/menu/producto/:id', component: ProductoComponent },
     { path: 'micomercio/categorias', component: CategoriasComponent },

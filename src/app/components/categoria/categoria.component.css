@@ -20,6 +20,16 @@
     margin-left: 5px;
     padding: 0;
 }
+.caja-nav button.delete{
+    color: #ffffff;
+    background: none;
+    border: 0;
+    outline: 0;
+    padding: 0;
+}
+.caja-nav button.delete i{    
+    font-weight: 400;
+}
 .caja-nav button i{
     color: #fff;
     font-size: 22px;

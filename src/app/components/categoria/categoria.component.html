@@ -14,22 +14,26 @@
         </button>
       </div>
       <div class="col-8" style="text-align:left">
-          <span class="titulo">Añadir nueva categoría</span>
+          <span class="titulo">{{ titulo }}</span>
       </div>
-      <div class="col-2">
-        
+      <div class="col-2" (click)="borrarCategoria()">
+          <button class="delete" *ngIf="this.editar">
+            <i class="fas fa-trash-alt"></i>
+          </button>
       </div>
     </div>
 </div>
 
-<div class="caja-texto">
-    <span>Nombre</span>
-    <input type="text" placeholder="Ingresa el nombre de la categoria" value="" #cat required>
-</div>
+<form [formGroup]="fCategoria">
+  <div class="caja-texto">
+      <span>Nombre</span>
+      <input type="text" formControlName="nombre" placeholder="Ingresa el nombre de la categoria" value="" #cat required>
+  </div>
 
 
-<div class="caja-boton fixed-bottom">
-  <button class="cat" (click)="guardarCategoria( this.usuario.idCom, cat.value)">
-    <span>Guardar</span>
-  </button>
-</div>
+  <div class="caja-boton fixed-bottom">
+    <button class="cat" (click)="guardarCategoria( this.usuario.idCom, cat.value)">
+      <span>{{ txtBoton }}</span>
+    </button>
+  </div>
+</form>

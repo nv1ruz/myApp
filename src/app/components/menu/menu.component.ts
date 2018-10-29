@@ -15,11 +15,7 @@ export class MenuComponent implements OnInit {
   public categorias = [];
   public productos = [];
 
-  constructor(  private _cs: ComercioService, private _us: UsuarioService, private router: Router  ) { 
-
-    
-
-  }
+  constructor(  private _cs: ComercioService, private _us: UsuarioService, private router: Router  ) { }
 
   ngOnInit() {
 
