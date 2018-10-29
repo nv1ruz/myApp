@@ -1,14 +1,23 @@
-<div class="caja-nav">    
-	<!-- <button class="regresar" [routerLink]="['/comercio', refId]">
-		<i class="fas fa-angle-left"></i>
-	</button> -->
-	<button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
-	<i class="fas fa-bars"></i>
-	</button>
-	<span class="titulo">Mi cuenta</span>
+<div class="caja-nav" *ngIf="this.ap.exist">
+
+	<div class="row">
+
+		<div class="col-3" style="text-align:left" (click)="this.ap._toggleOpened()">
+			<button class="menu" >
+				<i class="fas fa-bars"></i>
+			</button>
+		</div>
+
+		<div class="col-6">
+			<span class="titulo">Mi cuenta</span>
+		</div>
+
+		<div class="col-3"></div>
+	</div>
+	
 </div>
 
-<div class="contenedor">
+<div class="contenedor" *ngIf="this.ap.exist">
 	<form class="caja-datos">
 		<img src="{{ usuario.foto }}" alt="">
 		<div class="form-group">

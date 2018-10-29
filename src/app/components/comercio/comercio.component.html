@@ -1,21 +1,31 @@
 <div class="caja-nav">    
 	<div class="row">
-		<div class="col-3" style="text-align:left">
-			<button class="menu" *ngIf="_fs.usuario.uid" (click)="this.ap._toggleOpened()">
+		
+		<div class="col-3" *ngIf="_fs.usuario.uid" style="text-align:left" (click)="this.ap._toggleOpened()">
+			<button class="menu">
 				<i class="fas fa-bars"></i>
 			</button>
 		</div>
+		<div class="col-3" *ngIf="!_fs.usuario.uid"></div>
+
+		
 		<div class="col-6">
 			<span class="titulo"> Comercio</span>
 		</div>
-		<div class="col-3" style="text-align:right">
-			<button class="btnLogin" *ngIf="!_fs.usuario.uid" [routerLink]="['/login']">
-				<span>Ingresar</span>
-			</button>
-			<a class="btnLogin" *ngIf="_fs.usuario.uid">
-				<a class="btnCarrito" (click)="verCarrito()"><i class="fas fa-shopping-cart"></i></a>
+
+
+
+		<div class="col-3" *ngIf="_fs.usuario.uid" style="text-align:right" (click)="verCarrito()">
+			<a class="btnLogin">
+				<a class="btnCarrito"><i class="fas fa-shopping-cart"></i></a>
 			</a>
 		</div>
+		<div class="col-3" *ngIf="!_fs.usuario.uid" [routerLink]="['/login']">
+			<button class="btnLogin">
+				<span>Ingresar</span>
+			</button>
+		</div>
+
 	</div>		
 </div>
 

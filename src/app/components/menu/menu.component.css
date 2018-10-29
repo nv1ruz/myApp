@@ -6,6 +6,10 @@
     text-align: center;
     padding: 12px 0 11px 0;
 }
+.caja-nav .col-2{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 .caja-nav .row{
     margin: 0!important;
     height: 100%;

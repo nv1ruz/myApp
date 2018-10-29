@@ -1,26 +1,24 @@
 <div class="caja-nav">    
-  <!-- <button class="regresar">
-    <i class="fas fa-angle-left"></i>
-  </button> -->
-  <!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
-  <i class="fas fa-bars"></i>
-  </button> -->
-  <!-- <span class="titulo">Añadir nueva categoría</span> -->
 
-  <div class="row">
-      <div class="col-2" style="text-align:left" [routerLink]="['/micomercio/menu']">
-        <button class="regresar">
-          <i class="fas fa-angle-left"></i>
-        </button>
-      </div>
-      <div class="col-8" style="text-align:left">
-          <span class="titulo">{{ titulo }}</span>
-      </div>
-      <div class="col-2" (click)="borrarCategoria()">
-          <button class="delete" *ngIf="this.editar">
-            <i class="fas fa-trash-alt"></i>
-          </button>
-      </div>
+  	<div class="row">
+
+		<div class="col-2" style="text-align:left" [routerLink]="['/micomercio/menu']">
+			<button class="regresar">
+				<i class="fas fa-angle-left"></i>
+			</button>
+		</div>
+
+		<div class="col-8" style="text-align:left">
+			<span class="titulo">{{ titulo }}</span>
+		</div>
+
+		<div class="col-2" *ngIf="this.editar" (click)="borrarCategoria()">
+			<button class="delete">
+				<i class="fas fa-trash-alt"></i>
+			</button>
+		</div>
+		<div class="col-2" *ngIf="!this.editar"></div>
+
     </div>
 </div>
 
