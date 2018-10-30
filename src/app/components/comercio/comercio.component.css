@@ -1,10 +1,13 @@
+p {
+  margin-bottom: 0;  
+}
+/* -----------BARRA NAVEGACION----------- */
 .caja-nav{
     background-color: #fa3b7b;
     width: 100%;
     height: 55px;
     max-height: 55px;
     text-align: center;
-    /* padding: 12px 0 11px 0; */
 }
 .caja-nav .col-3{
     padding-top: 15px;
@@ -49,23 +52,6 @@
 
 
 
-/* NEW */
-/* .caja-texto{
-    background-color: #f4f4f4;
-    height: 30px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-.caja-texto span{
-    margin-top: 10px;
-    color: #666666; */
-    /* light 300, regular 400, medium 500, bold 700 */
-    /* font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 400;  
-    margin-left: 35px;  
-} */
 
 .caja-texto{
     background-color: #f4f4f4;
@@ -81,7 +67,6 @@
 .caja-texto .texto span{ 
     margin-left: 5px;  
     color: #666666;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;  
@@ -128,7 +113,6 @@
 .caja-descripcion .nombre{
     display: block;
     color: #666666;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700;  
@@ -137,7 +121,6 @@
 .caja-descripcion .ingredientes{
     display: block;
     color: #b4b4b4;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;  
@@ -145,9 +128,7 @@
     text-transform: capitalize;
 }
 .caja-descripcion .precio{
-    /* color: #666666; */
     color: #1bb140;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700; 
@@ -156,12 +137,9 @@
     padding: 0;
 }
 .caja-boton button{
-    /* color: #fff; */
-    /* background-color: #fa3b7b; */
     color: #fa3b7b;
     background: none;
     font-size: 20px;
-    /* padding: 0 10px 0 5px; */
     padding: 0;
     margin: 0 10px 0 5px;
     outline: 0;
@@ -169,22 +147,16 @@
     border-radius: 50px;
     cursor: pointer;
     transition: all .3s ease;
-    /* float: right; */
 }
 
-/* Cabera */
+/* -------- CABECERA ---------- */
 .cajaComercio{
     text-align: center;
     padding: 0;
-    /* box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2); */
-    /* background-color: #ff3e7f;     */
-    /* background-image: linear-gradient(#910030, #ff3e7f); */
     height: auto;
 }
 .cajaComercio a{
     position: absolute;
-    /* top: 1.75%;
-    right: 4%; */
     top: 15px;
     right: 25px;
 }
@@ -195,10 +167,7 @@
 .cajaComercio img{
     width: 100%;
     height: 150px;
-    /* border-radius: 100px; */
     margin: 0;
-    /* border: 2px solid #910030; */
-    /* box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.6); */
     transition: all .3s ease;
     float: left;
 }
@@ -208,7 +177,6 @@
 .cajaComercio .nombre{
     color: #000000;
     opacity: 0.87;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 500;
@@ -251,40 +219,6 @@
     letter-spacing: 0.1pt;
     margin-bottom: 0;   
 }
-.cajaComercio .estado p{
-    margin-bottom: 0;
-    width: auto;
-    /* border: 1px solid #e1e1e1; */
-}
-
-.cajaComercio .delivery{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.1pt;
-    margin: 0;
-    text-align: right;
-}
-.cajaComercio .megusta i{
-    color: rgb(56, 214, 241);
-}
-.cajaComercio .estado i{
-    color: rgb(255, 119, 29);
-}
-.cajaComercio .delivery i{
-    color: #23d32c;
-}
-.cajaComercio .delivery{
-    color: #000000;
-    opacity: 0.6;
-}
-.cajaComercio i{
-    font-size: 17px;
-    font-weight: bold;
-}
-
-
-
 
 .imagen-banner{
     position: absolute;
@@ -305,7 +239,6 @@
 }
 .comercio-header p{
     color: #fff;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 500;
@@ -315,7 +248,6 @@
 }
 .comercio-info h5{
     color: #fff;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -324,12 +256,11 @@
 }
 .comercio-info p{
     color: #fff;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 500;
     text-align: center;
-    margin: 0 0 5px 0;
+    margin-bottom: 5px;
 }
 
 
@@ -337,7 +268,7 @@
 
 
 
-/* Tabs */
+/* --------------TAB--------------- */
 
 .tab{
     margin-top: 0;
@@ -354,13 +285,10 @@
 }
 .tab .item{
     width: 50%;  
-    /* border: 1px solid #b3b1b1; */
-    /* border-radius: 8px; */
     border: 0;
 }
 .tab a.item{
     color: #fa3b7b;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -379,7 +307,6 @@
 
 .txtProductos{
     color: #666666;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -387,24 +314,11 @@
     text-transform: uppercase;
     margin: 15px 0 5px 0;    
     padding: 5px 10px 3px 10px;
-    /* border-bottom: 1px solid #ececec; */
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 .contenedor{
     padding: 0;
 }
-/* .producto {
-    border-bottom: 1px solid #ececec;
-    padding: 0;     
-    transition: all .3s ease;
-    cursor: pointer;
-    margin: 0;
-} */
-/* .producto:hover{
-    background: #f5f5f5;
-    box-shadow: 0px 2px 30px 0 rgba(0, 0, 0, 0.4);
-    padding: 20px 0;
-} */
 
 .producto .caja1 {
     padding: 10px 5px 10px 10px;
@@ -413,7 +327,6 @@
     width: 80px;
     height: 80px;
     overflow: hidden;
-    /* border-radius: 100px; */
     transition: all .3s ease;
 }
     .producto .caja1 .foto:hover{
@@ -425,10 +338,10 @@
     height: 80px;
     transition: all .3s ease;
 }
-    .producto .caja1 .foto img:hover{
-        width: 100%;
-        height: 200px;
-    }
+.producto .caja1 .foto img:hover{
+    width: 100%;
+    height: 200px;
+}
 
 .producto .caja2 {
     padding: 10px 10px 10px 5px;
@@ -436,7 +349,6 @@
 .producto .caja2 .nombre{
     color: #000000;
     opacity: 0.87;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -451,11 +363,9 @@
     font-weight: 400;
     letter-spacing: 0.25pt;
     text-transform: capitalize;
-    /* margin-bottom: 10px; */
 }
 .producto .caja2 .precio {
     color: #fa3b7b;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -491,14 +401,12 @@
 }
 
 
-/* +Info */
+/* ----------INFORMACION------------ */
 #nav-info .card-header{
     color: #666666;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
-    /* letter-spacing: 0.75pt; */
     background-color: #fff;
 }
 #nav-info .card-header i{
@@ -508,34 +416,31 @@
     color: #fa3b7b;
 }
 #nav-info .card-body{
-    padding: 10px 20px 0 20px;
+    padding: 10px 20px;
 }
 #nav-info .nosotros{
     text-align: center;
     color: #b4b4b4;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
 }
 #nav-info .horario{
     color: #b4b4b4;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
+}
+#nav-info .ubicacion {
+    padding-top: 5px;
 }
 #nav-info .ubicacion p{
     text-align: center;
     color: #b4b4b4;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
-}
-#nav-info .ubicacion img{
-    width: 100%;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 agm-map {
     width: 100%;
@@ -544,12 +449,18 @@ agm-map {
 .contacto i{
     font-size: 17px;
 }
+#nav-info .contacto {
+    padding-top: 5px;
+}
 #nav-info .contacto p{
     color: #b4b4b4;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
+    margin-top: 5px;
+}
+#nav-info .contacto span{
+    margin-left: 5px;
 }
 .contacto i.fa-whatsapp{
     color: #23d32c;
@@ -562,7 +473,9 @@ agm-map {
     color: rgb(51, 51, 212);
 }
 
-/* modal*/
+
+
+/* -----------MODAL PRODUCTO------------*/
 #modalProducto{
     padding-top: 50px;
 }
@@ -589,7 +502,6 @@ agm-map {
 #modalProducto .nom p{
     color: #000000;
     opacity: 0.87;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -599,7 +511,6 @@ agm-map {
 #modalProducto .ing p{
     color: #000000;
     opacity: 0.6;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -612,9 +523,7 @@ agm-map {
     width: 26.5px;
     height: 26px;
     font-size: 12px;
-    /* float: right; */
     background: none;
-    /* border: 2px solid #ececec; */
     border: none;
     border-radius: 50px;
     margin: 0 5px;
@@ -628,11 +537,9 @@ agm-map {
 #modalProducto .cant input{
     color: #000000;
     opacity: 0.87;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
-
     background: none;
     text-align: center;
     width: 60px;
@@ -640,33 +547,27 @@ agm-map {
     border-radius: 5px;
 }
 #modalProducto .nota{    
-    /* padding-top: 5px; */
-    /* border-top: 1px solid #ececec; */
     margin-bottom: 10px;
 }
 #modalProducto .nota textarea{
     width: 100%;
     margin: 0px auto;
-    /* padding: 0 20px; */
     text-align: center;
-
     color: #000000;
     opacity: 0.6;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.25pt;
 }
-    .form-control:focus{
-        border-color: #fa3b7b;
-        outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba(255, 112, 236, 0.25);
-    }
+.form-control:focus{
+    border-color: #fa3b7b;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(255, 112, 236, 0.25);
+}
 
 #modalProducto .modal-footer .pre p{
     color: #fa3b7b;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -681,7 +582,6 @@ agm-map {
     background: none;
     border: none;
     margin: 0 0 0 20%;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;

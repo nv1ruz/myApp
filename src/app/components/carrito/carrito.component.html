@@ -1,3 +1,4 @@
+<!-- BARRA NAVEGACION -->
 <div class="caja-nav">    
 
 	<div class="row">
@@ -16,15 +17,15 @@
 </div>
 
 
-
+<!--CAJA CARRITO -->
 <div class="cajaCarrito animated fadeIn fast" *ngIf="!visible">
 
 	<div class="carrito-body" *ngIf="_cs.carrito.length > 0">
 		
-		<p class="txtProductos">Mi pedido</p>
+		<!-- SECCION: MI PEDIDO -->
+		<p class="txtSubtitulo">Mi pedido</p>
 		<div class="accordion" id="acordion">
 			<div class="card" *ngFor="let producto of this._cs.carrito">
-				<!-- <div class="card-header row" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1"> -->
 				<div class="card-header2" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1">
 					<div class="row">
 						<div class="col-1 cant-prod">
@@ -78,7 +79,8 @@
 		</div>
 		<br>
 		
-		<p class="txtProductos">Forma de Entrega</p>
+		<!-- SECCION: FORMA DE ENTREGA -->
+		<p class="txtSubtitulo">Forma de Entrega</p>
 		<div class="form-entrega">
 			<div class="card-header row d-flex align-items-center">
 				<div class="col-2 cant-prod">
@@ -96,7 +98,8 @@
 				</div>
 			</div>
 		</div>
-		<p class="txtProductos direcc">Dirección</p>
+		<!-- SECCION: DIRECCION -->
+		<p class="txtSubtitulo direcc">Dirección</p>
 		<div class="form-entrega animated fadeIn" id="direcc" >
 			<div class="card-header row">
 				<div class="col-2 cant-prod">
@@ -114,6 +117,7 @@
 			</div>
 		</div>
 
+		<!-- PIE DEL CARRITO -->
 		<div class="row total m-0 fixed-bottom align-items-center" *ngIf="_cs.carrito.length > 0">
 			<div class="col-4 total-titulo">
 				<p>Total</p>
@@ -126,11 +130,14 @@
 					<span><i class="fas fa-concierge-bell"></i> Enviar pedido</span>
 				</div>
 			</div>
-		</div>		
+		</div>
+
 	</div>
 
 
 
+
+	<!-- CARRITO VACIO -->
 	<div class="carrito-vacio animated fadeIn fast" *ngIf="this._cs.carrito.length == 0">
 		<i class="fa fa-shopping-basket"></i>
 		<p class="uno">Tu carrito está vacío</p>

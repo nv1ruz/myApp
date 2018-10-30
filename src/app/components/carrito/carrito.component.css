@@ -1,3 +1,4 @@
+/* ---------CAJA NAV ----------- */
 .caja-nav{
     background-color: #fa3b7b;
     width: 100%;
@@ -46,59 +47,7 @@
 
 
 
-
-
-
-
-
-
-
-.nav{
-    height: 50px;
-    /* background: #38a85a; */
-    /* background-image: linear-gradient(#910030, #ff3e7f); */
-    background-color: #fa3b7b;
-    align-content: center;
-    align-items: center;
-}
-.nav .btnMenu{
-    background: none;
-    border: 0;
-    color: #ffffff;
-    padding: 0 20px;
-    font-size: 20px;
-    outline: 0;
-}
-.nav .titulo{
-    color: #ffffff;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.025rem;
-    margin-left: 20px;
-    margin-right: auto;
-    outline: 0;
-}
-.nav .btnIngresar{
-    color: #ffffff;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    border: 0;
-    padding: 0 20px;
-    background: none;
-}
-
-
-
-
-
-
-
-/* Carrito Header */
-
+/* -----------CAJA CARRITO------------- */
 .cajaCarrito{
     text-align: center;
     padding: 0 0 5px 0;
@@ -108,162 +57,10 @@
 .cajaCarrito p{
     margin: 0;
 }
-.cajaCarrito .carrito-header {
-    border-bottom: 2px solid #fe3918;
-    margin: 0 auto 10px auto;
-    background-color: #fa3b7b;
-}
-.cajaCarrito .titulo {
-    background-color: #fa3b7b;
-}
-.cajaCarrito .titulo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 30px;    
-    text-align: right;
-}
-.cajaCarrito .titulo p{
-    color: #ffffff;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.75pt;
-}
-.cajaCarrito .titulo .nombre {
-    color: #ffffff;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0.15pt;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    text-align: left;
-}
-.cajaCarrito .titulo .estado-pedido i{
-    color: #fff;
-    /* font-weight: 300; */
-}
-.cajaCarrito .carrito-header img{
-    width: 100px;
-    height: 100px;
-    border: 2px solid #fe3918;
-    border-radius: 50%;
-}
-.cajaCarrito .carrito-header .estado{
-    color: #858282;
-}
-
-/* Carrito Body */
-/* .carrito-body{
-    margin-bottom: 80px;
-}
-.carrito-body .txtProductos{
-    color: #666666;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.15pt;
-    text-transform: uppercase;
-    margin: 5px 0 5px 0;    
-    padding: 5px 10px 3px 10px;
-    box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-.producto .caja1 {
-    padding-right: 5px; 
-}
-.producto .caja2 {
-    padding: 10px 10px 10px 5px;
-}
-.cajaCarrito .carrito-body card{
-    margin-top: 0;
-    box-shadow: none;
-}
-.carrito-body .card{
-    border-top: none;
-    border-bottom: 1px solid #ececec;
-}
-.carrito-body .card-header{
-    text-transform: capitalize;
-    background-color: #fff;
-    margin: 0;
-    padding: 0 5px;
-    border-bottom: none;
-}
-.carrito-body .card-header p{
-    height: 30px;
-}
-.carrito-body .card-header .cant-prod{
-    padding: 0;
-    color: #000000;
-    opacity: 0.67;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    background: none;
-    text-align: center;
-    line-height: 1.8em;
-}
-.carrito-body .card-header .nombre-prod{
-    color: #000000;
-    opacity: 0.87;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: left;
-    padding: 0 0 0 5px;
-    line-height: 1.8em;
-}
-.carrito-body .card-header .prec-prod{
-    text-align: right;
-    color: #fa3b7b;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-}
-.carrito-body .card-body {
-    padding: 5px 10px 5px 10px;
-}
-.carrito-body .card-body .caja2{
-    text-align: left;
-    padding: 0;
-}
-.carrito-body .card-body .precio{
-    padding: 0;
-    color: #000000;
-    opacity: 0.57;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-}
-.carrito-body .card-body .precio-cant{
-    margin: 5px 10px 0 0;
-}
-.carrito-body .card-body .precio-cant .cantidad{
-    text-align: right;
-}
-.carrito-body .card-body .producto{
-    margin-bottom: 5px;
-}
-.carrito-body .card-body .producto .ingredientes{
-        display: block;
-        color: #000000;
-        opacity: 0.6;
-        font-family: 'Roboto', sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: 0.25pt;
-        text-transform: capitalize;
-} */
-
-/* ---------SECCION MI PEDIDO------------- */
 .carrito-body{
     margin-bottom: 80px;
 }
-.carrito-body .txtProductos{
+.carrito-body .txtSubtitulo{
     color: #666666;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -275,25 +72,28 @@
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
     text-align: left;
 }
-.producto .caja1 {
+
+
+
+
+/* ---------SECCION: MI PEDIDO------------- */
+.accordion .producto .caja1 {
     padding-right: 5px; 
 }
-.producto .caja2 {
+.accordion .producto .caja2 {
     padding: 10px 10px 10px 5px;
 }
-.cajaCarrito .carrito-body card{
-    margin-top: 0;
-    box-shadow: none;
-}
-.carrito-body .card{
+.carrito-body .accordion .card{
     border-top: none;
     border-bottom: 1px solid #ececec;
+    padding: 0 5px 0 5px;
 }
-.carrito-body .card-header2 .row{
+
+.carrito-body .accordion .card-header2 .row{
     flex-wrap: nowrap;
     margin: 0;
 }
-.carrito-body .card-header2 .cant-prod{
+.carrito-body .accordion .card-header2 .cant-prod{
     padding: 0;
     color: #000000;
     opacity: 0.67;
@@ -304,7 +104,7 @@
     text-align: center;
     line-height: 1.8em;
 }
-.carrito-body .card-header2 .nombre-prod{
+.carrito-body .accordion .card-header2 .nombre-prod{
     color: #000000;
     opacity: 0.87;
     font-family: 'Roboto', sans-serif;
@@ -314,22 +114,22 @@
     padding: 0 0 0 5px;
     line-height: 1.8em;
 }
-.carrito-body .card-header2 .prec-prod{
+.carrito-body .accordion .card-header2 .prec-prod{
     text-align: right;
     color: #fa3b7b;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    padding: 0 10px 0 0;
+    padding: 0 5px 0 0;
 }
-.carrito-body .card-body {
+.carrito-body .accordion .card-body {
     padding: 5px 10px 5px 10px;
 }
-.carrito-body .card-body .caja2{
+.carrito-body .accordion .card-body .caja2{
     text-align: left;
     padding: 0;
 }
-.carrito-body .card-body .precio{
+.carrito-body .accordion .card-body .precio{
     padding: 0;
     color: #000000;
     opacity: 0.57;
@@ -337,16 +137,16 @@
     font-size: 16px;
     font-weight: 400;
 }
-.carrito-body .card-body .precio-cant{
+.carrito-body .accordion .card-body .precio-cant{
     margin: 5px 10px 0 0;
 }
-.carrito-body .card-body .precio-cant .cantidad{
+.carrito-body .accordion .card-body .precio-cant .cantidad{
     text-align: right;
 }
-.carrito-body .card-body .producto{
+.carrito-body .accordion .card-body .producto{
     margin-bottom: 5px;
 }
-.carrito-body .card-body .producto .ingredientes{
+.carrito-body .accordion .card-body .producto .ingredientes{
     display: block;
     color: #000000;
     opacity: 0.6;
@@ -356,19 +156,14 @@
     letter-spacing: 0.25pt;
     text-transform: capitalize;
 }
-
-
-
-/* Cantidad Editar */
-.carrito-body .cantidad {
+.carrito-body .accordion .cantidad {
     text-align: center!important;
     margin: 0 auto;
     padding: 0;
 }
-.carrito-body .cantidad input{
+.carrito-body .accordion .cantidad input{
     color: #000000;
     opacity: 0.87;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -379,14 +174,12 @@
     border: none;
     border-radius: 5px;
 }
-.carrito-body .cantidad button{
+.carrito-body .accordion .cantidad button{
     color: #fa3b7b;
     width: 26.5px;
     height: 26px;
     font-size: 12px;
-    /* float: right; */
     background: none;
-    /* border: 2px solid #ececec; */
     border: none;
     border-radius: 50px;
     margin: 0 5px;
@@ -394,25 +187,29 @@
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
     outline: 0;
 }
-
-.carrito-body .eliminar{
-    /* line-height:2em; */
+.carrito-body .accordion .eliminar{
     padding: 0;
 }
-.carrito-body .eliminar i{
+.carrito-body .accordion .eliminar i{
     color: #d4d4d4;
     font-size: 18px;    
     font-weight: 300;
 }
 
-/* Forma de Entrega */
+
+
+
+/* ---------SECCION: FORMA DE ENTREGA----------- */
 .carrito-body .form-entrega .card-header{
     border-top: none;
     border-bottom: 1px solid #ececec;
+    text-transform: capitalize;
+    background-color: #fff;
+    margin: 0;
+    padding: 0 5px;
 }
 .carrito-body .form-entrega .custom-select{
     border: none;
-    /* border-bottom: 1px solid #666; */
     border-radius: 0;
     padding: 0;
     color: #666;
@@ -426,10 +223,11 @@
 }
 .carrito-body .form-entrega .prec-prod{
     color: #fa3b7b;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
+    text-align: right;
+    padding: 0 5px 0 0;
 }
 .carrito-body .form-entrega .prec-prod input{
     width: 100%;
@@ -460,23 +258,20 @@ p.valordelivery {
     display: none;
 }
 
-/* Total */
+/* ----------PIE DEL CARRITO------------ */
 .carrito-body .total{
     border-top: 1px solid #ececec;
     color: #fa3b7b;
     background-color: #fff;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: 0.15pt;
     text-transform: uppercase;
     margin-top: 10%!important;
-    /* padding: 5px; */
 }
 .carrito-body .total .total-titulo{
     color: #fa3b7b;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -487,7 +282,6 @@ p.valordelivery {
 }
 .carrito-body .total .total-numero{
     color: #fa3b7b;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 500;
@@ -500,14 +294,12 @@ p.valordelivery {
 .carrito-body .total .confirmar{
     color: #ffffff;
     background-color: #fa3b7b !important;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
     text-align: center;
     letter-spacing: 0.75pt;
     cursor: pointer;
-    
     height: 50px;
     width: 100%;
     transition: all .3s ease;    
@@ -515,18 +307,16 @@ p.valordelivery {
 
 
 
-/* Carrito Vacio */
+/* -----------CARRITO VACIO-------------- */
 .carrito-vacio i{
     color: rgb(240, 240, 240);
     font-size: 100px;
-    /* font-weight: 300; */
     margin: 0 auto;
     margin-top: 30%;
     padding: 0 0 10px 10px;
 }
 .carrito-vacio p.uno{
     color: rgb(148, 148, 148);
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -536,7 +326,6 @@ p.valordelivery {
 }
 .carrito-vacio p{
     color: rgb(221, 221, 221);
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -547,14 +336,12 @@ p.valordelivery {
 .carrito-vacio button{
     color: #ffffff;
     background-color: #3b87fa;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;
     text-align: center;
     letter-spacing: 0.75pt;
     cursor: pointer;
-
     border: 0;
     width: 185px;
     height: 30px;
@@ -564,194 +351,4 @@ p.valordelivery {
 }
 .carrito-vacio button:hover{
     background-color: #2576f0;
-}
-
-
-/* Modal Nueva Direccion */
-.modalNuevadireccion p{
-    margin: 0;
-}
-.modalNuevadireccion input,
-.modalNuevadireccion textarea,
-.modalNuevadireccion select {
-    border-radius: 0;
-}
-.modalNuevadireccion label{
-    color: #fa3b7b;
-    margin-bottom: 0;
-}
-.modalNuevadireccion .modal-dialog{
-    margin-top: 55px;
-}
-.modalNuevadireccion .modal-content{
-    font-family: 'Roboto', sans-serif;
-}
-.modalNuevadireccion .modal-header {
-    /* padding: 10px 5px; */
-    display: block;
-    background-color: #fa3b7b;
-    padding: 10px 1rem;
-}
-
-.modalNuevadireccion .modal-header .tituloDireccion p{
-    font-size: 17px;
-    font-weight: 550;
-    color: #fff;
-    text-transform: uppercase;
-}
-.modalNuevadireccion .modal-header .x {
-    text-align: right;
-}
-.modalNuevadireccion .modal-header .x p{
-    font-size: 22px;
-    font-weight: 550;
-    color: #fff;
-}
-.modalNuevadireccion .modal-body {
-    padding: 5px;
-}
-.modalNuevadireccion .card-body{
-    padding: 10px 20px 0 20px;
-}
-.modalNuevadireccion .boton{
-    margin: 10px auto 0 auto;
-    height: 40px;
-    border: 1px solid #fa3b7b;
-    background-color: #ffffff;
-    text-align: center;
-    padding-top: 6px;
-    cursor: pointer;
-    transition: all .3s ease;
-    min-width: 40%;
-    font-weight: bold;
-    color: #fa3b7b;
-    font-size: 18px;
-    text-transform: capitalize;
-}
-.modalNuevadireccion .boton:hover{
-    background-color: #fa3b7b;
-    color: #ffffff;
-}
-.modalNuevadireccion .modal-footer {
-    padding: 10px 5px;
-    display: block;
-    background-color: #fa3b7b;
-    text-align: center;
-}
-.modalNuevadireccion .modal-footer span{
-    font-size: 17px;
-    font-weight: 550;
-    color: #fff;
-}
-.modalNuevadireccion .modal-footer .cancelar{
-    border-right: 1px solid #e1e1e1;
-}
-
-
-/* Pagina: Nueva Direccion */
-.caja3{
-    background-color: #fa3b7b;
-    height: 36px;
-}
-.caja3 button.cancelar{
-    /* display: block; */
-    margin: 0 20px 0 auto;
-    width: auto;
-    height: 36px;
-    background-color: #fa3b7b;
-    border: 0;
-    outline: 0;
-    text-align: right;
-    float: right;
-}
-.caja3 .cancelar span{
-    display: block;
-    color: #fff;
-    /* color: #fff; */
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-weight: 500;  
-    letter-spacing: 0.025rem;
-}
-.caja3 span.titulo{
-    /* display: block; */
-    color: #fff;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 500;  
-    margin-left: 20px;  
-    line-height: 2.5;
-}
-
-.domicilio{
-    padding: 10px 20px;
-}
-
-.domicilio span{
-    display: inline-block;
-    margin-top: 15px;
-    color: #495057;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-weight: 500;  
-}
-.domicilio .opc{
-    padding-left: 5px;
-    color: #cccccc;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-weight: 400;  
-}
-.domicilio input{
-    display: block;
-    width: 100%;
-    height: 36px;
-    border: 0;
-    border-bottom: 1px solid #cccccc;
-    outline: 0;
-    padding-left: 5px;
-
-    color: #495057;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    font-weight: 400;  
-}
-.domicilio input:focus{
-    border-bottom: 1px solid #fa3b7b;
-}
-
-.domicilio button{
-    display: block;
-    margin: 15px auto;
-    width: 100%;
-    height: 36px;
-    background-color: #18ad7c;
-    border: 0;
-    border-radius: 5px;
-    outline: 0;
-    text-align: center;
-}
-.domicilio button:hover{
-    outline: 0;
-    background-color: #1ec58d;
-    border: 1px solid #1ec58d;
-}
-.domicilio button span{
-    display: block;
-    margin: 0;
-    color: #fff;
-    /* light 300, regular 400, medium 500, bold 700 */
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
-    font-weight: 500;  
-    letter-spacing: 0.025rem;    
-}
-
-button:disabled {
-    background-color: #e1e1e1!important;
 }

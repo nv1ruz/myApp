@@ -1,6 +1,6 @@
+<!-- BARRA NAVEGACION -->
 <div class="caja-nav">    
 	<div class="row">
-		
 		<div class="col-3" *ngIf="_fs.usuario.uid" style="text-align:left" (click)="this.ap._toggleOpened()">
 			<button class="menu">
 				<i class="fas fa-bars"></i>
@@ -8,12 +8,9 @@
 		</div>
 		<div class="col-3" *ngIf="!_fs.usuario.uid"></div>
 
-		
 		<div class="col-6">
 			<span class="titulo"> Comercio</span>
 		</div>
-
-
 
 		<div class="col-3" *ngIf="_fs.usuario.uid" style="text-align:right" (click)="verCarrito()">
 			<a class="btnLogin">
@@ -25,12 +22,11 @@
 				<span>Ingresar</span>
 			</button>
 		</div>
-
 	</div>		
 </div>
 
 
-<!-- Cabecera -->
+<!-- CABECERA -->
 <div class="cajaComercio animated fadeIn fast">
 	<div style="position: relative; height: 100%; overflow: hidden;">
 		<div class="imagen-banner">
@@ -60,7 +56,7 @@
 </div>
 
 
-<!-- Tab -->
+<!-- TAB -->
 <div class="nav nav-tabs tab" id="nav-tab" role="tablist">
 	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-sugeridos" role="tab">Menú</a>
 	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-info" role="tab">Información</a>
@@ -136,11 +132,10 @@
 				</div>
 				<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#acordion">
 					<div class="card-body ubicacion">
-						<p>Victoria Romero, 221 - Barrio Angel V. Peñaloza </p>
-						<!-- <img src="https://ep01.epimg.net/tecnologia/imagenes/2017/10/11/actualidad/1507722505_765166_1507722864_miniatura_normal.jpg"> -->
 						<agm-map [latitude]="-30.361148" [longitude]="-66.314116" [zoom]="15">
 							<agm-marker [latitude]="-30.361148" [longitude]="-66.314116"></agm-marker>
 						</agm-map>
+						<p>Victoria Romero, 221 - Barrio Angel V. Peñaloza </p>
 					</div>
 				</div>
 			</div>
@@ -151,9 +146,9 @@
 				</div>
 				<div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#acordion">
 					<div class="card-body contacto">
-						<p><i class="fab fa-whatsapp"></i> 3826403155 <span> (Personal)</span></p>
-						<p><i class="fas fa-phone"></i> 3826425592 <span> (Claro)</span></p>
-						<p><i class="fab fa-facebook"></i> DonLuna-Chamical </p>
+						<p><i class="fab fa-whatsapp"></i><span> 3826403155 (Personal)</span></p>
+						<p><i class="fas fa-phone"></i><span> 3826425592  (Claro)</span></p>
+						<p><i class="fab fa-facebook"></i><span> DonLuna-Chamical</span> </p>
 					</div>
 				</div>
 			</div>
