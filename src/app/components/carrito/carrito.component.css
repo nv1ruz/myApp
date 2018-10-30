@@ -157,12 +157,11 @@
 }
 
 /* Carrito Body */
-.carrito-body{
+/* .carrito-body{
     margin-bottom: 80px;
 }
 .carrito-body .txtProductos{
     color: #666666;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -170,14 +169,12 @@
     text-transform: uppercase;
     margin: 5px 0 5px 0;    
     padding: 5px 10px 3px 10px;
-    /* border-bottom: 1px solid #ececec; */
     box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
     text-align: left;
 }
 .producto .caja1 {
     padding-right: 5px; 
 }
-
 .producto .caja2 {
     padding: 10px 10px 10px 5px;
 }
@@ -213,7 +210,6 @@
 .carrito-body .card-header .nombre-prod{
     color: #000000;
     opacity: 0.87;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -224,7 +220,6 @@
 .carrito-body .card-header .prec-prod{
     text-align: right;
     color: #fa3b7b;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -240,7 +235,6 @@
     padding: 0;
     color: #000000;
     opacity: 0.57;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -263,7 +257,107 @@
         font-weight: 400;
         letter-spacing: 0.25pt;
         text-transform: capitalize;
+} */
+
+/* ---------SECCION MI PEDIDO------------- */
+.carrito-body{
+    margin-bottom: 80px;
 }
+.carrito-body .txtProductos{
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.15pt;
+    text-transform: uppercase;
+    margin: 5px 0 5px 0;    
+    padding: 5px 10px 3px 10px;
+    box-shadow: 0px 2px 1px 0 rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+.producto .caja1 {
+    padding-right: 5px; 
+}
+.producto .caja2 {
+    padding: 10px 10px 10px 5px;
+}
+.cajaCarrito .carrito-body card{
+    margin-top: 0;
+    box-shadow: none;
+}
+.carrito-body .card{
+    border-top: none;
+    border-bottom: 1px solid #ececec;
+}
+.carrito-body .card-header2 .row{
+    flex-wrap: nowrap;
+    margin: 0;
+}
+.carrito-body .card-header2 .cant-prod{
+    padding: 0;
+    color: #000000;
+    opacity: 0.67;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    background: none;
+    text-align: center;
+    line-height: 1.8em;
+}
+.carrito-body .card-header2 .nombre-prod{
+    color: #000000;
+    opacity: 0.87;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    padding: 0 0 0 5px;
+    line-height: 1.8em;
+}
+.carrito-body .card-header2 .prec-prod{
+    text-align: right;
+    color: #fa3b7b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0 10px 0 0;
+}
+.carrito-body .card-body {
+    padding: 5px 10px 5px 10px;
+}
+.carrito-body .card-body .caja2{
+    text-align: left;
+    padding: 0;
+}
+.carrito-body .card-body .precio{
+    padding: 0;
+    color: #000000;
+    opacity: 0.57;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.carrito-body .card-body .precio-cant{
+    margin: 5px 10px 0 0;
+}
+.carrito-body .card-body .precio-cant .cantidad{
+    text-align: right;
+}
+.carrito-body .card-body .producto{
+    margin-bottom: 5px;
+}
+.carrito-body .card-body .producto .ingredientes{
+    display: block;
+    color: #000000;
+    opacity: 0.6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.25pt;
+    text-transform: capitalize;
+}
+
+
 
 /* Cantidad Editar */
 .carrito-body .cantidad {

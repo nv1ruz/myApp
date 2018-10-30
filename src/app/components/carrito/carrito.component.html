@@ -20,19 +20,22 @@
 <div class="cajaCarrito animated fadeIn fast" *ngIf="!visible">
 
 	<div class="carrito-body" *ngIf="_cs.carrito.length > 0">
-		<p class="txtProductos">Mi pedido</p>
 		
+		<p class="txtProductos">Mi pedido</p>
 		<div class="accordion" id="acordion">
 			<div class="card" *ngFor="let producto of this._cs.carrito">
-				<div class="card-header row" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1">
-					<div class="col-1 cant-prod">
-						<p>{{ producto.cant }}</p>
-					</div>
-					<div class="col-auto nombre-prod">
-						<p>{{ producto.nombre }}</p>
-					</div>
-					<div class="col prec-prod">
-						<p>$ {{ producto.preTot }}</p>
+				<!-- <div class="card-header row" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1"> -->
+				<div class="card-header2" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1">
+					<div class="row">
+						<div class="col-1 cant-prod">
+							<p>{{ producto.cant }}</p>
+						</div>
+						<div class="col-8 nombre-prod">
+							<p>{{ producto.nombre }}</p>
+						</div>
+						<div class="col-3 prec-prod">
+							<p>$ {{ producto.preTot }}</p>
+						</div>
 					</div>
 				</div>
 				<div id="a{{producto.id}}" class="collapse" aria-labelledby="heading1" data-parent="#acordion">
