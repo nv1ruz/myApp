@@ -5,6 +5,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // ng sidebar
 import { SidebarModule } from 'ng-sidebar';
 
+// Angular Animations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// Angular Material
+import { MaterialModule } from './material';
+
 // angularfire2 modulos
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -83,6 +88,8 @@ import { CategoriaComponent } from './components/categoria/categoria.component';
     AngularFireStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), // imports firebase/storage only needed for storage features
     ReactiveFormsModule,
     FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBBghU-HAg9wpwoszhmnK_ljHTOh3Th4Js'
     })

@@ -4,7 +4,7 @@ import { AppComponent } from '../../app.component';
 import { AutenticacionService } from '../../providers/autenticacion.service';
 import { ComercioService } from '../../providers/comercio.service';
 import { UsuarioService } from '../../providers/usuario.service';
-
+declare var $:any;
 
 
 @Component({
@@ -13,6 +13,8 @@ import { UsuarioService } from '../../providers/usuario.service';
   styleUrls: ['./mi-comercio.component.css']
 })
 export class MiComercioComponent implements OnInit {
+  color = 'primary';
+  checked = false;
 
   public usuario:any = {};
   public comercio: any = {};
@@ -58,5 +60,4 @@ export class MiComercioComponent implements OnInit {
   private obtenerDocUsuario( id: string ){
     return this._us.getDocUsuario( id );
   }
-
 }

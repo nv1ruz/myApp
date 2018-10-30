@@ -23,9 +23,10 @@
                     <p class="email">{{ usuario.email }}</p>
                 </div>
             </div>
-            <div class="caja-comercio" [routerLink]="['/micomercio']" (click)="_toggleOpened()" *ngIf="comerciante">
+            <div class="caja-comercio" [routerLink]="['/micomercio']" (click)="_toggleOpened()" *ngIf="comerciante" style="border-top: 0.5px solid #fff">
                 <a><i class="fas fa-store"></i><span>Mi comercio</span></a>
-                <p style="margin-bottom:0; font-size:12px; color: #fff; margin-left:12%">Abierto</p>
+                <p *ngIf="estadoo" style="margin-bottom:0; font-size:12px; color: #fff; margin-left:12%">Abierto</p>
+                <p *ngIf="!estadoo" style="margin-bottom:0; font-size:12px; color: #fff; margin-left:12%">Cerrado</p>
             </div>     
             <div class="caja" [routerLink]="['/home']" (click)="_toggleOpened()">
                 <a><i class="fas fa-home"></i><span>Inicio</span></a>

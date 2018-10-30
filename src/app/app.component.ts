@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FirebaseService } from './providers/firebase.service';
 import { AutenticacionService } from './providers/autenticacion.service';
 import { UsuarioService } from './providers/usuario.service';
+import { ComercioService } from './providers/comercio.service';
 
 
 import { Router, RoutesRecognized  } from '@angular/router';
@@ -14,17 +15,21 @@ import { filter, pairwise } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
 
   public _opened: boolean = false;
-  private refUID: string;
+  public refUID: string;
   public usuario:any = {};
   public exist:boolean = false;
   public comerciante:boolean = false;
 
+  public comercio: any = {};
+  public estadoo:boolean = false;
+
   public prevUrl: string;
   
-  constructor( private _as: AutenticacionService, private _us: UsuarioService, private router: Router ) { 
+  constructor( private _as: AutenticacionService, private _us: UsuarioService,private _co: ComercioService, private router: Router ) { 
 
     // captura la url previa
     this.router.events
@@ -34,10 +39,6 @@ export class AppComponent {
         console.log(e[0].urlAfterRedirects); // previous url
         this.prevUrl = e[0].urlAfterRedirects;
     });
-
-
-
-
 
     // observador de estado de autenticación
     this._as.afAuth.authState.subscribe( user => {
@@ -62,6 +63,21 @@ export class AppComponent {
       }
 
     });
+
+  }
+
+  ngOnInit(){
+
+    this.obtenerComercio( 'ncRxByAIs5qd8i54BsXf' ).subscribe( param => {
+      this.comercio = [];
+      this.comercio = param.payload.data();
+      if(this.comercio.estado == true){
+        this.estadoo = true;
+      } else {
+        this.estadoo = false;
+      }
+    });
+    
   }
  
  
@@ -75,6 +91,10 @@ export class AppComponent {
 
   private cerrarSesion(){
     return this._as.logOut();
+  }
+
+  public obtenerComercio( documentId: string ){
+    return this._co.getComercio( documentId );
   }
 
 }
