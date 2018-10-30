@@ -30,31 +30,12 @@
 }
 .caja-nav span.titulo{
     color: #fff;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 500;  
-    /* margin: 0 auto; */
 }
 
 
-
-/* .caja-texto{
-    background-color: #f4f4f4;
-    height: 30px;
-    padding: 0;
-    display: flex;
-    align-items: center;    
-}
-.caja-texto span{   
-    margin-top: 10px; 
-    color: #666666; */
-    /* light 300, regular 400, medium 500, bold 700 */
-    /* font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 400;  
-    margin-left: 35px;  
-} */
 
 /* Categoria */
 .caja-categoria{
@@ -69,9 +50,7 @@
     border-radius: 5px;
 }
 .caja-categoria .categoria span{ 
-    /* margin-left: 5px;   */
     color: #666666;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;  
@@ -170,7 +149,6 @@
 .caja-descripcion .nombre{
     display: block;
     color: #666666;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700;  
@@ -179,7 +157,6 @@
 .caja-descripcion .ingredientes{
     display: block;
     color: #b4b4b4;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;  
@@ -188,7 +165,6 @@
 }
 .caja-descripcion .precio{
     color: #1bb140;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700; 
@@ -197,12 +173,9 @@
     padding: 0;
 }
 .caja-boton button{
-    /* color: #fff; */
-    /* background-color: #fa3b7b; */
     color: #fa3b7b;
     background: none;
     font-size: 20px;
-    /* padding: 0 10px 0 5px; */
     padding: 0;
     margin: 0 10px 0 5px;
     outline: 0;
@@ -210,7 +183,6 @@
     border-radius: 50px;
     cursor: pointer;
     transition: all .3s ease;
-    /* float: right; */
 }
 
 
@@ -229,9 +201,7 @@
     width: 90%;
 }
 .caja-boton-agregar .texto span{
-    /* color: #435296; */
     color: #fa3b7b;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 700;  
@@ -262,14 +232,12 @@
     text-align: center;
 }
 .caja-boton button.cat{
-    /* display: block; */
     padding: 0;
     margin: 0;
     width: 100%;
     height: 45px;
     color: #fff;
     background-color: #1c65c4;
-    /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 500;  
