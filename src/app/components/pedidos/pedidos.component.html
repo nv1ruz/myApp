@@ -1,75 +1,174 @@
-<div class="caja-nav">    
-	<!-- <button class="regresar" [routerLink]="['/comercio', refId]">
-		<i class="fas fa-angle-left"></i>
-	</button> -->
-	<button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
-	<i class="fas fa-bars"></i>
-	</button>
-	<span class="titulo">Mis pedidos</span>
-</div>
+<!-- BARRA DE NAVEGACION -->
+<div class="caja-nav">   
+	<div class="row">
+		<div class="col-3" *ngIf="this.ap.exist" style="text-align:left" (click)="this.ap._toggleOpened()">
+			<button class="menu">
+				<i class="fas fa-bars"></i>
+			</button>
+		</div>
+		<div class="col-3" *ngIf="!this.ap.exist"></div>
 
-
-
-
-<div class="container">
-	<div class="cabecera">
+		<div class="col-6">
+			<span class="titulo">Mis pedidos</span>
+		</div>
 		
-	</div>
-	<div class="cuerpo">
-		<div class="pedido">
-			<div class="row">
-				<div class="col-2 ver">
-					<button type="button" class="badge badge-info" data-toggle="modal" data-target="#modalDetalle">Ver</button>
-				</div>
-				<div class="col-auto nombre">
-					<p>Pizzeria "Don Luna"</p>
-				</div>
-				<div class="col estado">
-					<button type="button" class="badge badge-pill badge-primary" data-toggle="modal" data-target="#modalEstado">En Espera</button>
-				</div>
-			</div>
-		</div>
-		<div class=" pedido">
-			<div class="row">
-				<div class="col-2 ver">
-					<button type="button" class="badge badge-info" data-toggle="modal" data-target="#modalDetalle">Ver</button>
-				</div>
-				<div class="col-auto nombre">
-					<p>Pizzeria "Don Luna"</p>
-				</div>
-				<div class="col estado">
-						<button type="button" class="badge badge-pill badge-warning" data-toggle="modal" data-target="#modalEstado">Listo</button>
-				</div>
-			</div>
-		</div>
-		<div class=" pedido">
-			<div class="row">
-				<div class="col-2 ver">
-					<button type="button" class="badge badge-info" data-toggle="modal" data-target="#modalDetalle">Ver</button>
-				</div>
-				<div class="col-auto nombre">
-					<p>Urbano Resto Bar</p>
-				</div>
-				<div class="col estado">
-						<button type="button" class="badge badge-pill badge-danger" data-toggle="modal" data-target="#modalEstado">Cancelado</button>
-				</div>
-			</div>
-		</div>
-		<div class=" pedido">
-			<div class="row">
-				<div class="col-2 ver">
-					<button type="button" class="badge badge-info" data-toggle="modal" data-target="#modalDetalle">Ver</button>
-				</div>
-				<div class="col-auto nombre">
-					<p>Rey Del Lomito</p>
-				</div>
-				<div class="col estado">
-						<button type="button" class="badge badge-pill badge-secondary" data-toggle="modal" data-target="#modalEstado">Completado</button>
-				</div>
-			</div>
+		<div class="col-3">
+
 		</div>
 	</div>
 </div>
+
+
+
+<!-- TAB -->
+<div class="nav nav-tabs tab" id="nav-tab" role="tablist">
+	<a class="nav-item nav-link item active" data-toggle="tab" href="#nav-encurso" role="tab">
+		<p>En Curso (1)</p>
+		<!-- <p>(1)</p> -->
+	</a>
+	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-historial" role="tab">
+		<p>Historial (4)</p>
+		<!-- <p>(4)</p> -->
+	</a>
+</div>
+
+<div class="tab-content caja-pedidos" id="nav-tabContent">
+
+	<!-- En curso -->
+	<div class="tab-pane fade show active nav-encurso" id="nav-encurso" role="tabpanel">
+		<div class="animated fadeIn fast ">
+			<div class="pedido">
+				<div class="row">
+					<div class="col-2 imagen">
+						<img src="https://upload.wikimedia.org/wikipedia/lv/thumb/3/3a/Burger_King_Logo.svg/768px-Burger_King_Logo.svg.png">
+					</div>
+					<div class="col-7 cliente">
+						<p class="nombre">Don Luna</p>
+						<p class="numero">Orden Nro: 351</p>
+						<p class="estado">En Preparación</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="precio">
+							<p>$ 210</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="pedido">
+				<div class="row">
+					<div class="col-2 imagen">
+						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
+					</div>
+					<div class="col-8 cliente">
+						<p class="nombre">Rey Del Lomito</p>
+						<p class="numero">Orden Nro: 360</p>
+						<p class="estado">Pendiente</p>
+					</div>
+					<div class="col-2 dato">
+						<div class="precio">
+							<p>$ 175</p>
+						</div>
+						<div class="delivery">
+							<!-- <p><i class="fa fa-car"></i></p> -->
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<!-- Historial -->
+	<div class="tab-pane fade nav-historial" id="nav-historial" role="tabpanel">
+		<div class="animated fadeIn fast ">
+			<div class="pedido">
+				<div class="row">
+					<div class="col-2 imagen">
+						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
+					</div>
+					<div class="col-7 cliente">
+						<p class="nombre">Rey Del Lomito</p>
+						<p class="numero">Orden Nro: 351</p>
+						<p class="estado">En Preparación</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="precio">
+							<p>$ 210</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="pedido">
+				<div class="row">
+					<div class="col-2 imagen">
+						<img src="https://upload.wikimedia.org/wikipedia/lv/thumb/3/3a/Burger_King_Logo.svg/768px-Burger_King_Logo.svg.png">
+					</div>
+					<div class="col-7 cliente">
+						<p class="nombre">Don Luna</p>
+						<p class="numero">Orden Nro: 351</p>
+						<p class="estado">En Preparación</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="precio">
+							<p>$ 210</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="pedido">
+				<div class="row">
+					<div class="col-2 imagen">
+						<img src="https://www.designevo.com/res/templates/thumb_small/white-hat-and-yellow-bread.png">
+					</div>
+					<div class="col-7 cliente">
+						<p class="nombre">Pizzeria Fax</p>
+						<p class="numero">Orden Nro: 351</p>
+						<p class="estado">En Preparación</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="precio">
+							<p>$ 210</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="pedido">
+				<div class="row">
+					<div class="col-2 imagen">
+						<img src="https://upload.wikimedia.org/wikipedia/lv/thumb/3/3a/Burger_King_Logo.svg/768px-Burger_King_Logo.svg.png">
+					</div>
+					<div class="col-7 cliente">
+						<p class="nombre">Don Luna</p>
+						<p class="numero">Orden Nro: 351</p>
+						<p class="estado">En Preparación</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="precio">
+							<p>$ 210</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Modal Pedido:Estado -->
