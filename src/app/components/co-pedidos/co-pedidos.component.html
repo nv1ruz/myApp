@@ -19,44 +19,63 @@
 
 <!-- TAB -->
 <div class="nav nav-tabs tab" id="nav-tab" role="tablist">
-	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-nuevos" role="tab">Pendientes (2)</a>
-	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-confirmados" role="tab">Confirmados (0)</a>
-	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-completados" role="tab">Completados (17)</a>
+	<a class="nav-item nav-link item  active" data-toggle="tab" href="#nav-pendientes" role="tab">
+		<p>Pendientes</p>
+		<p>(2)</p>
+	</a>
+	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-confirmados" role="tab">
+		<p>Confirmados</p>
+		<p>(0)</p>
+	</a>
+	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-completados" role="tab">
+		<p>Completados</p>
+		<p>(4)</p>
+	</a>
 </div>
 
 <div class="tab-content caja-pedidos" id="nav-tabContent">
 
 	
 	<!-- Pendientes -->
-	<div class="tab-pane fade show active " id="nav-nuevos" role="tabpanel">
+	<div class="tab-pane fade show active nav-pendientes" id="nav-pendientes" role="tabpanel">
 		<div class="animated fadeIn fast ">
 			<div class="pedido">
 				<div class="row">
 					<div class="col-1 numero">
-						<p>1</p>
+						<p>1°</p>
 					</div>
 					<div class="col-9 cliente">
-						<p>Franco Martinez</p>
-						<p>B° Angel V Peñaloza</p>
+						<p class="nombre">Franco Martinez</p>
+						<p class="direccion">B° Angel V Peñaloza</p>
+						<p class="direccion">Victoria Romero, 221</p>
 					</div>
 					<div class="col-2 dato">
-						<p class="hora">21:31</p>
-						<!-- <p class="delivery"><i class="fa fa-car"></i></p> -->
+						<div class="hora">
+							<p>21:37</p>
+						</div>
+						<div class="delivery">
+							<!-- <p><i class="fa fa-car"></i></p> -->
+						</div>
 					</div>
 				</div>	
 			</div>
 			<div class="pedido">
 				<div class="row">
 					<div class="col-1 numero">
-						<p>2</p>
+						<p>2°</p>
 					</div>
 					<div class="col-9 cliente">
-						<p>xzCesar89</p>
-						<p>B° Victoria Romero</p>
+						<p class="nombre">xzCesar89</p>
+						<p class="direccion">B° Victoria Romero</p>
+						<p class="direccion">Av. San Nicolas de Bari, S/N</p>
 					</div>
 					<div class="col-2 dato">
-						<p class="hora">21:45</p>
-						<p class="delivery"><i class="fa fa-car"></i></p>
+						<div class="hora">
+							<p>21:45</p>
+						</div>
+						<div class="delivery">
+							<p><i class="fa fa-car"></i></p>
+						</div>
 					</div>
 				</div>	
 			</div>
@@ -68,12 +87,21 @@
 		<div class="animated fadeIn fast">
 			<!-- <div class="pedido">
 				<div class="row">
-					<div class="col-9">
-						<span>Franco Martinez</span>
-						<span>B° Angel V Peñaloza</span>
+					<div class="col-1 numero">
+						<p>2°</p>
 					</div>
-					<div class="col-2">
-						
+					<div class="col-9 cliente">
+						<p class="nombre">xzCesar89</p>
+						<p class="direccion">B° Victoria Romero</p>
+						<p class="direccion">Av. San Nicolas de Bari, S/N</p>
+					</div>
+					<div class="col-2 dato">
+						<div class="hora">
+							<p>21:45</p>
+						</div>
+						<div class="delivery">
+							<p><i class="fa fa-car"></i></p>
+						</div>
 					</div>
 				</div>	
 			</div> -->
@@ -82,40 +110,92 @@
 			</div>
 		</div>
 	</div>
+	
 
 	<!-- Completados -->
 	<div class="tab-pane fade nav-completados" id="nav-completados" role="tabpane3">
 		<div class="animated fadeIn fast">
 			<div class="pedido">
 				<div class="row">
-					<div class="col-9">
-						<span>Franco Martinez</span>
-						<span>B° Angel V Peñaloza</span>
+					<div class="col-1 numero">
+						<p>4</p>
 					</div>
-					<div class="col-2">
-						
+					<div class="col-8 cliente">
+						<p class="nombre">Admin</p>
+						<p class="direccion">B° Victoria Romero</p>
+						<p class="direccion">Av. San Nicolas de Bari, S/N</p>
+						<p class="fecha">12/10/18 22:45</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="hora">
+							<p>#1535</p>
+						</div>
+						<div class="delivery">
+							<p><i class="fa fa-car"></i></p>
+						</div>
 					</div>
 				</div>	
 			</div>
 			<div class="pedido">
 				<div class="row">
-					<div class="col-10">
-						<span>xzCesar89</span>
-						<span>B° Angel V Peñaloza</span>
+					<div class="col-1 numero">
+						<p>3</p>
 					</div>
-					<div class="col-2">
-						
+					<div class="col-8 cliente">
+						<p class="nombre">Usuario785501</p>
+						<p class="direccion">B° Centro</p>
+						<p class="direccion">Sante Fe, 35</p>
+						<p class="fecha">12/10/18 19:28</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="hora">
+							<p>#1520</p>
+						</div>
+						<div class="delivery">
+
+						</div>
 					</div>
 				</div>	
 			</div>
 			<div class="pedido">
 				<div class="row">
-					<div class="col-10">
-						<span>xzCesar89</span>
-						<span>B° Angel V Peñaloza</span>
+					<div class="col-1 numero">
+						<p>2</p>
 					</div>
-					<div class="col-2">
-						
+					<div class="col-8 cliente">
+						<p class="nombre">xzCesar89</p>
+						<p class="direccion">B° Victoria Romero</p>
+						<p class="direccion">Av. San Nicolas de Bari, S/N</p>
+						<p class="fecha">11/10/18 20:35</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="hora">
+							<p>#1401</p>
+						</div>
+						<div class="delivery">
+							<p><i class="fa fa-car"></i></p>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="pedido">
+				<div class="row">
+					<div class="col-1 numero">
+						<p>1</p>
+					</div>
+					<div class="col-8 cliente">
+						<p class="nombre">Franco Martinez</p>
+						<p class="direccion">B° Angel V. Peñaloza</p>
+						<p class="direccion">Victoria Romero, 221</p>
+						<p class="fecha">11/10/18 20:10</p>
+					</div>
+					<div class="col-3 dato">
+						<div class="hora">
+							<p>#1253</p>
+						</div>
+						<div class="delivery">
+							<p><i class="fa fa-car"></i></p>
+						</div>
 					</div>
 				</div>	
 			</div>

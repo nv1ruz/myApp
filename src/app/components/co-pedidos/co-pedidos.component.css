@@ -44,6 +44,9 @@
     border-bottom: 1px solid #fa3b7b;
     display: flex;
 }
+.tab p{
+    margin-bottom: 0;
+}
 .tab a.active{
     background-color: #fa3b7b;
     color: #ffffff!important;
@@ -54,12 +57,12 @@
 .tab .item{
     width: 33.33%;  
     border: 0;
-    padding: 15px 0;
+    padding: 5px 0;
 }
 .tab a.item{
     color: #fa3b7b;
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     text-align: center;
     letter-spacing: 0.75pt;
@@ -72,69 +75,138 @@
 }
 
 
-/* ------PEDIDO--------- */
+/* ------CAJA PEDIDOS--------- */
 .caja-pedidos {
     background-color: #f4f4f4;
     padding: 5px 10px;
     font-family: 'Roboto', sans-serif;
 }
+.caja-pedidos .listaVacia{
+    text-align: center;
+    margin: 20% 0;
+    font-size: 17px;
+    font-weight: 400;
+}
 .caja-pedidos p{
     margin-bottom: 0;
 }
 .caja-pedidos .pedido{
-    padding: 10px 0;
+    padding: 5px 0;
     border-bottom: 1px solid #cccccc;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
 }
-.caja-pedidos .pedido .col-1,
-.caja-pedidos .pedido .col-9,
-.caja-pedidos .pedido .col-2{
-    padding: 0;
-}
 .caja-pedidos .pedido .row{
     flex-wrap: nowrap;
     margin: 0;
 }
-.caja-pedidos .pedido .numero{
+
+/* -------PEDIDOS: Pendientes----------- */
+.caja-pedidos .nav-pendientes .pedido .col-1,
+.caja-pedidos .nav-pendientes .pedido .col-9,
+.caja-pedidos .nav-pendientes .pedido .col-2{
+    padding: 0;
+}
+.caja-pedidos .nav-pendientes .pedido .numero{
     text-align: center;
     background-color: #fff;
     color: #fa3b7b;
-    line-height: 2;
-
+    /* line-height: 2; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid #c4bec0;
 }
-.caja-pedidos .pedido .numero p{
+.caja-pedidos .nav-pendientes .pedido .numero p{
     font-size: 20px;
     font-weight: 500;
 }
-.caja-pedidos .pedido .cliente{
+.caja-pedidos .nav-pendientes .pedido .cliente{
     padding-left: 10px;
 }
-.caja-pedidos .pedido .cliente p:first-child{  
+.caja-pedidos .nav-pendientes .pedido .cliente .nombre{  
     font-size: 18px;
     font-weight: 400;  
+    margin-bottom: 10px;
 }
-.caja-pedidos .pedido .cliente p:last-child{
+.caja-pedidos .nav-pendientes .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
+    margin-top: -5px;
 }
-.caja-pedidos .pedido .dato .hora{
+.caja-pedidos .nav-pendientes .pedido .dato .hora{
+    height: 50%;
+}
+.caja-pedidos .nav-pendientes .pedido .dato .hora p{
     font-size: 14px;
     font-weight: 400;
     text-align: center;
 }
-.caja-pedidos .pedido .dato .delivery{
+.caja-pedidos .nav-pendientes .pedido .dato .delivery{
+    height: 50%;
+}
+.caja-pedidos .nav-pendientes .pedido .dato .delivery p{
     text-align: right;
     color: green;
     padding-right: 20%;
     line-height: 2;
 }
-.caja-pedidos .listaVacia{
-    text-align: center;
-    margin: 50% 0;
-    font-size: 17px;
-    font-weight: 400;
 
+/* -------PEDIDOS: Completados----------- */
+.caja-pedidos .nav-completados .pedido .col-1,
+.caja-pedidos .nav-completados .pedido .col-8,
+.caja-pedidos .nav-completados .pedido .col-3{
+    padding: 0;
+}
+.caja-pedidos .nav-completados .pedido .numero{
+    text-align: center;
+    background-color: #fff;
+    color: #fa3b7b;
+    /* line-height: 2; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid #c4bec0;
+}
+.caja-pedidos .nav-completados .pedido .numero p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.caja-pedidos .nav-completados .pedido .cliente{
+    padding-left: 10px;
+}
+.caja-pedidos .nav-completados .pedido .cliente .nombre{  
+    font-size: 18px;
+    font-weight: 400;  
+    margin-bottom: 5px;
+}
+.caja-pedidos .nav-completados .pedido .cliente .direccion{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: -5px;
+}
+.caja-pedidos .nav-completados .pedido .cliente .fecha{
+    font-size: 12px;
+    font-weight: 400;
+    color: #fa3b7b;
+}
+.caja-pedidos .nav-completados .pedido .dato .hora{
+    height: 50%;
+}
+.caja-pedidos .nav-completados .pedido .dato .hora p{
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 20%;
+    text-align: right;
+}
+.caja-pedidos .nav-completados .pedido .dato .delivery{
+    height: 50%;
+}
+.caja-pedidos .nav-completados .pedido .dato .delivery p{
+    text-align: right;
+    color: green;
+    padding-right: 20%;
+    line-height: 2;
 }
 
