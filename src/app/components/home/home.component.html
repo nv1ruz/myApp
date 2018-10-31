@@ -41,7 +41,7 @@
 
 <div class="container-fluid animated fadeIn comerciosAbiertos">
 
-  <div class="comercio row align-items-center" (click)="verComercio( comercioAbierto.id )" *ngFor="let comercioAbierto of comerciosAbiertos">  
+  <div class="comercio row align-items-center animated fadeIn fast" (click)="verComercio( comercioAbierto.id )" *ngFor="let comercioAbierto of comerciosAbiertos">  
     <div class="caja1 col-auto">
       <div class="foto">
         <img src="{{ comercioAbierto.data.img }}" width="100">

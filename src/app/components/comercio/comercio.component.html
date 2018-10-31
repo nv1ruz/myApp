@@ -71,7 +71,7 @@
 				<span>{{ c.nombre }}</span>
 			</div> -->
 
-			<div class="caja-texto">      
+			<div class="caja-texto" *ngIf="c.estado">      
 				<div class="texto">
 					<i class="fas fa-haykal"></i>
 					<span>{{ c.nombre }}</span>
@@ -80,7 +80,7 @@
 
 			<div class="container-fluid animated fadeIn caja-producto">
 				<div *ngFor="let p of productos">
-					<div class="producto row align-items-center" *ngIf="c.nombre == p.categoria">  
+					<div class="producto row align-items-center" *ngIf="c.nombre == p.categoria && c.estado && p.estado ">  
 						<div class="caja-foto col-auto">
 							<img src="{{ p.foto }}" width="100">
 						</div>
