@@ -28,7 +28,8 @@ export class MenuComponent implements OnInit {
             snap.forEach( data => {
               this.categorias.push({
                 id: data.payload.doc.id,
-                nombre: data.payload.doc.data().nombre
+                nombre: data.payload.doc.data().nombre,
+                estado: data.payload.doc.data().estado
               });      
             }); 
             // console.log( this.categorias );
@@ -42,7 +43,8 @@ export class MenuComponent implements OnInit {
                 nombre: data.payload.doc.data().nombre,
                 categoria: data.payload.doc.data().categoria,
                 ingredientes: data.payload.doc.data().ingredientes,
-                precio: data.payload.doc.data().precio
+                precio: data.payload.doc.data().precio,
+                estado: data.payload.doc.data().estado
               });
             });
             // console.log( this.productos );
@@ -72,6 +74,18 @@ export class MenuComponent implements OnInit {
 
     public editarProducto( id: string ){
       this.router.navigate(['/micomercio/menu/producto', id]);
+    }
+    
+    public actualizarEstadoCategoria( comercioId: string, categoriaId: string, estado: boolean ){
+      this._cs.updCategoriaEstado( comercioId, categoriaId ).update({
+        estado: !estado
+      });
+    }
+
+    public actualizarEstadoProducto( comercioId: string, productoId: string, estado: boolean ){
+      this._cs.updProductoEstado( comercioId, productoId ).update({
+        estado: !estado
+      });
     }
 
 }

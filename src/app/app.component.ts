@@ -36,7 +36,7 @@ export class AppComponent {
     .pipe(filter((e: any) => e instanceof RoutesRecognized),
         pairwise()
     ).subscribe((e: any) => {
-        console.log(e[0].urlAfterRedirects); // previous url
+        // console.log(e[0].urlAfterRedirects); // previous url
         this.prevUrl = e[0].urlAfterRedirects;
     });
 
@@ -48,10 +48,21 @@ export class AppComponent {
         this.refUID = user.uid;
         // obtiene el documento del usuario desde FireBase
         this.obtenerDocUsuario( this.refUID ).subscribe( param => {
-          this.usuario = param.payload.data();     
+          this.usuario = param.payload.data();  
           if( this.usuario.typeAcc == 2 ){
             console.log( "Tipo de cuenta: Comerciante" );
             this.comerciante = true;
+
+            this.obtenerComercio( this.usuario.idCom ).subscribe( param => {
+              this.comercio = [];
+              this.comercio = param.payload.data();
+              if(this.comercio.estado == true){
+                this.estadoo = true;
+              } else {
+                this.estadoo = false;
+              }
+
+            });
           } else{
             console.log( "Otro tipo de cuenta" );
             this.comerciante = false;
@@ -68,15 +79,15 @@ export class AppComponent {
 
   ngOnInit(){
 
-    this.obtenerComercio( 'ncRxByAIs5qd8i54BsXf' ).subscribe( param => {
-      this.comercio = [];
-      this.comercio = param.payload.data();
-      if(this.comercio.estado == true){
-        this.estadoo = true;
-      } else {
-        this.estadoo = false;
-      }
-    });
+    // this.obtenerComercio( 'ncRxByAIs5qd8i54BsXf' ).subscribe( param => {
+    //   this.comercio = [];
+    //   this.comercio = param.payload.data();
+    //   if(this.comercio.estado == true){
+    //     this.estadoo = true;
+    //   } else {
+    //     this.estadoo = false;
+    //   }
+    // });
     
   }
  

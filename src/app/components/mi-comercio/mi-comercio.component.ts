@@ -14,12 +14,13 @@ declare var $:any;
 })
 export class MiComercioComponent implements OnInit {
   color = 'primary';
-  checked = false;
 
   public usuario:any = {};
   public comercio: any = {};
+  public comercioId: string;
+  public abierto: boolean = false;
 
-  constructor( public ap: AppComponent, private _co: ComercioService, private _as: AutenticacionService, private _us: UsuarioService ) { }
+  constructor( public ap: AppComponent, private _cs: ComercioService, private _as: AutenticacionService, private _us: UsuarioService ) { }
 
   ngOnInit() {
 
@@ -28,10 +29,17 @@ export class MiComercioComponent implements OnInit {
       if( user ){
         this.obtenerDocUsuario( user.uid ).subscribe( param => {
           this.usuario = param.payload.data();
-
+          this.comercioId = this.usuario.idCom;
           this.obtenerComercio( this.usuario.idCom ).subscribe( data => {
             this.comercio = [];
             this.comercio = data.payload.data();
+            if( this.comercio.estado == true ){
+              this.abierto = true;
+              this.comercio.estado = true;
+            } else{
+              this.abierto = false;
+              this.comercio.estado = false;
+            }
           });
 
         });
@@ -42,11 +50,6 @@ export class MiComercioComponent implements OnInit {
 
 
 
-      
-      
-
-
-
   }
 
 
@@ -54,10 +57,18 @@ export class MiComercioComponent implements OnInit {
   // MÉTODOS ************************************
 
   private obtenerComercio( documentId: string ){
-    return this._co.getComercio( documentId );
+    return this._cs.getComercio( documentId );
   }
 
   private obtenerDocUsuario( id: string ){
     return this._us.getDocUsuario( id );
+  }
+
+  public estado( comercioId: string ){
+    if( this.abierto ){
+      this._cs.estadoComercio( comercioId, false );
+    } else{
+      this._cs.estadoComercio( comercioId, true );
+    }
   }
 }

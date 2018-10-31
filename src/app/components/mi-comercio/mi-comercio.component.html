@@ -14,11 +14,18 @@
 		</div>
 
 		<div class="col-3">
-			<label class="switch">
+			<!-- <label class="switch">
 				<input type="checkbox" checked>
 				<span class="slider round"></span>
-			</label>
+			</label> -->
 			<!-- <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked"></mat-slide-toggle> -->
+			<mat-slide-toggle
+				(click)="estado( comercioId )"
+				class="example-margin"
+				color="primary"
+				[checked]="abierto"
+				disabled="false">
+			</mat-slide-toggle>
 		</div>
 	</div>		
 </div>

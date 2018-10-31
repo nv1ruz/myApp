@@ -24,10 +24,17 @@
 			<span> {{ c.nombre }}</span>
 			</div>
 			<div class="opciones col-3">
-				<label class="switch">
+				<!-- <label class="switch">
 				<input type="checkbox" checked>
 				<span class="slider round"></span>
-				</label>
+				</label> -->
+				<mat-slide-toggle
+					(click)="actualizarEstadoCategoria( usuario.idCom, c.id, c.estado )"
+					class="example-margin"
+					color="accent"
+					checked="{{ c.estado }}"
+					disabled="false">
+				</mat-slide-toggle>
 			</div>
 		</div>
 		</div>
@@ -45,6 +52,15 @@
 							
 					</div>
 					<!-- <div class="caja-boton-new"></div>   -->
+					<div>
+						<mat-slide-toggle
+							(click)="actualizarEstadoProducto( usuario.idCom, p.id, p.estado )"
+							class="example-margin"
+							color="primary"
+							checked="{{ p.estado }}"
+							disabled="false">
+						</mat-slide-toggle>
+					</div>
 					      
 				</div>
 			</div>
