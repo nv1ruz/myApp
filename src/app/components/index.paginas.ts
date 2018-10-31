@@ -8,6 +8,7 @@ export { MiComercioComponent } from './mi-comercio/mi-comercio.component';
 export { MenuComponent } from './menu/menu.component';
 export { CategoriaComponent } from './categoria/categoria.component';
 export { ProductoComponent } from './producto/producto.component';
+export { CoPedidosComponent } from './co-pedidos/co-pedidos.component';
 
 
 export { CategoriasComponent } from './categorias/categorias.component';

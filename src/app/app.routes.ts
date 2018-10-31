@@ -19,7 +19,8 @@ import {
     PedidosComponent,
     RegisterComercioComponent,
     FavoritosComponent,
-    PruebaComponent
+    PruebaComponent,
+    CoPedidosComponent
  } from './components/index.paginas';
 
 const ROUTES: Routes = [
@@ -44,6 +45,7 @@ const ROUTES: Routes = [
     { path: 'registerComercio', component: RegisterComercioComponent },
     { path: 'favoritos', component: FavoritosComponent },
     { path: 'prueba', component: PruebaComponent },
+    { path: 'co-pedidos', component: CoPedidosComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

@@ -54,6 +54,7 @@ import { ProductosComponent } from './components/productos/productos.component';
 import { PruebaComponent } from './components/prueba/prueba.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
+import { CoPedidosComponent } from './components/co-pedidos/co-pedidos.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { CategoriaComponent } from './components/categoria/categoria.component';
     ProductosComponent,
     PruebaComponent,
     MenuComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    CoPedidosComponent
   ],
   imports: [
     BrowserModule,
