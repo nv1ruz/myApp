@@ -95,6 +95,7 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
+    margin-bottom: 5px;
 }
 .caja-pedidos .pedido .row{
     flex-wrap: nowrap;
@@ -152,7 +153,7 @@
 .caja-pedidos .nav-pendientes .pedido .precio{
     font-size: 16px;
     font-weight: 400;
-    padding-right: 15px;
+    padding-right: 10px;
     color: #fa3b7b;
     text-align: right;
 }
@@ -163,7 +164,7 @@
 .caja-pedidos .nav-pendientes .pedido .dato .hora p{
     font-size: 14px;
     font-weight: 400;
-    padding-right: 15px;
+    padding-right: 10px;
     color: #969292;
 }
 
@@ -172,8 +173,17 @@
 
 /* -------PEDIDOS: Aceptados----------- */
 .caja-pedidos .nav-aceptados .pedido .col-1,
+.caja-pedidos .nav-aceptados .pedido .col-2,
+.caja-pedidos .nav-aceptados .pedido .col-3,
+.caja-pedidos .nav-aceptados .pedido .col-4,
+.caja-pedidos .nav-aceptados .pedido .col-5,
+.caja-pedidos .nav-aceptados .pedido .col-6,
+.caja-pedidos .nav-aceptados .pedido .col-7,
+.caja-pedidos .nav-aceptados .pedido .col-8,
 .caja-pedidos .nav-aceptados .pedido .col-9,
-.caja-pedidos .nav-aceptados .pedido .col-2{
+.caja-pedidos .nav-aceptados .pedido .col-10,
+.caja-pedidos .nav-aceptados .pedido .col-11,
+.caja-pedidos .nav-aceptados .pedido .col-12{
     padding: 0;
 }
 .caja-pedidos .nav-aceptados .pedido .numero{
@@ -196,49 +206,64 @@
 .caja-pedidos .nav-aceptados .pedido .cliente .nombre{  
     font-size: 18px;
     font-weight: 400;  
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+}
+.caja-pedidos .nav-aceptados .pedido .cliente .nombre span{  
+    font-size: 14px;
+    font-weight: 400; 
+    color: #969292;
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
     margin-top: -5px;
 }
+.caja-pedidos .nav-aceptados .pedido .cliente .precio{
+    text-align: right;
+    padding-right: 10px;
+    font-size: 16px;
+    color: #fa3b7b;
+}
+.caja-pedidos .nav-aceptados .pedido .cliente .entrega{
+    font-size: 14px;
+    font-weight: 400;
+}
 .caja-pedidos .nav-aceptados .pedido .cliente .estado{
     font-size: 14px;
     font-weight: 400;
+    padding-right: 10px;
+    text-align: right;
 }
-.caja-pedidos .nav-aceptados .pedido .dato .hora{
-    height: 50%;
+.caja-pedidos .nav-aceptados .pedido .cliente .hora{
+    height: 100%;
     text-align: right
 }
-.caja-pedidos .nav-aceptados .pedido .dato .hora p{
+.caja-pedidos .nav-aceptados .pedido .cliente .hora p{
     font-size: 14px;
     font-weight: 400;
-    padding-right: 15px;
+    padding-right: 10px;
     color: #969292;
-}
-.caja-pedidos .nav-aceptados .pedido .dato .delivery{
-    height: 50%;
-}
-.caja-pedidos .nav-aceptados .pedido .dato .delivery p{
-    text-align: right;
-    color: green;
-    padding-right: 20%;
-    line-height: 2;
 }
 
 
 
 
 /* -------PEDIDOS: Completados----------- */
-.caja-pedidos .nav-completados .pedido .col-1,
-.caja-pedidos .nav-completados .pedido .col-2,
-.caja-pedidos .nav-completados .pedido .col-7,
-.caja-pedidos .nav-completados .pedido .col-8,
-.caja-pedidos .nav-completados .pedido .col-3{
+.caja-pedidos .nav-historial .pedido .col-1,
+.caja-pedidos .nav-historial .pedido .col-2,
+.caja-pedidos .nav-historial .pedido .col-3,
+.caja-pedidos .nav-historial .pedido .col-4,
+.caja-pedidos .nav-historial .pedido .col-5,
+.caja-pedidos .nav-historial .pedido .col-6,
+.caja-pedidos .nav-historial .pedido .col-7,
+.caja-pedidos .nav-historial .pedido .col-8,
+.caja-pedidos .nav-historial .pedido .col-9,
+.caja-pedidos .nav-historial .pedido .col-10,
+.caja-pedidos .nav-historial .pedido .col-11,
+.caja-pedidos .nav-historial .pedido .col-12{
     padding: 0;
 }
-.caja-pedidos .nav-completados .pedido .estado{
+.caja-pedidos .nav-historial .pedido .estado{
     text-align: center;
     background-color: #fff;
     color: #fa3b7b;
@@ -248,44 +273,44 @@
     align-items: center;
     border-right: 0.5px solid #c4bec0;
 }
-.caja-pedidos .nav-completados .pedido .estado p{
+.caja-pedidos .nav-historial .pedido .estado p{
     font-size: 20px;
     font-weight: 500;
 }
-.caja-pedidos .nav-completados .pedido .cliente{
+.caja-pedidos .nav-historial .pedido .cliente{
     padding-left: 10px;
 }
-.caja-pedidos .nav-completados .pedido .cliente .nombre{  
+.caja-pedidos .nav-historial .pedido .cliente .nombre{  
     font-size: 18px;
     font-weight: 400;  
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
-.caja-pedidos .nav-completados .pedido .cliente .direccion{
+.caja-pedidos .nav-historial .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
     margin-top: -5px;
 }
-.caja-pedidos .nav-completados .pedido .cliente .fecha{
-    font-size: 12px;
-    font-weight: 400;
-    color: #fa3b7b;
-}
-.caja-pedidos .nav-completados .pedido .dato .numeroOrden{
-    height: 50%;
-}
-.caja-pedidos .nav-completados .pedido .dato .numeroOrden p{
+.caja-pedidos .nav-historial .pedido .fecha{
     font-size: 14px;
     font-weight: 400;
-    padding-right: 20%;
+    padding-left: 10px;
+    color: #969292;
+    /* margin-top: 5px; */
+}
+.caja-pedidos .nav-historial .pedido .precio{
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 10px;
     text-align: right;
 }
-.caja-pedidos .nav-completados .pedido .dato .delivery{
-    height: 50%;
+.caja-pedidos .nav-historial .pedido .dato .numero{
+    height: 100%;
+    text-align: right
 }
-.caja-pedidos .nav-completados .pedido .dato .delivery p{
-    text-align: right;
-    color: green;
-    padding-right: 20%;
-    line-height: 2;
+.caja-pedidos .nav-historial .pedido .dato .numero p{
+    font-size: 16px;
+    font-weight: 400;
+    padding-right: 10px;
+    color: #969292;
 }
 
