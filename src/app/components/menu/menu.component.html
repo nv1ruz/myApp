@@ -15,6 +15,7 @@
 </div>
 
 <div style="padding-bottom: 65px;" class="animated fadeIn fast">
+	<div style="height: 15px; background-color: #f4f4f4;"></div>
   	<div *ngFor="let c of categorias">
 
 		<div class="caja-categoria">      
@@ -42,17 +43,17 @@
 		<div class="caja-producto">
 			<div *ngFor="let p of productos">
 				<div class="producto row" *ngIf="c.nombre == p.categoria">        
-					<div class="caja-foto col-auto" (click)="editarProducto( p.id )">
+					<div class="caja-foto col-2" (click)="editarProducto( p.id )">
 						<img src="{{ p.foto }}" width="100">
 					</div>
-					<div class="caja-descripcion col" (click)="editarProducto( p.id )">
+					<div class="caja-descripcion col-8" (click)="editarProducto( p.id )">
 						<span class="nombre">{{ p.nombre }}</span>      
 						<span class="ingredientes">{{ p.ingredientes }}</span>   
 						<span class="precio">${{ p.precio }}</span>
 							
 					</div>
 					<!-- <div class="caja-boton-new"></div>   -->
-					<div>
+					<div class="col-2">
 						<mat-slide-toggle
 							(click)="actualizarEstadoProducto( usuario.idCom, p.id, p.estado )"
 							class="example-margin"

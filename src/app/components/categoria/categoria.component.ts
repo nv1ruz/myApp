@@ -5,12 +5,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { UsuarioService } from '../../providers/usuario.service';
 import { ComercioService } from '../../providers/comercio.service';
 
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { DialogComponent } from './dialog/dialog.component';
+
+
 @Component({
   selector: 'app-categoria',
   templateUrl: './categoria.component.html',
   styleUrls: ['./categoria.component.css']
 })
 export class CategoriaComponent implements OnInit {
+
+  fileNameDialogRef: MatDialogRef<DialogComponent>;
 
   public usuario:any = {};
   public categoria:any = {};
@@ -22,7 +28,7 @@ export class CategoriaComponent implements OnInit {
   
   public productos:any = [];
 
-  constructor( private _cs: ComercioService, private _us: UsuarioService, private router: Router, private activatedRoute: ActivatedRoute ) { 
+  constructor( private _cs: ComercioService, private _us: UsuarioService, private router: Router, private activatedRoute: ActivatedRoute, private dialog: MatDialog ) { 
     
     this.activatedRoute.params.subscribe( param => {
       this.parametro = param.id;
@@ -133,5 +139,34 @@ export class CategoriaComponent implements OnInit {
       }  
 
   }
+
+
+
+  openAddFileDialog() {
+    this.fileNameDialogRef = this.dialog.open( DialogComponent, {
+      data: {
+        nombre: this.fCategoria.controls['nombre'].value,
+        editar: this.editar
+      }
+    } );
+
+    this.fileNameDialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+      if( result ){
+        this.guardarCategoria( this.usuario.idCom, this.fCategoria.controls['nombre'].value );
+      } else{
+        return;
+      }
+    });
+
+  }
+
+
+
+
+
+
+
+
 
 }

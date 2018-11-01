@@ -29,9 +29,11 @@
   </div>
 
 
-  <div class="caja-boton fixed-bottom">
-    <button class="cat" (click)="guardarCategoria( this.usuario.idCom, cat.value)">
+  <div class="caja-boton">
+    <!-- <button class="cat" (click)="guardarCategoria( this.usuario.idCom, cat.value)">     -->
+    <button class="cat" (click)="openAddFileDialog()">    
       <span>{{ txtBoton }}</span>
-    </button>
+		</button>
+		<!-- <button (click)="openAddFileDialog()">Add file</button> -->
   </div>
 </form>

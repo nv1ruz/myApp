@@ -55,6 +55,7 @@ import { PruebaComponent } from './components/prueba/prueba.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { CoPedidosComponent } from './components/co-pedidos/co-pedidos.component';
+import { DialogComponent } from './components/categoria/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { CoPedidosComponent } from './components/co-pedidos/co-pedidos.component
     PruebaComponent,
     MenuComponent,
     CategoriaComponent,
-    CoPedidosComponent
+    CoPedidosComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -103,6 +105,7 @@ import { CoPedidosComponent } from './components/co-pedidos/co-pedidos.component
     CarritoService,
     ComercioService
   ],
+  entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
