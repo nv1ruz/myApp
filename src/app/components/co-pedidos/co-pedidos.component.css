@@ -135,24 +135,25 @@
     padding-left: 10px;
 }
 .caja-pedidos .nav-pendientes .pedido .cliente .nombre{  
-    font-size: 18px;
-    font-weight: 400;  
+    font-size: 16px;
+    font-weight: 600;  
     margin-bottom: 8px;
 }
 .caja-pedidos .nav-pendientes .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
     margin-top: -5px;
+    color: #969292;
 }
 .caja-pedidos .nav-pendientes .pedido .entrega{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     padding-left: 10px;
-    /* margin-top: 5px; */
+    margin-top: 5px;
 }
 .caja-pedidos .nav-pendientes .pedido .precio{
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
     padding-right: 10px;
     color: #fa3b7b;
     text-align: right;
@@ -216,6 +217,8 @@
 .caja-pedidos .nav-aceptados .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
+}
+.caja-pedidos .nav-aceptados .pedido .cliente .direccion p{
     margin-top: -5px;
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .precio{
