@@ -56,6 +56,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
 import { CoPedidosComponent } from './components/co-pedidos/co-pedidos.component';
 import { DialogComponent } from './components/categoria/dialog/dialog.component';
+import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedido.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { DialogComponent } from './components/categoria/dialog/dialog.component'
     MenuComponent,
     CategoriaComponent,
     CoPedidosComponent,
-    DialogComponent
+    DialogComponent,
+    DetallePedidoComponent
   ],
   imports: [
     BrowserModule,

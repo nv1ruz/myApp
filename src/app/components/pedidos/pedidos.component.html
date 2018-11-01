@@ -40,56 +40,32 @@
 			<div class="pedido">
 				<div class="row">
 					<div class="col-2 imagen">
-						<img src="https://upload.wikimedia.org/wikipedia/lv/thumb/3/3a/Burger_King_Logo.svg/768px-Burger_King_Logo.svg.png">
-					</div>
-					<div class="col-7 cliente">
-						<p class="nombre">Don Luna</p>
-						<p class="numero">Orden Nro: 351</p>
-						<p class="estado" style="color:gray">Pendiente</p>
-					</div>
-					<div class="col-3 dato">
-						<div class="precio">
-							<p>$ 210</p>
-						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido">
-				<div class="row">
-					<div class="col-2 imagen">
 						<img src="https://www.designevo.com/res/templates/thumb_small/white-hat-and-yellow-bread.png">
 					</div>
-					<div class="col-7 cliente">
-						<p class="nombre">Pizzeria FAX</p>
-						<p class="numero">Orden Nro: 360</p>
-						<p class="estado" style="color:rgb(16, 105, 221)">En Preparación</p>
-					</div>
-					<div class="col-3 dato">
-						<div class="precio">
-							<p>$ 320</p>
+					<div class="col-10 comercio" [routerLink]="['/detalle-pedido']">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Pizzeria FAX</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ 320</p>
+							</div>
 						</div>
-						<div class="delivery">
-							<!-- <p><i class="fa fa-shipping-fast"></i></p> -->
+						<div class="row">
+							<div class="col-9 numeroOrden">
+								<p>Orden Nro: 360</p>
+							</div>
+							<div class="col-3">
+
+							</div>
 						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido">
-				<div class="row">
-					<div class="col-2 imagen">
-						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
-					</div>
-					<div class="col-7 cliente">
-						<p class="nombre">Rey Del Lomito</p>
-						<p class="numero">Orden Nro: 402</p>
-						<p class="estado" style="color:green">En Camino</p>
-					</div>
-					<div class="col-3 dato">
-						<div class="precio">
-							<p>$ 175</p>
-						</div>
-						<div class="delivery">
-							<!-- <p><i class="fa fa-shipping-fast"></i></p> -->
+						<div class="row">
+							<div class="col-6 fecha">
+								<p style="color:gray">11/10/18 20:55</p>
+							</div>
+							<div class="col-6 estado">
+								<p style="color:rgb(16, 105, 221)">En Preparación</p>
+							</div>
 						</div>
 					</div>
 				</div>	
@@ -99,21 +75,68 @@
 					<div class="col-2 imagen">
 						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
 					</div>
-					<div class="col-7 cliente">
-						<p class="nombre">Rey Del Lomito</p>
-						<p class="numero">Orden Nro: 402</p>
-						<p class="estado" style="color:green">Listo para Retirar</p>
-					</div>
-					<div class="col-3 dato">
-						<div class="precio">
-							<p>$ 175</p>
+					<div class="col-10 comercio" [routerLink]="['/detalle-pedido']">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Rey Del Lomito</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ 175</p>
+							</div>
 						</div>
-						<div class="delivery">
-							<!-- <p><i class="fa fa-shipping-fast"></i></p> -->
+						<div class="row">
+							<div class="col-9 numeroOrden">
+								<p>Orden Nro: 402</p>
+							</div>
+							<div class="col-3">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 fecha">
+								<p style="color:gray">11/10/18 20:55</p>
+							</div>
+							<div class="col-6 estado">
+								<p style="color:green">En Camino</p>
+							</div>
 						</div>
 					</div>
 				</div>	
 			</div>
+			<div class="pedido">
+				<div class="row">
+					<div class="col-2 imagen">
+						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
+					</div>
+					<div class="col-10 comercio" [routerLink]="['/detalle-pedido']">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Rey Del Lomito</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ 175</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-9 numeroOrden">
+								<p>Orden Nro: 402</p>
+							</div>
+							<div class="col-3">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 fecha">
+								<p style="color:gray">11/10/18 20:55</p>
+							</div>
+							<div class="col-6 estado">
+								<p style="color:green">Listo para Retirar</p>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+
 		</div>
 	</div>
 
@@ -123,33 +146,32 @@
 			<div class="pedido">
 				<div class="row">
 					<div class="col-2 imagen">
-						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
+						<img src="https://st2.depositphotos.com/3283017/8720/v/950/depositphotos_87207810-stock-illustration-vintage-fast-food-logo.jpg">
 					</div>
-					<div class="col-7 cliente">
-						<p class="nombre">Rey Del Lomito</p>
-						<p class="numero">Orden Nro: 312</p>
-						<p class="estado" style="color:green">Completado</p>
-					</div>
-					<div class="col-3 dato">
-						<div class="precio">
-							<p>$ 315</p>
+					<div class="col-10 comercio">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Carrobar Dumbo</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ 120</p>
+							</div>
 						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido">
-				<div class="row">
-					<div class="col-2 imagen">
-						<img src="https://upload.wikimedia.org/wikipedia/lv/thumb/3/3a/Burger_King_Logo.svg/768px-Burger_King_Logo.svg.png">
-					</div>
-					<div class="col-7 cliente">
-						<p class="nombre">Don Luna</p>
-						<p class="numero">Orden Nro: 301</p>
-						<p class="estado" style="color:green">Completado</p>
-					</div>
-					<div class="col-3 dato">
-						<div class="precio">
-							<p>$ 210</p>
+						<div class="row">
+							<div class="col-9 numeroOrden">
+								<p>Orden Nro: 360</p>
+							</div>
+							<div class="col-3">
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 fecha">
+								<p style="color:gray">11/10/18 20:55</p>
+							</div>
+							<div class="col-6 estado">
+								<p style="color:green">Completado</p>
+							</div>
 						</div>
 					</div>
 				</div>	
@@ -159,14 +181,63 @@
 					<div class="col-2 imagen">
 						<img src="https://www.designevo.com/res/templates/thumb_small/white-hat-and-yellow-bread.png">
 					</div>
-					<div class="col-7 cliente">
-						<p class="nombre">Pizzeria Fax</p>
-						<p class="numero">Orden Nro: 281</p>
-						<p class="estado" style="color:red">Rechazado</p>
+					<div class="col-10 comercio">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Pizzeria FAX</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ 320</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-9 numeroOrden">
+								<p>Orden Nro: 360</p>
+							</div>
+							<div class="col-3">
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 fecha">
+								<p style="color:gray">11/10/18 20:55</p>
+							</div>
+							<div class="col-6 estado">
+								<p style="color:green">Completado</p>
+							</div>
+						</div>
 					</div>
-					<div class="col-3 dato">
-						<div class="precio">
-							<p>$ 160</p>
+				</div>	
+			</div>
+			<div class="pedido">
+				<div class="row">
+					<div class="col-2 imagen">
+						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
+					</div>
+					<div class="col-10 comercio">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Rey Del Lomito</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ 280</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-9 numeroOrden">
+								<p>Orden Nro: 360</p>
+							</div>
+							<div class="col-3">
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 fecha">
+								<p style="color:gray">11/10/18 20:55</p>
+							</div>
+							<div class="col-6 estado">
+								<p style="color:red">Rechazado</p>
+							</div>
 						</div>
 					</div>
 				</div>	
@@ -176,14 +247,30 @@
 					<div class="col-2 imagen">
 						<img src="https://upload.wikimedia.org/wikipedia/lv/thumb/3/3a/Burger_King_Logo.svg/768px-Burger_King_Logo.svg.png">
 					</div>
-					<div class="col-7 cliente">
-						<p class="nombre">Don Luna</p>
-						<p class="numero">Orden Nro: 237</p>
-						<p class="estado" style="color:green">Completado</p>
-					</div>
-					<div class="col-3 dato">
-						<div class="precio">
-							<p>$ 445</p>
+					<div class="col-10 comercio">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Don Luna</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ 170</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-9 numeroOrden">
+								<p>Orden Nro: 360</p>
+							</div>
+							<div class="col-3">
+
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 fecha">
+								<p style="color:gray">11/10/18 20:55</p>
+							</div>
+							<div class="col-6 estado">
+								<p style="color:green">Completado</p>
+							</div>
 						</div>
 					</div>
 				</div>	
@@ -191,137 +278,9 @@
 		</div>
 	</div>
 
-
-
-
-
 </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-<!-- Modal Pedido:Estado -->
-<div class="modal fade modalEstado" id="modalEstado" tabindex="-1" role="dialog" aria-labelledby="modalEstadoTitle" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<!-- <div class="modal-header">
-			
-			</div> -->
-			<div class="modal-body">
-				<i class="fa fa-dizzy"></i>
-				<p>¿Quieres Cancelar tu pedido?</p>
-				<span>(Esta acción no se puede deshacer)</span>
-			</div>
-			<div class="modal-footer">
-				<div class="row">
-					<div class="col-6 si">
-						<span >SI</span>
-					</div>
-					<div class="col-6 no" data-dismiss="modal">
-						<span>NO</span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Modal Pedido:Detalle -->
-<div class="modal fade modalDetalle" id="modalDetalle" tabindex="-1" role="dialog" aria-labelledby="modalDetalleTitle" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<div class="row d-flex align-items-center">
-					<div class="col-6 numero">
-						<p>Pedido #1578</p>
-					</div>
-					<div class="col-6 x" data-dismiss="modal">
-						<p><i class="fa fa-times"></i></p>
-					</div>
-				</div>
-			</div>
-			<div class="modal-body">
-				<div class="titulo1">
-						<span>Detalle</span>
-					</div>
-				<div class="titul">
-					<span>Producto</span>
-				</div>
-				<div class="producto row">
-					<div class="col-2 cantidad">
-						<p>1</p>
-					</div>
-					<div class="col-8 nombre">
-						<p>Barroluco</p>
-					</div>
-					<div class="col-2 precio">
-						<p>$140</p>
-					</div>
-				</div>
-				<div class="producto row">
-					<div class="col-2 cantidad">
-						<p>2</p>
-					</div>
-					<div class="col-8 nombre">
-						<p>Pizza Cuatro Quesos</p>
-					</div>
-					<div class="col-2 precio">
-						<p>$340</p>
-					</div>
-				</div>
-				<div class="producto row">
-					<div class="col-2 cantidad">
-						<p>1</p>
-					</div>
-					<div class="col-8 nombre">
-						<p>Lomo Especial</p>
-					</div>
-					<div class="col-2 precio">
-						<p>$150</p>
-					</div>
-				</div>
-				<br>
-				<div class="titul">
-					<span>Entrega</span>
-				</div>
-				<div class="delivery row">
-					<div class="col-6 tipoEntrega">
-						<p>Delivery</p>
-					</div>
-					<div class="col-6 precioDelivery">
-						<p>$20</p>
-					</div>
-				</div><br>
-				<div class="titul">
-					<span>Dirección</span>
-				</div>
-				<div class="direccion row">
-					<div class="col-12">
-						<p>Angel V. Peñaloza, 221</p>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<div class="total row">
-					<div class="col-6 titulo">
-						<p>Total</p>
-					</div>
-					<div class="col-6 numero">
-						<p>$650</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>

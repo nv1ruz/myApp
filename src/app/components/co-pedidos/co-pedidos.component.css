@@ -149,7 +149,7 @@
     font-size: 14px;
     font-weight: 500;
     padding-left: 10px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 .caja-pedidos .nav-pendientes .pedido .precio{
     font-size: 16px;
@@ -205,8 +205,8 @@
     padding-left: 10px;
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .nombre{  
-    font-size: 18px;
-    font-weight: 400;  
+    font-size: 16px;
+    font-weight: 600;  
     margin-bottom: 8px;
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .nombre span{  
@@ -217,23 +217,26 @@
 .caja-pedidos .nav-aceptados .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
+    color: #969292;
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .direccion p{
     margin-top: -5px;
+    
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .precio{
     text-align: right;
     padding-right: 10px;
     font-size: 16px;
     color: #fa3b7b;
+    font-weight: 600;
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .entrega{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .estado{
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     padding-right: 10px;
     text-align: right;
 }
@@ -251,7 +254,7 @@
 
 
 
-/* -------PEDIDOS: Completados----------- */
+/* -------PEDIDOS: Historial----------- */
 .caja-pedidos .nav-historial .pedido .col-1,
 .caja-pedidos .nav-historial .pedido .col-2,
 .caja-pedidos .nav-historial .pedido .col-3,
@@ -284,14 +287,15 @@
     padding-left: 10px;
 }
 .caja-pedidos .nav-historial .pedido .cliente .nombre{  
-    font-size: 18px;
-    font-weight: 400;  
+    font-size: 16px;
+    font-weight: 600;  
     margin-bottom: 8px;
 }
 .caja-pedidos .nav-historial .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
     margin-top: -5px;
+    color: #969292;
 }
 .caja-pedidos .nav-historial .pedido .fecha{
     font-size: 14px;
@@ -305,6 +309,7 @@
     font-weight: 400;
     padding-right: 10px;
     text-align: right;
+    color: #969292;
 }
 .caja-pedidos .nav-historial .pedido .dato .numero{
     height: 100%;
@@ -312,8 +317,8 @@
 }
 .caja-pedidos .nav-historial .pedido .dato .numero p{
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     padding-right: 10px;
-    color: #969292;
+    color: #fa3b7b;
 }
 

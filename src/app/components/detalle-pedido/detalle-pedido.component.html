@@ -1,0 +1,117 @@
+<!-- BARRA DE NAVEGACION -->
+<div class="caja-nav">   
+  <div class="row">
+    <div class="col-2" style="text-align:left" [routerLink]="['/pedidos']" >
+      <button class="regresar">
+        <i class="fas fa-angle-left"></i>
+      </button>
+    </div>
+
+    <div class="col-8" style="text-align:left">
+      <span class="titulo">Detalle del Pedido</span>
+    </div>
+
+    <div class="col-2"></div>
+  </div>
+</div>
+
+<div class="contenedor">
+	<!-- CABECERA -->
+	<div class="cabecera">
+		<div class="row">
+			<div class="col-8 numeroOrden">
+				<p>ORDEN N° 371</p>
+			</div>
+			<div class="col-4 total">
+				<p>$ 420</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-8 comercio">
+				<p>Rey Del Lomito</p>
+			</div>
+			<div class="col-4 estado">
+				<p style="color:rgb(16, 105, 221)">En Preparación</p>
+			</div>
+		</div>
+	</div>
+	<!-- CUERPO -->
+	<div class="cuerpo">
+		<!-- Productos -->
+		<p class="txtProductos">Productos</p>
+		<div class="productos">
+			<div class="row">
+				<div class="col-1 cantidad">
+					<p>3</p>
+				</div>
+				<div class="col-8 nombre">
+					<p>Pizza Napolitana</p>
+					<p class="aclaracion">sin oregano</p>
+				</div>
+				<div class="col-3 precio">
+					<p>$ 450</p>
+				</div>
+			</div>
+		</div>
+		<div class="productos">
+			<div class="row">
+				<div class="col-1 cantidad">
+					<p>1</p>
+				</div>
+				<div class="col-8 nombre">
+					<p>Lomo Especial con Papas</p>
+					<p class="aclaracion"></p>
+				</div>
+				<div class="col-3 precio">
+					<p>$ 150</p>
+				</div>
+			</div>
+		</div>
+		<div class="productos">
+			<div class="row">
+				<div class="col-1 cantidad">
+					<p>2</p>
+				</div>
+				<div class="col-8 nombre">
+					<p>Pizza Comun</p>
+					<p class="aclaracion">1 sin oregano</p>
+				</div>
+				<div class="col-3 precio">
+					<p>$ 200</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Entrega -->
+		<p class="txtEntrega">Entrega</p>
+		<div class="entrega">
+			<div class="row">
+				<div class="col-9 tipo">
+					<p>Delivery</p>
+				</div>
+				<div class="col-3 precio">
+					<p>$ 15</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-8 direccion">
+					<p>B° Centro</p>
+					<p>Av. Luis Vernet, 1230</p>
+				</div>
+				<div class="col-4 btnMapa">
+					<p>Ver Mapa</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- BOTON CANCELAR PEDIDO -->
+	<div class="caja-boton fixed-bottom">
+		<button class="btnCancelar">
+			<span>Cancelar el Pedido</span>
+		</button>
+	</div>
+
+</div>

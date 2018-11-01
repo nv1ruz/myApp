@@ -90,11 +90,12 @@
     margin-bottom: 0;
 }
 .caja-pedidos .pedido{
-    padding: 10px 0;
+    padding: 5px 0;
     border-bottom: 1px solid #cccccc;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
+    margin-bottom: 5px;
 }
 .caja-pedidos .pedido .row{
     flex-wrap: nowrap;
@@ -102,9 +103,18 @@
 }
 
 /* -------PEDIDOS: En Curso----------- */
-.caja-pedidos .nav-encurso .pedido .col-7,
+.caja-pedidos .nav-encurso .pedido .col-1,
+.caja-pedidos .nav-encurso .pedido .col-2,
 .caja-pedidos .nav-encurso .pedido .col-3,
-.caja-pedidos .nav-encurso .pedido .col-2{
+.caja-pedidos .nav-encurso .pedido .col-4,
+.caja-pedidos .nav-encurso .pedido .col-5,
+.caja-pedidos .nav-encurso .pedido .col-6,
+.caja-pedidos .nav-encurso .pedido .col-7,
+.caja-pedidos .nav-encurso .pedido .col-8,
+.caja-pedidos .nav-encurso .pedido .col-9,
+.caja-pedidos .nav-encurso .pedido .col-10,
+.caja-pedidos .nav-encurso .pedido .col-11,
+.caja-pedidos .nav-encurso .pedido .col-12{
     padding: 0;
 }
 .caja-pedidos .nav-encurso .pedido .imagen{
@@ -115,48 +125,56 @@
 .caja-pedidos .nav-encurso .pedido img{
     width: 80%;
 }
-.caja-pedidos .nav-encurso .pedido .cliente{
+.caja-pedidos .nav-encurso .pedido .comercio{
     padding-left: 10px;
 }
-.caja-pedidos .nav-encurso .pedido .cliente .nombre{  
-    font-size: 18px;
-    font-weight: 400;  
+.caja-pedidos .nav-encurso .pedido .comercio .nombre{  
+    font-size: 16px;
+    font-weight: 600;  
 }
-.caja-pedidos .nav-encurso .pedido .cliente .numero{
+.caja-pedidos .nav-encurso .pedido .comercio .numeroOrden{
     font-size: 14px;
     font-weight: 400;
+}
+.caja-pedidos .nav-encurso .pedido .comercio .numeroOrden p{
     margin-top: -5px;
     margin-bottom: 5px;
 }
-.caja-pedidos .nav-encurso .pedido .cliente .estado{
+.caja-pedidos .nav-encurso .pedido .comercio .fecha{
     font-size: 14px;
     font-weight: 400;
-    color: #1fbd3a;
 }
-.caja-pedidos .nav-encurso .pedido .dato .precio{
-    height: 50%;
+.caja-pedidos .nav-encurso .pedido .comercio .estado{
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 10px;
     text-align: right;
-    padding-right: 20%;
 }
-.caja-pedidos .nav-encurso .pedido .dato .precio p{
+.caja-pedidos .nav-encurso .pedido .comercio .precio{
+    height: 100%;
+    text-align: right
+}
+.caja-pedidos .nav-encurso .pedido .comercio .precio p{
     font-size: 18px;
     font-weight: 500;
+    padding-right: 10px;
     color: #fa3b7b;
 }
-.caja-pedidos .nav-encurso .pedido .dato .delivery{
-    height: 50%;
-}
-.caja-pedidos .nav-encurso .pedido .dato .delivery p{
-    text-align: right;
-    color: green;
-    padding-right: 20%;
-    line-height: 2;
-}
 
-/* -------PEDIDOS: En Curso----------- */
-.caja-pedidos .nav-historial .pedido .col-7,
+
+/* -------PEDIDOS: Historial----------- */
+.caja-pedidos .nav-historial .pedido .col-1,
+.caja-pedidos .nav-historial .pedido .col-2,
 .caja-pedidos .nav-historial .pedido .col-3,
-.caja-pedidos .nav-historial .pedido .col-2{
+.caja-pedidos .nav-historial .pedido .col-4,
+.caja-pedidos .nav-historial .pedido .col-5,
+.caja-pedidos .nav-historial .pedido .col-6,
+.caja-pedidos .nav-historial .pedido .col-7,
+.caja-pedidos .nav-historial .pedido .col-8,
+.caja-pedidos .nav-historial .pedido .col-9,
+.caja-pedidos .nav-historial .pedido .col-10,
+.caja-pedidos .nav-historial .pedido .col-11,
+.caja-pedidos .nav-historial .pedido .col-12{
     padding: 0;
 }
 .caja-pedidos .nav-historial .pedido .imagen{
@@ -167,143 +185,38 @@
 .caja-pedidos .nav-historial .pedido img{
     width: 80%;
 }
-.caja-pedidos .nav-historial .pedido .cliente{
+.caja-pedidos .nav-historial .pedido .comercio{
     padding-left: 10px;
 }
-.caja-pedidos .nav-historial .pedido .cliente .nombre{  
-    font-size: 18px;
-    font-weight: 400;  
+.caja-pedidos .nav-historial .pedido .comercio .nombre{  
+    font-size: 16px;
+    font-weight: 600;  
 }
-.caja-pedidos .nav-historial .pedido .cliente .numero{
+.caja-pedidos .nav-historial .pedido .comercio .numeroOrden{
     font-size: 14px;
     font-weight: 400;
+}
+.caja-pedidos .nav-historial .pedido .comercio .numeroOrden p{
     margin-top: -5px;
     margin-bottom: 5px;
 }
-.caja-pedidos .nav-historial .pedido .cliente .estado{
+.caja-pedidos .nav-historial .pedido .comercio .fecha{
     font-size: 14px;
     font-weight: 400;
 }
-.caja-pedidos .nav-historial .pedido .dato .precio{
-    height: 50%;
-    text-align: right;
-    padding-right: 20%;
-}
-.caja-pedidos .nav-historial .pedido .dato .precio p{
-    font-size: 18px;
+.caja-pedidos .nav-historial .pedido .comercio .estado{
+    font-size: 14px;
     font-weight: 500;
-    color: #fa3b7b;
-}
-.caja-pedidos .nav-historial .pedido .dato .delivery{
-    height: 50%;
-}
-.caja-pedidos .nav-historial .pedido .dato .delivery p{
+    padding-right: 10px;
     text-align: right;
-    color: green;
-    padding-right: 20%;
-    line-height: 2;
 }
-
-
-
-
-/* Modal Estado */
-.modalEstado .modal-dialog{
-    margin-top: 55px;
+.caja-pedidos .nav-historial .pedido .comercio .precio{
+    height: 100%;
+    text-align: right
 }
-.modalEstado .modal-content{
-    font-family: 'Roboto', sans-serif;
-    background-color: #fa3b7b;
-}
-.modalEstado .modal-body{
-    text-align: center
-}
-.modalEstado .modal-body i{
-    color: rgb(240, 240, 240);
-    font-size: 100px;
-    margin: 5px auto 10px auto;
-}
-.modalEstado .modal-footer{
-    padding: 10px;
-    text-align: center;
-    display: block;
-}
-.modalEstado .modal-footer .si{
-    border-right: 1px solid #e1e1e1;
-}
-.modalEstado .modal-body p{
-    color: #fff;
-    font-size: 19px;
-}
-.modalEstado .modal-body span{
-    color: #fff;
-    font-size: 14px;
-}
-.modalEstado .modal-footer span{
-    color: #fff;
-    font-size: 20px;
+.caja-pedidos .nav-historial .pedido .comercio .precio p{
+    font-size: 16px;
     font-weight: 400;
-}
-
-/* Modal Detalle */
-.modalDetalle .modal-dialog{
-    margin-top: 55px;
-}
-.modalDetalle .modal-content{
-    font-family: 'Roboto', sans-serif;
-}
-.modalDetalle .modal-header {
-    padding: 10px 5px;
-    display: block;
-    background-color: #fa3b7b;
-}
-.modalDetalle .modal-header .numero{
-    padding-left: 5px;
-}
-.modalDetalle .modal-header .numero p{
-    font-size: 17px;
-    font-weight: 550;
-    color: #fff;
-}
-.modalDetalle .modal-header .x {
-    text-align: right;
-}
-.modalDetalle .modal-header .x p{
-    font-size: 22px;
-    font-weight: 550;
-    color: #fff;
-}
-.modalDetalle .modal-body {
-    padding: 5px;
-}
-.modalDetalle .modal-body .titulo1{
+    padding-right: 10px;
     color: #fa3b7b;
-    text-align: center;
-    border-bottom: 1px solid #fa3b7b;
-    text-transform: uppercase;
-    font-weight: bold;
-
-}
-.modalDetalle .modal-body .titul{
-    margin: 5px;
-    text-transform: uppercase;
-    color: #fa3b7b;
-}
-
-.modalDetalle .modal-body .producto .nombre {
-    padding-left: 5px;
-}
-.modalDetalle .modal-body .delivery .precioDelivery{
-    text-align: right;
-}
-.modalDetalle .modal-footer {
-    padding: 10px 5px;
-    display: block;
-    background-color: #fa3b7b;
-    text-align: right;
-}
-.modalDetalle .modal-footer p{
-    font-size: 17px;
-    font-weight: 550;
-    color: #fff;
 }

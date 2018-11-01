@@ -25,3 +25,4 @@ export { DireccionComponent } from './direccion/direccion.component';
 export { PedidosComponent } from './pedidos/pedidos.component';
 export { RegisterComercioComponent } from './register-comercio/register-comercio.component';
 export { FavoritosComponent } from './favoritos/favoritos.component';
+export { DetallePedidoComponent } from './detalle-pedido/detalle-pedido.component';

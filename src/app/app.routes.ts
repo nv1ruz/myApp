@@ -20,7 +20,8 @@ import {
     RegisterComercioComponent,
     FavoritosComponent,
     PruebaComponent,
-    CoPedidosComponent
+    CoPedidosComponent,
+    DetallePedidoComponent
  } from './components/index.paginas';
 
 const ROUTES: Routes = [
@@ -46,6 +47,7 @@ const ROUTES: Routes = [
     { path: 'favoritos', component: FavoritosComponent },
     { path: 'prueba', component: PruebaComponent },
     { path: 'co-pedidos', component: CoPedidosComponent },
+    { path: 'detalle-pedido', component: DetallePedidoComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
