@@ -57,6 +57,7 @@ import { CategoriaComponent } from './components/categoria/categoria.component';
 import { CoPedidosComponent } from './components/co-pedidos/co-pedidos.component';
 import { DialogComponent } from './components/categoria/dialog/dialog.component';
 import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedido.component';
+import { DetalleCoPedidoComponent } from './components/detalle-co-pedido/detalle-co-pedido.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedi
     CategoriaComponent,
     CoPedidosComponent,
     DialogComponent,
-    DetallePedidoComponent
+    DetallePedidoComponent,
+    DetalleCoPedidoComponent
   ],
   imports: [
     BrowserModule,

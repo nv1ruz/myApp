@@ -69,7 +69,7 @@
 .cabecera {
     background-color: #fff;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 10px 0 10px;
     margin-bottom: 5px;
     box-shadow: 0px 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
 }
@@ -90,6 +90,8 @@
     font-weight: 500;
     /* color: #fa3b7b; */
     color: #7e7d7d;
+    display:flex;
+    align-items: center;
 }
 .cabecera .estado {
     font-size: 14px;
@@ -106,6 +108,7 @@
     margin-bottom: 5px;
 }
 .cuerpo .txtProductos,
+.cuerpo .txtCliente,
 .cuerpo .txtEntrega {
     background-color: #fff;
     font-size: 14px;
@@ -113,7 +116,30 @@
     border-bottom: 1px solid #f4f4f4;
     text-transform: uppercase;
     padding: 5px 0;
-    margin: 10px 0;
+    margin-bottom: 10px;
+}
+/* ------CLIENTE-------- */
+.cuerpo .cliente {
+    padding: 5px 15px;
+}
+.cuerpo .cliente .icono {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+.cuerpo .cliente .datos .nombre{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.cuerpo .cliente .datos .aclaracion{
+    font-size: 14px;
+    color: gray;
+    margin-top: -5px;
+}
+.cuerpo .cliente .precio{
+    text-align: right;
+    font-size: 14px;
 }
 
 /* ------PRODUCTOS-------- */

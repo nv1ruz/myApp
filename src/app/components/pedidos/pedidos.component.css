@@ -156,7 +156,7 @@
 }
 .caja-pedidos .nav-encurso .pedido .comercio .precio p{
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     padding-right: 10px;
     color: #fa3b7b;
 }
@@ -218,5 +218,5 @@
     font-size: 16px;
     font-weight: 400;
     padding-right: 10px;
-    color: #fa3b7b;
+    color: gray;
 }

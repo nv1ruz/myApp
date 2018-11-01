@@ -1,18 +1,18 @@
 <!-- BARRA DE NAVEGACION -->
 <div class="caja-nav">   
-  <div class="row">
-    <div class="col-2" style="text-align:left" [routerLink]="['/pedidos']" >
-      <button class="regresar">
-        <i class="fas fa-angle-left"></i>
-      </button>
-    </div>
-
-    <div class="col-8" style="text-align:left">
-      <span class="titulo">Detalle del Pedido</span>
-    </div>
-
-    <div class="col-2"></div>
-  </div>
+	<div class="row">
+	  <div class="col-2" style="text-align:left" [routerLink]="['/co-pedidos']" >
+		<button class="regresar">
+		  <i class="fas fa-angle-left"></i>
+		</button>
+	  </div>
+  
+	  <div class="col-8" style="text-align:left">
+		<span class="titulo">Detalle del Pedido</span>
+	  </div>
+  
+	  <div class="col-2"></div>
+	</div>
 </div>
 
 <div class="contenedor">
@@ -22,19 +22,41 @@
 			<div class="col-8 numeroOrden">
 				<p>ORDEN N° 371</p>
 			</div>
-			<div class="col-4 total">
-				<p>$ 420</p>
+			<div class="col-4 estado">
+				<p>11/10/18</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-8 comercio">
-				<p>Rey Del Lomito</p>
+				<p style="color:green">En Camino</p>
 			</div>
-			<div class="col-4 estado">
-				<p style="color:rgb(16, 105, 221)">En Preparación</p>
+			<div class="col-4 total">
+				<p>$ 420</p>
 			</div>
 		</div>
 	</div>
+
+	<!-- CUERPO-->
+	<div class="cuerpo">
+		<!-- Cliente -->
+		<p class="txtCliente">Cliente</p>
+		<div class="cliente">
+			<div class="row">
+				<div class="col-1 icono">
+					<i class="fa fa-user"></i>
+				</div>
+				<div class="col-8 datos">
+					<p class="nombre">Franco Martinez</p>
+					<p class="aclaracion">3826403155</p>
+					<p class="aclaracion">fd.martinezfranco@gmail.com</p>
+				</div>
+				<div class="col-3 precio">
+					<a href="tel:+1-303-499-7111">Llamar</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 	<!-- CUERPO -->
 	<div class="cuerpo">
 		<!-- Productos -->
@@ -107,13 +129,13 @@
 			</div>
 		</div>
 	</div>
-
-
+  
+  
 	<!-- BOTON CANCELAR PEDIDO -->
 	<div class="caja-boton fixed-bottom">
 		<button class="btnCancelar">
 			<span>Cancelar el Pedido</span>
 		</button>
 	</div>
-
+  
 </div>

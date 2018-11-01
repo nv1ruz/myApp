@@ -150,6 +150,8 @@
     font-weight: 500;
     padding-left: 10px;
     /* margin-top: 5px; */
+    display: flex;
+    align-items: center;
 }
 .caja-pedidos .nav-pendientes .pedido .precio{
     font-size: 16px;
@@ -229,6 +231,7 @@
     font-size: 16px;
     color: #fa3b7b;
     font-weight: 600;
+    
 }
 .caja-pedidos .nav-aceptados .pedido .cliente .entrega{
     font-size: 14px;
