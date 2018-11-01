@@ -85,10 +85,9 @@
     color: #fa3b7b;
     font-weight: 600;
 }
-.cabecera .comercio {
+.cabecera .fecha {
     font-size: 14px;
     font-weight: 500;
-    /* color: #fa3b7b; */
     color: #7e7d7d;
 }
 .cabecera .estado {
@@ -96,6 +95,7 @@
     font-weight: 500;
     text-align: right;
 }
+
 
 /* -------CUERPO------- */
 .cuerpo {
@@ -106,6 +106,7 @@
     margin-bottom: 5px;
 }
 .cuerpo .txtProductos,
+.cuerpo .txtCliente,
 .cuerpo .txtEntrega {
     background-color: #fff;
     font-size: 14px;
@@ -113,10 +114,43 @@
     border-bottom: 1px solid #f4f4f4;
     text-transform: uppercase;
     padding: 5px 0;
-    margin: 10px 0;
 }
 
-/* ------PRODUCTOS-------- */
+
+/* ------CLIENTE-------- */
+.cuerpo .cliente {
+    padding: 5px 15px;
+}
+.cuerpo .cliente .icono {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+.cuerpo .cliente .caja-datos .nombre{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.cuerpo .cliente .caja-datos .contacto p{
+    font-size: 14px;
+    color: gray;
+    margin-top: -5px;
+}
+.cuerpo .cliente .caja-datos .llamar{
+    padding: 5px 10px;
+    background-color: #fa3b7b;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+.cuerpo .cliente .caja-datos .llamar a{
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ------PRODUCTO-------- */
 .cuerpo .productos {
     padding: 5px 15px;
 }

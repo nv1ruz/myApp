@@ -69,7 +69,7 @@
 .cabecera {
     background-color: #fff;
     border-radius: 5px;
-    padding: 5px 10px 0 10px;
+    padding: 5px 10px;
     margin-bottom: 5px;
     box-shadow: 0px 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
 }
@@ -85,14 +85,14 @@
     color: #fa3b7b;
     font-weight: 600;
 }
-.cabecera .estado {
+.cabecera .fecha {
     font-size: 14px;
     font-weight: 500;
     color: #7e7d7d;
     display:flex;
     align-items: center;
 }
-.cabecera .fecha {
+.cabecera .estado {
     font-size: 14px;
     font-weight: 500;
     text-align: right;
@@ -148,6 +148,7 @@
 .cuerpo .cliente .caja-datos .llamar a{
     font-size: 14px;
     color: #fff;
+    text-decoration: none;
 }
 
 /* ------PRODUCTOS-------- */
@@ -176,7 +177,7 @@
 /* -------ENTREGA------- */
 .cuerpo .entrega {
     padding: 5px 15px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 .cuerpo .entrega .tipo{
     margin-bottom: 10px;
@@ -206,28 +207,49 @@
 
 
 
-/* -------BOTON CANCELAR PEDIDO-------- */
+/* -------CAJA DEL BOTON-------- */
 .caja-boton{
     background-color: rgba(255, 255, 255, 0.445);
     padding: 10px 10px;
     text-align: center;
 }
-.caja-boton button.btnCancelar{
+
+/* ------BOTON RECHAZAR------ */
+.caja-boton button.btnRechazar{
     padding: 0;
     margin: 0;
     width: 100%;
     height: 45px;
-    color: #fa3b7b;
-    /* background-color: #1c65c4; */
-    background-color: #f4f4f4;
+    color: #fff;
+    background-color: rgb(187, 1, 1);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;  
-    border: 1px solid #fa3b7b;
+    border: 1px solid rgb(187, 1, 1);
     border-radius: 5px;
     outline: 0;
 }
-.caja-boton button.btnCancelar:hover{
-    background-color: #fa3b7b;
+.caja-boton button.btnRechazar:hover{
+    background-color: rgb(255, 0, 0);
+    color: #fff;
+}
+
+/* ------BOTON ACEPTAR------ */
+.caja-boton button.btnAceptar{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 45px;
+    color: #fff;
+    background-color: rgb(0, 185, 0);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;  
+    border: 1px solid rgb(0, 185, 0);
+    border-radius: 5px;
+    outline: 0;
+}
+.caja-boton button.btnAceptar:hover{
+    background-color: rgb(0, 255, 0);
     color: #fff;
 }
