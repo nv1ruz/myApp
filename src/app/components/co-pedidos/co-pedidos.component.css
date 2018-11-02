@@ -43,16 +43,20 @@
     margin-bottom: 0;
     display: flex;
     font-family: 'Roboto', sans-serif;
+    
+    background-color: #fa3b7b;
 }
 .tab p{
     margin-bottom: 0;
     line-height: 1.2;
 }
 .tab a.active{
-    color: #fa3b7b!important;
+    background-color: #fc588f!important;
     border-radius: 0;
     border: 0;
-    border-bottom: 1px solid #fa3b7b;
+    /* border-bottom: 1px solid #fa3b7b; */
+
+    color: #fff;
 }
 .tab .item{
     width: 33.33%;  
@@ -60,18 +64,20 @@
     padding: 10px 0;
 }
 .tab a.item{
-    color: #000;
+    /* color: #000; */
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
     font-weight: 500;
     text-align: center;
-    /* letter-spacing: 0.75pt; */
     cursor: pointer;
     transition: all .3s ease;
+
+    background-color: #fa3b7b;
+    color: #fff;
 }
 .tab a.item:hover{
-    background-color: #fff;
-    color: #fa3b7b;
+    background-color: #fc588f;
+    color: #fff;
 }
 
 

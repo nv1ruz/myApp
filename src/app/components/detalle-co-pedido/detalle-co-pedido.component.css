@@ -41,7 +41,7 @@
 .contenedor{
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
-    padding: 5px 5px 25% 5px;
+    padding: 5px 5px 65px 5px;
 }
 .contenedor .col-1,
 .contenedor .col-2,
@@ -116,6 +116,7 @@
     text-transform: uppercase;
     padding: 5px 0;
     margin-bottom: 10px;
+    color: #fa3b7b;
 }
 
 /* ------CLIENTE-------- */

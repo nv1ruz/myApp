@@ -11,6 +11,7 @@ export { CategoriaComponent } from './categoria/categoria.component';
 export { ProductoComponent } from './producto/producto.component';
 export { CoPedidosComponent } from './co-pedidos/co-pedidos.component';
 export { DetalleCoPedidoComponent } from './detalle-co-pedido/detalle-co-pedido.component';
+export { CoConfigComponent } from './co-config/co-config.component';
 
 
 export { CategoriasComponent } from './categorias/categorias.component';
