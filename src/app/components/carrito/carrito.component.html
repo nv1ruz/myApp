@@ -125,7 +125,7 @@
 			<div class="col-8 total-numero">
 				<p>{{ precioTotal | currency }}</p>
 			</div>
-			<div class="row confirmar m-0 align-items-center">
+			<div class="row confirmar m-0 align-items-center" [routerLink]="['/pedido-completado']">
 				<div class="col-12">
 					<span><i class="fas fa-concierge-bell"></i> Enviar pedido</span>
 				</div>

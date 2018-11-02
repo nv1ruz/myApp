@@ -1,0 +1,47 @@
+<!-- BARRA DE NAVEGACION -->
+<div class="caja-nav">    
+	<div class="row">
+		<div class="col-3" style="text-align:left">
+			<button class="menu">
+				<i class="fas fa-bars"></i>
+			</button>
+		</div>
+
+		<div class="col-6">
+			<span class="titulo">Aviso Importante</span>
+		</div>
+		
+		<div class="col-3"></div>
+	</div>
+</div>
+
+<!-- CONTENIDO -->
+<div class="contenido animated fadeIn fast">
+	<i class="fa fa-clipboard-check"></i>
+		<p class="uno">Pedido Completado</p>
+	<div class="texto">
+		<p>Felicidades! Completaste tu pedido. Puedes seguir su Estado en <span class="titulo">"Mis Pedidos"</span></p>
+	</div>
+	<div class="txtNroOrden">
+		<p>Tu Nro de Orden:</p>
+	</div>
+	<div class="nroOrden">
+		<p>#352</p>
+	</div>
+</div>
+
+<!-- SALUDO -->
+<div class="saludo animated fadeIn fast">
+	<i class="fa fa-grin-beam"></i>
+	<div class="texto">
+		<p>¡Gracias!</p>
+	</div>
+</div>
+
+
+<!-- BOTON IR A PEDIDOS -->
+<div class="caja-boton fixed-bottom">
+  <button class="btnMisPedidos" [routerLink]="['/pedidos']">
+    <span>Ir a Mis Pedidos</span>
+  </button>
+</div>

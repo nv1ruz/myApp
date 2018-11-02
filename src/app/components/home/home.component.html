@@ -1,7 +1,5 @@
 <div class="caja-nav">    
-
 	<div class="row">
-
 		<div class="col-3" *ngIf="this.ap.exist" style="text-align:left" (click)="this.ap._toggleOpened()">
 			<button class="menu">
 				<i class="fas fa-bars"></i>
@@ -9,23 +7,17 @@
     	</div>
 		<div class="col-3" *ngIf="!this.ap.exist"></div>
 
-
 		<div class="col-6">
 			<span class="titulo"><i class="fas fa-car"></i> MyApp</span>
 		</div>
 		
-
 		<div class="col-3" *ngIf="this.ap.exist"></div>
 		<div class="col-3" *ngIf="!this.ap.exist" [routerLink]="['/login']">
 			<button class="btnLogin">
 				<span>Ingresar</span>
 			</button>
 		</div>
-
-
-
 	</div>
-		
 </div>
 
 

@@ -3,6 +3,7 @@ export { LoginComponent } from './login/login.component';
 export { ComercioComponent } from './comercio/comercio.component';
 export { RegisterComponent } from './register/register.component';
 export { CarritoComponent } from './carrito/carrito.component';
+export { PedidoCompletadoComponent } from './pedido-completado/pedido-completado.component';
 
 export { MiComercioComponent } from './mi-comercio/mi-comercio.component';
 export { MenuComponent } from './menu/menu.component';

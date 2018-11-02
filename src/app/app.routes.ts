@@ -22,7 +22,8 @@ import {
     PruebaComponent,
     CoPedidosComponent,
     DetallePedidoComponent,
-    DetalleCoPedidoComponent
+    DetalleCoPedidoComponent,
+    PedidoCompletadoComponent
  } from './components/index.paginas';
 
 const ROUTES: Routes = [
@@ -50,6 +51,7 @@ const ROUTES: Routes = [
     { path: 'co-pedidos', component: CoPedidosComponent },
     { path: 'detalle-pedido', component: DetallePedidoComponent },
     { path: 'detalle-co-pedido', component: DetalleCoPedidoComponent },
+    { path: 'pedido-completado', component: PedidoCompletadoComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
