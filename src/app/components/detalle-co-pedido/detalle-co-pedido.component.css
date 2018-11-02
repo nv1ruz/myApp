@@ -41,7 +41,7 @@
 .contenedor{
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 25% 5px;
 }
 .contenedor .col-1,
 .contenedor .col-2,
@@ -177,7 +177,6 @@
 /* -------ENTREGA------- */
 .cuerpo .entrega {
     padding: 5px 15px;
-    margin-bottom: 60px;
 }
 .cuerpo .entrega .tipo{
     margin-bottom: 10px;
@@ -209,7 +208,6 @@
 
 /* -------CAJA DEL BOTON-------- */
 .caja-boton{
-    background-color: rgba(255, 255, 255, 0.445);
     padding: 10px 10px;
     text-align: center;
 }

@@ -46,6 +46,7 @@
 }
 .tab p{
     margin-bottom: 0;
+    line-height: 1.2;
 }
 .tab a.active{
     color: #fa3b7b!important;

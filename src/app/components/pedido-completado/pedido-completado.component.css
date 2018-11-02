@@ -6,7 +6,7 @@
     max-height: 55px;
     text-align: center;
 }
-.caja-nav .col-3{
+.caja-nav .col-2{
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -35,13 +35,15 @@
     font-weight: 500;  
 }
 
+
+
 /* -----------CONTENIDO-------------- */
 .contenido {
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     margin-top: 0;
     width: 80%;
-    padding: 20% 10px 10px 10px;
+    padding: 25% 10px 10px 10px;
     text-align: center;
     box-shadow: 0 3px 4px 0 green, 0 1px 1px -2px green;
     border-radius: 0  0 20px 20px;
@@ -52,7 +54,7 @@
 .contenido i {
     color: green ;
     font-size: 70px;
-    margin-bottom: 20px;
+    margin-bottom: 10%;
 }
 .contenido .uno {
     font-size: 25px;
@@ -84,10 +86,10 @@
 }
 
 /* ------SALUDO------ */
-.saludo {
+/* .saludo {
     width: 80%;
     text-align: center;
-    margin: 10% auto 70px auto;
+    margin: 5% auto 20% auto;
 }
 .saludo i{
     font-size: 50px;
@@ -96,7 +98,7 @@
 .saludo .texto{
     font-size: 25px;
     font-weight: 400;
-}
+} */
 
 
 /* ------BOTON VER MIS PEDIDOS-------- */
