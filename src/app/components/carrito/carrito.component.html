@@ -86,30 +86,72 @@
 				<div class="col-2 cant-prod">
 					<i class="fas fa-shipping-fast"></i>
 				</div>
-				<div class="col-auto input-field select"> 
-					<select class="custom-select" (click)="sumarTotal(); mostrarOcultarDireccion()" id="cambiarentrega" name="cambiarentrega" required>
+				<div class="col-8 input-field select"> 
+					<!-- <select class="custom-select" (click)="sumarTotal(); mostrarOcultarDireccion()" id="cambiarentrega" name="cambiarentrega" required>
 						<option value="0" disabled selected>Forma de entrega</option>
 						<option value="1" *ngIf="comercio.delivery == true" >Delivery</option>
 						<option value="2" >Retiro por el local</option>
-					</select>
+					</select> -->
+
+					<mat-form-field>
+						<mat-select placeholder="Forma de entrega" [formControl]="entrega">
+							<mat-option value="0" (click)="sumarTotal()">Retiro en local</mat-option>
+							<mat-option value="1" (click)="sumarTotal()">Delivery ${{ comercio.deliveryPrecio }}</mat-option>
+						</mat-select>
+					</mat-form-field>
 				</div>
-				<div class="col prec-prod">
+				<div class="col-2 prec-prod">
 					<p class="valordelivery" *ngIf="comercio.delivery == true">$ {{ comercio.deliveryPrecio }}</p>
+				</div>
+			</div>
+
+			<div class="card-header row" *ngIf="entrega.value == 1">
+				<div class="col-2 cant-prod">
+					<i class="fas fa-map-marker-alt"></i>
+				</div>
+				<div class="col-8 input-field select">
+					<!-- <select class="custom-select" required>
+						<option value="" disabled selected>Selecciona la dirección</option>
+						<option *ngFor="let domicilio of domicilios" [value]="0">{{domicilio.calle}}, {{domicilio.numero}}</option>
+					</select> -->
+
+
+					<mat-form-field>
+						<mat-select placeholder="Dirección de entrega" [formControl]="direccion">
+								<mat-option *ngFor="let direccion of domicilios"
+								value="{{ direccion.id }}">{{ direccion.calle }}, {{ direccion.numero }}
+							</mat-option>
+						</mat-select>
+					</mat-form-field>
+
+				</div>
+				<div class="col-2 center" (click)="nuevaDireccion()" *ngIf="!max">
+					<i class="fa fa-plus"></i>
 				</div>
 			</div>
 		</div>
 		<!-- SECCION: DIRECCION -->
-		<p class="txtSubtitulo direcc">Dirección</p>
-		<div class="form-entrega animated fadeIn" id="direcc" >
+		<p class="txtSubtitulo direcc" *ngIf="entrega.value == 5">Dirección</p>
+		<div class="form-entrega animated fadeIn" id="direcc" *ngIf="entrega.value == 4">
 			<div class="card-header row">
 				<div class="col-2 cant-prod">
 					<i class="fas fa-map-marker-alt"></i>
 				</div>
 				<div class="col-8 input-field select">
-					<select class="custom-select" required>
+					<!-- <select class="custom-select" required>
 						<option value="" disabled selected>Selecciona la dirección</option>
 						<option *ngFor="let domicilio of domicilios" [value]="0">{{domicilio.calle}}, {{domicilio.numero}}</option>
-					</select>
+					</select> -->
+
+
+					<mat-form-field>
+						<mat-select placeholder="Dirección de entrega" [formControl]="direccion">
+						  	<mat-option *ngFor="let direccion of domicilios"
+								value="{{ direccion.id }}">{{ direccion.calle }}, {{ direccion.numero }}
+							</mat-option>
+						</mat-select>
+					</mat-form-field>
+
 				</div>
 				<div class="col-2 center" (click)="nuevaDireccion()" *ngIf="!max">
 					<i class="fa fa-plus"></i>
@@ -125,8 +167,8 @@
 			<div class="col-8 total-numero">
 				<p>{{ precioTotal | currency }}</p>
 			</div>
-			<div class="row confirmar m-0 align-items-center" [routerLink]="['/pedido-completado']">
-				<div class="col-12">
+			<div class="row confirmar m-0 align-items-center">
+				<div class="col-12" (click)="enviarPedido()">
 					<span><i class="fas fa-concierge-bell"></i> Enviar pedido</span>
 				</div>
 			</div>

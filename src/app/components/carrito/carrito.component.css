@@ -249,13 +249,13 @@
     width: auto;
 }
 p.direcc{
-    display: none;
+    /* display: none; */
 }
 div#direcc{
-    display: none;
+    /* display: none; */
 }
 p.valordelivery {
-    display: none;
+    /* display: none; */
 }
 
 /* ----------PIE DEL CARRITO------------ */

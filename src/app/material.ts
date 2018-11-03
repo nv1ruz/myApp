@@ -5,6 +5,7 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
     imports: [
@@ -12,14 +13,16 @@ import { MatDialogModule } from '@angular/material/dialog';
       MatCheckboxModule, 
       MatIconModule, 
       MatSlideToggleModule,
-      MatDialogModule
+      MatDialogModule,
+      MatSelectModule
     ],
     exports: [
       MatButtonModule, 
       MatCheckboxModule, 
       MatIconModule, 
       MatSlideToggleModule,
-      MatDialogModule
+      MatDialogModule,
+      MatSelectModule
     ]
   })
 

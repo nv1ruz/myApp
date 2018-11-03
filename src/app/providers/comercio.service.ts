@@ -142,4 +142,16 @@ export class ComercioService {
                     .collection( 'categorias' ).doc( categoriaId ).delete();
   }
 
+
+
+
+
+
+  public pedidosComercio( comercioId: string ){
+    return this.afs.collection( 'comercios' ).doc( comercioId )
+                    .collection( 'pedidos' );
+  }
+
+
+
 }
