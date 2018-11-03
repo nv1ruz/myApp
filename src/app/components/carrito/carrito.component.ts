@@ -20,6 +20,7 @@ export class CarritoComponent implements OnInit {
   public comercio:any = {};
   public precioTotal:number = 0;
   public iduser: string = this._fs.usuario.uid;
+  public nuevo:number = 0;
 
   // Validacion de Campos
   rForm: FormGroup;
@@ -143,7 +144,10 @@ export class CarritoComponent implements OnInit {
 
   public sumarTotal(){
     this.precioTotal = 0;
-    if( $('p.valordelivery').is(":visible") ){
+    this.nuevo = $('#cambiarentrega').val();
+    console.log(this.nuevo);
+    // if( $('p.valordelivery').is(":visible") ){
+      if( this.nuevo == 1 ){
       this._cs.carrito.forEach( param => {
         this.precioTotal += parseInt( param.preTot );
       });
