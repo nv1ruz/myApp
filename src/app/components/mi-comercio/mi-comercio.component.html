@@ -52,7 +52,7 @@
 					<h5>Seguidores</h5>
 					<p>3.500</p>
 				</div>
-				<div class="col">
+				<div class="col" *ngIf="comercio.delivery == true">
 					<h5>Delivery</h5>
 					<p>$ {{ comercio.deliveryPrecio }}</p> 
 				</div>
@@ -81,23 +81,23 @@
 		</div>
 	</div>
 
-  <div class="item" [routerLink]="['categorias']">
+  <!-- <div class="item" [routerLink]="['categorias']">
     <div class="texto">
       <span>Categorías</span>
     </div>
     <div class="icono">
       <i class="fas fa-chevron-right"></i>
     </div>
-  </div>
+  </div> -->
 
-  <div class="item" [routerLink]="['productos']">
+  <!-- <div class="item" [routerLink]="['productos']">
     <div class="texto">
       <span>Productos</span>
     </div>
     <div class="icono">
       <i class="fas fa-chevron-right"></i>
     </div>
-  </div>
+  </div> -->
 
   <div class="item" [routerLink]="['/co-config']">
     <div class="texto">

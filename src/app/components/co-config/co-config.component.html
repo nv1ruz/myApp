@@ -83,6 +83,7 @@
 					</div>
 					<div class="col-6 btnToggle">
 						<mat-slide-toggle
+							(click)="estado( comercioId )"
 							class="example-margin"
 							color="primary"
 							[checked]="estadoDelivery"
@@ -96,7 +97,7 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="basic-addon1">$</span>
 							</div>
-							<input type="text" class="form-control" placeholder="15" value="{{ comercio.deliveryPrecio }}" aria-label="precioDelivery" aria-describedby="basic-addon1" #pDel disabled>
+							<input type="text" class="form-control" placeholder="15" value="{{ comercio.deliveryPrecio }}" aria-label="precioDelivery" aria-describedby="basic-addon1" #pDel>
 						</div>
 					</div>
 				</div>
@@ -147,7 +148,7 @@
 					</div>
 					<input type="text" class="form-control" placeholder="" value="{{ comercio.numero }}" aria-label="numero" aria-describedby="basic-addon1" #nume>
 				</div>
-				<span>Seleccioná tu ubicación</span>
+				<span>Selecciona tu ubicación</span>
 				<agm-map [latitude]="-30.361148" [longitude]="-66.314116" [zoom]="15">
 					<agm-marker [latitude]="-30.361148" [longitude]="-66.314116"></agm-marker>
 				</agm-map>

@@ -25,8 +25,8 @@ export class ComercioService {
                         });
   }
 
-  // cambia el estado (abierto/cerrado) del comercio (Firebase)
-  public estadoDelivery( comercioId: string, estado:boolean ){
+  // cambia el estado (Si/No) del Delivery del comercio (Firebase)
+  public esDelivery( comercioId: string, estado:boolean ){
     this.afs.collection( 'comercios' ).doc( comercioId ).update({
                           delivery: estado
                         })

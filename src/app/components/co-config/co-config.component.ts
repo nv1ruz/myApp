@@ -21,7 +21,7 @@ export class CoConfigComponent implements OnInit {
 
   constructor( public ap: AppComponent, private _cs: ComercioService, private _as: AutenticacionService, private _us: UsuarioService, public _fs: FirebaseService ) { }
 
-  ngOnInit() {
+  ngOnInit() { 
 
     this._us.afAuth.authState.subscribe( user => {
       if( user ){
@@ -77,6 +77,14 @@ export class CoConfigComponent implements OnInit {
     .catch( function(error) {
       console.log( "Error al actualizar documento: ", error);
     });
+  }
+
+  public estado( comercioId: string ){
+    if( this.estadoDelivery ){
+      this._cs.esDelivery( comercioId, false );
+    } else{
+      this._cs.esDelivery( comercioId, true );
+    }
   }
 
 
