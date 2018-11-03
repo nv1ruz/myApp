@@ -249,6 +249,6 @@
     outline: 0;
 }
 .caja-boton button.btnAceptar:hover{
-    background-color: rgb(0, 255, 0);
+    background-color: rgb(0, 214, 0);
     color: #fff;
 }

@@ -22,7 +22,7 @@ export class MiComercioComponent implements OnInit {
 
   constructor( public ap: AppComponent, private _cs: ComercioService, private _as: AutenticacionService, private _us: UsuarioService ) { }
 
-  ngOnInit() {
+  ngOnInit() { 
 
 
     this._us.afAuth.authState.subscribe( user => {

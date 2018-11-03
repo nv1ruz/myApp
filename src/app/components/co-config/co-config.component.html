@@ -1,3 +1,130 @@
-<p>
-  co-config works!
-</p>
+<!-- BARRA DE NAVEGACION -->
+<div class="caja-nav">   
+	<div class="row">
+		<div class="col-2" style="text-align:left" [routerLink]="['/micomercio']">
+			<button class="regresar">
+				<i class="fas fa-angle-left"></i>
+			</button>
+		</div>
+
+		<div class="col-8" style="text-align:left">
+			<span class="titulo">Configuración</span>
+		</div>
+
+		<div class="col-2"></div>
+	</div>
+</div>
+
+
+<div class="contenedor animate fadeIn fast">
+
+	<!-- CUERPO: NOMBRE-->
+	<div class="cuerpo">
+		<p class="txtNombre">Nombre</p>
+		<div class="datos">
+			<div class="nombre">
+				<input type="text" placeholder="Ingresa el nombre" value="{{ comercio.nombre }}" required>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- CUERPO: DESCRIPCION-->
+	<div class="cuerpo">
+		<p class="txtDescripcion">Descripción</p>
+		<div class="datos">
+			<div class="descripcion">
+				<textarea class="form-control" placeholder="Preséntate ante tus clientes" value="{{ comercio.descripcion }}" id="exampleFormControlTextarea1" rows="3"></textarea>
+			</div>
+		</div>
+	</div>
+
+	<!-- CUERPO: DELIVERY-->
+	<div class="cuerpo">
+		<div class="row">
+			<div class="col-6">
+				<p class="txtDelivery">Delivery</p>
+			</div>
+			<div class="col-6 btnToggle">
+				<mat-slide-toggle
+					class="example-margin"
+					color="primary"
+					[checked]="estadoDelivery"
+					disabled="false">
+				</mat-slide-toggle>
+			</div>
+		</div>
+		<div class="datos">
+			<div class="delivery">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">$</span>
+					</div>
+					<input type="text" class="form-control" placeholder="15" value="{{ comercio.deliveryPrecio }}" aria-label="precioDelivery" aria-describedby="basic-addon1" disabled>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- CUERPO: HORARIOS-->
+	<div class="cuerpo">
+		<p class="txtHorarios">Horarios</p>
+		<div class="datos">
+			<div class="horarios">
+				<input type="text" placeholder="Lunes a Viernes: 20hs a 01hs" value="{{ comercio.horarios }}" required>
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- CUERPO: UBICACION-->
+	<div class="cuerpo">
+		<p class="txtUbicacion">Ubicación</p>
+		<div class="datos">
+			<!-- <div class="ubicacion">
+				<input type="text" placeholder="Barrio" value="{{ comercio.barrio }}" required>
+			</div>
+			<div class="ubicacion">
+				<input type="text" placeholder="Calle" value="{{ comercio.calle }}" required>
+			</div>
+			<div class="ubicacion">
+				<input type="text" placeholder="Número" value="{{ comercio.numero }}" required>
+			</div> -->
+			<div class="ubicacion">
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Barrio</span>
+					</div>
+					<input type="text" class="form-control" placeholder="" value="{{ comercio.barrio }}" aria-label="barrio" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Calle</span>
+					</div>
+					<input type="text" class="form-control" placeholder="" value="{{ comercio.calle }}" aria-label="calle" aria-describedby="basic-addon1">
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Número</span>
+					</div>
+					<input type="text" class="form-control" placeholder="" value="{{ comercio.numero }}" aria-label="numero" aria-describedby="basic-addon1">
+				</div>
+				<span>Seleccioná tu ubicación</span>
+				<agm-map [latitude]="-30.361148" [longitude]="-66.314116" [zoom]="15">
+					<agm-marker [latitude]="-30.361148" [longitude]="-66.314116"></agm-marker>
+				</agm-map>
+			</div>
+		</div>
+	</div>
+
+	
+
+
+</div>
+
+
+<div class="caja-boton fixed-bottom">
+	<button class="cat" [routerLink]="['/mi-comercio']">
+		<span>Guardar</span>
+	</button>
+</div>

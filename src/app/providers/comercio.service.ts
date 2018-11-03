@@ -25,6 +25,19 @@ export class ComercioService {
                         });
   }
 
+  // cambia el estado (abierto/cerrado) del comercio (Firebase)
+  public estadoDelivery( comercioId: string, estado:boolean ){
+    this.afs.collection( 'comercios' ).doc( comercioId ).update({
+                          delivery: estado
+                        })
+                        .then( function() {
+                          console.log( "Documento actualizado con exito" );
+                        })
+                        .catch( function(error) {
+                          console.log( "Error al actualizar el documento" );
+                        });
+  }
+
   // obtiene el documento de un comercio específico (Firebase)
   public getComercio( documentId: string ){
     return this.afs.collection( 'comercios' ).doc( documentId ).snapshotChanges();

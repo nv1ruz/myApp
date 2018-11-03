@@ -47,8 +47,8 @@
 					<p>3.500</p>
 				</div>
 				<div class="col" *ngIf="comercio.delivery == true">
-					<h5>Costo de envío</h5>
-					<p>{{ comercio.deliveryPrecio | currency }}</p> 
+					<h5>Delivery</h5>
+					<p>$ {{ comercio.deliveryPrecio }}</p> 
 				</div>
 			</div>	
 		</div>
@@ -109,7 +109,7 @@
 				</div>
 				<div id="collapse1" class="collapse show acive" aria-labelledby="heading1" data-parent="#acordion">
 					<div class="card-body nosotros">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dolorem odit ut repellat tempora, ad harum aliquam tenetur itaque magnam, quod quae est voluptatum praesentium veritatis sint? Culpa, error perferendis?</p>
+						<p>{{ comercio.descripcion }}</p>
 					</div>
 				</div>
 			</div>
@@ -120,8 +120,7 @@
 				</div>
 				<div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#acordion">
 					<div class="card-body horario">
-						<p><span>Lunes a Viernes: </span>8hs a 12hs - 18hs a 23hs</p>
-						<p><span>Sabados: </span>18hs a 23hs</p>
+						<p>{{ comercio.horarios }}</p>
 					</div>
 				</div>
 			</div>
@@ -132,7 +131,7 @@
 				</div>
 				<div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#acordion">
 					<div class="card-body ubicacion">
-						<p>Victoria Romero, 221 - Barrio Angel V. Peñaloza </p>
+						<p>{{ comercio.calle }}, {{ comercio.numero }} - {{ comercio.barrio }} </p>
 						<agm-map [latitude]="-30.361148" [longitude]="-66.314116" [zoom]="15">
 							<agm-marker [latitude]="-30.361148" [longitude]="-66.314116"></agm-marker>
 						</agm-map>
