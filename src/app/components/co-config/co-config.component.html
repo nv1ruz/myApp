@@ -16,31 +16,30 @@
 </div>
 
 
-<div class="contenedor animate fadeIn fast">
+<form class="contenedor animate fadeIn fast">
 
 	<!-- CUERPO: NOMBRE-->
 	<div class="cuerpo">
 		<p class="txtNombre">Nombre</p>
 		<div class="datos">
 			<div class="nombre">
-				<input type="text" placeholder="Ingresa el nombre" value="{{ comercio.nombre }}" required>
+				<input type="text" placeholder="Ingresa el nombre" value="{{ comercio.nombre }}" #nom required>
 			</div>
 		</div>
 	</div>
-
-
+	
 	<!-- CUERPO: DESCRIPCION-->
 	<div class="cuerpo">
 		<p class="txtDescripcion">Descripción</p>
 		<div class="datos">
 			<div class="descripcion">
-				<textarea class="form-control" placeholder="Preséntate ante tus clientes" value="{{ comercio.descripcion }}" id="exampleFormControlTextarea1" rows="3"></textarea>
+				<textarea class="form-control" placeholder="Preséntate ante tus clientes" value="{{ comercio.descripcion }}" rows="3" #des></textarea>
 			</div>
 		</div>
 	</div>
 
 	<!-- CUERPO: DELIVERY-->
-	<div class="cuerpo">
+	<!-- <div class="cuerpo">
 		<div class="row">
 			<div class="col-6">
 				<p class="txtDelivery">Delivery</p>
@@ -60,7 +59,46 @@
 					<div class="input-group-prepend">
 						<span class="input-group-text" id="basic-addon1">$</span>
 					</div>
-					<input type="text" class="form-control" placeholder="15" value="{{ comercio.deliveryPrecio }}" aria-label="precioDelivery" aria-describedby="basic-addon1" disabled>
+					<input type="text" class="form-control" placeholder="15" value="{{ comercio.deliveryPrecio }}" aria-label="precioDelivery" aria-describedby="basic-addon1" #pDel disabled>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- CUERPO TELEFONO-DELIVERY -->
+	<div class="cuerpo">
+		<div class="row">
+			<div class="col-6">
+				<p class="txtTelefono">Teléfono</p>
+				<div class="datos">
+					<div class="telefono">
+						<input type="text" placeholder="Ej.: 3826405111" value="{{ comercio.telefono }}" #tel required>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="row">
+					<div class="col-6">
+						<p class="txtDelivery">Delivery</p>
+					</div>
+					<div class="col-6 btnToggle">
+						<mat-slide-toggle
+							class="example-margin"
+							color="primary"
+							[checked]="estadoDelivery"
+							disabled="false">
+						</mat-slide-toggle>
+					</div>
+				</div>
+				<div class="datos">
+					<div class="delivery">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="basic-addon1">$</span>
+							</div>
+							<input type="text" class="form-control" placeholder="15" value="{{ comercio.deliveryPrecio }}" aria-label="precioDelivery" aria-describedby="basic-addon1" #pDel disabled>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -71,43 +109,43 @@
 		<p class="txtHorarios">Horarios</p>
 		<div class="datos">
 			<div class="horarios">
-				<input type="text" placeholder="Lunes a Viernes: 20hs a 01hs" value="{{ comercio.horarios }}" required>
-				
+				<input type="text" placeholder="Lunes a Viernes: 20hs a 01hs" value="{{ comercio.horarios }}" #hor required>
 			</div>
 		</div>
 	</div>
+
+	<!-- CUERPO: TELEFONO-->
+	<!-- <div class="cuerpo">
+		<p class="txtTelefono">Teléfono</p>
+		<div class="datos">
+			<div class="telefono">
+				<input type="text" placeholder="Ej.: 3826405111" value="{{ comercio.telefono }}" #tel required>
+			</div>
+		</div>
+	</div> -->
 
 	<!-- CUERPO: UBICACION-->
 	<div class="cuerpo">
 		<p class="txtUbicacion">Ubicación</p>
 		<div class="datos">
-			<!-- <div class="ubicacion">
-				<input type="text" placeholder="Barrio" value="{{ comercio.barrio }}" required>
-			</div>
-			<div class="ubicacion">
-				<input type="text" placeholder="Calle" value="{{ comercio.calle }}" required>
-			</div>
-			<div class="ubicacion">
-				<input type="text" placeholder="Número" value="{{ comercio.numero }}" required>
-			</div> -->
 			<div class="ubicacion">
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text" id="basic-addon1">Barrio</span>
 					</div>
-					<input type="text" class="form-control" placeholder="" value="{{ comercio.barrio }}" aria-label="barrio" aria-describedby="basic-addon1">
+					<input type="text" class="form-control" placeholder="" value="{{ comercio.barrio }}" aria-label="barrio" aria-describedby="basic-addon1" #barr>
 				</div>
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text" id="basic-addon1">Calle</span>
 					</div>
-					<input type="text" class="form-control" placeholder="" value="{{ comercio.calle }}" aria-label="calle" aria-describedby="basic-addon1">
+					<input type="text" class="form-control" placeholder="" value="{{ comercio.calle }}" aria-label="calle" aria-describedby="basic-addon1" #call>
 				</div>
 				<div class="input-group">
 					<div class="input-group-prepend">
 						<span class="input-group-text" id="basic-addon1">Número</span>
 					</div>
-					<input type="text" class="form-control" placeholder="" value="{{ comercio.numero }}" aria-label="numero" aria-describedby="basic-addon1">
+					<input type="text" class="form-control" placeholder="" value="{{ comercio.numero }}" aria-label="numero" aria-describedby="basic-addon1" #nume>
 				</div>
 				<span>Seleccioná tu ubicación</span>
 				<agm-map [latitude]="-30.361148" [longitude]="-66.314116" [zoom]="15">
@@ -117,14 +155,13 @@
 		</div>
 	</div>
 
-	
+	<!-- BOTON GUARDAR -->
+	<div class="caja-boton fixed-bottom">
+		<button type="submit" class="guardar" (click)="actualizarDatos( nom.value, des.value, pDel.value, hor.value, barr.value, call.value, nume.value)">
+			<span>Guardar</span>
+		</button>
+	</div>
+
+</form>
 
 
-</div>
-
-
-<div class="caja-boton fixed-bottom">
-	<button class="cat" [routerLink]="['/mi-comercio']">
-		<span>Guardar</span>
-	</button>
-</div>

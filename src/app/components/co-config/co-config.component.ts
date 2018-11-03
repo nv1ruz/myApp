@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppComponent } from '../../app.component';
 
+import { FirebaseService } from '../../providers/firebase.service';
 import { AutenticacionService } from '../../providers/autenticacion.service';
 import { ComercioService } from '../../providers/comercio.service';
 import { UsuarioService } from '../../providers/usuario.service';
@@ -12,12 +13,13 @@ import { UsuarioService } from '../../providers/usuario.service';
 })
 export class CoConfigComponent implements OnInit {
 
+  // private refUID: string;
   public usuario:any = {};
   public comercio: any = {};
   public comercioId: string;
   public estadoDelivery: boolean = false;
 
-  constructor( public ap: AppComponent, private _cs: ComercioService, private _as: AutenticacionService, private _us: UsuarioService ) { }
+  constructor( public ap: AppComponent, private _cs: ComercioService, private _as: AutenticacionService, private _us: UsuarioService, public _fs: FirebaseService ) { }
 
   ngOnInit() {
 
@@ -56,6 +58,25 @@ export class CoConfigComponent implements OnInit {
 
   private obtenerDocUsuario( id: string ){
     return this._us.getDocUsuario( id );
+  }
+
+  actualizarDatos(nom: string, des: string, pDel: string, hor: string, barr: string, call: string, nume: string){
+    let refDoc = this._fs.afs.collection( 'comercios' ).doc( this.comercioId );
+    refDoc.update({
+      nombre: nom,
+      descripcion: des,
+      deliveryPrecio: pDel,
+      horarios: hor,
+      barrio: barr,
+      calle: call,
+      numero: nume
+    })
+    .then( function() {
+      console.log( "Documento actualizado correctamente");
+    })
+    .catch( function(error) {
+      console.log( "Error al actualizar documento: ", error);
+    });
   }
 
 
