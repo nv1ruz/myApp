@@ -129,9 +129,12 @@
 					<p>B° Centro</p>
 					<p>Av. Luis Vernet, 1230</p>
 				</div>
-				<div class="col-4 btnMapa">
+				<div class="col-4 btnMapa" (click)="toggleMapa()">
 					<p>Ver Mapa</p>
 				</div>
+			</div>
+			<div class="row mapa" *ngIf="visible">
+				<p>mapa</p>
 			</div>
 		</div>
 	</div>
