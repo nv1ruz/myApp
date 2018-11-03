@@ -149,15 +149,8 @@ export class CarritoComponent implements OnInit {
 
   public sumarTotal(){
     this.precioTotal = 0;
-<<<<<<< HEAD
-    this.nuevo = $('#cambiarentrega').val();
-    console.log(this.nuevo);
-    // if( $('p.valordelivery').is(":visible") ){
-      if( this.nuevo == 1 ){
-=======
     // if( $('p.valordelivery').is(":visible") ){
     if( this.entrega.value == 1 ){
->>>>>>> c7398d46ce0046d849ead20475ab89b06b94b3f0
       this._cs.carrito.forEach( param => {
         this.precioTotal += parseInt( param.preTot );
       });
