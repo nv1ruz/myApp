@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../../providers/firebase.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 declare var $:any;
 
 import { ComercioService } from '../../providers/comercio.service';
@@ -30,6 +30,9 @@ export class CarritoComponent implements OnInit {
   public domicilios = [];
   public max:boolean = false;
 
+  entrega = new FormControl();
+  direccion = new FormControl();
+
   constructor( public ap: AppComponent, public _cs: CarritoService, private _co: ComercioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
 
     // captura y almacena el ID enviado por parametro
@@ -43,6 +46,8 @@ export class CarritoComponent implements OnInit {
       'numero': [null, Validators.compose([Validators.required, Validators.maxLength(10)]) ],
       'barrio': [null, Validators.compose([Validators.required, Validators.maxLength(50)]) ]
     })
+
+
 
   }
 
@@ -143,7 +148,8 @@ export class CarritoComponent implements OnInit {
 
   public sumarTotal(){
     this.precioTotal = 0;
-    if( $('p.valordelivery').is(":visible") ){
+    // if( $('p.valordelivery').is(":visible") ){
+    if( this.entrega.value == 1 ){
       this._cs.carrito.forEach( param => {
         this.precioTotal += parseInt( param.preTot );
       });
@@ -209,6 +215,25 @@ export class CarritoComponent implements OnInit {
 
   private nuevaDireccion(){
     this.router.navigate(['/direccion']);
+  }
+
+  public enviarPedido(): void{
+    let hoy: number = Date.now();
+    let preDelivery: number;
+    if( this.entrega.value == 1 ){
+      preDelivery = this.comercio.deliveryPrecio;
+    } else{
+      preDelivery = 0;
+    }
+    this._co.pedidosComercio( this.refId ).add({
+      fecha: hoy,
+      idCom: this.refId,
+      idUser: this.iduser,
+      productos: this._cs.carrito,
+      entrega: this.entrega.value,
+      precioEntrega: preDelivery,
+      direccion: this.direccion.value
+    });
   }
 
 }
