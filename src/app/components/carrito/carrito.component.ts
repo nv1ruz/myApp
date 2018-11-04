@@ -5,6 +5,8 @@ declare var $:any;
 
 import { ComercioService } from '../../providers/comercio.service';
 import { CarritoService } from '../../providers/carrito.service';
+import { UsuarioService } from '../../providers/usuario.service';
+
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { AppComponent } from '../../app.component';
@@ -18,6 +20,8 @@ export class CarritoComponent implements OnInit {
   public visible: boolean = false;
   public refId:string;
   public comercio:any = {};
+  public subtotal: number = 0;
+  public precioDelivery: number = 0;
   public precioTotal:number = 0;
   public iduser: string = this._fs.usuario.uid;
 
@@ -30,10 +34,12 @@ export class CarritoComponent implements OnInit {
   public domicilios = [];
   public max:boolean = false;
 
-  entrega = new FormControl();
-  direccion = new FormControl();
+  public direccionSelect:object = {};
 
-  constructor( public ap: AppComponent, public _cs: CarritoService, private _co: ComercioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
+  entrega = new FormControl('', [Validators.required])
+  direccion = new FormControl('', [Validators.required])
+
+  constructor( public ap: AppComponent, public _cs: CarritoService, private _co: ComercioService, private _us: UsuarioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {
@@ -147,15 +153,20 @@ export class CarritoComponent implements OnInit {
   }
 
   public sumarTotal(){
+    this.subtotal = 0;
+    this.precioDelivery = 0;
     this.precioTotal = 0;
     // if( $('p.valordelivery').is(":visible") ){
     if( this.entrega.value == 1 ){
+      this.precioDelivery = this.comercio.deliveryPrecio;
       this._cs.carrito.forEach( param => {
+        this.subtotal  += parseInt( param.preTot );
         this.precioTotal += parseInt( param.preTot );
       });
-      this.precioTotal += this.comercio.deliveryPrecio;
+      this.precioTotal += this.precioDelivery;
     }else{
       this._cs.carrito.forEach( param => {
+        this.subtotal  += parseInt( param.preTot );
         this.precioTotal += parseInt( param.preTot );
       });
     }
@@ -220,20 +231,36 @@ export class CarritoComponent implements OnInit {
   public enviarPedido(): void{
     let hoy: number = Date.now();
     let preDelivery: number;
+
     if( this.entrega.value == 1 ){
-      preDelivery = this.comercio.deliveryPrecio;
+      preDelivery = this.precioDelivery;
     } else{
       preDelivery = 0;
     }
+
     this._co.pedidosComercio( this.refId ).add({
       fecha: hoy,
-      idCom: this.refId,
       idUser: this.iduser,
       productos: this._cs.carrito,
       entrega: this.entrega.value,
       precioEntrega: preDelivery,
-      direccion: this.direccion.value
+      direccion: this.direccionSelect,
+      total: this.precioTotal
     });
+
+    this._us.pedidosUsuario( this.iduser ).add({
+      fecha: hoy,
+      idCom: this.refId,
+      productos: this._cs.carrito,
+      entrega: this.entrega.value,
+      precioEntrega: preDelivery,
+      direccion: this.direccionSelect,
+      total: this.precioTotal
+    });
+  }
+
+  public cargarDireccionn( direccion:object ){
+    this.direccionSelect = direccion;
   }
 
 }

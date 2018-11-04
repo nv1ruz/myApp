@@ -80,4 +80,9 @@ export class UsuarioService {
                     .collection( 'direcciones' ).doc( domicilioId ).delete()
   }
 
+  public pedidosUsuario( usuarioId: string ){
+    return this.afs.collection( 'usuarios' ).doc( usuarioId )
+                    .collection( 'pedidos' );
+  }
+
 }
