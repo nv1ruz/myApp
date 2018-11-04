@@ -145,32 +145,43 @@
     font-weight: 600;  
     margin-bottom: 8px;
 }
+.caja-pedidos .nav-pendientes .pedido .cliente .nombre span{  
+    font-size: 14px;
+    font-weight: 400; 
+    color: #969292;
+}
 .caja-pedidos .nav-pendientes .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
-    margin-top: -5px;
     color: #969292;
 }
-.caja-pedidos .nav-pendientes .pedido .entrega{
+.caja-pedidos .nav-pendientes .pedido .cliente .direccion p{
+    margin-top: -5px;
+    
+}
+.caja-pedidos .nav-pendientes .pedido .cliente .precio{
+    text-align: right;
+    padding-right: 10px;
+    font-size: 16px;
+    color: #fa3b7b;
+    font-weight: 600;
+    
+}
+.caja-pedidos .nav-pendientes .pedido .cliente .entrega{
     font-size: 14px;
     font-weight: 500;
-    padding-left: 10px;
-    /* margin-top: 5px; */
-    display: flex;
-    align-items: center;
 }
-.caja-pedidos .nav-pendientes .pedido .precio{
-    font-size: 16px;
-    font-weight: 600;
+.caja-pedidos .nav-pendientes .pedido .cliente .estado{
+    font-size: 14px;
+    font-weight: 500;
     padding-right: 10px;
-    color: #fa3b7b;
     text-align: right;
 }
-.caja-pedidos .nav-pendientes .pedido .dato .hora{
+.caja-pedidos .nav-pendientes .pedido .cliente .hora{
     height: 100%;
     text-align: right
 }
-.caja-pedidos .nav-pendientes .pedido .dato .hora p{
+.caja-pedidos .nav-pendientes .pedido .cliente .hora p{
     font-size: 14px;
     font-weight: 400;
     padding-right: 10px;
@@ -262,23 +273,22 @@
 
 
 
-
-/* -------PEDIDOS: Historial----------- */
-.caja-pedidos .nav-historial .pedido .col-1,
-.caja-pedidos .nav-historial .pedido .col-2,
-.caja-pedidos .nav-historial .pedido .col-3,
-.caja-pedidos .nav-historial .pedido .col-4,
-.caja-pedidos .nav-historial .pedido .col-5,
-.caja-pedidos .nav-historial .pedido .col-6,
-.caja-pedidos .nav-historial .pedido .col-7,
-.caja-pedidos .nav-historial .pedido .col-8,
-.caja-pedidos .nav-historial .pedido .col-9,
-.caja-pedidos .nav-historial .pedido .col-10,
-.caja-pedidos .nav-historial .pedido .col-11,
-.caja-pedidos .nav-historial .pedido .col-12{
+/* ---------PEDIDOS: LISTOS--------- */
+.caja-pedidos .nav-listos .pedido .col-1,
+.caja-pedidos .nav-listos .pedido .col-2,
+.caja-pedidos .nav-listos .pedido .col-3,
+.caja-pedidos .nav-listos .pedido .col-4,
+.caja-pedidos .nav-listos .pedido .col-5,
+.caja-pedidos .nav-listos .pedido .col-6,
+.caja-pedidos .nav-listos .pedido .col-7,
+.caja-pedidos .nav-listos .pedido .col-8,
+.caja-pedidos .nav-listos .pedido .col-9,
+.caja-pedidos .nav-listos .pedido .col-10,
+.caja-pedidos .nav-listos .pedido .col-11,
+.caja-pedidos .nav-listos .pedido .col-12{
     padding: 0;
 }
-.caja-pedidos .nav-historial .pedido .estado{
+.caja-pedidos .nav-listos .pedido .numero{
     text-align: center;
     background-color: #fff;
     color: #fa3b7b;
@@ -288,46 +298,134 @@
     align-items: center;
     border-right: 0.5px solid #c4bec0;
 }
-.caja-pedidos .nav-historial .pedido .estado p{
+.caja-pedidos .nav-listos .pedido .numero p{
     font-size: 20px;
     font-weight: 500;
 }
-.caja-pedidos .nav-historial .pedido .cliente{
+.caja-pedidos .nav-listos .pedido .cliente{
     padding-left: 10px;
 }
-.caja-pedidos .nav-historial .pedido .cliente .nombre{  
+.caja-pedidos .nav-listos .pedido .cliente .nombre{  
     font-size: 16px;
     font-weight: 600;  
     margin-bottom: 8px;
 }
-.caja-pedidos .nav-historial .pedido .cliente .direccion{
+.caja-pedidos .nav-listos .pedido .cliente .nombre span{  
+    font-size: 14px;
+    font-weight: 400; 
+    color: #969292;
+}
+.caja-pedidos .nav-listos .pedido .cliente .direccion{
+    font-size: 14px;
+    font-weight: 400;
+    color: #969292;
+}
+.caja-pedidos .nav-listos .pedido .cliente .direccion p{
+    margin-top: -5px;
+    
+}
+.caja-pedidos .nav-listos .pedido .cliente .precio{
+    text-align: right;
+    padding-right: 10px;
+    font-size: 16px;
+    color: #fa3b7b;
+    font-weight: 600;
+    
+}
+.caja-pedidos .nav-listos .pedido .cliente .entrega{
+    font-size: 14px;
+    font-weight: 500;
+}
+.caja-pedidos .nav-listos .pedido .cliente .estado{
+    font-size: 14px;
+    font-weight: 500;
+    padding-right: 10px;
+    text-align: right;
+}
+.caja-pedidos .nav-listos .pedido .cliente .hora{
+    height: 100%;
+    text-align: right
+}
+.caja-pedidos .nav-listos .pedido .cliente .hora p{
+    font-size: 14px;
+    font-weight: 400;
+    padding-right: 10px;
+    color: #969292;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------PLANTILLA PEDIDOS: HISTORIAL----------- */
+/* .caja-pedidos .nav-listos .pedido .col-1,
+.caja-pedidos .nav-listos .pedido .col-2,
+.caja-pedidos .nav-listos .pedido .col-3,
+.caja-pedidos .nav-listos .pedido .col-4,
+.caja-pedidos .nav-listos .pedido .col-5,
+.caja-pedidos .nav-listos .pedido .col-6,
+.caja-pedidos .nav-listos .pedido .col-7,
+.caja-pedidos .nav-listos .pedido .col-8,
+.caja-pedidos .nav-listos .pedido .col-9,
+.caja-pedidos .nav-listos .pedido .col-10,
+.caja-pedidos .nav-listos .pedido .col-11,
+.caja-pedidos .nav-listos .pedido .col-12{
+    padding: 0;
+}
+.caja-pedidos .nav-listos .pedido .estado{
+    text-align: center;
+    background-color: #fff;
+    color: #fa3b7b;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.5px solid #c4bec0;
+}
+.caja-pedidos .nav-listos .pedido .estado p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.caja-pedidos .nav-listos .pedido .cliente{
+    padding-left: 10px;
+}
+.caja-pedidos .nav-listos .pedido .cliente .nombre{  
+    font-size: 16px;
+    font-weight: 600;  
+    margin-bottom: 8px;
+}
+.caja-pedidos .nav-listos .pedido .cliente .direccion{
     font-size: 14px;
     font-weight: 400;
     margin-top: -5px;
     color: #969292;
 }
-.caja-pedidos .nav-historial .pedido .fecha{
+.caja-pedidos .nav-listos .pedido .fecha{
     font-size: 14px;
     font-weight: 400;
     padding-left: 10px;
     color: #969292;
-    /* margin-top: 5px; */
 }
-.caja-pedidos .nav-historial .pedido .precio{
+.caja-pedidos .nav-listos .pedido .precio{
     font-size: 14px;
     font-weight: 400;
     padding-right: 10px;
     text-align: right;
     color: #969292;
 }
-.caja-pedidos .nav-historial .pedido .dato .numero{
+.caja-pedidos .nav-listos .pedido .dato .numero{
     height: 100%;
     text-align: right
 }
-.caja-pedidos .nav-historial .pedido .dato .numero p{
+.caja-pedidos .nav-listos .pedido .dato .numero p{
     font-size: 16px;
     font-weight: 500;
     padding-right: 10px;
     color: #fa3b7b;
-}
+} */
 

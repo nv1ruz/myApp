@@ -27,8 +27,9 @@
 		<p>Aceptados</p>
 		<p>(3)</p>
 	</a>
-	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-historial" role="tab">
-		<p>Historial</p>
+	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-listos" role="tab">
+		<p>Listos</p>
+		<p>(5)</p>
 		<!-- <p>(4)</p> -->
 	</a>
 </div>
@@ -38,45 +39,9 @@
 	
 	<!-- Pendientes -->
 	<div class="tab-pane fade show active nav-pendientes" id="nav-pendientes" role="tabpanel">
-		<div class="animated fadeIn fast ">
-
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']" *ngFor="let pedido of coPedidos; index as i;" >
-				<div class="row">
-					<div class="col-1 numero">
-						<p>{{ i+1 }}°</p>
-					</div>
-					<div class="col-11">
-						<div class="row">
-							<div class="col-9 cliente">
-								<p class="nombre">Franco Martinez</p>
-								<p class="direccion">B° {{ pedido.direccion.barrio }}</p>
-								<p class="direccion">{{ pedido.direccion.calle }}</p>
-							</div>
-							<div class="col-3 dato">
-								<div class="hora">
-									<p>21:37</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-9 entrega">
-								<p *ngIf="pedido.entrega == 0" style="color:#666666">Retiro por el Local</p>
-								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
-							</div>
-							<div class="col-3 precio">
-								<p>$ {{ pedido.total }}</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-		</div>
-	</div>
-	
-	<!-- Aceptados -->
-	<div class="tab-pane fade nav-aceptados" id="nav-aceptados" role="tabpane2">
-		<div class="animated fadeIn fast">
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']" *ngFor="let pedido of coPedidos; index as i;">
+		
+		<div class="animated fadeIn fast" *ngFor="let pedido of coPedidos; index as i;" >
+			<div class="pedido" *ngIf="pedido.estado == 0" [routerLink]="['/detalle-co-pedido']" >
 				<div class="row">
 					<div class="col-1 numero">
 						<p>{{ i+1 }}°</p>
@@ -84,16 +49,16 @@
 					<div class="col-11 cliente">
 						<div class="row">
 							<div class="col-9 nombre">
-								<p>Diego Gonzalez <span>#125</span></p>
+								<p>Nombre Usuario <span>#380</span></p>
 							</div>
 							<div class="col-3 hora">
-								<p>20:50</p>
+								<p>22:05</p>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-9 direccion">
-								<p>B° {{ pedido.direccion.barrio }}</p>
-								<p>{{ pedido.direccion.calle }}, {{ pedido.direccion.numero }}</p>
+								<p *ngIf="pedido.entrega == 1">B° {{ pedido.direccion.barrio }}</p>
+								<p *ngIf="pedido.entrega == 1">{{ pedido.direccion.calle }}, {{ pedido.direccion.numero }}</p>
 							</div>
 							<div class="col-3 precio">
 								<p>$ {{ pedido.total }}</p>
@@ -105,7 +70,48 @@
 								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
 							</div>
 							<div class="col-6 estado">
-								<p style="color:green">Listo para Retirar</p>
+								<p *ngIf="pedido.estado == 0" style="color:rgb(192, 3, 3)">Pendiente</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Aceptados -->
+	<div class="tab-pane fade nav-aceptados" id="nav-aceptados" role="tabpane2">
+		<div class="animated fadeIn fast"  *ngFor="let pedido of coPedidos; index as i;">
+			<div class="pedido"  *ngIf="pedido.estado == 1" [routerLink]="['/detalle-co-pedido']">
+				<div class="row">
+					<div class="col-1 numero">
+						<p>{{ i+1 }}°</p>
+					</div>
+					<div class="col-11 cliente">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Nombre Usuario <span>#257</span></p>
+							</div>
+							<div class="col-3 hora">
+								<p>21:10</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-9 direccion">
+								<p *ngIf="pedido.entrega == 1">B° {{ pedido.direccion.barrio }}</p>
+								<p *ngIf="pedido.entrega == 1">{{ pedido.direccion.calle }}, {{ pedido.direccion.numero }}</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ {{ pedido.total }}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 entrega">
+								<p *ngIf="pedido.entrega == 0" style="color:#666666">Retiro por el Local</p>
+								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
+							</div>
+							<div class="col-6 estado">
+								<p *ngIf="pedido.estado == 1" style="color:rgb(24, 93, 184)">En Preparación</p>
 							</div>
 						</div>
 					</div>
@@ -120,20 +126,59 @@
 	</div>
 	
 
-	<!-- Completados -->
-	<div class="tab-pane fade nav-historial" id="nav-historial" role="tabpane3">
-		<div class="animated fadeIn fast">
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
+	<!-- Listos -->
+	<div class="tab-pane fade nav-listos" id="nav-listos" role="tabpane3">
+		<div class="animated fadeIn fast" *ngFor="let pedido of coPedidos; index as i;">
+			<div class="pedido" *ngIf="pedido.estado == 2 || pedido.estado == 3" [routerLink]="['/detalle-co-pedido']">
+				<div class="row">
+					<div class="col-1 numero">
+						<p>{{ i+1 }}°</p>
+					</div>
+					<div class="col-11 cliente">
+						<div class="row">
+							<div class="col-9 nombre">
+								<p>Nombre Usuario <span>#213</span></p>
+							</div>
+							<div class="col-3 hora">
+								<p>20:50</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-9 direccion">
+								<p *ngIf="pedido.entrega == 1">B° {{ pedido.direccion.barrio }}</p>
+								<p *ngIf="pedido.entrega == 1">{{ pedido.direccion.calle }}, {{ pedido.direccion.numero }}</p>
+							</div>
+							<div class="col-3 precio">
+								<p>$ {{ pedido.total }}</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6 entrega">
+								<p *ngIf="pedido.entrega == 0" style="color:#666666">Retiro por el Local</p>
+								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
+							</div>
+							<div class="col-6 estado">
+								<p *ngIf="pedido.estado == 2" style="color:green">En Camino</p>
+								<p *ngIf="pedido.estado == 3" style="color:green">Listo para Retirar</p>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+
+			<!-- Plantilla de Pedidos Historial -->
+			<!-- <div class="pedido" *ngIf="pedido.estado == 2 || pedido.estado == 3" [routerLink]="['/detalle-co-pedido']">
 				<div class="row">
 					<div class="col-1 estado">
-						<p><i class="fa fa-check text-success"></i></p>
+						<p *ngIf="pedido.estado == 4"><i class="fa fa-check text-success"></i></p>
+						<p *ngIf="pedido.estado == 5"><i class="fa fa-times text-danger"></i></p>
 					</div>
 					<div class="col-11">
 						<div class="row">
 							<div class="col-9 cliente">
-								<p class="nombre">Miguel Toledo</p>
-								<p class="direccion">B° Centro</p>
-								<p class="direccion">Miranda, 386</p>
+								<p class="nombre">Nombre Usuario</p>
+								<p class="direccion">B° {{ pedido.direccion.barrio }}</p>
+								<p class="direccion">{{ pedido.direccion.calle }}, {{ pedido.direccion.numero }}</p>
 							</div>
 							<div class="col-3 dato">
 								<div class="numero">
@@ -146,99 +191,13 @@
 								<p>11/10/18 21:45</p>
 							</div>
 							<div class="col-6 precio">
-								<p>$110</p>
+								<p>$ {{ pedido.total }}</p>
 							</div>
 						</div>
 					</div>
 				</div>	
-			</div>
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
-				<div class="row">
-					<div class="col-1 estado">
-						<p><i class="fa fa-check text-success"></i></p>
-					</div>
-					<div class="col-11">
-						<div class="row">
-							<div class="col-9 cliente">
-								<p class="nombre">Ramiro Nieto</p>
-								<p class="direccion">B° Tres Esquinas</p>
-								<p class="direccion">Los Azucares, 77</p>
-							</div>
-							<div class="col-3 dato">
-								<div class="numero">
-									<p>#107</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 fecha">
-								<p>11/10/18 21:45</p>
-							</div>
-							<div class="col-6 precio">
-								<p>$310</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
-				<div class="row">
-					<div class="col-1 estado">
-						<p><i class="fa fa-times text-danger"></i></p>
-					</div>
-					<div class="col-11">
-						<div class="row">
-							<div class="col-9 cliente">
-								<p class="nombre">Jose Luis Romero</p>
-								<p class="direccion">B° Rosedal</p>
-								<p class="direccion">Constantino Carbel, S/N</p>
-							</div>
-							<div class="col-3 dato">
-								<div class="numero">
-									<p>#92</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 fecha">
-								<p>11/10/18 21:45</p>
-							</div>
-							<div class="col-6 precio">
-								<p>$520</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
-				<div class="row">
-					<div class="col-1 estado">
-						<p><i class="fa fa-check text-success"></i></p>
-					</div>
-					<div class="col-11">
-						<div class="row">
-							<div class="col-9 cliente">
-								<p class="nombre">Facundo Aballay</p>
-								<p class="direccion">B° Centro</p>
-								<p class="direccion">Malvinas Argentina, 53</p>
-							</div>
-							<div class="col-3 dato">
-								<div class="numero">
-									<p>#91</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 fecha">
-								<p>11/10/18 21:45</p>
-							</div>
-							<div class="col-6 precio">
-								<p>$220</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
+			</div> -->
+		
 		</div>
 	</div>
 
