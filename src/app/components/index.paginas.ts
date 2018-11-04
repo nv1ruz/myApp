@@ -18,6 +18,8 @@ export { CategoriasComponent } from './categorias/categorias.component';
 export { ProductosComponent } from './productos/productos.component';
 
 export { PruebaComponent } from './prueba/prueba.component';
+export { PruebaPedidosComponent } from './prueba-pedidos/prueba-pedidos.component';
+
 
 
 

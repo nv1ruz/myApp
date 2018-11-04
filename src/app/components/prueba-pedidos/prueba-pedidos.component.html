@@ -1,0 +1,22 @@
+<h5>Pedidos de Don luna</h5>
+<div>
+  <div *ngFor="let pedido of pedidos">
+    <h5>Pedido</h5>
+    <p>Entrega: {{ pedido.entrega }}</p>
+    <p>Estado: {{ pedido.estado }}</p>
+    <p>Precio total: ${{ pedido.total }}</p>
+    <button (click)="cambiarEstadoaConfirmado( pedido.id )">cambiar estado a Confirmado</button>
+  </div>
+</div>
+
+<br><br><br><br><hr>
+<h5>Pedidos de Braian</h5>
+<div>
+  <div *ngFor="let pedido of pedidosUsuario" (click)="detallePedidoUsuario( pedido.id )">
+    <div *ngIf="pedido.estado == 'Pendiente'">
+      <h5>Pedido</h5>
+      <p>Entrega: {{ pedido.entrega }}</p>
+      <p>Estado: {{ pedido.estado }}</p>
+      <p>Precio total: ${{ pedido.total }}</p>
+  </div>
+</div>

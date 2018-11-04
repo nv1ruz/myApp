@@ -30,6 +30,7 @@ import { CarritoService } from './providers/carrito.service';
 import { ComercioService } from './providers/comercio.service';
 import { AutenticacionService } from './providers/autenticacion.service';
 import { UsuarioService } from './providers/usuario.service';
+import { PedidosService } from './providers/pedidos.service';
 
 
 // componentes
@@ -60,6 +61,7 @@ import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedi
 import { DetalleCoPedidoComponent } from './components/detalle-co-pedido/detalle-co-pedido.component';
 import { PedidoCompletadoComponent } from './components/pedido-completado/pedido-completado.component';
 import { CoConfigComponent } from './components/co-config/co-config.component';
+import { PruebaPedidosComponent } from './components/prueba-pedidos/prueba-pedidos.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +90,8 @@ import { CoConfigComponent } from './components/co-config/co-config.component';
     DetallePedidoComponent,
     DetalleCoPedidoComponent,
     PedidoCompletadoComponent,
-    CoConfigComponent
+    CoConfigComponent,
+    PruebaPedidosComponent
   ],
   imports: [
     BrowserModule,
@@ -111,7 +114,8 @@ import { CoConfigComponent } from './components/co-config/co-config.component';
     AutenticacionService,
     UsuarioService,
     CarritoService,
-    ComercioService
+    ComercioService,
+    PedidosService
   ],
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]

@@ -3,6 +3,8 @@ import { FirebaseService } from '../../providers/firebase.service';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 declare var $:any;
 
+import { AngularFirestore } from '@angular/fire/firestore';
+
 import { ComercioService } from '../../providers/comercio.service';
 import { CarritoService } from '../../providers/carrito.service';
 import { UsuarioService } from '../../providers/usuario.service';
@@ -41,7 +43,7 @@ export class CarritoComponent implements OnInit {
   entrega = new FormControl('', [Validators.required])
   direccion = new FormControl('', [Validators.required])
 
-  constructor( public ap: AppComponent, public _cs: CarritoService, private _co: ComercioService, private _us: UsuarioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
+  constructor( public afs: AngularFirestore, public ap: AppComponent, public _cs: CarritoService, private _co: ComercioService, private _us: UsuarioService, private router: Router, private activatedRoute: ActivatedRoute, private _fs: FirebaseService, private _fb: FormBuilder ) { 
 
     // captura y almacena el ID enviado por parametro
     this.activatedRoute.params.subscribe( param => {
@@ -241,27 +243,42 @@ export class CarritoComponent implements OnInit {
       preDelivery = 0;
     }
 
-    this._co.pedidosComercio( this.refId ).add({
+    // this._co.pedidosComercio( this.refId ).add({
+    //   fecha: hoy,
+    //   idUser: this.iduser,
+    //   productos: this._cs.carrito,
+    //   entrega: this.entrega.value,
+    //   precioEntrega: preDelivery,
+    //   direccion: this.direccionSelect,
+    //   total: this.precioTotal,
+    //   estado: estado
+    // });
+
+    // this._us.pedidosUsuario( this.iduser ).add({
+    //   fecha: hoy,
+    //   idCom: this.refId,
+    //   productos: this._cs.carrito,
+    //   entrega: this.entrega.value,
+    //   precioEntrega: preDelivery,
+    //   direccion: this.direccionSelect,
+    //   subtotal: this.subtotal,
+    //   total: this.precioTotal,
+    //   estado: estado
+    // });
+
+    this.afs.collection( 'pedidos' ).add({
       fecha: hoy,
-      idUser: this.iduser,
-      productos: this._cs.carrito,
+      usuarioId: this.iduser,
+      comercioId: this.refId,
       entrega: this.entrega.value,
-      precioEntrega: preDelivery,
       direccion: this.direccionSelect,
+      precioDelivery: preDelivery,
+      productos: this._cs.carrito,
+      subtotal: this.subtotal,
       total: this.precioTotal,
-      estado: estado
+      estado: 'Pendiente'
     });
 
-    this._us.pedidosUsuario( this.iduser ).add({
-      fecha: hoy,
-      idCom: this.refId,
-      productos: this._cs.carrito,
-      entrega: this.entrega.value,
-      precioEntrega: preDelivery,
-      direccion: this.direccionSelect,
-      total: this.precioTotal,
-      estado: estado
-    });
   }
 
   public cargarDireccionn( direccion:object ){
