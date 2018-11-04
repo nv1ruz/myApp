@@ -114,24 +114,33 @@
 
 	<!-- CUERPO: ENTREGA -->
 	<div class="cuerpo">
-		<p class="txtEntrega">Entrega</p>
-		<div class="entrega">
-			<div class="row">
-				<div class="col-9 tipo">
-					<p>Delivery</p>
-				</div>
-				<div class="col-3 precio">
-					<p>$ 15</p>
-				</div>
+		<div class="row tituloEntrega">
+			<div class="col-6">
+				<p class="txtEntrega">Entrega</p>
 			</div>
+			<div class="col-6 tipo">
+				<p>Delivery ($ 15)</p>
+			</div>
+		</div>
+		<div class="entrega">
 			<div class="row">
 				<div class="col-8 direccion">
 					<p>B° Centro</p>
 					<p>Av. Luis Vernet, 1230</p>
 				</div>
-				<div class="col-4 btnMapa">
+				<div class="col-4 btnMapa" (click)="toggleMapa()">
 					<p>Ver Mapa</p>
 				</div>
+			</div>
+			<div class="direccion2">
+				<p>Piso 2 - Depto 17</p>
+				<p>Entre: Carlos Longueville y Rosario Peñaloza</p>
+				<p>Casa con rejas azules</p>
+			</div>
+			<div class="mapa" *ngIf="visible">
+				<agm-map [latitude]="-30.361148" [longitude]="-66.314116" [zoom]="15">
+					<agm-marker [latitude]="-30.361148" [longitude]="-66.314116"></agm-marker>
+				</agm-map>
 			</div>
 		</div>
 	</div>

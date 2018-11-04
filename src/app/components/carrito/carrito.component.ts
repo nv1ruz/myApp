@@ -24,6 +24,7 @@ export class CarritoComponent implements OnInit {
   public precioDelivery: number = 0;
   public precioTotal:number = 0;
   public iduser: string = this._fs.usuario.uid;
+  public nuevo:number = 0;
 
   // Validacion de Campos
   rForm: FormGroup;
