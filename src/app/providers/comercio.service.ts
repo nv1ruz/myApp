@@ -152,6 +152,11 @@ export class ComercioService {
                     .collection( 'pedidos' );
   }
 
+  public getDomicilios( refId: string ){
+    return this.afs.collection( 'usuarios' ).doc( refId )
+                    .collection('direcciones').snapshotChanges();
+  }
+
 
 
 }

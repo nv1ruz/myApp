@@ -10,7 +10,9 @@
 		<div class="col-3" *ngIf="!this.ap.exist"></div>
 
 		<div class="col-6">
-			<span class="titulo">Mi comercio</span>
+			<p class="titulo">Mi comercio</p>
+			<p class="estado" *ngIf="comercio.estado == true">Abierto</p>
+			<p class="estado" *ngIf="comercio.estado == false">Cerrado</p>
 		</div>
 
 		<div class="col-3">

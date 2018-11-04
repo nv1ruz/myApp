@@ -39,17 +39,18 @@
 	<!-- Pendientes -->
 	<div class="tab-pane fade show active nav-pendientes" id="nav-pendientes" role="tabpanel">
 		<div class="animated fadeIn fast ">
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
+
+			<div class="pedido" [routerLink]="['/detalle-co-pedido']" *ngFor="let pedido of coPedidos; index as i;" >
 				<div class="row">
 					<div class="col-1 numero">
-						<p>1°</p>
+						<p>{{ i+1 }}°</p>
 					</div>
 					<div class="col-11">
 						<div class="row">
 							<div class="col-9 cliente">
 								<p class="nombre">Franco Martinez</p>
-								<p class="direccion">B° Angel V Peñaloza</p>
-								<p class="direccion">Victoria Romero, 221</p>
+								<p class="direccion">B° {{ pedido.direccion.barrio }}</p>
+								<p class="direccion">{{ pedido.direccion.calle }}</p>
 							</div>
 							<div class="col-3 dato">
 								<div class="hora">
@@ -59,39 +60,11 @@
 						</div>
 						<div class="row">
 							<div class="col-9 entrega">
-								<p style="color:#666666">Retiro por el Local</p>
+								<p *ngIf="pedido.entrega == 0" style="color:#666666">Retiro por el Local</p>
+								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
 							</div>
 							<div class="col-3 precio">
-								<p>$ 320</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
-				<div class="row">
-					<div class="col-1 numero">
-						<p>2°</p>
-					</div>
-					<div class="col-11">
-						<div class="row">
-							<div class="col-9 cliente">
-								<p class="nombre">Lucas Ezequiel Molina</p>
-								<p class="direccion">B° Centro</p>
-								<p class="direccion">Av. Luis Vernet, 1230</p>
-							</div>
-							<div class="col-3 dato">
-								<div class="hora">
-									<p>21:45</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-9 entrega">
-								<p style="color:green">Delivery</p>
-							</div>
-							<div class="col-3 precio">
-								<p>$ 280</p>
+								<p>$ {{ pedido.total }}</p>
 							</div>
 						</div>
 					</div>
@@ -103,10 +76,10 @@
 	<!-- Aceptados -->
 	<div class="tab-pane fade nav-aceptados" id="nav-aceptados" role="tabpane2">
 		<div class="animated fadeIn fast">
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
+			<div class="pedido" [routerLink]="['/detalle-co-pedido']" *ngFor="let pedido of coPedidos; index as i;">
 				<div class="row">
 					<div class="col-1 numero">
-						<p>1°</p>
+						<p>{{ i+1 }}°</p>
 					</div>
 					<div class="col-11 cliente">
 						<div class="row">
@@ -119,87 +92,20 @@
 						</div>
 						<div class="row">
 							<div class="col-9 direccion">
-								<p>B° America</p>
-								<p>Sin nombre, 52</p>
+								<p>B° {{ pedido.direccion.barrio }}</p>
+								<p>{{ pedido.direccion.calle }}, {{ pedido.direccion.numero }}</p>
 							</div>
 							<div class="col-3 precio">
-								<p>$ 350</p>
+								<p>$ {{ pedido.total }}</p>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-6 entrega">
-								<p style="color:#666666">Retiro por el Local</p>
+								<p *ngIf="pedido.entrega == 0" style="color:#666666">Retiro por el Local</p>
+								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
 							</div>
 							<div class="col-6 estado">
 								<p style="color:green">Listo para Retirar</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
-				<div class="row">
-					<div class="col-1 numero">
-						<p>2°</p>
-					</div>
-					<div class="col-11 cliente">
-						<div class="row">
-							<div class="col-9 nombre">
-								<p>Diego Gonzalez <span>#125</span></p>
-							</div>
-							<div class="col-3 hora">
-								<p>20:50</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-9 direccion">
-								<p>B° America</p>
-								<p>Sin nombre, 52</p>
-							</div>
-							<div class="col-3 precio">
-								<p>$ 350</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 entrega">
-								<p style="color:green">Delivery</p>
-							</div>
-							<div class="col-6 estado">
-								<p style="color:green">En Camino</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido" [routerLink]="['/detalle-co-pedido']">
-				<div class="row">
-					<div class="col-1 numero">
-						<p>3°</p>
-					</div>
-					<div class="col-11 cliente">
-						<div class="row">
-							<div class="col-9 nombre">
-								<p>Diego Gonzalez <span>#125</span></p>
-							</div>
-							<div class="col-3 hora">
-								<p>20:50</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-9 direccion">
-								<p>B° America</p>
-								<p>Sin nombre, 52</p>
-							</div>
-							<div class="col-3 precio">
-								<p>$ 350</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 entrega">
-								<p style="color:green">Delivery</p>
-							</div>
-							<div class="col-6 estado">
-								<p style="color:rgb(16, 105, 221)">En Preparación</p>
 							</div>
 						</div>
 					</div>
