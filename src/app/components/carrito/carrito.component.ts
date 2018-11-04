@@ -25,6 +25,7 @@ export class CarritoComponent implements OnInit {
   public precioTotal:number = 0;
   public iduser: string = this._fs.usuario.uid;
   public nuevo:number = 0;
+  public estado: number = 0;
 
   // Validacion de Campos
   rForm: FormGroup;
@@ -232,6 +233,7 @@ export class CarritoComponent implements OnInit {
   public enviarPedido(): void{
     let hoy: number = Date.now();
     let preDelivery: number;
+    let estado: number = 0;
 
     if( this.entrega.value == 1 ){
       preDelivery = this.precioDelivery;
@@ -246,7 +248,8 @@ export class CarritoComponent implements OnInit {
       entrega: this.entrega.value,
       precioEntrega: preDelivery,
       direccion: this.direccionSelect,
-      total: this.precioTotal
+      total: this.precioTotal,
+      estado: estado
     });
 
     this._us.pedidosUsuario( this.iduser ).add({
@@ -256,7 +259,8 @@ export class CarritoComponent implements OnInit {
       entrega: this.entrega.value,
       precioEntrega: preDelivery,
       direccion: this.direccionSelect,
-      total: this.precioTotal
+      total: this.precioTotal,
+      estado: estado
     });
   }
 
