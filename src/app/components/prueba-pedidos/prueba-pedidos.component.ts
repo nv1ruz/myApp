@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { UsuarioService } from '../../providers/usuario.service';
 import { ComercioService } from '../../providers/comercio.service';
-import { spawn } from 'child_process';
+// import { spawn } from 'child_process';
 
 @Component({
   selector: 'app-prueba-pedidos',
@@ -84,4 +84,4 @@ export class PruebaPedidosComponent implements OnInit {
     });
   }
 
-}
+} 

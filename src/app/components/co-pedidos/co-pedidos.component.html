@@ -40,8 +40,8 @@
 	<!-- Pendientes -->
 	<div class="tab-pane fade show active nav-pendientes" id="nav-pendientes" role="tabpanel">
 		
-		<div class="animated fadeIn fast" *ngFor="let pedido of coPedidos; index as i;" >
-			<div class="pedido" *ngIf="pedido.estado == 0" [routerLink]="['/detalle-co-pedido']" >
+		<div class="animated fadeIn fast" (click)="verPedido( pedido.id )" *ngFor="let pedido of coPedidos; index as i;">
+			<div class="pedido" *ngIf="pedido.estado == 'Pendiente'" >
 				<div class="row">
 					<div class="col-1 numero">
 						<p>{{ i+1 }}°</p>
@@ -49,7 +49,7 @@
 					<div class="col-11 cliente">
 						<div class="row">
 							<div class="col-9 nombre">
-								<p>Nombre Usuario <span>#380</span></p>
+								<p>Nombre Usuario <span># {{ pedido.id }}</span></p>
 							</div>
 							<div class="col-3 hora">
 								<p>22:05</p>
@@ -70,7 +70,7 @@
 								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
 							</div>
 							<div class="col-6 estado">
-								<p *ngIf="pedido.estado == 0" style="color:rgb(192, 3, 3)">Pendiente</p>
+								<p *ngIf="pedido.estado == 'Pendiente'" style="color:rgb(192, 3, 3)">Pendiente</p>
 							</div>
 						</div>
 					</div>
@@ -82,7 +82,7 @@
 	<!-- Aceptados -->
 	<div class="tab-pane fade nav-aceptados" id="nav-aceptados" role="tabpane2">
 		<div class="animated fadeIn fast"  *ngFor="let pedido of coPedidos; index as i;">
-			<div class="pedido"  *ngIf="pedido.estado == 1" [routerLink]="['/detalle-co-pedido']">
+			<div class="pedido"  *ngIf="pedido.estado == 'Aceptado'" [routerLink]="['/detalle-co-pedido']">
 				<div class="row">
 					<div class="col-1 numero">
 						<p>{{ i+1 }}°</p>
@@ -111,7 +111,7 @@
 								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
 							</div>
 							<div class="col-6 estado">
-								<p *ngIf="pedido.estado == 1" style="color:rgb(24, 93, 184)">En Preparación</p>
+								<p *ngIf="pedido.estado == 'Aceptado'" style="color:rgb(24, 93, 184)">En Preparación</p>
 							</div>
 						</div>
 					</div>
@@ -129,7 +129,7 @@
 	<!-- Listos -->
 	<div class="tab-pane fade nav-listos" id="nav-listos" role="tabpane3">
 		<div class="animated fadeIn fast" *ngFor="let pedido of coPedidos; index as i;">
-			<div class="pedido" *ngIf="pedido.estado == 2 || pedido.estado == 3" [routerLink]="['/detalle-co-pedido']">
+			<div class="pedido" *ngIf="pedido.estado == 'En Camino' || pedido.estado == 'Listo para Retirar'" [routerLink]="['/detalle-co-pedido']">
 				<div class="row">
 					<div class="col-1 numero">
 						<p>{{ i+1 }}°</p>
@@ -158,8 +158,8 @@
 								<p *ngIf="pedido.entrega == 1" style="color:green">Delivery</p>
 							</div>
 							<div class="col-6 estado">
-								<p *ngIf="pedido.estado == 2" style="color:green">En Camino</p>
-								<p *ngIf="pedido.estado == 3" style="color:green">Listo para Retirar</p>
+								<p *ngIf="pedido.estado == 'En Camino'" style="color:green">En Camino</p>
+								<p *ngIf="pedido.estado == 'Listo para Retirar'" style="color:green">Listo para Retirar</p>
 							</div>
 						</div>
 					</div>

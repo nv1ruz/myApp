@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
     this._cs.carrito = [];
 
-  }
+  } 
 
 
   ngOnInit() {

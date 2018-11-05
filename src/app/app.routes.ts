@@ -53,7 +53,7 @@ const ROUTES: Routes = [
     { path: 'prueba-pedidos', component: PruebaPedidosComponent },
     { path: 'co-pedidos', component: CoPedidosComponent },
     { path: 'detalle-pedido', component: DetallePedidoComponent },
-    { path: 'detalle-co-pedido', component: DetalleCoPedidoComponent },
+    { path: 'detalle-co-pedido/:id', component: DetalleCoPedidoComponent },
     { path: 'pedido-completado', component: PedidoCompletadoComponent },
     { path: 'co-config', component: CoConfigComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }

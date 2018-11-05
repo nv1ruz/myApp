@@ -1,12 +1,12 @@
 <!-- BARRA DE NAVEGACION -->
 <div class="caja-nav">   
 	<div class="row">
-		<div class="col-3" *ngIf="this.ap.exist" style="text-align:left" (click)="this.ap._toggleOpened()">
+		<div class="col-3" style="text-align:left" [routerLink]="['/home']">
 			<button class="menu">
 				<i class="fas fa-bars"></i>
 			</button>
 		</div>
-		<div class="col-3" *ngIf="!this.ap.exist"></div>
+		<!-- <div class="col-3" *ngIf="!this.ap.exist"></div> -->
 
 		<div class="col-6">
 			<span class="titulo">Mis pedidos</span>
@@ -18,7 +18,7 @@
 	</div>
 </div>
 
-
+ 
 
 <!-- TAB -->
 <div class="nav nav-tabs tab" id="nav-tab" role="tablist">
@@ -36,8 +36,8 @@
 
 	<!-- En curso -->
 	<div class="tab-pane fade show active nav-encurso" id="nav-encurso" role="tabpanel">
-		<div class="animated fadeIn fast ">
-			<div class="pedido">
+		<div class="animated fadeIn fast" *ngFor="let pedido of pedidosUsuario; index as i;">
+			<div class="pedido" *ngIf="pedido.estado == 'Pendiente' || pedido.estado == 'Aceptado'">
 				<div class="row">
 					<div class="col-2 imagen">
 						<img src="https://www.designevo.com/res/templates/thumb_small/white-hat-and-yellow-bread.png">
@@ -45,10 +45,10 @@
 					<div class="col-10 comercio" [routerLink]="['/detalle-pedido']">
 						<div class="row">
 							<div class="col-9 nombre">
-								<p>Pizzeria FAX</p>
+								<p>Nombre Comercio</p>
 							</div>
 							<div class="col-3 precio">
-								<p>$ 320</p>
+								<p>$ {{ pedido.total }}</p>
 							</div>
 						</div>
 						<div class="row">
@@ -64,73 +64,8 @@
 								<p style="color:gray">11/10/18 20:55</p>
 							</div>
 							<div class="col-6 estado">
-								<p style="color:rgb(16, 105, 221)">En Preparación</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido">
-				<div class="row">
-					<div class="col-2 imagen">
-						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
-					</div>
-					<div class="col-10 comercio" [routerLink]="['/detalle-pedido']">
-						<div class="row">
-							<div class="col-9 nombre">
-								<p>Rey Del Lomito</p>
-							</div>
-							<div class="col-3 precio">
-								<p>$ 175</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-9 numeroOrden">
-								<p>Orden Nro: 402</p>
-							</div>
-							<div class="col-3">
-								
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 fecha">
-								<p style="color:gray">11/10/18 20:55</p>
-							</div>
-							<div class="col-6 estado">
-								<p style="color:green">En Camino</p>
-							</div>
-						</div>
-					</div>
-				</div>	
-			</div>
-			<div class="pedido">
-				<div class="row">
-					<div class="col-2 imagen">
-						<img src="https://previews.123rf.com/images/tachyglossus/tachyglossus1610/tachyglossus161000039/67373440-emblema-tradicional-de-la-comida-r%C3%A1pida-americana-para-su-logo-banner-o-plantilla-de-volante.jpg">
-					</div>
-					<div class="col-10 comercio" [routerLink]="['/detalle-pedido']">
-						<div class="row">
-							<div class="col-9 nombre">
-								<p>Rey Del Lomito</p>
-							</div>
-							<div class="col-3 precio">
-								<p>$ 175</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-9 numeroOrden">
-								<p>Orden Nro: 402</p>
-							</div>
-							<div class="col-3">
-								
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6 fecha">
-								<p style="color:gray">11/10/18 20:55</p>
-							</div>
-							<div class="col-6 estado">
-								<p style="color:green">Listo para Retirar</p>
+								<p *ngIf="pedido.estado == 'Pendiente'" style="color:green">Pendiente</p>
+								<p *ngIf="pedido.estado == 'Aceptado'" style="color:rgb(16, 105, 221)">En Preparación</p>
 							</div>
 						</div>
 					</div>

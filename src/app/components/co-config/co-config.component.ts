@@ -60,7 +60,7 @@ export class CoConfigComponent implements OnInit {
     return this._us.getDocUsuario( id );
   }
 
-  actualizarDatos(nom: string, des: string, pDel: string, hor: string, barr: string, call: string, nume: string){
+  actualizarDatos(nom: string, des: string, pDel: number, hor: string, barr: string, call: string, nume: string){
     let refDoc = this._fs.afs.collection( 'comercios' ).doc( this.comercioId );
     refDoc.update({
       nombre: nom,
