@@ -61,6 +61,10 @@ export class CategoriasComponent implements OnInit {
 
   // MÉTODOS ***************************************
 
+  public irAtras(){
+    this._us.goBack();
+  }
+
   private obtenerCategorias( documentId: string ){
     return this._cs.getCategorias( documentId );
   }

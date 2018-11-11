@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import { Location } from '@angular/common';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 
@@ -8,11 +8,15 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class UsuarioService {
 
-  constructor( private afs: AngularFirestore, public afAuth: AngularFireAuth ) { }
+  constructor( public location: Location, private afs: AngularFirestore, public afAuth: AngularFireAuth ) { }
 
 
 
   // MÉTODOS ***************************************
+
+  public goBack(){
+    this.location.back();
+  }
 
   public getDocUsuario( documentId: string ){
     return this.afs.collection( 'usuarios' ).doc( documentId ).snapshotChanges();

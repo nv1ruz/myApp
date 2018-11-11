@@ -19,7 +19,7 @@ export class PedidosComponent implements OnInit {
   public usuario:any = {};
   public pedidosUsuario:any = [];
 
-  constructor( public afs: AngularFirestore, private _us: UsuarioService, private _co: ComercioService, private _fs: FirebaseService) { 
+  constructor( public ap: AppComponent, public afs: AngularFirestore, private _us: UsuarioService, private _co: ComercioService, private _fs: FirebaseService) { 
 
     this._us.afAuth.authState.subscribe( user => {
       if( user ){

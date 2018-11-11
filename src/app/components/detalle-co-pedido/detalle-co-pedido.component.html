@@ -1,7 +1,8 @@
 <!-- BARRA DE NAVEGACION -->
 <div class="caja-nav">   
 	<div class="row">
-	  <div class="col-2" style="text-align:left" [routerLink]="['/co-pedidos']" >
+	  <!-- <div class="col-2" style="text-align:left" [routerLink]="['/co-pedidos']" > -->
+	  <div class="col-2" style="text-align:left" (click)="irAtras()">
 		<button class="regresar">
 		  <i class="fas fa-angle-left"></i>
 		</button>

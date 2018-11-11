@@ -166,6 +166,10 @@ export class DireccionComponent implements OnInit {
       'numero': '',
       'barrio': ''
     }); 
-  } 
+  }
+
+  public irAtras(){
+    this._us.goBack();
+  }
 
 }

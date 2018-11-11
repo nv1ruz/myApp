@@ -285,4 +285,8 @@ export class CarritoComponent implements OnInit {
     this.direccionSelect = direccion;
   }
 
+  public irAtras(){
+    this._us.goBack();
+  }
+
 }

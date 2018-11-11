@@ -61,6 +61,7 @@ export class AutenticacionService {
 
   // MÉTODOS ***************************************
 
+
   // inicia sesión el usuario con algun proveedor
   public logIn( proveedor: string, email:string, pass:string ){
     if( proveedor == 'google' ){

@@ -60,6 +60,10 @@ export class MenuComponent implements OnInit {
 
     // MÉTODOS ***************************************
 
+    public irAtras(){
+      this._us.goBack();
+    }
+
     private obtenerDocUsuario( id: string ){
       return this._us.getDocUsuario( id );
     }

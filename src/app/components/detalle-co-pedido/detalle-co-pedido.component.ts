@@ -47,6 +47,11 @@ export class DetalleCoPedidoComponent implements OnInit {
 
 
   // METODOS
+
+  public irAtras(){
+    this._us.goBack();
+  }
+
   private obtenerPedido( documentId: string ){
     return this._co.getComercio( documentId );
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../providers/usuario.service';
+
 
 @Component({
   selector: 'app-detalle-pedido',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallePedidoComponent implements OnInit {
 
-  constructor() { }
+  constructor( private _us: UsuarioService ) { }
 
   ngOnInit() {
+  }
+
+
+  // METODOS
+
+  public irAtras(){
+    this._us.goBack();
   }
 
 }

@@ -52,6 +52,10 @@ export class CoConfigComponent implements OnInit {
 
   // MÉTODOS ************************************
 
+  public irAtras(){
+    this._us.goBack();
+  }
+
   private obtenerComercio( documentId: string ){
     return this._cs.getComercio( documentId );
   }

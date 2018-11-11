@@ -140,6 +140,10 @@ export class CoPedidosComponent implements OnInit {
 
   // METODOS NUEVOS
 
+  public irAtras(){
+    this._us.goBack();
+  }
+
   private obtenerDocUsuario( id: string ){
     return this._us.getDocUsuario( id );
   }

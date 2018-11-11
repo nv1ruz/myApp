@@ -1,5 +1,6 @@
 <div class="caja-nav">    
-  <button class="regresar" [routerLink]=[anterior]>
+  <!-- <button class="regresar" [routerLink]=[anterior]> -->
+  <button class="regresar" (click)="irAtras()">
     <i class="fas fa-angle-left"></i>
   </button>
   <!-- <button class="menu" *ngIf="this.ap.exist" (click)="this.ap._toggleOpened()">
