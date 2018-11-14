@@ -149,7 +149,7 @@ export class CoPedidosComponent implements OnInit {
   }
 
   private obtenerPedidosComercio( comercioId: string ){
-    return this.afs.collection( 'pedidos', ref => ref.where( 'comercioId', '==', comercioId ) ).snapshotChanges();
+    return this.afs.collection( 'pedidos', ref => ref.where( 'comercioId', '==', comercioId )).snapshotChanges();
   }
 
   private verPedido( idx: string ){

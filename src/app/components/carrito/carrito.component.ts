@@ -228,7 +228,7 @@ export class CarritoComponent implements OnInit {
 
   }
 
-  private nuevaDireccion(){
+  public nuevaDireccion(){
     this.router.navigate(['/direccion']);
   }
 
@@ -243,29 +243,6 @@ export class CarritoComponent implements OnInit {
       preDelivery = 0;
     }
 
-    // this._co.pedidosComercio( this.refId ).add({
-    //   fecha: hoy,
-    //   idUser: this.iduser,
-    //   productos: this._cs.carrito,
-    //   entrega: this.entrega.value,
-    //   precioEntrega: preDelivery,
-    //   direccion: this.direccionSelect,
-    //   total: this.precioTotal,
-    //   estado: estado
-    // });
-
-    // this._us.pedidosUsuario( this.iduser ).add({
-    //   fecha: hoy,
-    //   idCom: this.refId,
-    //   productos: this._cs.carrito,
-    //   entrega: this.entrega.value,
-    //   precioEntrega: preDelivery,
-    //   direccion: this.direccionSelect,
-    //   subtotal: this.subtotal,
-    //   total: this.precioTotal,
-    //   estado: estado
-    // });
-
     this.afs.collection( 'pedidos' ).add({
       fecha: hoy,
       usuarioId: this.iduser,
@@ -277,7 +254,13 @@ export class CarritoComponent implements OnInit {
       subtotal: this.subtotal,
       total: this.precioTotal,
       estado: 'Pendiente'
+    }).then( function() {
+      console.log("El pedido se envió correctamente");
+    }).catch( function( error ) {
+      console.log("Hubo un error al enviar el pedido: ", error);
     });
+
+    this.router.navigate(['/pedido-completado']);
 
   }
 

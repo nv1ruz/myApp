@@ -38,51 +38,63 @@
 
 
 /* -----------CONTENIDO-------------- */
-.contenido {
-    font-family: 'Roboto', sans-serif;
-    margin: 0 auto;
-    margin-top: 0;
-    width: 80%;
-    padding: 25% 10px 10px 10px;
-    text-align: center;
-    box-shadow: 0 3px 4px 0 green, 0 1px 1px -2px green;
-    border-radius: 0  0 20px 20px;
+.caja {
+    height: 100vh;
+    width: 100%;
+    /* padding: 110px 20px 65px 20px; */
+    padding: 25% 20px;
+    /* background-image: linear-gradient(#910030, #ff3e7f); */
+    background-image: linear-gradient(#ffa099, #c95959);
+    /* background-color: #e25d20; */
+    /* text-align: center; */
 }
-.contenido p{
-    margin-bottom: 0;
+.caja-contenido{
+    /* background-color: #000; */
+    height: 100%;
+    width: 100%;
 }
-.contenido i {
-    color: green ;
-    font-size: 70px;
-    margin-bottom: 10%;
-}
-.contenido .uno {
-    font-size: 25px;
-    font-weight: 700;
-}
-.contenido .texto {
-    color: #666;
-    font-size: 15px;
+.caja-contenido i{
+    color: #fff;
+    font-size: 60px;
     font-weight: 400;
-    padding: 5px 10px 10px 10px;
-    line-height: 1.7em;
+    display: block;
+    text-align: center;
+    padding: 25% 0 10px 0;
 }
-.contenido .texto .titulo {
-    font-size: 16px;
-    font-weight: 500;
+.caja-contenido span{
+    color: #fff;
+    text-align: center;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;  
+    padding: 10px 0;
 }
-.contenido .txtNroOrden {
-    margin: 5px 0;
-    border-bottom: 1px solid #c1c1c1;
+.caja-contenido p{
+    color: #fff;
+    width: 250px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;  
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
 }
-.contenido .txtNroOrden p{
-    font-weight: 500;
-    font-size: 20px;
-    margin: 10px 0;
-}
-.contenido .nroOrden p{
-    font-size: 25px;
-    font-weight: 500;
+.caja-contenido button{
+    display: block;
+    margin: 15px auto 0 auto;
+    height: 40px;
+    width: 250px;
+    /* width: 200px; */
+    color: #666;
+    background-color: #fff;
+    border: 0;
+    border-radius: 100px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;  
 }
 
 /* ------SALUDO------ */

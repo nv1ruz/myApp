@@ -79,7 +79,7 @@
 /* ------CAJA PEDIDOS--------- */
 .caja-pedidos {
     background-color: #f4f4f4;
-    padding: 5px 10px;
+    padding: 10px 10px;
     font-family: 'Roboto', sans-serif;
 }
 .caja-pedidos .listaVacia{
@@ -92,33 +92,144 @@
     margin-bottom: 0;
 }
 .caja-pedidos .pedido{
-    padding: 5px 0;
-    border-bottom: 1px solid #cccccc;
     background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    padding: 10px 10px;
     border-radius: 5px;
+    cursor: pointer;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
-    margin-bottom: 5px;
 }
-.caja-pedidos .pedido .row{
+.caja-pedidos .pedido .comercio{
+    padding-right: 10px;
+}
+.caja-pedidos .pedido .caja-nombre{
+    padding: 0 0 0 10px;
+}
+.caja-pedidos .pedido .nombre{
+    color: #666666;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+}
+.caja-pedidos .pedido .caja-precio{
+    padding: 0 10px 0 0;
+    text-align: right;
+}
+.caja-pedidos .pedido .precio{
+    height: 100%;
+    color: #1bb140;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700; 
+}
+.caja-pedidos .pedido .caja-estado{
+    padding: 0 0 0 10px;
+}
+.caja-pedidos .pedido .estado{
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25pt;
+    /* text-align: right; */
+}
+.caja-pedidos .pedido .caja-fecha{
+    padding: 0 10px 0 0;
+    text-align: right;
+}
+.caja-pedidos .pedido .fecha{
+    color: #b4b4b4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;  
+    letter-spacing: 0.25pt;
+}
+/* .caja-pedidos .pedido .row{
     flex-wrap: nowrap;
     margin: 0;
-}
+} */
 
-/* -------PEDIDOS: En Curso----------- */
-.caja-pedidos .nav-encurso .pedido .col-1,
-.caja-pedidos .nav-encurso .pedido .col-2,
-.caja-pedidos .nav-encurso .pedido .col-3,
-.caja-pedidos .nav-encurso .pedido .col-4,
-.caja-pedidos .nav-encurso .pedido .col-5,
-.caja-pedidos .nav-encurso .pedido .col-6,
-.caja-pedidos .nav-encurso .pedido .col-7,
-.caja-pedidos .nav-encurso .pedido .col-8,
-.caja-pedidos .nav-encurso .pedido .col-9,
-.caja-pedidos .nav-encurso .pedido .col-10,
-.caja-pedidos .nav-encurso .pedido .col-11,
-.caja-pedidos .nav-encurso .pedido .col-12{
+/* DETALLE PEDIDO */
+.caja-detalle{
+    padding: 10px 0;
+    width: 100%;
+    margin: 0;
+    transition: all .3s ease;
+}
+.caja-vendedor{
+    padding: 5px 15px;
+    border-radius: 3px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
+}
+.caja-vendedor .caja-titulo{
     padding: 0;
 }
+.caja-vendedor .caja-titulo span{
+    color: #fa3b7b;
+    /* color: #666666; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400; 
+} 
+.caja-vendedor .caja-comercio{
+    padding: 0;
+}
+.caja-vendedor .caja-comercio span{
+    color: #666666;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: capitalize;
+}
+.caja-vendedor .caja-direccion{
+    margin: 0;
+}
+.caja-vendedor .caja-direccion .barrio-calle-numero{
+    padding: 0;
+}
+.caja-vendedor .caja-direccion .barrio-calle-numero span{
+    color: #b4b4b4;
+    display: block;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.25pt;
+}
+.caja-vendedor .caja-llamar{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.caja-vendedor .caja-llamar button{
+    margin: 0 auto;
+    color: #fff;
+    background-color: #fa3b7b;
+    height: 30px;
+    width: 80px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;  
+    outline: 0;
+}
+
+
+
+
+
+
+/* -------PEDIDOS: En Curso----------- */
+
 .caja-pedidos .nav-encurso .pedido .imagen{
     display:flex;
     justify-content: center;
@@ -130,10 +241,10 @@
 .caja-pedidos .nav-encurso .pedido .comercio{
     padding-left: 10px;
 }
-.caja-pedidos .nav-encurso .pedido .comercio .nombre{  
+/* .caja-pedidos .nav-encurso .pedido .comercio .nombre{  
     font-size: 16px;
     font-weight: 600;  
-}
+} */
 .caja-pedidos .nav-encurso .pedido .comercio .numeroOrden{
     font-size: 14px;
     font-weight: 400;
@@ -142,17 +253,17 @@
     margin-top: -5px;
     margin-bottom: 5px;
 }
-.caja-pedidos .nav-encurso .pedido .comercio .fecha{
+/* .caja-pedidos .nav-encurso .pedido .comercio .fecha{
     font-size: 14px;
     font-weight: 400;
-}
-.caja-pedidos .nav-encurso .pedido .comercio .estado{
+} */
+/* .caja-pedidos .nav-encurso .pedido .comercio .estado{
     font-size: 14px;
     font-weight: 500;
     padding-right: 10px;
     text-align: right;
-}
-.caja-pedidos .nav-encurso .pedido .comercio .precio{
+} */
+/* .caja-pedidos .nav-encurso .pedido .comercio .precio{
     height: 100%;
     text-align: right
 }
@@ -161,7 +272,7 @@
     font-weight: 600;
     padding-right: 10px;
     color: #fa3b7b;
-}
+} */
 
 
 /* -------PEDIDOS: Historial----------- */
@@ -190,10 +301,10 @@
 .caja-pedidos .nav-historial .pedido .comercio{
     padding-left: 10px;
 }
-.caja-pedidos .nav-historial .pedido .comercio .nombre{  
+/* .caja-pedidos .nav-historial .pedido .comercio .nombre{  
     font-size: 16px;
     font-weight: 600;  
-}
+} */
 .caja-pedidos .nav-historial .pedido .comercio .numeroOrden{
     font-size: 14px;
     font-weight: 400;
@@ -202,17 +313,17 @@
     margin-top: -5px;
     margin-bottom: 5px;
 }
-.caja-pedidos .nav-historial .pedido .comercio .fecha{
+/* .caja-pedidos .nav-historial .pedido .comercio .fecha{
     font-size: 14px;
     font-weight: 400;
-}
-.caja-pedidos .nav-historial .pedido .comercio .estado{
+} */
+/* .caja-pedidos .nav-historial .pedido .comercio .estado{
     font-size: 14px;
     font-weight: 500;
     padding-right: 10px;
     text-align: right;
-}
-.caja-pedidos .nav-historial .pedido .comercio .precio{
+} */
+/* .caja-pedidos .nav-historial .pedido .comercio .precio{
     height: 100%;
     text-align: right
 }
@@ -221,4 +332,4 @@
     font-weight: 400;
     padding-right: 10px;
     color: gray;
-}
+} */

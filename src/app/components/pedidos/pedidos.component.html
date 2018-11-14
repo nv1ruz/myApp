@@ -23,7 +23,7 @@
 <!-- TAB -->
 <div class="nav nav-tabs tab" id="nav-tab" role="tablist">
 	<a class="nav-item nav-link item active" data-toggle="tab" href="#nav-encurso" role="tab">
-		<p>En Curso (3)</p>
+		<p>En Curso ({{ conEncurso }})</p>
 		<!-- <p>(1)</p> -->
 	</a>
 	<a class="nav-item nav-link item" data-toggle="tab" href="#nav-historial" role="tab">
@@ -36,42 +36,61 @@
 
 	<!-- En curso -->
 	<div class="tab-pane fade show active nav-encurso" id="nav-encurso" role="tabpanel">
-		<div class="animated fadeIn fast" *ngFor="let pedido of pedidosUsuario; index as i;">
-			<div class="pedido" *ngIf="pedido.estado == 'Pendiente' || pedido.estado == 'Aceptado'">
-				<div class="row">
-					<div class="col-2 imagen">
-						<img src="https://www.designevo.com/res/templates/thumb_small/white-hat-and-yellow-bread.png">
-					</div>
-					<div class="col-10 comercio" [routerLink]="['/detalle-pedido']">
-						<div class="row">
-							<div class="col-9 nombre">
-								<p>Nombre Comercio</p>
-							</div>
-							<div class="col-3 precio">
-								<p>$ {{ pedido.total }}</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-9 numeroOrden">
-								<p>Orden Nro: 360</p>
-							</div>
-							<div class="col-3">
 
+		<div class="animated fadeIn fast" >
+			<div *ngFor="let pedido of pedidosUsuario; index as i;">
+			
+				<div class="pedido row" *ngIf="pedido.estado == 'Pendiente' || pedido.estado == 'En preparacion'">
+					<div class="col-2 p-0 imagen">
+						<img src="{{ pedido.comercioFoto}}">
+					</div>
+					<div class="col-10 p-0 comercio" (click)="verPedido( pedido.id )">
+						<div class="row m-0">
+							<div class="col-9 caja-nombre">
+								<span class="nombre">{{ pedido.comercioNombre }}</span>
+							</div>
+							<div class="col-3 caja-precio">
+								<span class="precio">$ {{ pedido.total }}</span>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col-6 fecha">
-								<p style="color:gray">11/10/18 20:55</p>
+						<div class="row m-0">
+							<div class="col-6 caja-estado">
+								<span class="estado" *ngIf="pedido.estado == 'Pendiente'" style="color: #b4b4b4;">Pendiente</span>
+								<span class="estado" *ngIf="pedido.estado == 'En preparacion'" style="color:#2b62d8">En preparación</span>
 							</div>
-							<div class="col-6 estado">
-								<p *ngIf="pedido.estado == 'Pendiente'" style="color:green">Pendiente</p>
-								<p *ngIf="pedido.estado == 'Aceptado'" style="color:rgb(16, 105, 221)">En Preparación</p>
-							</div>
+							<div class="col-6 caja-fecha">
+								<span class="fecha">{{ pedido.fecha | date:'short' }}</span>
+							</div>							
 						</div>
 					</div>
-				</div>	
+
+					<div *ngIf="pedido.id == ver" class="caja-detalle animated fadeIn fast row">
+						<div class="caja-vendedor col-12">
+							<div class="row m-0">
+								<div class="caja-titulo col-12">
+									<span>Vendedor</span>
+								</div>
+								<div class="caja-comercio col-12">
+									<span>{{ pedido.comercioNombre }}</span>
+								</div>
+							</div>
+							<div class="caja-direccion row">
+								<div class="barrio-calle-numero col-8">
+									<span>B° {{ pedido.comercioBarrio }}</span>
+									<span>{{ pedido.comercioCalle }}, {{ pedido.comercioNumero }}</span>
+								</div>
+								<div class="caja-llamar col-4">
+									<button><i class="fas fa-phone"></i> Llamar</button>
+								</div>
+							</div>
+						</div>
+						<div class="caja-productos col-12">
+							
+						</div>
+					</div>
+
+				</div>
 			</div>
-
 		</div>
 	</div>
 

@@ -1,5 +1,5 @@
 <!-- BARRA DE NAVEGACION -->
-<div class="caja-nav">    
+<!-- <div class="caja-nav">    
 	<div class="row">
 		<div class="col-2" style="text-align:left">
 			<button class="menu">
@@ -8,26 +8,23 @@
 		</div>
 
 		<div class="col-8">
-			<span class="titulo">Aviso Importante</span>
+			<span class="titulo">Pedido completado</span>
 		</div>
 		
 		<div class="col-2"></div>
 	</div>
-</div>
+</div> -->
 
 	<!-- CONTENIDO -->
-	<div class="contenido animated fadeIn fast">
-		<i class="fa fa-clipboard-check"></i>
-			<p class="uno">Pedido Completado</p>
-		<div class="texto">
-			<p>Felicidades! Completaste tu pedido. Puedes seguir su Estado en <span class="titulo">"Mis Pedidos"</span></p>
+	<div class="caja animated fadeIn fast">
+
+		<div class="caja-contenido">
+			<i class="fas fa-check-circle"></i>
+			<span>Pedido completado</span>
+			<p>Tu pedido fué enviado correctamente, recuerda que puedes seguir el estado de tu pedido usando esta app!</p>				
+			<button [routerLink]="['/pedidos']">Mis Pedidos</button>
 		</div>
-		<div class="txtNroOrden">
-			<p>Tu Nro de Orden:</p>
-		</div>
-		<div class="nroOrden">
-			<p>#352</p>
-		</div>
+
 	</div>
 
 	<!-- SALUDO -->
@@ -43,8 +40,8 @@
 
 
 <!-- BOTON IR A PEDIDOS -->
-<div class="caja-boton fixed-bottom">
+<!-- <div class="caja-boton fixed-bottom">
   <button class="btnMisPedidos" [routerLink]="['/pedidos']">
     <span>Ir a Mis Pedidos</span>
   </button>
-</div>
+</div> -->
