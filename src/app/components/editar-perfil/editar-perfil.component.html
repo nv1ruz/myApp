@@ -1,0 +1,71 @@
+<div class="caja-nav">   
+	<div class="row">
+		<!-- <div class="col-2" style="text-align:left" [routerLink]=[anterior]> -->
+		<div class="col-2" style="text-align:left" (click)="irAtras()">
+			<button class="regresar">
+				<i class="fas fa-angle-left"></i>
+			</button>
+		</div>
+
+		<div class="titulo col-8">
+			<span>Editar perfil</span>
+		</div>
+
+		<div class="col-2"></div>
+	</div>
+</div>
+
+
+
+<div>
+
+	<div class="caja-usuario row animated fadeIn fast">
+
+		<div class="usuario col-12">
+
+      <div class="caja-input">
+
+        <span>Usuario</span>
+        <input type="text" value="{{ usuario.nick }}" #nick>
+
+      </div>
+
+      
+      <div class="caja-input">
+
+        <span>Nombre</span>
+        <input type="text" value="{{ usuario.nombre }}" #nombre>
+
+      </div>
+
+
+      <div class="caja-input">
+
+        <span>Apellido</span>
+        <input type="text" value="{{ usuario.apellido }}" #apellido>
+
+      </div>
+
+
+      <div class="caja-input">
+
+        <span>Email</span>
+        <input type="email" value="{{ usuario.email }}" readonly disabled>
+
+      </div>
+
+
+      <div class="caja-input">
+
+        <span>Movil</span>
+        <input type="text" value="{{ usuario.movil }}" #movil>
+
+      </div>
+
+    </div>
+    
+    <button (click)="actualizarPerfil( nick.value, nombre.value, apellido.value, movil.value )">Guardar cambios</button>
+
+	</div>
+
+</div>

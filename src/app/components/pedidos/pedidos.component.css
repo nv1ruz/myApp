@@ -42,38 +42,40 @@
 .tab{
     margin-top: 0;
     margin-bottom: 0;
+    border-bottom: 1px solid #fa3b7b;
     display: flex;
-    font-family: 'Roboto', sans-serif;
-    background-color: #fa3b7b;
 }
 .tab p{ 
     margin-bottom: 0;
 }
+.tab a{
+    background-color: #fff;
+}
 .tab a.active{
-    background-color: #fc588f!important;
+    background-color: #fa3b7b;
+    color: #ffffff!important;
+    border-bottom: 1px solid #fa3b7b;
     border-radius: 0;
     border: 0;
-    /* border-bottom: 1px solid #fa3b7b; */
 }
 .tab .item{
     width: 50%;  
     border: 0;
-    padding: 15px 0;
 }
 .tab a.item{
-    /* color: #000; */
+    color: #fa3b7b;
     font-family: 'Roboto', sans-serif;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
     text-align: center;
+    letter-spacing: 0.75pt;
     cursor: pointer;
     transition: all .3s ease;
-    background-color: #fa3b7b;
-    color: #fff;
+    border-bottom: 1px solid #fa3b7b;
 }
 .tab a.item:hover{
-    background-color: #fc588f;
-    color: #fff;
+    background-color: #fa3b7b;
+    color: #ffffff;
 }
 
 /* ------CAJA PEDIDOS--------- */

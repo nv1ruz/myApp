@@ -1,3 +1,4 @@
+import { PedidoComponent } from './pedido/pedido.component';
 export { HomeComponent } from './home/home.component';
 export { LoginComponent } from './login/login.component';
 export { ComercioComponent } from './comercio/comercio.component';
@@ -16,6 +17,7 @@ export { CoConfigComponent } from './co-config/co-config.component';
 
 export { CategoriasComponent } from './categorias/categorias.component';
 export { ProductosComponent } from './productos/productos.component';
+export { PedidoComponent } from './pedido/pedido.component';
 
 export { PruebaComponent } from './prueba/prueba.component';
 export { PruebaPedidosComponent } from './prueba-pedidos/prueba-pedidos.component';
@@ -24,6 +26,7 @@ export { PruebaPedidosComponent } from './prueba-pedidos/prueba-pedidos.componen
 
 
 export { MicuentaComponent } from './micuenta/micuenta.component';
+export { EditarPerfilComponent } from './editar-perfil/editar-perfil.component';
 export { DireccionesComponent } from './direcciones/direcciones.component';
 export { DireccionComponent } from './direccion/direccion.component';
 

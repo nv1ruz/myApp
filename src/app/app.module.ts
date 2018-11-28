@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+// service worker
+import { ServiceWorkerModule } from '@angular/service-worker';
+
 // ng sidebar
 import { SidebarModule } from 'ng-sidebar';
 
@@ -45,7 +48,6 @@ import { MicuentaComponent } from './components/micuenta/micuenta.component';
 import { DireccionesComponent } from './components/direcciones/direcciones.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { RegisterComercioComponent } from './components/register-comercio/register-comercio.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { DireccionComponent } from './components/direccion/direccion.component';
 import { MiComercioComponent } from './components/mi-comercio/mi-comercio.component';
@@ -62,6 +64,8 @@ import { DetalleCoPedidoComponent } from './components/detalle-co-pedido/detalle
 import { PedidoCompletadoComponent } from './components/pedido-completado/pedido-completado.component';
 import { CoConfigComponent } from './components/co-config/co-config.component';
 import { PruebaPedidosComponent } from './components/prueba-pedidos/prueba-pedidos.component';
+import { EditarPerfilComponent } from './components/editar-perfil/editar-perfil.component';
+import { PedidoComponent } from './components/pedido/pedido.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +95,9 @@ import { PruebaPedidosComponent } from './components/prueba-pedidos/prueba-pedid
     DetalleCoPedidoComponent,
     PedidoCompletadoComponent,
     CoConfigComponent,
-    PruebaPedidosComponent
+    PruebaPedidosComponent,
+    EditarPerfilComponent,
+    PedidoComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +106,8 @@ import { PruebaPedidosComponent } from './components/prueba-pedidos/prueba-pedid
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), 
     ReactiveFormsModule,
     FormsModule,
     BrowserAnimationsModule,

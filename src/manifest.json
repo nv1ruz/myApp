@@ -1,12 +1,13 @@
 {
   "name": "myApp",
   "short_name": "myApp",
+  "start_url": "/",
   "theme_color": "#fa3b7b",
-  "background_color": "#fafafa",
+  "background_color": "#fa3b7b",
   "display": "standalone",
+  "orientation": "portrait",
   "gcm_sender_id": "103953800507",
   "scope": "/",
-  "start_url": "/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",

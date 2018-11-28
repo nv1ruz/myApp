@@ -38,9 +38,9 @@
 	<div class="tab-pane fade show active nav-encurso" id="nav-encurso" role="tabpanel">
 
 		<div class="animated fadeIn fast" >
-			<div *ngFor="let pedido of pedidosUsuario; index as i;">
+			<div *ngFor="let pedido of pedidos; index as i;">
 			
-				<div class="pedido row" *ngIf="pedido.estado == 'Pendiente' || pedido.estado == 'En preparacion'">
+				<div class="pedido row animated flipInX" *ngIf="pedido.estado == 'Pendiente' || pedido.estado == 'En preparacion'" [routerLink]="['/pedido', pedido.id]">
 					<div class="col-2 p-0 imagen">
 						<img src="{{ pedido.comercioFoto}}">
 					</div>
@@ -83,6 +83,18 @@
 									<button><i class="fas fa-phone"></i> Llamar</button>
 								</div>
 							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<span>Productos</span>
+								</div>
+								<div class="row">
+									<div class="col-2">2</div>
+									<div class="col-8">Pizza</div>
+									<div class="col-2">$340</div>
+								</div>
+							</div>
+
 						</div>
 						<div class="caja-productos col-12">
 							

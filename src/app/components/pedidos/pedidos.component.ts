@@ -18,7 +18,7 @@ export class PedidosComponent implements OnInit {
   public conHistorial: number;
 
   public usuario:any = {};
-  public pedidosUsuario:any = [];
+  public pedidos:any = [];
 
   ver:string = '';
 
@@ -32,7 +32,7 @@ export class PedidosComponent implements OnInit {
           console.log(this.usuario.idCom);
           this.obtenerPedidosUsuario( this.usuario.uid ).subscribe( snap => {
             // console.log(data);
-            this.pedidosUsuario = [];
+            this.pedidos = [];
             this.conEncurso = 0;
             this.conHistorial = 0;
             snap.forEach( (data:any) => {
@@ -41,7 +41,7 @@ export class PedidosComponent implements OnInit {
               this.obtenerComercio( data.payload.doc.data().comercioId ).subscribe( (com:any) => {
                 // console.log( com.payload.data() );
                 
-                this.pedidosUsuario.push({
+                this.pedidos.push({
                   id: data.payload.doc.id,
                   comercioId: data.payload.doc.data().comercioId,
                   comercioNombre: com.payload.data().nombre,
@@ -60,7 +60,7 @@ export class PedidosComponent implements OnInit {
 
                 // console.log('contador:' , param.payload.doc.data().estado);
   
-                if(data.payload.doc.data().estado == 'Pendiente'){
+                if(data.payload.doc.data().estado == 'Pendiente' || data.payload.doc.data().estado == 'En preparacion'){
                   this.conEncurso ++;
                 }
                 if(data.payload.doc.data().estado == 'Aceptado'){
@@ -70,7 +70,7 @@ export class PedidosComponent implements OnInit {
               });  
   
             });
-            console.log( this.pedidosUsuario );
+            console.log( this.pedidos );
             
             // console.log('En Curso:', this.conEncurso);
             // console.log('Historial:', this.conHistorial);

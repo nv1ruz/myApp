@@ -14,9 +14,11 @@ import {
     CategoriasComponent,
     ProductosComponent,
     MicuentaComponent,
+    EditarPerfilComponent,
     DireccionesComponent,
     DireccionComponent,
     PedidosComponent,
+    PedidoComponent,
     RegisterComercioComponent,
     FavoritosComponent,
     PruebaComponent,
@@ -25,7 +27,7 @@ import {
     DetallePedidoComponent,
     DetalleCoPedidoComponent,
     PedidoCompletadoComponent,
-    CoConfigComponent
+    CoConfigComponent    
  } from './components/index.paginas';
 
 const ROUTES: Routes = [
@@ -34,6 +36,7 @@ const ROUTES: Routes = [
     { path: 'comercio/:id', component: ComercioComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'carrito/:id', component: CarritoComponent },
+
     { path: 'micomercio', component: MiComercioComponent },
     { path: 'micomercio/menu', component: MenuComponent },
     { path: 'micomercio/menu/categoria', component: CategoriaComponent },
@@ -42,11 +45,16 @@ const ROUTES: Routes = [
     { path: 'micomercio/menu/producto/:id', component: ProductoComponent },
     { path: 'micomercio/categorias', component: CategoriasComponent },
     { path: 'micomercio/productos', component: ProductosComponent },
+
     { path: 'micuenta', component: MicuentaComponent },
+    { path: 'micuenta/editar', component: EditarPerfilComponent },
     { path: 'direccion/:id', component: DireccionComponent },
     { path: 'direccion', component: DireccionComponent },
     { path: 'direcciones', component: DireccionesComponent },
+
     { path: 'pedidos', component: PedidosComponent },
+    { path: 'pedido/:id', component: PedidoComponent },
+
     { path: 'registerComercio', component: RegisterComercioComponent },
     { path: 'favoritos', component: FavoritosComponent },
     { path: 'prueba', component: PruebaComponent },

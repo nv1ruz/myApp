@@ -13,6 +13,12 @@ export class PedidosService {
     return this.afs.collection( 'pedidos' ).doc( pedidoId );
   }
 
+  // Obtiene la colección productos de un pedido en específico (Firebase)
+  public getPedidoProductos( pedidoId: string ){
+    return this.afs.collection( 'pedidos' ).doc( pedidoId )
+                    .collection( 'productos' );
+  }
+
   // obtiene la colección de pedidos (Firebase)
   public getPedidos(){
     return this.afs.collection( 'pedidos' ).snapshotChanges();

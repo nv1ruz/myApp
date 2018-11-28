@@ -2,22 +2,62 @@
 
 	<div class="row">
 
-		<div class="col-3" style="text-align:left" (click)="this.ap._toggleOpened()">
-			<button class="menu" >
+		<div class="col-3"  (click)="this.ap._toggleOpened()">
+			<button class="menu">
 				<i class="fas fa-bars"></i>
 			</button>
 		</div>
 
 		<div class="col-6">
-			<span class="titulo">Mi cuenta</span>
+			<span class="titulo">Perfil</span>
 		</div>
 
-		<div class="col-3"></div>
+		<div class="col-3" [routerLink]="['editar']">
+			<button class="editar">
+				<i class="fas fa-edit"></i>
+			</button>
+		</div>
 	</div>
 	
 </div>
 
-<div class="contenedor" *ngIf="this.ap.exist">
+
+
+<div>
+
+	<div class="caja-usuario row  animated fadeIn fast">
+
+		<div class="usuario col-12">
+
+			<div class="foto">
+
+				<img src="{{ usuario.foto }}" alt="foto_usuario">
+
+			</div>
+
+			<div class="nick">
+
+				<span>{{ usuario.nick }}</span>
+
+			</div>
+
+			<div class="email">
+
+				<span>{{ usuario.email }}</span>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+
+<!-- <div class="contenedor" *ngIf="this.ap.exist">
 	<form class="caja-datos">
 		<img src="{{ usuario.foto }}" alt="">
 		<div class="form-group">
@@ -48,4 +88,4 @@
 			<span class="text">Guardar</span>
 		</button>
 	</form>
-</div>
+</div> -->

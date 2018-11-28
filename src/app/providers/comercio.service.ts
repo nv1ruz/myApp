@@ -39,6 +39,11 @@ export class ComercioService {
   }
 
   // obtiene el documento de un comercio específico (Firebase)
+  public getCom( documentId: string ){
+    return this.afs.collection( 'comercios' ).doc( documentId );
+  }
+
+  // obtiene el documento de un comercio específico (Firebase)
   public getComercio( documentId: string ){
     return this.afs.collection( 'comercios' ).doc( documentId ).snapshotChanges();
   }

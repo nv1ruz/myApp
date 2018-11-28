@@ -1,0 +1,250 @@
+.caja-nav{
+    background-color: #fa3b7b;
+    width: 100%;
+    height: 55px;
+    max-height: 55px;
+    text-align: center;
+    padding: 12px 0 11px 0;
+}
+.caja-nav .col-2{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.caja-nav .row{
+    margin: 0!important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.caja-nav button.regresar{
+    color: #fff;
+    background: none;
+    border: 0;
+    outline: 0;
+    margin-left: 5px;
+    padding: 0;
+}
+.caja-nav button i{
+    color: #fff;
+    font-size: 22px;
+}
+.caja-nav .titulo{
+    text-align: center;
+}
+.caja-nav .titulo span{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 500;   
+    /* margin: 0 auto; */
+}
+.caja-nav button.menu{
+    color: #fff;
+    background: none;
+    border: 0;
+    outline: 0;
+    margin-right: 5px;
+    padding: 0;
+}
+
+
+
+
+
+.caja-main{
+    background-color: #fa3b7b;
+    padding: 0 10px;
+}
+.caja-productos{
+    padding: 0 10px;
+}
+
+.estado{
+    /* padding-bottom: 20px; */
+    margin: 0;
+    margin-bottom: 20px;
+}
+.estado .fecha{
+    padding: 0;
+    text-align: center;
+}
+.estado .fecha span{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;  
+    letter-spacing: 0.25pt;
+}
+
+
+.producto{    
+    display: flex;
+    align-items: center;
+    /* background-color: #fff; */
+}
+.producto .cantidad{
+    padding: 0;
+    text-align: center;
+}
+.producto .cantidad span{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.producto .nombre{
+    padding: 0 0 0 5px;
+}
+.producto .nombre span{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.producto .precio{
+    padding: 0;
+    text-align: right;
+}
+.producto .precio span{
+    color: #fff;
+    height: 100%;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400; 
+}
+
+.delivery .texto{
+    padding: 0;
+}
+.delivery .texto span{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+.delivery .precioDelivery{
+    padding: 0;
+    text-align: right;
+}
+.delivery .precioDelivery span{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.total{
+    margin: 0;
+    margin-top: 8px;
+    border-top: 1px solid #fff;
+    padding: 8px 0;
+}
+.total .texto{
+    padding: 0;
+}
+.total .texto span{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.total .precioTotal{
+    padding: 0;
+    text-align: right;
+}
+.total .precioTotal span{
+    color: #fff;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.caja-secundaria{
+    background-color: #f4f4f4;
+}
+.formaEntrega{
+    padding: 15px 20px 5px 20px;
+    text-align: center;
+}
+.formaEntrega span{
+    color: #666666;
+    /* light 300, regular 400, medium 500, bold 700 */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;  
+}
+.caja-estado{
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    padding: 10px 10px;
+    text-align: center;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
+}
+.caja-direccion{
+    margin: 0;
+    padding: 0 20px 20px 20px;
+}
+.caja-direccion .direccion{
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
+}
+.caja-direccion .direccion i{
+    color: #fa3b7b;
+    font-size: 20px;
+}
+.caja-direccion .direccion span{
+    display: block;
+    color: #b4b4b4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;  
+    letter-spacing: 0.25pt;
+    text-transform: capitalize;
+}
+
+
+
+.caja-comercio{
+    margin: 0;
+    padding: 0 20px 20px 20px;
+}
+.caja-comercio .comercio{
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
+}
+.caja-comercio .comercio i{
+    color: #2b62d8;
+    font-size: 20px;
+}
+.caja-comercio .comercio span{
+    display: block;
+    color: #b4b4b4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 400;  
+    letter-spacing: 0.25pt;
+    text-transform: capitalize;
+}
+.caja-comercio .comercio span:first-child{
+    font-weight: 500;
+}

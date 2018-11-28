@@ -79,7 +79,7 @@ export class AutenticacionService {
     } else if( proveedor == 'facebook'){
       console.log( "El codigo todavía no está desarrollado" );
     }
-  }
+  }  
 
   // cierra sesión del usuario
   public logOut(){

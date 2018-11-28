@@ -28,6 +28,7 @@ export class CarritoComponent implements OnInit {
   public iduser: string = this._fs.usuario.uid;
   public nuevo:number = 0;
   public estado: number = 0;
+  private pedidoId: string;
 
   // Validacion de Campos
   rForm: FormGroup;
@@ -83,7 +84,7 @@ export class CarritoComponent implements OnInit {
         snap.forEach( (data: any) => {
           // console.log( data.payload.doc.data() );
           this.domicilios.push({
-            id: data.payload.doc.id,
+            direccionId: data.payload.doc.id,
             // data: data.payload.doc.data(),
             calle: data.payload.doc.data().calle,
             numero: data.payload.doc.data().numero,
@@ -250,17 +251,33 @@ export class CarritoComponent implements OnInit {
       entrega: this.entrega.value,
       direccion: this.direccionSelect,
       precioDelivery: preDelivery,
-      productos: this._cs.carrito,
       subtotal: this.subtotal,
       total: this.precioTotal,
       estado: 'Pendiente'
-    }).then( function() {
+    }).then( docRef => {
       console.log("El pedido se envió correctamente");
+      console.log( 'La ID del documento es: ', docRef.id );
+      this.pedidoId = docRef.id;
+
+      for( let producto of this._cs.carrito ){
+        docRef.collection( 'productos' ).add({
+          productoId: producto.id,
+          img: producto.img,
+          nombre: producto.nombre,
+          ingredientes: producto.ing,
+          cantidad: producto.cant,
+          precio: producto.pre,
+          precioTotal: producto.preTot,
+          nota: producto.nota
+        });
+      }
+      
+      this.router.navigate(['/pedido-completado']);
+
     }).catch( function( error ) {
       console.log("Hubo un error al enviar el pedido: ", error);
     });
 
-    this.router.navigate(['/pedido-completado']);
 
   }
 

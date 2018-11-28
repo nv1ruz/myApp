@@ -2,7 +2,6 @@
 <div class="caja-nav">    
 
 	<div class="row">
-		<!-- <div class="col-2" style="text-align:left" [routerLink]="['/comercio', refId]"> -->
 		<div class="col-2" style="text-align:left" (click)="irAtras()">
 			<button class="regresar">
 				<i class="fas fa-angle-left"></i>
@@ -11,8 +10,7 @@
 		<div class="col-8" style="text-align:left">
 			<span class="titulo">Tu pedido</span>
 		</div>
-		<div class="col-2">
-			
+		<div class="col-2">			
 		</div>
 	</div>
 </div>
@@ -24,7 +22,6 @@
 	<div class="carrito-body" *ngIf="_cs.carrito.length > 0">
 		
 		<!-- SECCION: MI PEDIDO -->
-		<!-- <p class="txtSubtitulo">Mi pedido</p> -->
 		<div class="accordion" id="acordion">
 			<div class="card" *ngFor="let producto of this._cs.carrito">
 				<div class="card-header2" id="heading1" data-toggle="collapse" [attr.data-target]="'#a' + producto.id" aria-expanded="false" aria-controls="collapse1">
@@ -83,29 +80,6 @@
 		<!-- SECCION: FORMA DE ENTREGA -->
 		<p class="txtSubtitulo">Forma de Entrega</p>
 		<div class="form-entrega">
-			<!-- <div class="card-header row d-flex align-items-center"> -->
-				<!-- <div class="col-2 cant-prod">
-					<i class="fas fa-shipping-fast"></i>
-				</div>
-				<div class="col-10 input-field select">  -->
-					<!-- <select class="custom-select" (click)="sumarTotal(); mostrarOcultarDireccion()" id="cambiarentrega" name="cambiarentrega" required>
-						<option value="0" disabled selected>Forma de entrega</option>
-						<option value="1" *ngIf="comercio.delivery == true" >Delivery</option>
-						<option value="2" >Retiro por el local</option>
-					</select> -->
-
-					<!-- <mat-form-field>
-						<mat-select placeholder="Forma de entrega" [formControl]="entrega" required>
-							<mat-option value="0" (click)="sumarTotal()">Retiro en local</mat-option>
-							<mat-option value="1" (click)="sumarTotal()">Delivery ${{ comercio.deliveryPrecio }}</mat-option>
-						</mat-select>
-						<mat-error *ngIf="entrega.hasError('required')">Elige una opción</mat-error>
-					</mat-form-field>
-				</div>
-			</div> -->
-
-
-
 
 			<div class="caja-entrega row m-0">
 				<div class="icono col-2">
@@ -131,7 +105,7 @@
 						<mat-select placeholder="Dirección de entrega" [formControl]="direccion" required>
 							<mat-option *ngFor="let direccion of domicilios"
 								(click)="cargarDireccionn( direccion )"
-								value="{{ direccion.id }}">{{ direccion.calle }}, {{ direccion.numero }}
+								value="{{ direccion.direccionId }}">{{ direccion.calle }}, {{ direccion.numero }}
 							</mat-option>
 							<mat-option (click)="nuevaDireccion()" *ngIf="!max">- Nueva dirección -</mat-option>
 						</mat-select>
@@ -140,37 +114,6 @@
 				</div>
 			</div>
 
-
-
-
-
-			<!-- <div class="card-header row" *ngIf="entrega.value == 1">
-				<div class="col-2 cant-prod">
-					<i class="fas fa-map-marker-alt"></i>
-				</div>
-				<div class="col-8 input-field select"> -->
-					<!-- <select class="custom-select" required>
-						<option value="" disabled selected>Selecciona la dirección</option>
-						<option *ngFor="let domicilio of domicilios" [value]="0">{{domicilio.calle}}, {{domicilio.numero}}</option>
-					</select> -->
-
-
-					<!-- <mat-form-field>
-						<mat-select placeholder="Dirección de entrega" [formControl]="direccion" required>
-							<mat-option *ngFor="let direccion of domicilios"
-								(click)="cargarDireccionn( direccion )"
-								value="{{ direccion.id }}">{{ direccion.calle }}, {{ direccion.numero }}
-							</mat-option>
-							<mat-option (click)="nuevaDireccion()" *ngIf="!max">- Nueva dirección -</mat-option>
-						</mat-select>
-						<mat-error *ngIf="direccion.hasError('required')">Elige una dirección</mat-error>
-					</mat-form-field>
-
-				</div>
-				<div class="col-2 center" (click)="nuevaDireccion()" *ngIf="!max">
-					<i class="fa fa-plus"></i>
-				</div>
-			</div> -->
 		</div>
 
 		<!-- PIE DEL CARRITO -->

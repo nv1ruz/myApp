@@ -1,0 +1,126 @@
+<div class="caja-nav">   
+  <div class="row">
+    <!-- <div class="col-2" style="text-align:left" [routerLink]=[anterior]> -->
+    <div class="col-2" style="text-align:left" (click)="irAtras()">
+      <button class="regresar">
+        <i class="fas fa-angle-left"></i>
+      </button>
+    </div>
+
+    <div class="titulo col-8">
+      <span>Detalle del pedido</span>
+    </div>
+
+    <div class="col-2"></div>
+  </div>
+</div>
+
+<div class="caja-main animated fadeInBig">
+
+  <div class="caja-productos animated fadeInDown" *ngIf="pedido && comercio && productos">
+
+    <div class="estado row">
+
+      <div class="fecha col-12">
+        <span>{{ pedido.fecha | date:'short'}}</span>
+      </div>
+
+    </div>
+
+    <div class="producto row m-0" *ngFor="let producto of productos">
+      
+      <div class="cantidad col-1">
+        <span>{{ producto.cantidad }}</span>
+      </div>
+
+      <div class="nombre col-8">
+        <span>{{ producto.nombre }}</span>
+      </div>
+
+      <div class="precio col-3">
+        <span>${{ producto.precioTotal }}</span>
+      </div>
+
+    </div>
+
+
+    <div class="delivery row m-0">
+
+      <div class="texto col-8">
+        <span>Delivery</span>
+      </div>
+      <div class="precioDelivery col-4">
+        <span>${{ pedido.precioDelivery }}</span>
+      </div>
+
+    </div>
+
+
+    <div class="total row">
+
+      <div class="texto col-8">
+        <span>TOTAL</span>
+      </div>
+      <div class="precioTotal col-4">
+        <span>${{ pedido.total }}</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="caja-secundaria animated fadeIn" *ngIf="pedido && comercio && productos">
+
+
+  <div class="row m-0">
+    
+    <div class="caja-estado col-12">
+      <span *ngIf="pedido.estado == 'Pendiente'" style="color: #b4b4b4;">{{ pedido.estado }}</span>
+      <span *ngIf="pedido.estado == 'En preparacion'" style="color:#2b62d8">{{ pedido.estado }}</span>
+    </div>
+    
+  </div>
+
+  <div class="formaEntrega">
+    <span *ngIf="pedido.entrega == 1">Delivery</span>
+    <span *ngIf="pedido.entrega == 0">Retiro en el local</span>
+  </div>
+
+  <div class="caja-direccion animated zoomIn row" *ngIf="pedido.entrega == 1">
+
+    <div class="direccion col-12">
+
+      <i class="fas fa-map-marker-alt"></i>
+      <span>{{ pedido.direccion.calle }} {{ pedido.direccion.numero }}</span>
+      <span>B° {{ pedido.direccion.barrio }}</span>
+      <!-- <span>{{ pedido.direccion.ciudad }} ({{ pedido.direccion.cp }}), {{ pedido.direccion.provincia }}</span> -->
+
+    </div>
+
+  </div>
+
+  <div class="caja-comercio animated zoomIn row ">
+
+    <div class="comercio col-12">
+
+      <i class="fas fa-store"></i>
+      <span>{{ comercio.nombre }}</span>
+      <span>{{ comercio.calle }} {{ comercio.numero }}</span>
+      <span>B° {{ comercio.barrio }}</span>
+      <span>{{ comercio.telefono }}</span>
+
+    </div>
+
+  </div>
+
+
+
+</div>
