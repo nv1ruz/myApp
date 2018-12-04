@@ -45,7 +45,7 @@ export class PedidoComponent implements OnInit {
       this.obtenerComercio( this.pedido.comercioId ).subscribe( (data: any) => {
 
         var estado: string;
-        if( data.estado ){
+        if( data.abierto ){
           estado = 'Abierto';
         } else{
           estado = 'Cerrado';
@@ -54,11 +54,11 @@ export class PedidoComponent implements OnInit {
         this.comercio = {
 
           nombre: data.nombre,
-          calle: data.calle,
-          numero: data.numero,
-          barrio: data.barrio,
+          calle: data.direccion.calle,
+          numero: data.direccion.numero,
+          barrio: data.direccion.barrio,
           telefono: data.telefono,
-          estado: estado
+          abierto: data.abierto
 
         };
         console.log( this.comercio );

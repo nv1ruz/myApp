@@ -1,3 +1,17 @@
+.contenedor{
+    background-color: #f4f4f4;
+    width: 100%;
+    min-height: 100%;
+    height: auto !important;
+    position: absolute;
+    top:0; 
+    left:0; 
+}
+
+
+
+
+
 
 /* --------BARRA DE NAVEGACION----------- */
 .caja-nav{
@@ -102,13 +116,17 @@
     cursor: pointer;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.07), 0 1px 1px -2px rgba(0,0,0,.1);
 }
+.caja-pedidos .pedido .imagen-historial img{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
 .caja-pedidos .pedido .comercio{
     padding-right: 10px;
 }
 .caja-pedidos .pedido .caja-nombre{
     padding: 0 0 0 10px;
 }
-.caja-pedidos .pedido .nombre{
+.caja-pedidos .pedido .caja-nombre .nombre{
     color: #666666;
     /* light 300, regular 400, medium 500, bold 700 */
     font-family: 'Roboto', sans-serif;
@@ -120,6 +138,13 @@
 .caja-pedidos .pedido .caja-precio{
     padding: 0 10px 0 0;
     text-align: right;
+}
+.caja-pedidos .pedido .caja-precio-historial{
+    padding: 0 10px 0 0;
+    text-align: right;
+}
+.caja-pedidos .pedido .caja-precio-historial span{
+    color: #b4b4b4;
 }
 .caja-pedidos .pedido .precio{
     height: 100%;

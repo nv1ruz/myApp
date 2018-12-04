@@ -18,7 +18,8 @@ import { Router } from '@angular/router';
 export class ComercioComponent implements OnInit {
 
   public refId:string;
-  public comercio: any = {};
+  // public comercio: any = {};
+  public comercio:any;
   public producto:any = {};
   public productosSugeridos = [];
 
@@ -37,40 +38,55 @@ export class ComercioComponent implements OnInit {
 
   ngOnInit() {
 
-    this.obtenerComercio( this.refId ).subscribe( param => {
+    this.obtenerComercio( this.refId ).subscribe( datos => {
 
-      this.comercio = [];
-      this.comercio = param.payload.data();
+      this.comercio = datos;
+      if( this.comercio.activo ){
+        // console.log( 'El comercio está activo' );
+        // console.log( this.comercio );
+      } else{
+        // console.log( 'El comercio está desactivado' );
+      }
 
     });
 
+    // this.obtenerCom( this.refId ).subscribe( param => {
+
+    //   // this.comercio = [];
+    //   this.comercio = param.payload.data();
+    //   console.log( this.comercio );
+    //   console.log( this.comercio.delivery.activo );
+
+    // });
+
     
-          this.obtenerCategorias( this.refId ).subscribe( snap => {
-            this.categorias = [];
-            snap.forEach( data => {
-              this.categorias.push({
-                id: data.payload.doc.id,
-                nombre: data.payload.doc.data().nombre,
-                estado: data.payload.doc.data().estado
-              });      
-            }); 
-            // console.log( this.categorias );
-          });
-          this.obtenerProductos( this.refId ).subscribe( snap => {
-            this.productos = [];
-            snap.forEach( data => {
-              this.productos.push({
-                id: data.payload.doc.id,
-                foto: data.payload.doc.data().img,
-                nombre: data.payload.doc.data().nombre,
-                categoria: data.payload.doc.data().categoria,
-                ingredientes: data.payload.doc.data().ingredientes,
-                precio: data.payload.doc.data().precio,
-                estado: data.payload.doc.data().estado
-              });
-            });
-            // console.log( this.productos );
-          });
+    this.obtenerCategorias( this.refId ).subscribe( snap => {
+      this.categorias = [];
+      snap.forEach( data => {
+        this.categorias.push({
+          id: data.payload.doc.id,
+          nombre: data.payload.doc.data().nombre,
+          estado: data.payload.doc.data().estado
+        });      
+      }); 
+      // console.log( this.categorias );
+    });
+
+    this.obtenerProductos( this.refId ).subscribe( snap => {
+      this.productos = [];
+      snap.forEach( data => {
+        this.productos.push({
+          id: data.payload.doc.id,
+          foto: data.payload.doc.data().img,
+          nombre: data.payload.doc.data().nombre,
+          categoria: data.payload.doc.data().categoria,
+          ingredientes: data.payload.doc.data().ingredientes,
+          precio: data.payload.doc.data().precio,
+          estado: data.payload.doc.data().estado
+        });
+      });
+      // console.log( this.productos );
+    });
         
 
 
@@ -101,9 +117,13 @@ export class ComercioComponent implements OnInit {
   }
 
 
-  // MÉTODOS ************************************
 
-  private obtenerComercio( documentId: string ){
+  // MÉTODOS ************************************
+  private obtenerComercio( comercioId: string ){
+    return this._co.getCom( comercioId ).valueChanges();
+  }
+
+  private obtenerCom( documentId: string ){
     return this._co.getComercio( documentId );
   }
 

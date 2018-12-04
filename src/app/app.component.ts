@@ -56,7 +56,7 @@ export class AppComponent {
             this.obtenerComercio( this.usuario.idCom ).subscribe( param => {
               this.comercio = [];
               this.comercio = param.payload.data();
-              if(this.comercio.estado == true){
+              if(this.comercio.abierto){
                 this.estadoo = true;
               } else {
                 this.estadoo = false;

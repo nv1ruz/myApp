@@ -17,7 +17,7 @@
 
 
 <!--CAJA CARRITO -->
-<div class="cajaCarrito animated fadeIn fast" *ngIf="!visible">
+<div class="cajaCarrito animated fadeIn fast">
 
 	<div class="carrito-body" *ngIf="_cs.carrito.length > 0">
 		
@@ -164,7 +164,8 @@
 		<p class="uno">Tu carrito está vacío</p>
 		<p>Parece que aún no elegiste</p>
 		<p>lo que vas a pedir.</p>
-		<button [routerLink]="['/comercio', refId]">Explorar</button>
+		<!-- <button [routerLink]="['/comercio', refId]">Explorar</button> -->
+		<button (click)="irAtras()">Explorar</button>
 	</div>
 
 

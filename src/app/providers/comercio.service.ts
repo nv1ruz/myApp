@@ -15,7 +15,7 @@ export class ComercioService {
   // cambia el estado (abierto/cerrado) del comercio (Firebase)
   public estadoComercio( comercioId: string, estado:boolean ){
     this.afs.collection( 'comercios' ).doc( comercioId ).update({
-                          estado: estado
+                          abierto: estado
                         })
                         .then( function() {
                           console.log( "Documento actualizado con exito" );

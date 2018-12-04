@@ -76,37 +76,41 @@ export class CarritoComponent implements OnInit {
     });
 
     // ********************************************
-    this.getDomicilios().subscribe( (snap) => {
-      console.log( snap );
-      if( snap.length > 0){
-        console.log("existen direcciones");
-        this.domicilios = [];
-        snap.forEach( (data: any) => {
-          // console.log( data.payload.doc.data() );
-          this.domicilios.push({
-            direccionId: data.payload.doc.id,
-            // data: data.payload.doc.data(),
-            calle: data.payload.doc.data().calle,
-            numero: data.payload.doc.data().numero,
-            barrio: data.payload.doc.data().barrio,
-            cp: '5380',
-            provincia: 'La Rioja',
-            ciudad: 'Chamical'
-            // cp: data.payload.doc.data().cp,
-            // provincia: data.payload.doc.data().provincia,
-            // ciudad: data.payload.doc.data().ciudad
+    if( this._cs.carrito.length > 0){
+    
+      this.getDomicilios().subscribe( (snap) => {
+        console.log( snap );
+        if( snap.length > 0){
+          console.log("existen direcciones");
+          this.domicilios = [];
+          snap.forEach( (data: any) => {
+            // console.log( data.payload.doc.data() );
+            this.domicilios.push({
+              direccionId: data.payload.doc.id,
+              // data: data.payload.doc.data(),
+              calle: data.payload.doc.data().calle,
+              numero: data.payload.doc.data().numero,
+              barrio: data.payload.doc.data().barrio,
+              cp: '5380',
+              provincia: 'La Rioja',
+              ciudad: 'Chamical'
+              // cp: data.payload.doc.data().cp,
+              // provincia: data.payload.doc.data().provincia,
+              // ciudad: data.payload.doc.data().ciudad
+            });
           });
-        });
-        // console.log(this.domicilios);
-        if( snap.length == 5 ){
-          this.max = true;
+          // console.log(this.domicilios);
+          if( snap.length == 5 ){
+            this.max = true;
+          } else{
+            this.max = false;
+          }
         } else{
-          this.max = false;
+          console.log( 'No existe ninguna direccion' );
         }
-      } else{
-        console.log( 'No existe ninguna direccion' );
-      }
-    });
+      });
+
+    }
   }
 
   toggle(){
@@ -235,11 +239,13 @@ export class CarritoComponent implements OnInit {
 
   public enviarPedido(): void{
     let hoy: number = Date.now();
+    let delivery: boolean = false;
     let preDelivery: number;
     let estado: number = 0;
 
     if( this.entrega.value == 1 ){
       preDelivery = this.precioDelivery;
+      delivery = true;
     } else{
       preDelivery = 0;
     }
@@ -248,7 +254,7 @@ export class CarritoComponent implements OnInit {
       fecha: hoy,
       usuarioId: this.iduser,
       comercioId: this.refId,
-      entrega: this.entrega.value,
+      delivery: delivery,
       direccion: this.direccionSelect,
       precioDelivery: preDelivery,
       subtotal: this.subtotal,

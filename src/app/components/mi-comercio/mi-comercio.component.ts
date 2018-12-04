@@ -33,12 +33,12 @@ export class MiComercioComponent implements OnInit {
           this.obtenerComercio( this.usuario.idCom ).subscribe( data => {
             this.comercio = [];
             this.comercio = data.payload.data();
-            if( this.comercio.estado == true ){
+            if( this.comercio.abierto == true ){
               this.abierto = true;
-              this.comercio.estado = true;
+              this.comercio.abierto = true;
             } else{
               this.abierto = false;
-              this.comercio.estado = false;
+              this.comercio.abierto = false;
             }
           });
 

@@ -12,8 +12,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  public comerciosAbiertos = [];
-  public comerciosCerrados = [];
+  // public comerciosAbiertos = [];
+  // public comerciosCerrados = [];
+  public comercios = [];
 
   constructor( public ap: AppComponent, private _co: ComercioService, private _cs: CarritoService, private router: Router) { 
 
@@ -26,21 +27,32 @@ export class HomeComponent implements OnInit {
 
     this.obtenerComercios().subscribe( snap => {
 
-      this.comerciosAbiertos = [];
-      this.comerciosCerrados = [];
+      // this.comerciosAbiertos = [];
+      // this.comerciosCerrados = [];
+      this.comercios = [];
 
       snap.forEach( (param:any) => {
-        if( param.payload.doc.data().estado == true ){
-          this.comerciosAbiertos.push({
+        // console.log(param.payload.doc.data().abierto);
+        // if( param.payload.doc.data().abierto == true ){
+        //   this.comerciosAbiertos.push({
+        //     id: param.payload.doc.id,
+        //     data: param.payload.doc.data()
+        //   });
+        // } else{
+        //   this.comerciosCerrados.push({
+        //     id: param.payload.doc.id,
+        //     data: param.payload.doc.data()
+        //   });
+        // }
+        if( param.payload.doc.data().activo ){
+          
+          this.comercios.push({
             id: param.payload.doc.id,
             data: param.payload.doc.data()
           });
-        } else{
-          this.comerciosCerrados.push({
-            id: param.payload.doc.id,
-            data: param.payload.doc.data()
-          });
+
         }
+
       });
 
       // console.log( this.comerciosAbiertos );

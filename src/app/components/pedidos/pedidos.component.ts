@@ -46,12 +46,13 @@ export class PedidosComponent implements OnInit {
                   comercioId: data.payload.doc.data().comercioId,
                   comercioNombre: com.payload.data().nombre,
                   comercioFoto: com.payload.data().img,
-                  comercioCalle: com.payload.data().calle,
-                  comercioBarrio: com.payload.data().barrio,
-                  comercioNumero: com.payload.data().numero,
+                  comercioCalle: com.payload.data().direccion.calle,
+                  comercioBarrio: com.payload.data().direccion.barrio,
+                  comercioNumero: com.payload.data().direccion.numero,
                   usuarioId: data.payload.doc.data().usuarioId,
                   fecha: data.payload.doc.data().fecha,
-                  entrega: data.payload.doc.data().entrega,
+                  // entrega: data.payload.doc.data().entrega,
+                  delivery: data.payload.doc.data().delivery,
                   direccion: data.payload.doc.data().direccion,
                   deliveryPrecio: data.payload.doc.data().precioDelivery,
                   total: data.payload.doc.data().total,
@@ -60,7 +61,7 @@ export class PedidosComponent implements OnInit {
 
                 // console.log('contador:' , param.payload.doc.data().estado);
   
-                if(data.payload.doc.data().estado == 'Pendiente' || data.payload.doc.data().estado == 'En preparacion'){
+                if(data.payload.doc.data().estado == 'Pendiente' || data.payload.doc.data().estado == 'En proceso' || data.payload.doc.data().estado == 'Listo'){
                   this.conEncurso ++;
                 }
                 if(data.payload.doc.data().estado == 'Aceptado'){
