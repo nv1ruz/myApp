@@ -113,7 +113,7 @@ import { PedidoComponent } from './components/pedido/pedido.component';
     BrowserAnimationsModule,
     MaterialModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBBghU-HAg9wpwoszhmnK_ljHTOh3Th4Js'
+      apiKey: ''
     })
   ],
   providers: [
